@@ -30,6 +30,11 @@ Battino, U., Pignatari, M., Travaglio, C., {Lederer-Woods}, C., Denissenkov, P.,
 \newblock Heavy elements nucleosynthesis on accreting white dwarfs: Building seeds for the p-process.
 \newblock {\em Monthly Notices of the Royal Astronomical Society}, 497:4981--4998.
 
+\bibitem[Battino et~al., 2019]{battinoNuGridStellarData2019}
+Battino, U., Tattersall, A., {Lederer-Woods}, C., Herwig, F., Denissenkov, P., Hirschi, R., Trappitsch, R., {den Hartogh}, J.~W., Pignatari, M., and {NuGrid Collaboration} (2019).
+\newblock {{NuGrid}} stellar data set - {{III}}. {{Updated}} low-mass {{AGB}} models and s-process nucleosynthesis with metallicities {{Z}}= 0.01, {{Z}} = 0.02, and {{Z}} = 0.03.
+\newblock {\em Monthly Notices of the Royal Astronomical Society}, 489:1082--1098.
+
 \bibitem[Bazan and Arnett, 1994]{bazanConvectionNucleosynthesisCore1994}
 Bazan, G. and Arnett, D. (1994).
 \newblock Convection, {{Nucleosynthesis}}, and {{Core Collapse}}.
@@ -39,6 +44,11 @@ Bazan, G. and Arnett, D. (1994).
 Bisterzo, S., Gallino, R., Straniero, O., Cristallo, S., and K{\"a}ppeler, F. (2011).
 \newblock The s-process in low-metallicity stars - {{II}}. {{Interpretation}} of high-resolution spectroscopic observations with asymptotic giant branch models.
 \newblock {\em Monthly Notices of the Royal Astronomical Society}, 418:284--319.
+
+\bibitem[{B{\"o}hm-Vitense}, 1958]{bohm-vitenseUberWasserstoffkonvektionszoneSternen1958}
+{B{\"o}hm-Vitense}, E. (1958).
+\newblock {\"U}ber die {{Wasserstoffkonvektionszone}} in {{Sternen}} verschiedener {{Effektivtemperaturen}} und {{Leuchtkr{\"a}fte}}. {{Mit}} 5 {{Textabbildungen}}.
+\newblock {\em Zeitschrift fur Astrophysik}, 46:108.
 
 \bibitem[Brauner et~al., 2023]{braunerUnveilingChemicalFingerprint2023}
 Brauner, M., Masseron, T., {Garc{\'i}a-Hern{\'a}ndez}, D.~A., Pignatari, M., Womack, K.~A., Lugaro, M., and Hayes, C.~R. (2023).
@@ -109,6 +119,16 @@ Grevesse, N. and Noels, A. (1994).
 \newblock Atomic data and solar and stellar spectroscopy.
 \newblock {\em Physica Scripta Volume T}, 51:47--50.
 
+\bibitem[Henyey et~al., 1964]{henyeyNewMethodAutomatic1964}
+Henyey, L.~G., Forbes, J.~E., and Gould, N.~L. (1964).
+\newblock A {{New Method}} of {{Automatic Computation}} of {{Stellar Evolution}}.
+\newblock {\em The Astrophysical Journal}, 139:306.
+
+\bibitem[Herwig, 2023]{herwigASTR5012023}
+Herwig, F. (2023).
+\newblock Astr 501: Stellar interiors.
+\newblock Lecture notes, University of Victoria.
+
 \bibitem[Herwig et~al., 2011]{herwigCONVECTIVEREACTIVEPROTON2011}
 Herwig, F., Pignatari, M., Woodward, P.~R., Porter, D.~H., Rockefeller, G., Fryer, C.~L., Bennett, M., and Hirschi, R. (2011).
 \newblock {{CONVECTIVE}}--{{REACTIVE PROTON}}--{{12C COMBUSTION IN SAKURAI}}'{{S OBJECT}} ({{V4334 SAGITTARII}}) {{AND IMPLICATIONS FOR THE EVOLUTION AND YIELDS FROM THE FIRST GENERATIONS OF STARS}}.
@@ -138,6 +158,11 @@ Joyce, M. and Tayar, J. (2023).
 Kippenhahn, R., Weigert, A., and Weiss, A. (2013).
 \newblock {\em Stellar {{Structure}} and {{Evolution}}}.
 \newblock Springer.
+
+\bibitem[Langer et~al., 1985]{langerEvolutionMassiveStars1985}
+Langer, N., El~Eid, M.~F., and Fricke, K.~J. (1985).
+\newblock Evolution of massive stars with semiconvective diffusion.
+\newblock {\em Astronomy and Astrophysics}, 145:179--191.
 
 \bibitem[Masseron et~al., 2020]{masseronPhosphorusrichStarsUnusual2020}
 Masseron, T., {Garc{\'i}a-Hern{\'a}ndez}, D.~A., Santove{\~n}a, R., Manchado, A., Zamora, O., Manteiga, M., and Dafonte, C. (2020).
@@ -179,10 +204,20 @@ Pignatari, M., Gallino, R., Heil, M., Wiescher, M., K{\"a}ppeler, F., Herwig, F.
 \newblock {{THE WEAK}} s-{{PROCESS IN MASSIVE STARS AND ITS DEPENDENCE ON THE NEUTRON CAPTURE CROSS SECTIONS}}.
 \newblock {\em The Astrophysical Journal}, 710(2):1557.
 
-\bibitem[Pignatari et~al., 2016]{pignatariProductionProtonrichIsotopes2016}
-Pignatari, M., G{\"o}bel, K., Reifarth, R., and Travaglio, C. (2016).
+\bibitem[Pignatari et~al., 2016a]{pignatariProductionProtonrichIsotopes2016}
+Pignatari, M., G{\"o}bel, K., Reifarth, R., and Travaglio, C. (2016a).
 \newblock The production of proton-rich isotopes beyond iron: {{The}} {$\gamma$}-process in stars.
 \newblock {\em International Journal of Modern Physics E}, 25(04):1630003.
+
+\bibitem[Pignatari et~al., 2016b]{pignatariNuGridStellarData2016}
+Pignatari, M., Herwig, F., Hirschi, R., Bennett, M., Rockefeller, G., Fryer, C., Timmes, F.~X., Ritter, C., Heger, A., Jones, S., Battino, U., Dotter, A., Trappitsch, R., Diehl, S., Frischknecht, U., Hungerford, A., Magkotsios, G., Travaglio, C., and Young, P. (2016b).
+\newblock {{NuGrid Stellar Data Set}}. {{I}}.{{Stellar Yields}} from {{H}} to {{Bi}} for {{Stars}} with {{Metallicities Z}} = 0.02 and {{Z}} = 0.01.
+\newblock {\em The Astrophysical Journal Supplement Series}, 225:24.
+
+\bibitem[Prandtl, 1925]{prandtl7BerichtUber1925}
+Prandtl, L. (1925).
+\newblock 7. {{Bericht}} {\"u}ber {{Untersuchungen}} zur ausgebildeten {{Turbulenz}}.
+\newblock {\em ZAMM - Journal of Applied Mathematics and Mechanics / Zeitschrift f{\"u}r Angewandte Mathematik und Mechanik, vol. 5, issue 2, pp. 136-139}, 5(2):136.
 
 \bibitem[Prialnik, 2009]{prialnikIntroductionTheoryStellar2009}
 Prialnik, D. (2009).
@@ -282,6 +317,11 @@ Travaglio, C., R{\"o}pke, F.~K., Gallino, R., and Hillebrandt, W. (2011).
 Woosley, S.~E. and Heger, A. (2007).
 \newblock Nucleosynthesis and remnants in massive stars of solar metallicity.
 \newblock {\em Physics Reports}, 442:269--283.
+
+\bibitem[Woosley et~al., 2002]{woosleyEvolutionExplosionMassive2002}
+Woosley, S.~E., Heger, A., and Weaver, T.~A. (2002).
+\newblock The evolution and explosion of massive stars.
+\newblock {\em Reviews of Modern Physics}, 74:1015--1071.
 
 \bibitem[Woosley and Hoffman, 1992]{woosleyAlphaProcessRProcess1992}
 Woosley, S.~E. and Hoffman, R.~D. (1992).

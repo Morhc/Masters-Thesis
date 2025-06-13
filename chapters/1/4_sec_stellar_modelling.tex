@@ -148,40 +148,59 @@ Therefore, in the radiative case only the temperature is equilibriated, but in t
 Additionally, for the motions of a fluid to be adiabatic, it is assumed that it has a constant entropy gradient.
 If a region was radiative but slowly becomes adiabatic, it must be the case that the entropy gradient also equilibriates as the region forms.
 
-Using Equation \ref{eq:dr_dm}$-$\ref{eq:dT_dm} we can describe stellar evolution in 1-D.
+Stellar modelling is also concerned with the evolution of the chemical composition of the star.
+The chemical composition in a star can be described by the both the nuclear reactions that occur to change the composition and the motions to mix the composition.
+The following follows the lecture content of \cite{herwigASTR5012023} and description by \cite{langerEvolutionMassiveStars1985}.
+
+The mass fraction of an individual isotope is given as $X_i$ where the sum of all isotopes $\sum_i X_i = 1$, and is related to the mole fraction $Y=X/A$ where $A$ is the atomic mass of the isotope.
+The energy generation of a star comes from the nuclear reactions that occur in the star and can be described by
+\begin{equation}\label{eq:dX_dt_burn}
+    \frac{d\mathbf{X}_j}{dt}\Bigg|_{\mathrm{burn}} = \hat{F}_j \cdot \mathbf{X}_j
+\end{equation}
+where $\mathbf{X}_j$ is the vector of mass fractions at some position $j$ and $\hat{F}_j$ are the nuclear reactions that the isotopes undergo.
+These reactions are typically written in number density as opposed to mass fraction
+which is given by $N_i = Y_i \rho N_A$ where $N_A$ is the Avogadro number and $Y_i = X_i / A_i$ is the mole fraction and $A_i$ is the mass number.
+\begin{equation}
+    \frac{dN_i}{dt} = N_l N_k \langle\sigma v\rangle_{lk} - N_i N_j \langle\sigma v\rangle_{ij} + \ldots + N_n \lambda_{n} - N_p \lambda_{p}
+\end{equation}
+where $\langle \sigma v \rangle_{ij}$ is the average of the product of the cross section and relative velocities in the centre of mass frame and $\lambda$ is rate of $\beta$ decays.
+
+The mixing of isotopes in the star is described by the diffusion equation:
+\begin{equation}\label{eq:dX_dm}
+    \frac{d X_i}{dt}\Bigg|_{\mathrm{mix}} = \frac{\partial}{\partial m}\Biggl[(4 \pi r^2 \rho)^2 D \frac{d X_i}{dm} \Biggr]
+\end{equation}
+where $X_i$ is the mass fraction of a particular isotope.
 
 \subsection{Mixing Length Theory Approximation}
 
-Convectively unstable regions cannot be modelled accurately in 1-D because these regions involve the transport of fluid elements that are 3-D in shape and move in ways that are not wholly radial.
-Instead in 1-D the bulk properties of these fluids are calculated to determine at any given position what the average is.
+\cite{prandtl7BerichtUber1925} was first to describe the turbulent flow of water through a channel by considering a characteristic length scale the eddies would travel before mixing with their surroundings.
+Following his insight, \cite{bohm-vitenseUberWasserstoffkonvektionszoneSternen1958} developed the first stellar model using the idea of a characteristic length scale to describe the convective motions of the Sun.
 
-Imagine a scenario where you have a convective unstable region where you have balls of fluid moving up and down.
-Eventually, these balls will mix with their surroundings as they equilibriate.
-Let us say that the distance they travel before mixing is given by a "mixing length" $\ell$. 
+Turbulent motions are complex 3-D flows involving eddies of different shapes, velocities, and distances they travel before mixing with their environment.
+Rather than describing the flow of every individual fluid element, instead consider that on average, each fluid element travels a distance $\ell$ before mixing with its surroundings.
+In addition to this, assume that the average size of the fluid elements is equal to this travel distance $\ell$.
 This is the mixing length theory (MLT) approximation.
-In addition to $\ell$, these balls of fluid also have other average properties such as their velocity $\bar{v}$ and therefore an average timescale they travel over before they mix $\tau=\ell/\bar{v}$ \cite{kippenhahnStellarStructureEvolution2013,coxPrinciplesStellarStructure1968}.
-This process is described by Equation \ref{eq:nabla_ad} and is demonstrated by \cite{joyceReviewMixingLength2023}.
+In addition to $\ell$, these balls of fluid also have other average properties such as their velocity $\bar{v}$ and therefore an average timescale they travel for before mixing with their surroundings $\tau=\ell/\bar{v}$ \citep{kippenhahnStellarStructureEvolution2013,coxPrinciplesStellarStructure1968,joyceReviewMixingLength2023}.
+In stars, the mixing length is given by:
+\begin{equation}
+\ell_{\mathrm{MLT}} = \alpha_{\text{MLT}} H_P,
+\end{equation}
+where $H_P$ is the pressure scale height and $\alpha_{\mathrm{ MLT}}$ is a dimensionless free parameter and can be chosen to match stellar evolution tracks to empirical data \citep{joyceReviewMixingLength2023}.
 
-Mixing length theory assumes that this mixing process is a diffusive process \cite{joyceReviewMixingLength2023}, which means that we can describe the motions with the diffusive coefficient
+\cite{prandtl7BerichtUber1925} used this assumption to describe the turbulent flows by a diffusion process, and this description of the motion is still the understood physical picture that MLT relies on \citep{joyceReviewMixingLength2023}.
+In the MLT approximation, the motion of fluid elements is characterized by a diffusion coefficient:
 \begin{equation}\label{eq:d_mlt}
     D_{\mathrm{MLT}} = \frac{1}{3}v_{\mathrm{conv}}\ell_{\mathrm{MLT}}
 \end{equation}
 where $v_{\mathrm{conv}}$ are the average convective velocities of the fluid elements and $\ell_{\mathrm{MLT}}$ is the mixing length.
-This would have an associated mixing timescale as described by \cite{herwigCONVECTIVEREACTIVEPROTON2011} of
+The timescale can also be re-written in terms of this diffusion coefficient and the mixing length \citep{herwigCONVECTIVEREACTIVEPROTON2011}.
 \begin{equation}\label{eq:t_mlt}
     \tau_{\mathrm{MLT}} = \ell_{\mathrm{MLT}}^2/D_{\mathrm{MLT}}
 \end{equation}
-The mixing length itself is given by
-\begin{equation}
-\ell_{\mathrm{MLT}} = \alpha_{\text{MLT}} H_P,
-\end{equation}
-where $H_P$ is the pressure scale height and $\alpha_{\mathrm{ MLT}}$ is a dimensionless free parameter and can be chosen to match stellar evolution tracks to empirical data \cite{joyceReviewMixingLength2023}.
-The choice for the mixing length to be according to the pressure scale height is because the fluid element is in hydrostatic equilibrium and so the buoyancy force must be driving its motions.
-In addition to $\ell_{\mathrm{MLT}}$ being the average distance fluid elements travel, it is also understood to be the size of the fluid elements \cite{coxPrinciplesStellarStructure1968}.
 
 \subsection{Stellar Evolution with \texttt{MESA}}
 
-The \texttt{Modules for Experiments in Stellar Astrophysics} (\texttt{MESA}) code is an open-source 1-D stellar evolution framework used in stellar astrophysics that allows the computation of the structure and evolution of stars from pre-main-sequence to advanced stages of burning up to core-collapse \cite{paxtonMODULESEXPERIMENTSLAR2010}.
+The \texttt{Modules for Experiments in Stellar Astrophysics} (\texttt{MESA}) code is an open-source 1-D stellar evolution framework used in stellar astrophysics that allows the computation of the structure and evolution of stars from pre-main-sequence to advanced stages of burning up to core-collapse \citep{paxtonMODULESEXPERIMENTSLAR2010}.
 One of \texttt{MESA}’s distinguishing features is its implicit, fully coupled solution of the structure, nuclear burning, and mixing equations. 
 The code employs a Newton-Raphson method to simultaneously solve the coupled set of equations of 1-D stellar structure, diffusion of species, and nuclear reactions.
 The coupled equations allow \texttt{MESA} to resolve multi-timescale problems.
@@ -197,7 +216,7 @@ However, solving large coupled equations takes a lot of computational power, and
 \subsection{Post-Processing with \texttt{mppnp}}
 
 To obtain detailed nucleosynthesis predictions, post-processing stellar models is needed.
-\texttt{multi-zone post-processing network parallel} (\texttt{mppnp}) is a code created by the \texttt{NuGrid} collaboration\footnote{The NuGrid collaboration and its code can be found at https://nugrid.github.io/.} can be used for this.
+One such code is \texttt{multi-zone post-processing network parallel} (\texttt{mppnp}) created by the \texttt{NuGrid} collaboration\footnote{Details about the NuGrid collaboration and its code can be found at https://nugrid.github.io/.}.
 \texttt{mppnp} is a parallelized multi-zone code that takes in already evolved stellar structure and species from \texttt{MESA} and calculates the full nucleosynthesis of thousands of isotopes and tens of thousands of reactions.
 
 Unlike the coupled equations of \texttt{MESA}, \texttt{mppnp} adopts an operator-split approach where it solves nuclear reactions and mixing separately in alternating steps.
@@ -215,8 +234,13 @@ Therefore, it is important when calculating the results of a convective-reactive
 
 \begin{figure}[!htbp]
 \includegraphics[width=\textwidth]{chapters/1/figures/time_resolution [temp].png}
-\caption{TEMP CAPTION
+\caption{Evolution of the mass fraction of $^{12}\mathrm{C}$, $^{16}\mathrm{O}$, $^{20}\mathrm{Ne}$, and $^{35}\mathrm{Cl}$ in a convective-reactive environment at the same simulation time with different timesteps. The solid line corresponds to a simulation with timestep of $\Delta t = 0.5 \mathrm{s}$, the dashed line corresponds to $\Delta t = 0.1 \mathrm{s}$, and the dotted line corresponds to $\Delta t = 0.01 \mathrm{s}$. 
 \label{fig:time_resolution}}
 \end{figure}
 
-As shown in Figure \ref{fig:time_resolution}, increasing the timestep changes the mass fraction of C-12, O-16, Ne-20, Cl-35.
+As shown in Figure \ref{fig:time_resolution}, there is a noticable change in the final mass fraction of the isotopic abundances.
+While these lighter isotopes $^{12}\mathrm{C}$, $^{16}\mathrm{O}$, and $^{20}\mathrm{Ne}$ are not drastically changed, the final production of heavier isotopes such as the $p$-nuclei can be orders of magnitude.
+
+In addition to the importance for timescale resolution, there is also spatial resolution.
+Changing the number of mass zones in the simulation can change the final result as the mixing of the isotopes depends on the number of fluid elements that can be resolved.
+By ensuring that the number of mass zones is high enough, the mixing can be resolved to a point where the final result is not changed by the number of mass zones.
