@@ -1,0 +1,44 @@
+\documentclass[12pt,oneside]{book}
+\input{macros/style}	
+\input{macros/use_packages}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{tipa}
+\usepackage{accents} 
+\usepackage{newunicodechar}
+
+\newunicodechar{ʷ}{\textsuperscript{w}}
+\newunicodechar{ə}{\textschwa}
+
+\setlength{\headheight}{14.5pt}
+
+% Falk comments
+\newcommand{\fhcom}[1]{{\color{magenta}[\emph{FH: #1}]}}
+\newcommand{\fhtxt}[1]{{\color{magenta}[FH: #1]}}
+
+% Iris comments
+\newcommand{\idcom}[1]{{\color{blue}[\emph{ID: #1}]}}
+\newcommand{\idtxt}[1]{{\color{blue}[ID: #1]}}
+
+
+\begin{document}
+
+\MastersThesis
+\input{frontmatter/setup} 
+
+\newpage
+
+	\include{chapters/1/chapter_intro}
+	\include{chapters/2/chapter_paper}
+	\include{chapters/3/chapter_further}
+	\include{chapters/4/chapter_conclusion}	
+	
+	\TOCadd{Bibliography}
+    \bibliographystyle{apalike}
+	\bibliography{UvicBiblio}
+	
+	%\appendix
+	%\include{chapters/appendix/chapter_app}
+
+\end{document}

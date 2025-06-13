@@ -1,0 +1,580 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./ThesisMain.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/bk12.clo))
+(./macros/style.tex
+(/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tocloft/tocloft.sty))
+(./macros/use_packages.tex
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/dcolumn.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def)))))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/afterpage.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/cases/cases.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/carlisle/slashed.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/xspace.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/textcase/textcase.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/moreverb/moreverb.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/verbatim.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/wasysym/wasysym.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/boxedminipage/boxedminipage.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/dvips/rotate.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/layout.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/changebar/changebar.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pdfpages/pppdftex.def))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/collectbox/collectbox.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/tc-pdftex.def))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/varwidth/varwidth.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/notoccite/notoccite.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/varioref.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/sectsty/sectsty.sty
+
+LaTeX Warning: Command \underbar  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \underline  has changed.
+               Check if current package is valid.
+
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+)))) (/usr/local/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tipa/tipa.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tipa/t3enc.def)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/accents/accents.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/newunicodechar/newunicodechar.sty
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+ (./ThesisMain.aux (./chapters/1/chapter_intro.aux)
+(./chapters/3/chapter_further.aux) (./chapters/4/chapter_conclusion.aux))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tipa/t3cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./ThesisMain.out) (./ThesisMain.out) (./macros/masterssetup.tex)
+(./frontmatter/setup.tex (./frontmatter/titlepage.tex)
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
+ocal/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/loc
+al/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+(./frontmatter/committee.tex
+Underfull \hbox (badness 10000) in paragraph at lines 16--19
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--19
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--19
+
+)
+[2] (./frontmatter/abstract.tex
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/wasysym/uwasy.fd))
+[3] (./ThesisMain.toc
+[4])
+[5] (./ThesisMain.lot)
+[6] (./ThesisMain.lof
+
+LaTeX Warning: Citation `prialnikIntroductionTheoryStellar2009' on page vii und
+efined on input line 2.
+
+
+LaTeX Warning: Citation `ritterNuGridStellarData2018' on page vii undefined on 
+input line 3.
+
+
+LaTeX Warning: Citation `ritterNuGridStellarData2018' on page vii undefined on 
+input line 5.
+
+
+LaTeX Warning: Citation `jonesIdealizedHydrodynamicSimulations2017' on page vii
+ undefined on input line 6.
+
+) (./frontmatter/coauthorship.tex
+[7]) (./frontmatter/acknowledgements.tex
+[8]) (./frontmatter/dedications.tex
+[9])
+[10]) (./chapters/1/chapter_intro.tex
+Chapter 1.
+(./chapters/1/1_sec_motivation.tex
+
+LaTeX Warning: Citation `meakinTurbulentConvectionStellar2007' on page 1 undefi
+ned on input line 5.
+
+
+LaTeX Warning: Citation `jonesIdealizedHydrodynamicSimulations2017' on page 1 u
+ndefined on input line 5.
+
+
+LaTeX Warning: Citation `andrassy3DHydrodynamicSimulations2020' on page 1 undef
+ined on input line 5.
+
+
+LaTeX Warning: Citation `bazanConvectionNucleosynthesisCore1994' on page 1 unde
+fined on input line 6.
+
+
+LaTeX Warning: Citation `rizzutiShellMergersLate2024a' on page 1 undefined on i
+nput line 6.
+
+) (./chapters/1/2_sec_nucleosynthesis.tex
+
+LaTeX Warning: Citation `burbidgeSynthesisElementsStars1957' on page 1 undefine
+d on input line 4.
+
+
+[1]
+[2]
+[3]
+[4]) (./chapters/1/3_sec_massive_star.tex
+
+LaTeX Warning: Citation `prialnikIntroductionTheoryStellar2009' on page 5 undef
+ined on input line 11.
+
+
+LaTeX Warning: Citation `prialnikIntroductionTheoryStellar2009' on page 5 undef
+ined on input line 11.
+
+
+LaTeX Warning: Citation `prialnikIntroductionTheoryStellar2009' on page 5 undef
+ined on input line 15.
+
+
+LaTeX Warning: Citation `ritterNuGridStellarData2018' on page 5 undefined on in
+put line 18.
+
+
+LaTeX Warning: Citation `rauscherNucleosynthesisMassiveStars2002' on page 5 und
+efined on input line 22.
+
+
+LaTeX Warning: Citation `ritterConvectivereactiveNucleosynthesisSc2018' on page
+ 5 undefined on input line 22.
+
+
+LaTeX Warning: Citation `collinsPropertiesConvectiveOxygen2018' on page 5 undef
+ined on input line 22.
+
+
+LaTeX Warning: Citation `robertiGprocessNucleosynthesisCorecollapse2023' on pag
+e 5 undefined on input line 22.
+
+
+LaTeX Warning: Citation `robertiOccurrenceImpactCarbonOxygen2025' on page 5 und
+efined on input line 22.
+
+
+LaTeX Warning: Citation `ritterNuGridStellarData2018' on page 5 undefined on in
+put line 28.
+
+
+LaTeX Warning: Citation `ritterNuGridStellarData2018' on page 5 undefined on in
+put line 28.
+
+
+LaTeX Warning: Citation `ritterConvectivereactiveNucleosynthesisSc2018' on page
+ 5 undefined on input line 32.
+
+
+LaTeX Warning: Citation `robertiOccurrenceImpactCarbonOxygen2025' on page 5 und
+efined on input line 32.
+
+
+LaTeX Warning: Citation `rauscherNucleosynthesisMassiveStars2002' on page 5 und
+efined on input line 33.
+
+
+LaTeX Warning: Citation `ritterConvectivereactiveNucleosynthesisSc2018' on page
+ 5 undefined on input line 33.
+
+
+LaTeX Warning: Citation `robertiGprocessNucleosynthesisCorecollapse2023' on pag
+e 5 undefined on input line 33.
+
+
+LaTeX Warning: Citation `robertiGprocessNucleosynthesisCorecollapse2024b' on pa
+ge 5 undefined on input line 35.
+
+
+[5]
+[6 <./chapters/1/figures/Prialnik_Fig9.19.png>]
+[7 <./chapters/1/figures/Kippenhahn_Ritter+2018.pdf>]
+
+LaTeX Warning: Citation `mullerStatusMultiDimensionalCoreCollapse2016' on page 
+8 undefined on input line 37.
+
+
+LaTeX Warning: Citation `collinsPropertiesConvectiveOxygen2018' on page 8 undef
+ined on input line 37.
+
+
+LaTeX Warning: Citation `mullerHydrodynamicsCorecollapseSupernovae2020' on page
+ 8 undefined on input line 37.
+
+
+LaTeX Warning: Citation `yadavLargescaleMixingViolent2020a' on page 8 undefined
+ on input line 37.
+
+
+LaTeX Warning: Citation `andrassy3DHydrodynamicSimulations2020' on page 8 undef
+ined on input line 37.
+
+
+LaTeX Warning: Citation `collinsPropertiesConvectiveOxygen2018' on page 8 undef
+ined on input line 38.
+
+) (./chapters/1/4_sec_stellar_modelling.tex
+
+LaTeX Warning: Citation `kippenhahnStellarStructureEvolution2013' on page 8 und
+efined on input line 4.
+
+
+LaTeX Warning: Citation `rizzutiStellarEvolutionConvection2024' on page 8 undef
+ined on input line 25.
+
+
+[8]
+[9]
+
+LaTeX Warning: Citation `kippenhahnStellarStructureEvolution2013' on page 10 un
+defined on input line 70.
+
+
+LaTeX Warning: Citation `kippenhahnStellarStructureEvolution2013' on page 10 un
+defined on input line 88.
+
+
+[10]
+
+LaTeX Warning: Citation `kippenhahnStellarStructureEvolution2013' on page 11 un
+defined on input line 132.
+
+
+[11]
+
+LaTeX Warning: Citation `kippenhahnStellarStructureEvolution2013' on page 12 un
+defined on input line 162.
+
+
+LaTeX Warning: Citation `coxPrinciplesStellarStructure1968' on page 12 undefine
+d on input line 162.
+
+
+LaTeX Warning: Citation `joyceReviewMixingLength2023' on page 12 undefined on i
+nput line 163.
+
+
+LaTeX Warning: Citation `joyceReviewMixingLength2023' on page 12 undefined on i
+nput line 165.
+
+
+LaTeX Warning: Citation `herwigCONVECTIVEREACTIVEPROTON2011' on page 12 undefin
+ed on input line 170.
+
+
+[12]
+
+LaTeX Warning: Citation `joyceReviewMixingLength2023' on page 13 undefined on i
+nput line 178.
+
+
+LaTeX Warning: Citation `coxPrinciplesStellarStructure1968' on page 13 undefine
+d on input line 180.
+
+
+LaTeX Warning: Citation `paxtonMODULESEXPERIMENTSLAR2010' on page 13 undefined 
+on input line 184.
+
+
+LaTeX Warning: Citation `paxtonMODULESEXPERIMENTSLAR2010' on page 13 undefined 
+on input line 193.
+
+
+[13]) (./chapters/1/5_sec_1d3dmodelling.tex
+[14]
+[15 <./chapters/1/figures/time_resolution [temp].png>]
+
+LaTeX Warning: Citation `paxtonMODULESEXPERIMENTSLAR2010' on page 16 undefined 
+on input line 18.
+
+
+LaTeX Warning: Citation `renziniEmbarrassmentsCurrentTreatments1987' on page 16
+ undefined on input line 20.
+
+
+LaTeX Warning: Citation `ritterNuGridStellarData2018' on page 16 undefined on i
+nput line 29.
+
+
+LaTeX Warning: Citation `ritterNuGridStellarData2018' on page 16 undefined on i
+nput line 29.
+
+
+LaTeX Warning: Citation `bazanConvectionNucleosynthesisCore1994' on page 16 und
+efined on input line 32.
+
+
+LaTeX Warning: Citation `ritterNuGridStellarData2018' on page 16 undefined on i
+nput line 33.
+
+
+LaTeX Warning: Citation `bazanConvectionNucleosynthesisCore1994' on page 16 und
+efined on input line 42.
+
+
+LaTeX Warning: Citation `meakinActiveCarbonOxygen2006' on page 16 undefined on 
+input line 44.
+
+
+[16]
+[17 <./chapters/1/figures/Oshell_ell_MLT.pdf>]
+
+LaTeX Warning: Citation `meakinTurbulentConvectionStellar2007' on page 18 undef
+ined on input line 50.
+
+
+LaTeX Warning: Citation `jonesIdealizedHydrodynamicSimulations2017' on page 18 
+undefined on input line 54.
+
+
+LaTeX Warning: Citation `jonesIdealizedHydrodynamicSimulations2017' on page 18 
+undefined on input line 58.
+
+
+LaTeX Warning: Citation `jonesIdealizedHydrodynamicSimulations2017' on page 18 
+undefined on input line 58.
+
+
+LaTeX Warning: Citation `meakinTurbulentConvectionStellar2007' on page 18 undef
+ined on input line 66.
+
+
+LaTeX Warning: Citation `arnett3DSimulationsMLT2019' on page 18 undefined on in
+put line 69.
+
+
+LaTeX Warning: Citation `yadavLargescaleMixingViolent2020a' on page 18 undefine
+d on input line 71.
+
+
+LaTeX Warning: Citation `andrassy3DHydrodynamicSimulations2020' on page 18 unde
+fined on input line 74.
+
+
+LaTeX Warning: Citation `herwigGLOBALNONSPHERICALOSCILLATIONS2014' on page 18 u
+ndefined on input line 77.
+
+
+[18]
+[19 <./chapters/1/figures/Jones+17_Fig21.png>]
+
+LaTeX Warning: Citation `rizzutiShellMergersLate2024a' on page 20 undefined on 
+input line 80.
+
+
+LaTeX Warning: Citation `jonesIdealizedHydrodynamicSimulations2017' on page 20 
+undefined on input line 82.
+
+
+LaTeX Warning: Citation `meakinTurbulentConvectionStellar2007' on page 20 undef
+ined on input line 92.
+
+
+LaTeX Warning: Citation `jonesIdealizedHydrodynamicSimulations2017' on page 20 
+undefined on input line 92.
+
+
+LaTeX Warning: Citation `jonesIdealizedHydrodynamicSimulations2017' on page 20 
+undefined on input line 93.
+
+
+LaTeX Warning: Citation `rizzutiShellMergersLate2024a' on page 20 undefined on 
+input line 93.
+
+
+LaTeX Warning: Citation `andrassy3DHydrodynamicSimulations2020' on page 20 unde
+fined on input line 94.
+
+
+LaTeX Warning: Citation `andrassy3DHydrodynamicSimulations2020' on page 20 unde
+fined on input line 95.
+
+
+LaTeX Warning: Citation `jonesIdealizedHydrodynamicSimulations2017' on page 20 
+undefined on input line 98.
+
+
+LaTeX Warning: Citation `andrassy3DHydrodynamicSimulations2020' on page 20 unde
+fined on input line 102.
+
+
+[20])
+
+LaTeX Warning: Reference `sec:thepaper' on page 21 undefined on input line 13.
+
+)
+[21] (./chapters/3/chapter_further.tex
+Chapter 2.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+(./chapters/3/1_sec_lightoddZ.tex
+
+LaTeX Warning: Citation `ritterConvectivereactiveNucleosynthesisSc2018' on page
+ 22 undefined on input line 4.
+
+
+LaTeX Warning: Citation `robertiOccurrenceImpactCarbonOxygen2025' on page 22 un
+defined on input line 4.
+
+
+LaTeX Warning: Citation `masseronPhosphorusrichStarsUnusual2020' on page 22 und
+efined on input line 5.
+
+
+LaTeX Warning: Citation `braunerUnveilingChemicalFingerprint2023' on page 22 un
+defined on input line 5.
+
+
+LaTeX Warning: Citation `braunerUnveilingChemicalFingerprint2024' on page 22 un
+defined on input line 5.
+
+
+LaTeX Warning: Citation `frankRadiogenicHeatingEvolution2014' on page 22 undefi
+ned on input line 16.
+
+
+LaTeX Warning: Citation `oneillEffectGalacticChemical2020' on page 22 undefined
+ on input line 16.
+
+) (./chapters/3/2_sec_rprocess.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+[22]))
+[23 <./chapters/3/figures/in_timescale.png>]
+[24 <./chapters/3/figures/pairwise.png>]
+[25 <./chapters/3/figures/frac_exchanging.png>]
+(./chapters/4/chapter_conclusion.tex
+Chapter 3.
+)
+[26] (./ThesisMain.bbl) (./ThesisMain.aux (./chapters/1/chapter_intro.aux)
+(./chapters/3/chapter_further.aux) (./chapters/4/chapter_conclusion.aux))
+
+LaTeX Warning: There were undefined references.
+
+ )
+(see the transcript file for additional information)</usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/font
+s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/
+fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
+pe1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type
+1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
+public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pu
+blic/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publ
+ic/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public
+/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/c
+m-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-
+super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-su
+per/sftt1200.pfb>
+Output written on ThesisMain.pdf (36 pages, 7629422 bytes).
+Transcript written on ThesisMain.log.

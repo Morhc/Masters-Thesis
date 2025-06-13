@@ -1,0 +1,62 @@
+\contentsline {chapter}{Supervisory Committee}{ii}{section*.1}%
+\contentsline {chapter}{Abstract}{iii}{section*.2}%
+\contentsline {chapter}{Table of Contents}{iv}{section*.4}%
+\contentsline {chapter}{List of Tables}{vi}{section*.5}%
+\contentsline {chapter}{List of Figures}{vii}{section*.6}%
+\contentsline {chapter}{Acknowledgements}{xiii}{section*.7}%
+\contentsline {chapter}{Dedication}{xiv}{section*.9}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Nucleosynthesis}{1}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Hydrostatic Burning Phases}{1}{subsection.1.2.1}%
+\contentsline {subsubsection}{H-burning}{2}{section*.11}%
+\contentsline {subsubsection}{He-burning}{2}{section*.12}%
+\contentsline {subsubsection}{C-burning}{2}{section*.13}%
+\contentsline {subsubsection}{Ne-burning}{2}{section*.14}%
+\contentsline {subsubsection}{O-burning}{3}{section*.15}%
+\contentsline {subsubsection}{Si-burning}{3}{section*.16}%
+\contentsline {subsection}{\numberline {1.2.2}Neutron Capture Processes}{3}{subsection.1.2.2}%
+\contentsline {subsubsection}{$s$-Process}{3}{section*.17}%
+\contentsline {subsubsection}{$i$-Process}{3}{section*.18}%
+\contentsline {subsubsection}{$r$-Process}{4}{section*.19}%
+\contentsline {subsection}{\numberline {1.2.3}$p$-Nuclei Nucleosynthesis}{4}{subsection.1.2.3}%
+\contentsline {subsubsection}{$rp$-Process}{4}{section*.20}%
+\contentsline {subsubsection}{$\nu p$-Process}{4}{section*.21}%
+\contentsline {subsubsection}{$\gamma $-process}{4}{section*.22}%
+\contentsline {subsubsection}{Pre-Explosive $\gamma $-process}{4}{section*.23}%
+\contentsline {subsubsection}{Explosive $\gamma $-process}{4}{section*.24}%
+\contentsline {subsection}{\numberline {1.2.4}Convective-Reactive Nucleosynthesis}{5}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Massive Star Evolution}{5}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}O-C Shell Mergers}{7}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.4}1-D Stellar Modelling}{8}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Mixing Length Theory Approximation}{12}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Stellar Evolution with \texttt {MESA}}{13}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Post-Processing with \texttt {mppnp}}{14}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}3-D Macrophysics}{16}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Insufficiencies of MLT}{16}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}3-D Simulations of Convective O-Shell Burning and C-Shell Entrainment}{18}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}1-D Implementation of 3-D Hydrodynamics}{20}{subsection.1.5.3}%
+\contentsline {section}{\numberline {1.6}Thesis Outline}{22}{section.1.6}%
+\contentsline {subsubsection}{Chapter 2: Impact of 3D-macrophysics and nuclear physics on p-nuclei nucleosynthesis in O-C shell mergers}{22}{section*.30}%
+\contentsline {subsubsection}{Chapter 3: Additional Work}{22}{section*.31}%
+\contentsline {chapter}{\numberline {2}Impact of 3D-macrophysics and nuclear physics on p-nuclei nucleosynthesis in O–C shell mergers}{23}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Abstract}{23}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Introduction}{24}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Methodology}{27}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}1-D implementation of 3-D macrophysics}{29}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Determining nuclear physics impact}{33}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Correlations of nuclear reaction rates}{34}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Results}{37}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Convective-reactive production of the p-nuclei}{37}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Mixing scenario 1: Convective downturns}{41}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Mixing scenario 2: Varying the ingestion rate}{43}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Mixing scenario 3: Convective dips from GOSH-like feedback and a partial merger}{48}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Nuclear physics impact and mixing dependencies}{50}{subsection.2.5.5}%
+\contentsline {section}{\numberline {2.6}Discussion}{54}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Conclusion}{66}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Investigations Beyond the $p$-Nuclei}{68}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Light Odd-Z Isotope Production}{68}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The Relevance of K}{68}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Advective-Reactive $r$-process}{68}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Summary and Conclusion}{72}{chapter.4}%
+\contentsline {chapter}{Bibliography}{73}{section*.66}%
