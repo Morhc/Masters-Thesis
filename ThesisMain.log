@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  12 JUN 2025 19:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 JUN 2025 00:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -775,27 +775,11 @@ Package hyperref Info: Link coloring ON on input line 25.
 \@outlinefile=\write5
 \openout5 = `ThesisMain.out'.
 
- (./macros/masterssetup.tex) (./frontmatter/setup.tex (./frontmatter/titlepage.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 25.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 25.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/wasysym/uwasy.fd
-File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
-))
+ (./macros/masterssetup.tex) (./frontmatter/setup.tex (./frontmatter/titlepage.tex) (./frontmatter/committee.tex
 
 [1
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./frontmatter/committee.tex
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 Underfull \hbox (badness 10000) in paragraph at lines 16--19
 
  []
@@ -812,7 +796,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--19
 
 )
 
-[2] (./frontmatter/abstract.tex)
+[2] (./frontmatter/abstract.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 6.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 6.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+))
 
 [3] (./ThesisMain.toc
 
@@ -855,8 +855,13 @@ Overfull \hbox (3.46317pt too wide) in paragraph at lines 4--4
  (./frontmatter/acknowledgements.tex
 
 [12]
-Overfull \hbox (3.07951pt too wide) in paragraph at lines 10--11
-[]\T1/cmr/m/n/12 for your sup-port and guid-ance on how to be a re-searcher. 
+Underfull \hbox (badness 10000) in paragraph at lines 27--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--30
+
  []
 
 ) (./frontmatter/dedications.tex
@@ -868,38 +873,37 @@ Overfull \hbox (3.07951pt too wide) in paragraph at lines 10--11
 
  (./chapters/1/chapter_intro.tex
 Chapter 1.
-(./chapters/1/1_sec_motivation.tex) (./chapters/1/2_sec_nucleosynthesis.tex
+(./chapters/1/1_sec_motivation.tex
 
 [1
 
 
-]
+]) (./chapters/1/2_sec_nucleosynthesis.tex
 
 [2]
 
 [3]
 
-[4]) (./chapters/1/3_sec_massive_star.tex
-<chapters/1/figures/Prialnik_Fig9.19.png, id=465, 507.8975pt x 353.32pt>
+[4]
+
+[5]) (./chapters/1/3_sec_massive_star.tex
+<chapters/1/figures/Prialnik_Fig9.19.png, id=508, 507.8975pt x 353.32pt>
 File: chapters/1/figures/Prialnik_Fig9.19.png Graphic file (type png)
 <use chapters/1/figures/Prialnik_Fig9.19.png>
 Package pdftex.def Info: chapters/1/figures/Prialnik_Fig9.19.png  used on input line 9.
 (pdftex.def)             Requested size: 469.75502pt x 326.79971pt.
-
-
-[5]
-
-[6 <./chapters/1/figures/Prialnik_Fig9.19.png>]
-<chapters/1/figures/Kippenhahn_Ritter+2018.pdf, id=500, 993.45195pt x 848.20386pt>
+<chapters/1/figures/Kippenhahn_Ritter+2018.pdf, id=530, 993.45195pt x 848.20386pt>
 File: chapters/1/figures/Kippenhahn_Ritter+2018.pdf Graphic file (type pdf)
 <use chapters/1/figures/Kippenhahn_Ritter+2018.pdf>
 Package pdftex.def Info: chapters/1/figures/Kippenhahn_Ritter+2018.pdf  used on input line 27.
 (pdftex.def)             Requested size: 469.75502pt x 401.07613pt.
 
 
-[7 <./chapters/1/figures/Kippenhahn_Ritter+2018.pdf>]) (./chapters/1/4_sec_stellar_modelling.tex
+[6]
 
-[8]
+[7 <./chapters/1/figures/Prialnik_Fig9.19.png>]
+
+[8 <./chapters/1/figures/Kippenhahn_Ritter+2018.pdf>]) (./chapters/1/4_sec_stellar_modelling.tex
 
 [9]
 
@@ -908,82 +912,82 @@ Package pdftex.def Info: chapters/1/figures/Kippenhahn_Ritter+2018.pdf  used on 
 [11]
 
 [12]
+
+[13]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 182.
 
 
-[13]
-<chapters/1/figures/time_resolution [temp].png, id=681, 814.04124pt x 605.26125pt>
+[14]
+<chapters/1/figures/time_resolution [temp].png, id=713, 814.04124pt x 605.26125pt>
 File: chapters/1/figures/time_resolution [temp].png Graphic file (type png)
 <use chapters/1/figures/time_resolution [temp].png>
 Package pdftex.def Info: chapters/1/figures/time_resolution [temp].png  used on input line 217.
 (pdftex.def)             Requested size: 469.75502pt x 349.27853pt.
 ) (./chapters/1/5_sec_1d3dmodelling.tex
 
-[14]
+[15]
 
-[15 <./chapters/1/figures/time_resolution [temp].png>]
-<chapters/1/figures/Oshell_ell_MLT.pdf, id=703, 462.52798pt x 346.89601pt>
+[16 <./chapters/1/figures/time_resolution [temp].png>]
+<chapters/1/figures/Oshell_ell_MLT.pdf, id=735, 462.52798pt x 346.89601pt>
 File: chapters/1/figures/Oshell_ell_MLT.pdf Graphic file (type pdf)
 <use chapters/1/figures/Oshell_ell_MLT.pdf>
 Package pdftex.def Info: chapters/1/figures/Oshell_ell_MLT.pdf  used on input line 27.
 (pdftex.def)             Requested size: 469.75502pt x 352.33656pt.
 
 
-[16]
+[17]
 
-[17 <./chapters/1/figures/Oshell_ell_MLT.pdf>]
-<chapters/1/figures/Jones+17_Fig21.png, id=782, 1019.81pt x 764.8575pt>
+[18 <./chapters/1/figures/Oshell_ell_MLT.pdf>]
+<chapters/1/figures/Jones+17_Fig21.png, id=815, 1019.81pt x 764.8575pt>
 File: chapters/1/figures/Jones+17_Fig21.png Graphic file (type png)
 <use chapters/1/figures/Jones+17_Fig21.png>
 Package pdftex.def Info: chapters/1/figures/Jones+17_Fig21.png  used on input line 56.
 (pdftex.def)             Requested size: 469.75502pt x 352.31721pt.
 
 
-[18]
+[19]
 
-[19 <./chapters/1/figures/Jones+17_Fig21.png>]
+[20 <./chapters/1/figures/Jones+17_Fig21.png>]
 
-[20])
-
-[21])
+[21]))
 
 [22]
+
+[23]
 \openout2 = `chapters/2/chapter_paper.aux'.
 
  (./chapters/2/chapter_paper.tex
 Chapter 2.
 \savedunitlength=\skip124
 (./chapters/2/1_sec_paper_methods.tex
-
-[23
-
-
-
-
-]
 Underfull \hbox (badness 10000) in paragraph at lines 20--20
 [][]$\T1/cmr/m/n/10 ,$[][]$,$[][]$,$[][]$,$[][]$,$[][]$,$[][]$,$[][]$,$[][]$,$[][]$,$[][]$,$[][]$,$[][]$,$[][]$,$[][]$,$[]\OT1/cmr/m/n/10 W$\T1/cmr/m/n/10 ,$[][]$,
  []
 
 
 
-[24]
+[24
+
+
+
+
+]
 
 [25]
 
 [26]
-<chapters/2/figures/Kippenhahn_Ritter+2018.pdf, id=989, 993.45195pt x 848.20386pt>
+
+[27]
+<chapters/2/figures/Kippenhahn_Ritter+2018.pdf, id=1015, 993.45195pt x 848.20386pt>
 File: chapters/2/figures/Kippenhahn_Ritter+2018.pdf Graphic file (type pdf)
 <use chapters/2/figures/Kippenhahn_Ritter+2018.pdf>
 Package pdftex.def Info: chapters/2/figures/Kippenhahn_Ritter+2018.pdf  used on input line 89.
 (pdftex.def)             Requested size: 469.75502pt x 401.07613pt.
 
 
-[27]
-
 [28 <./chapters/2/figures/Kippenhahn_Ritter+2018.pdf>]
-<chapters/2/figures/Dmlt_forced.pdf, id=1045, 1004.09332pt x 858.63785pt>
+<chapters/2/figures/Dmlt_forced.pdf, id=1067, 1004.09332pt x 858.63785pt>
 File: chapters/2/figures/Dmlt_forced.pdf Graphic file (type pdf)
 <use chapters/2/figures/Dmlt_forced.pdf>
 Package pdftex.def Info: chapters/2/figures/Dmlt_forced.pdf  used on input line 107.
@@ -993,12 +997,12 @@ Package pdftex.def Info: chapters/2/figures/Dmlt_forced.pdf  used on input line 
 [29]
 
 [30 <./chapters/2/figures/Dmlt_forced.pdf>]
-<chapters/2/figures/All_Dconv.pdf, id=1130, 1004.09332pt x 858.21715pt>
+<chapters/2/figures/All_Dconv.pdf, id=1151, 1004.09332pt x 858.21715pt>
 File: chapters/2/figures/All_Dconv.pdf Graphic file (type pdf)
 <use chapters/2/figures/All_Dconv.pdf>
 Package pdftex.def Info: chapters/2/figures/All_Dconv.pdf  used on input line 134.
 (pdftex.def)             Requested size: 469.75502pt x 401.51567pt.
-<chapters/2/figures/Dmlt_partial_gosh.pdf, id=1139, 985.19453pt x 858.63785pt>
+<chapters/2/figures/Dmlt_partial_gosh.pdf, id=1160, 985.19453pt x 858.63785pt>
 File: chapters/2/figures/Dmlt_partial_gosh.pdf Graphic file (type pdf)
 <use chapters/2/figures/Dmlt_partial_gosh.pdf>
 Package pdftex.def Info: chapters/2/figures/Dmlt_partial_gosh.pdf  used on input line 157.
@@ -1010,7 +1014,7 @@ Package pdftex.def Info: chapters/2/figures/Dmlt_partial_gosh.pdf  used on input
 [32 <./chapters/2/figures/All_Dconv.pdf>]
 
 [33 <./chapters/2/figures/Dmlt_partial_gosh.pdf>]
-<chapters/2/figures/correlation_example.pdf, id=1293, 1011.78pt x 867.24pt>
+<chapters/2/figures/correlation_example.pdf, id=1314, 1011.78pt x 867.24pt>
 File: chapters/2/figures/correlation_example.pdf Graphic file (type pdf)
 <use chapters/2/figures/correlation_example.pdf>
 Package pdftex.def Info: chapters/2/figures/correlation_example.pdf  used on input line 183.
@@ -1020,7 +1024,7 @@ Package pdftex.def Info: chapters/2/figures/correlation_example.pdf  used on inp
 [34]
 
 [35 <./chapters/2/figures/correlation_example.pdf>]
-<chapters/2/figures/Se74_example.pdf, id=1376, 1011.78pt x 722.7pt>
+<chapters/2/figures/Se74_example.pdf, id=1397, 1011.78pt x 722.7pt>
 File: chapters/2/figures/Se74_example.pdf Graphic file (type pdf)
 <use chapters/2/figures/Se74_example.pdf>
 Package pdftex.def Info: chapters/2/figures/Se74_example.pdf  used on input line 198.
@@ -1028,7 +1032,7 @@ Package pdftex.def Info: chapters/2/figures/Se74_example.pdf  used on input line
 ) (./chapters/2/2_sec_paper_results.tex
 
 [36 <./chapters/2/figures/Se74_example.pdf>]
-<chapters/2/figures/Temperature_Profile_with_X.pdf, id=1438, 1002.93587pt x 712.48888pt>
+<chapters/2/figures/Temperature_Profile_with_X.pdf, id=1459, 1002.93587pt x 712.48888pt>
 File: chapters/2/figures/Temperature_Profile_with_X.pdf Graphic file (type pdf)
 <use chapters/2/figures/Temperature_Profile_with_X.pdf>
 Package pdftex.def Info: chapters/2/figures/Temperature_Profile_with_X.pdf  used on input line 15.
@@ -1038,12 +1042,12 @@ Package pdftex.def Info: chapters/2/figures/Temperature_Profile_with_X.pdf  used
 [37]
 
 [38 <./chapters/2/figures/Temperature_Profile_with_X.pdf>]
-<chapters/2/figures/ce136_network_m1.55551.pdf, id=1513, 1004.68759pt x 967.55453pt>
+<chapters/2/figures/ce136_network_m1.55551.pdf, id=1535, 1004.68759pt x 967.55453pt>
 File: chapters/2/figures/ce136_network_m1.55551.pdf Graphic file (type pdf)
 <use chapters/2/figures/ce136_network_m1.55551.pdf>
 Package pdftex.def Info: chapters/2/figures/ce136_network_m1.55551.pdf  used on input line 29.
 (pdftex.def)             Requested size: 469.75502pt x 452.40327pt.
-<chapters/2/figures/ce136_network_m1.58017.pdf, id=1514, 1004.68759pt x 967.55453pt>
+<chapters/2/figures/ce136_network_m1.58017.pdf, id=1536, 1004.68759pt x 967.55453pt>
 File: chapters/2/figures/ce136_network_m1.58017.pdf Graphic file (type pdf)
 <use chapters/2/figures/ce136_network_m1.58017.pdf>
 Package pdftex.def Info: chapters/2/figures/ce136_network_m1.58017.pdf  used on input line 35.
@@ -1053,7 +1057,7 @@ Package pdftex.def Info: chapters/2/figures/ce136_network_m1.58017.pdf  used on 
 [39 <./chapters/2/figures/ce136_network_m1.55551.pdf>]
 
 [40 <./chapters/2/figures/ce136_network_m1.58017.pdf>]
-<chapters/2/figures/impact_mixing_cases.pdf, id=1627, 1445.4pt x 722.7pt>
+<chapters/2/figures/impact_mixing_cases.pdf, id=1648, 1445.4pt x 722.7pt>
 File: chapters/2/figures/impact_mixing_cases.pdf Graphic file (type pdf)
 <use chapters/2/figures/impact_mixing_cases.pdf>
 Package pdftex.def Info: chapters/2/figures/impact_mixing_cases.pdf  used on input line 59.
@@ -1063,73 +1067,73 @@ Package pdftex.def Info: chapters/2/figures/impact_mixing_cases.pdf  used on inp
 [41]
 
 [42 <./chapters/2/figures/impact_mixing_cases.pdf>]
-<chapters/2/figures/ingest_MLT.pdf, id=1713, 1445.4pt x 722.7pt>
+<chapters/2/figures/ingest_MLT.pdf, id=1734, 1445.4pt x 722.7pt>
 File: chapters/2/figures/ingest_MLT.pdf Graphic file (type pdf)
 <use chapters/2/figures/ingest_MLT.pdf>
 Package pdftex.def Info: chapters/2/figures/ingest_MLT.pdf  used on input line 88.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
-<chapters/2/figures/ingest_3D.pdf, id=1716, 1445.4pt x 722.7pt>
+<chapters/2/figures/ingest_3D.pdf, id=1737, 1445.4pt x 722.7pt>
 File: chapters/2/figures/ingest_3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/ingest_3D.pdf>
 Package pdftex.def Info: chapters/2/figures/ingest_3D.pdf  used on input line 94.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
-<chapters/2/figures/ingest_3x3D.pdf, id=1719, 1445.4pt x 722.7pt>
+<chapters/2/figures/ingest_3x3D.pdf, id=1740, 1445.4pt x 722.7pt>
 File: chapters/2/figures/ingest_3x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/ingest_3x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/ingest_3x3D.pdf  used on input line 100.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
-<chapters/2/figures/ingest_10x3D.pdf, id=1722, 1445.4pt x 722.7pt>
+<chapters/2/figures/ingest_10x3D.pdf, id=1743, 1445.4pt x 722.7pt>
 File: chapters/2/figures/ingest_10x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/ingest_10x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/ingest_10x3D.pdf  used on input line 106.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
-<chapters/2/figures/ingest_50x3D.pdf, id=1725, 1445.4pt x 722.7pt>
+<chapters/2/figures/ingest_50x3D.pdf, id=1746, 1445.4pt x 722.7pt>
 File: chapters/2/figures/ingest_50x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/ingest_50x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/ingest_50x3D.pdf  used on input line 112.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
 
 
-[43 <./chapters/2/figures/ingest_MLT.pdf>]
+[43]
 
-[44 <./chapters/2/figures/ingest_3D.pdf>]
+[44 <./chapters/2/figures/ingest_MLT.pdf>]
 
-[45 <./chapters/2/figures/ingest_3x3D.pdf>]
+[45 <./chapters/2/figures/ingest_3D.pdf>]
 
-[46 <./chapters/2/figures/ingest_10x3D.pdf>]
+[46 <./chapters/2/figures/ingest_3x3D.pdf>]
 
-[47 <./chapters/2/figures/ingest_50x3D.pdf>]
-<chapters/2/figures/impact_mixing_GOSH_partial.pdf, id=2119, 1445.4pt x 722.7pt>
+[47 <./chapters/2/figures/ingest_10x3D.pdf>]
+
+[48 <./chapters/2/figures/ingest_50x3D.pdf>]
+<chapters/2/figures/impact_mixing_GOSH_partial.pdf, id=2144, 1445.4pt x 722.7pt>
 File: chapters/2/figures/impact_mixing_GOSH_partial.pdf Graphic file (type pdf)
 <use chapters/2/figures/impact_mixing_GOSH_partial.pdf>
 Package pdftex.def Info: chapters/2/figures/impact_mixing_GOSH_partial.pdf  used on input line 136.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
 
 
-[48]
-
 [49 <./chapters/2/figures/impact_mixing_GOSH_partial.pdf>]
-<chapters/2/figures/nuclearimpact_MLT.pdf, id=2204, 1413.78458pt x 713.60516pt>
+<chapters/2/figures/nuclearimpact_MLT.pdf, id=2225, 1413.78458pt x 713.60516pt>
 File: chapters/2/figures/nuclearimpact_MLT.pdf Graphic file (type pdf)
 <use chapters/2/figures/nuclearimpact_MLT.pdf>
 Package pdftex.def Info: chapters/2/figures/nuclearimpact_MLT.pdf  used on input line 159.
 (pdftex.def)             Requested size: 469.75502pt x 237.11284pt.
-<chapters/2/figures/nuclearimpact_3D.pdf, id=2205, 1413.78458pt x 713.60516pt>
+<chapters/2/figures/nuclearimpact_3D.pdf, id=2226, 1413.78458pt x 713.60516pt>
 File: chapters/2/figures/nuclearimpact_3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/nuclearimpact_3D.pdf>
 Package pdftex.def Info: chapters/2/figures/nuclearimpact_3D.pdf  used on input line 165.
 (pdftex.def)             Requested size: 469.75502pt x 237.11284pt.
-<chapters/2/figures/nuclearimpact_3x3D.pdf, id=2206, 1413.78458pt x 713.60516pt>
+<chapters/2/figures/nuclearimpact_3x3D.pdf, id=2227, 1413.78458pt x 713.60516pt>
 File: chapters/2/figures/nuclearimpact_3x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/nuclearimpact_3x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/nuclearimpact_3x3D.pdf  used on input line 171.
 (pdftex.def)             Requested size: 469.75502pt x 237.11284pt.
-<chapters/2/figures/nuclearimpact_10x3D.pdf, id=2207, 1413.78458pt x 713.60516pt>
+<chapters/2/figures/nuclearimpact_10x3D.pdf, id=2228, 1413.78458pt x 713.60516pt>
 File: chapters/2/figures/nuclearimpact_10x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/nuclearimpact_10x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/nuclearimpact_10x3D.pdf  used on input line 177.
 (pdftex.def)             Requested size: 469.75502pt x 237.11284pt.
-<chapters/2/figures/nuclearimpact_50x3D.pdf, id=2208, 1413.78458pt x 713.60516pt>
+<chapters/2/figures/nuclearimpact_50x3D.pdf, id=2229, 1413.78458pt x 713.60516pt>
 File: chapters/2/figures/nuclearimpact_50x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/nuclearimpact_50x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/nuclearimpact_50x3D.pdf  used on input line 183.
@@ -1172,7 +1176,7 @@ LaTeX Warning: Float too large for page by 5.04659pt on input line 606.
 [60]
 
 [61]
-<chapters/2/figures/impact_mixing_cases_bars_all.pdf, id=2603, 1445.4pt x 722.7pt>
+<chapters/2/figures/impact_mixing_cases_bars_all.pdf, id=2624, 1445.4pt x 722.7pt>
 File: chapters/2/figures/impact_mixing_cases_bars_all.pdf Graphic file (type pdf)
 <use chapters/2/figures/impact_mixing_cases_bars_all.pdf>
 Package pdftex.def Info: chapters/2/figures/impact_mixing_cases_bars_all.pdf  used on input line 13.
@@ -1180,12 +1184,12 @@ Package pdftex.def Info: chapters/2/figures/impact_mixing_cases_bars_all.pdf  us
 
 
 [62 <./chapters/2/figures/impact_mixing_cases_bars_all.pdf>]
-<chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf, id=2693, 1011.78pt x 867.24pt>
+<chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf, id=2714, 1011.78pt x 867.24pt>
 File: chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf Graphic file (type pdf)
 <use chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf>
 Package pdftex.def Info: chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf  used on input line 37.
 (pdftex.def)             Requested size: 469.75502pt x 402.65372pt.
-<chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf, id=2694, 1011.78pt x 867.24pt>
+<chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf, id=2715, 1011.78pt x 867.24pt>
 File: chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf Graphic file (type pdf)
 <use chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf>
 Package pdftex.def Info: chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf  used on input line 42.
@@ -1213,17 +1217,17 @@ Chapter 3.
 
 
 ]
-<chapters/3/figures/in_timescale.png, id=2862, 1104.125pt x 586.19pt>
+<chapters/3/figures/in_timescale.png, id=2883, 1104.125pt x 586.19pt>
 File: chapters/3/figures/in_timescale.png Graphic file (type png)
 <use chapters/3/figures/in_timescale.png>
 Package pdftex.def Info: chapters/3/figures/in_timescale.png  used on input line 16.
 (pdftex.def)             Requested size: 469.75502pt x 249.40025pt.
-<chapters/3/figures/pairwise.png, id=2863, 893.3375pt x 577.15625pt>
+<chapters/3/figures/pairwise.png, id=2884, 893.3375pt x 577.15625pt>
 File: chapters/3/figures/pairwise.png Graphic file (type png)
 <use chapters/3/figures/pairwise.png>
 Package pdftex.def Info: chapters/3/figures/pairwise.png  used on input line 22.
 (pdftex.def)             Requested size: 469.75502pt x 303.49593pt.
-<chapters/3/figures/frac_exchanging.png, id=2864, 902.37125pt x 564.1075pt>
+<chapters/3/figures/frac_exchanging.png, id=2885, 902.37125pt x 564.1075pt>
 File: chapters/3/figures/frac_exchanging.png Graphic file (type png)
 <use chapters/3/figures/frac_exchanging.png>
 Package pdftex.def Info: chapters/3/figures/frac_exchanging.png  used on input line 28.
@@ -1275,21 +1279,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `ThesisMain.out' has not changed.
-(rerunfilecheck)             Checksum: 001A6E0C1B28DE2490DE2C969B8973F7;8938.
+(rerunfilecheck)             Checksum: BD970A7F83CC31EA929B4186A133AA5F;8843.
  ) 
 Here is how much of TeX's memory you used:
- 20634 strings out of 473190
- 356105 string characters out of 5715801
+ 20630 strings out of 473190
+ 356015 string characters out of 5715801
  927407 words of memory out of 5000000
- 43124 multiletter control sequences out of 15000+600000
+ 43121 multiletter control sequences out of 15000+600000
  584965 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,12n,120p,1055b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tipa/tipa12.pfb>
-Output written on ThesisMain.pdf (93 pages, 14559759 bytes).
+Output written on ThesisMain.pdf (93 pages, 14562770 bytes).
 PDF statistics:
- 3095 PDF objects out of 3580 (max. 8388607)
- 1578 compressed objects within 16 object streams
- 294 named destinations out of 1000 (max. 500000)
- 529 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3116 PDF objects out of 3580 (max. 8388607)
+ 1599 compressed objects within 16 object streams
+ 293 named destinations out of 1000 (max. 500000)
+ 521 words of extra memory for PDF output out of 10000 (max. 10000000)
 
