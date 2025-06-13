@@ -44,5 +44,5 @@
 \contentsline {section}{\numberline {3.2}Advective-Reactive $r$-process}{72}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Summary and Conclusion}{74}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Mixing, Nuclear Physics, and the $p$-Nuclei}{74}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Light Odd-Z Isotope Production}{74}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Light Odd-Z Isotope Production and Macrophysics}{74}{section.4.2}%
 \contentsline {chapter}{Bibliography}{76}{section*.53}%

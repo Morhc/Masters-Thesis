@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: ThesisMain.aux
+A level-1 auxiliary file: chapters/1/chapter_intro.aux
+A level-1 auxiliary file: chapters/2/chapter_paper.aux
+A level-1 auxiliary file: chapters/3/chapter_further.aux
+A level-1 auxiliary file: chapters/4/chapter_conclusion.aux
+The style file: apalike.bst
+Database file #1: UvicBiblio.bib
+Warning--empty publisher in iliadisNuclearPhysicsStars2015
+You've used 75 entries,
+            1935 wiz_defined-function locations,
+            982 strings with 24071 characters,
+and the built_in function-call counts, 34097 in all, are:
+= -- 3145
+> -- 2025
+< -- 25
++ -- 776
+- -- 724
+* -- 3170
+:= -- 6128
+add.period$ -- 222
+call.type$ -- 75
+change.case$ -- 733
+chr.to.int$ -- 71
+cite$ -- 76
+duplicate$ -- 1064
+empty$ -- 2013
+format.name$ -- 823
+if$ -- 6380
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 76
+newline$ -- 375
+num.names$ -- 225
+pop$ -- 601
+preamble$ -- 1
+purify$ -- 737
+quote$ -- 0
+skip$ -- 780
+stack$ -- 0
+substring$ -- 2099
+swap$ -- 91
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 442
+warning$ -- 1
+while$ -- 246
+width$ -- 0
+write$ -- 965
+(There was 1 warning)
