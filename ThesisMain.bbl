@@ -64,6 +64,11 @@ Burbidge, E.~M., Burbidge, G.~R., Fowler, W.~A., and Hoyle, F. (1957).
 \newblock Synthesis of the {{Elements}} in {{Stars}}.
 \newblock {\em Reviews of Modern Physics}, 29(4):547--650.
 
+\bibitem[Chapman, 1961]{chapmanScaleTimesScale1961}
+Chapman, S. (1961).
+\newblock Scale {{Times}} and {{Scale Lengths}} of {{Variables}}: With {{Geomagnetic}} and {{Ionospheric Illustrations}}.
+\newblock {\em Proceedings of the Physical Society}, 77:424--432.
+
 \bibitem[Collins et~al., 2018]{collinsPropertiesConvectiveOxygen2018}
 Collins, C., M{\"u}ller, B., and Heger, A. (2018).
 \newblock Properties of convective oxygen and silicon burning shells in supernova progenitors.
@@ -144,6 +149,10 @@ Hynes, K.~M. and Gyngard, F. (2009).
 \newblock The {{Presolar Grain Database}}: {{http://presolar.wustl.edu/{\textasciitilde}pgd}}.
 \newblock In {\em 40th {{Annual Lunar}} and {{Planetary Science Conference}}}, page 1198.
 
+\bibitem[Iliadis, 2015]{iliadisNuclearPhysicsStars2015}
+Iliadis, C. (2015).
+\newblock {\em Nuclear Physics of Stars}.
+
 \bibitem[Jones et~al., 2017]{jonesIdealizedHydrodynamicSimulations2017}
 Jones, S., Andrassy, R., Sandalski, S., Davis, A., Woodward, P., and Herwig, F. (2017).
 \newblock Idealized hydrodynamic simulations of turbulent oxygen-burning shell convection in 4{$\pi$} geometry.
@@ -153,6 +162,11 @@ Jones, S., Andrassy, R., Sandalski, S., Davis, A., Woodward, P., and Herwig, F. 
 Joyce, M. and Tayar, J. (2023).
 \newblock A {{Review}} of the {{Mixing Length Theory}} of {{Convection}} in {{1D Stellar Modeling}}.
 \newblock {\em Galaxies}, 11(3):75.
+
+\bibitem[K{\"a}ppeler et~al., 2011]{kappelerProcessNuclearPhysics2011}
+K{\"a}ppeler, F., Gallino, R., Bisterzo, S., and Aoki, W. (2011).
+\newblock The s process: {{Nuclear}} physics, stellar models, and observations.
+\newblock {\em Reviews of Modern Physics}, 83:157--194.
 
 \bibitem[Kippenhahn et~al., 2013]{kippenhahnStellarStructureEvolution2013}
 Kippenhahn, R., Weigert, A., and Weiss, A. (2013).
@@ -189,6 +203,11 @@ M{\"u}ller, B. (2020).
 \newblock Hydrodynamics of core-collapse supernovae and their progenitors.
 \newblock {\em Living Reviews in Computational Astrophysics}, 6:3.
 
+\bibitem[Mumpower et~al., 2018]{mumpowerVdelayedFissionRprocess2018}
+Mumpower, M.~R., Kawano, T., Sprouse, T.~M., Vassh, N., Holmbeck, E.~M., Surman, R., and M{\"o}ller, P. (2018).
+\newblock {$\beta$}-delayed {{Fission}} in r-process {{Nucleosynthesis}}.
+\newblock {\em The Astrophysical Journal}, 869:14.
+
 \bibitem[O'Neill et~al., 2020]{oneillEffectGalacticChemical2020}
 O'Neill, C., Lowman, J., and Wasiliev, J. (2020).
 \newblock The effect of galactic chemical evolution on terrestrial exoplanet composition and tectonics.
@@ -223,6 +242,11 @@ Prandtl, L. (1925).
 Prialnik, D. (2009).
 \newblock {\em An {{Introduction}} to the {{Theory}} of {{Stellar Structure}} and {{Evolution}}}.
 \newblock Cambridge University Press.
+
+\bibitem[Rapp et~al., 2006]{rappSensitivityPProcessNucleosynthesis2006}
+Rapp, W., G{\"o}rres, J., Wiescher, M., Schatz, H., and K{\"a}ppeler, F. (2006).
+\newblock Sensitivity of p-{{Process Nucleosynthesis}} to {{Nuclear Reaction Rates}} in a 25 {{Msolar Supernova Model}}.
+\newblock {\em The Astrophysical Journal}, 653:474--489.
 
 \bibitem[Rauscher et~al., 2013]{rauscherConstrainingAstrophysicalOrigin2013}
 Rauscher, T., Dauphas, N., Dillmann, I., Fr{\"o}hlich, C., F{\"u}l{\"o}p, Z., and Gy{\"u}rky, G. (2013).
@@ -282,6 +306,11 @@ Roberti, L., Pignatari, M., Fryer, C., and Lugaro, M. (2024).
 Roberti, L., Pignatari, M., Psaltis, A., Sieverding, A., Mohr, P., F{\"u}l{\"o}p, {\relax Zs}., and Lugaro, M. (2023).
 \newblock The {$\gamma$}-process nucleosynthesis in core-collapse supernovae: {{I}}. {{A}} novel analysis of {$\gamma$}-process yields in massive stars.
 \newblock {\em Astronomy \& Astrophysics}, 677:A22.
+
+\bibitem[Schatz et~al., 2001]{schatzEndPointRp2001}
+Schatz, H., Aprahamian, A., Barnard, V., Bildsten, L., Cumming, A., Ouellette, M., Rauscher, T., Thielemann, F.~K., and Wiescher, M. (2001).
+\newblock End {{Point}} of the rp {{Process}} on {{Accreting Neutron Stars}}.
+\newblock {\em Physical Review Letters}, 86:3471--3474.
 
 \bibitem[Schatz et~al., 1998]{schatzRpprocessNucleosynthesisExtreme1998}
 Schatz, H., Aprahamian, A., G{\"o}rres, J., Wiescher, M., Rauscher, T., Rembges, J.~F., Thielemann, F.~K., Pfeiffer, B., M{\"o}ller, P., Kratz, K.~L., Herndl, H., Brown, B.~A., and Rebel, H. (1998).

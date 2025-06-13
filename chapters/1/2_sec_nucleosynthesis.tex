@@ -2,7 +2,7 @@
 
 Stellar nucleosynthesis is the process by which elements are formed through nuclear reactions in stars.
 \cite{burbidgeSynthesisElementsStars1957} set the foundation for the field describing the synthesis of all elements in hydrostatic and explosive burning.
-From theoretical calculations, they described the nucleosynthesis of all isotopes in stars via a series of burning stages and nuclear processes while proposing the likely astrophysical sites.
+From theoretical calculations and a handful of observations, they described the nucleosynthesis of all isotopes in stars via a series of burning stages and nuclear processes while proposing the likely astrophysical sites.
 In the following years, through observational data and computational developments, the work remains a foundational text to stellar nuclear astrophysics.\footnote{One is reminded of Alfred North Whitehead's quote: \textit{The safest general characterization of the European philosophical tradition is that it consists of a series of footnotes to Plato.} Or in our case, B$^2$FH.}
 Shortly after, \cite{henyeyNewMethodAutomatic1964} proposed a method for calculating nucleosynthesis of the CNO cycle in stars.
 Since then, the field has expanded to modelling the nucleosynthesis of isotopes during all stages of stellar evolution and produce data sets of stellar models at any mass and metallicity \citep{pignatariNuGridStellarData2016, ritterNuGridStellarData2018, battinoNuGridStellarData2019}.
@@ -28,132 +28,125 @@ Each of these burning phases is characterized by a specific temperature, density
 \end{tabular}
 \end{table}
 
-\subsubsection{H-burning}
+\jicom{Flesh out these burning stages with some more references + non-standard burning like maybe C12 + p flames or partial CNO etc}
+The following section describes the burning stages following \cite{woosleyEvolutionExplosionMassive2002, iliadisNuclearPhysicsStars2015}.
+H-burning is the first stage of hydrostatic burning which occurs in massive stars primarily by the CNO cycle.
+\[
+    ^{12}\mathrm{C}(p,\gamma)^{13}\mathrm{N}(\beta^+)^{13}\mathrm{C}(p,\gamma)^{14}\mathrm{N}(p,\gamma)^{15}\mathrm{O}(\beta^+)^{15}\mathrm{N}(p,\alpha)^{12}\mathrm{C}
+\]
+In the CNO cycle, carbon, nitrogen, and oxygen act as a catalyst for the fusion of four $^{H}$ isotopes into $^{4}\mathrm{He}$.
 
-H-burning is the first stage of hydrostatic burning in the core of a star. 
-There are two processes by which this happens, the pp chain and the CNO cycle.
-In low mass stars
+Next is He-burning which has two main processes
+\[
+    ^{4}\mathrm{He}(\alpha,\gamma)^{8}\mathrm{Be}(\alpha,\gamma)^{12}\mathrm{C}, \quad ^{12}\mathrm{C}(\alpha,\gamma)^{16}\mathrm{O}
+\]
+Therefore, the main products of He-burning are $^{12}\mathrm{C}$ and $^{16}\mathrm{O}$.
 
-The conversion of hydrogen to helium via nuclear fusion occurs primarily through the proton-proton (pp) chains and the CNO cycles. In massive stars, the CNO cycle dominates due to higher central temperatures (\( T \gtrsim 15 \times 10^6\,\mathrm{K} \)):
-\begin{equation}
-^{12}\mathrm{C}(p,\gamma)^{13}\mathrm{N}(\beta^+)^{13}\mathrm{C}(p,\gamma)^{14}\mathrm{N}(p,\gamma)^{15}\mathrm{O}(\beta^+)^{15}\mathrm{N}(p,\alpha)^{12}\mathrm{C}.
-\end{equation}
+Following this is C-burning which has the following main processes
+\[
+    ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{24}\mathrm{Mg} + n \\
+    ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{20}\mathrm{Ne} + \alpha \\
+    ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{23}\mathrm{Na} + p \\
+    ^{12}\mathrm{C} + ^{16}\mathrm{O} \rightarrow ^{24}\mathrm{Mg} + \alpha \\
+\]
 
-The net result is four protons converted to a helium nucleus, releasing energy via positrons and neutrinos.
+After is Ne-burning which undergoes
+\[
+    ^{20}\mathrm{Ne} + ^{20} \mathrm{Ne} \rightarrow ^{16}\mathrm{O} + ^{24}\mathrm{Mg}\\
+    ^{20}\mathrm{Ne}(\gamma,\alpha)^{16}\mathrm{O} \\ 
+    ^{20}\mathrm{Ne}(\alpha,\gamma)^{24}\mathrm{Mg}
+\]
 
-\subsubsection{He-burning}
+Next is O-burning which undergoes
+\[
+    ^{16}\mathrm{O}(^{16}\mathrm{O},p)^{31}\mathrm{P} \\
+    ^{16}\mathrm{O}(^{16}\mathrm{O},2p)^{30}\mathrm{Si} \\
+    ^{16}\mathrm{O}(^{16}\mathrm{O},\alpha)^{28}\mathrm{Si} \\
+    ^{16}\mathrm{O}(^{16}\mathrm{O},2\alpha)^{24}\mathrm{Mg} \\
+    ^{16}\mathrm{O}(^{16}\mathrm{O},d)^{30}\mathrm{P} \\
+    ^{16}\mathrm{O}(^{16}\mathrm{O},n)^{31}\mathrm{S} \\
+\]
 
-Once hydrogen is exhausted in the core, helium burning is ignited via the triple-alpha process:
-\begin{align}
-3\alpha &\rightarrow {}^{12}\mathrm{C}, \
-{}^{12}\mathrm{C}(\alpha,\gamma){}^{16}\mathrm{O}.
-\end{align}
+In the final stage of hydrostatic burning, Si-burning occurs by a series of ($\alpha, \gamma$) reactions:
+\[
+    ^{28}\mathrm{Si}(\alpha,\gamma)^{32}\mathrm{S}(\alpha,\gamma)^{36}\mathrm{Ar}(\alpha,\gamma)^{40}\mathrm{Ca}(\alpha,\gamma)^{44}\mathrm{Ti}(\alpha,\gamma)^{48}\mathrm{Cr}(\alpha,\gamma)^{52}\mathrm{Fe}(\alpha,\gamma)^{56}\mathrm{Ni}
+\]
 
-The $^{12}\mathrm{C}/^{16}\mathrm{O}$ ratio has significant consequences for later burning stages and the final core structure. This phase operates at $T \sim 2\times10^8\,\mathrm{K}$.
+\subsection{Neutron Captures}
 
-\subsubsection{C-burning}
+The neutron capture processes are the primary mechanism for the production of elements heavier than iron in stars \citep{burbidgeSynthesisElementsStars1957}.
+There are three main regimes to the neutron capture processes: the slow, intermediate, and rapid neutron capture processes, commonly referred to as the $s$-, $i$-, and $r$-processes.
+Generically, in the neutron capture processes, a nucleus in a neutron rich environment captures neutrons and becomes increasingly neutron-rich and unstable. 
+The unstable nucleus then decays via $\beta^-$ decay until it reaches a stable state.
+This process is controlled by the timescale of neutron capture compared to the timescale of $\beta^-$ decay \citep{burbidgeSynthesisElementsStars1957, iliadisNuclearPhysicsStars2015}.
 
-At $T \sim 6\times10^8\,\mathrm{K}$, carbon fusion begins:
-\begin{align}
-{}^{12}\mathrm{C} + {}^{12}\mathrm{C} &\rightarrow {}^{20}\mathrm{Ne} + \alpha, \
-{}^{12}\mathrm{C} + {}^{12}\mathrm{C} &\rightarrow {}^{23}\mathrm{Na} + p, \
-{}^{12}\mathrm{C} + {}^{12}\mathrm{C} &\rightarrow {}^{24}\mathrm{Mg} + \gamma.
-\end{align}
 
-This burning typically occurs in a convective core or shell, depending on the stellar mass and prior evolution.
+The $s$-process in massive stars occurs during the He- and C-burning phases where $^{22}\mathrm{Ne}$ from $^{14}\mathrm{N}(\alpha,\gamma)^{18}\mathrm{F}(\beta^+)^{18}\mathrm{O}(\gamma,\alpha)^{22}\mathrm{Ne}$ undergoes the reaction $^{22}\mathrm{Ne}(\alpha,\gamma)^{25}\mathrm{Mg}$ and produces neutron densities of $10^6\text{–}10^8\,\mathrm{cm}^{-3}$ \citep{pignatariWEAKSPROCESSMASSIVE2010,kappelerProcessNuclearPhysics2011}.
 
-\subsubsection{Ne-burning}
+The $i$- and $r$-processes are not well-determined in massive stars as the neutron densities needed ($10^{13}\text{–}10^{15}$ and $\geq 10^{20}\,\mathrm{cm}^{-3}$) are not reached in these conditions.
+\cite{denissenkovImpactReactionRate2018,battinoHeavyElementsNucleosynthesis2020} find these conditions can be met in rapidly accreting white dwarfs where a white dwarf accretes H from a companion main sequence star leading to H-flashes where $^{12}\mathrm{C}(p,\gamma)^{13}N(\beta^+)^{13}\mathrm{C}(\alpha,n)^{16}\mathrm{O}$ is a source for neutrons.
+The $r$-process is thought to occur in neutron star mergers \citep{mumpowerVdelayedFissionRprocess2018} where the neutrons densities are high enough to produce the heaviest elements in the universe.
 
-Neon burning occurs via photodisintegration reactions at $T \sim 1.2\times10^9\,\mathrm{K}$:
-\begin{align}
-{}^{20}\mathrm{Ne}(\gamma,\alpha){}^{16}\mathrm{O}, \
-{}^{20}\mathrm{Ne}(\alpha,\gamma){}^{24}\mathrm{Mg}.
-\end{align}
+\section{\texorpdfstring{$p$}{p}-Nuclei Nucleosynthesis}
 
-This process mainly produces Mg and reinforces O production. It is typically confined to a shell.
+The $p$-nuclei are a set of 35 proton heavy stable isotopes heavier than iron that were all originally considered to be produced in a process other than neutron captures.
+\cite{burbidgeSynthesisElementsStars1957} proposed that the $p$-nuclei were produced in a series of ($p,\gamma$) reactions in equilibrium with ($\gamma,p
+$) and ($\gamma,n$)  reactions in the H-rich envelope of a Type II supernova in a process they labelled the $p$-process.
+\cite{woosleyPprocessesSupernovae1978} later proposed that the temperature conditions were not sufficient in the H-envelope of a supernova to produce the $p$-nuclei, and instead proposed that in explosive O-burning during the supernova explosion, the $p$-nuclei could be produced in a process they labelled the $\gamma$-process.
+The $\gamma$-process is a series of ($\gamma,n$) and ($\gamma,\alpha$) reactions along with $\beta^+$ decays that occur during explosive O-burning, or potentially C-burning, at $2{-}3 \times 10^9 \mathrm{K}$.
+However, they also show that a single temperature is not sufficient to produce all of the $p$-nuclei as at cooler temperatures the heavier $p$-nuclei are more easily produced while at hotter temperatures the lighter $p$-nuclei are more easily produced.
 
-\subsubsection{O-burning}
+Since then, many astrophysical sites have been proposed for the production of the $p$-nuclei. 
+\cite{woosleyAlphaProcessRProcess1992} proposed that the lighter $p$-nuclei could be produced in the $\alpha$-process in Type II supernovae.
+\cite{frohlichNeutrinoInducedNucleosynthesisA>642006,arconesProductionLightelementPrimary2011} found that $\nu$ induced ($n,p$) reactions in the $\nu p$-process could produce the lighter $p$-nuclei in the winds of a supernova.
+\cite{schatzEndPointRp2001} likewise found that they could produce the lighter $p$-nuclei in the $rp$-process in a H-rich accretion disk around a neutron star where they are made by rapid ($p,\gamma$) and $\beta^+$ decay analogous to the neutron capture process.
+\cite{gorielyHedetonationSubChandrasekharCO2002} found taht they could produce both the light and heavy $p$-nuclei in a He-detonation of a C-O white dwarf in a cousin of the $rp$-process called the $pn$-process where ($\alpha,p$) and ($\alpha,n$) reactions create the needed sources of neutrons and protons.
+\cite{rauscherNucleosynthesisMassiveStars2002} found that the $\gamma$-process could take place in both the pre-explosive and explosive O-burning phases of massive stars and could produce all the p-nuclei, but underproduced $^{92}\mathrm{Mo},^{94}\mathrm{Mo}, ^{96}\mathrm{Ru}$ and $^{98}\mathrm{Ru}$.
+\cite{travaglioTypeIaSupernovae2011,travaglioTestingRoleSNe2015} found that they could produce $\gamma$-process conditions that could produce all of the $p$-nuclei in Type Ia supernovae including the underproduced Mo and Ru isotopes.
+\cite{battinoHeavyElementsNucleosynthesis2020} found that the $p$-nuclei could be produced in the He-shell flahes of a rapidly accreting white dwarf by the $\gamma$-process during the $i$-process.
 
-At $T \sim 1.5\times10^9\,\mathrm{K}$, oxygen nuclei fuse to form Si-group elements:
-\begin{align}
-{}^{16}\mathrm{O} + {}^{16}\mathrm{O} &\rightarrow {}^{28}\mathrm{Si} + \alpha, \
-{}^{16}\mathrm{O} + {}^{16}\mathrm{O} &\rightarrow {}^{31}\mathrm{P} + p, \
-{}^{16}\mathrm{O} + {}^{16}\mathrm{O} &\rightarrow {}^{32}\mathrm{S} + \gamma.
-\end{align}
+Not all the p-nuclei are produced in these ways, however.
+Despite the claims of \cite{burbidgeSynthesisElementsStars1957}, $^{152}\mathrm{Gd}$, $^{164}\mathrm{Er}$, $^{180\mathrm{m}}\mathrm{Ta}$ have a majority of their production in the $s$-process \citep{bisterzoSprocessLowmetallicityStars2011}, and $^{113}\mathrm{In}$ and $^{115}\mathrm{In}$ can be made during the $r$-process \citep{dillmannPProcessSimulationsModified2008}.
+$\nu$-capture reactions have been found to play a role in the production of $^{113}\mathrm{In}$, $^{138}\mathrm{La}$, and $^{180\mathrm{m}}\mathrm{Ta}$ \citep{gorielyPuzzleSynthesisRare2001, arnouldPprocessStellarNucleosynthesis2003,sieverdingNProcessLightImproved2018}.
 
-These products mark the onset of the \textquotedblleft alpha-rich\textquotedblright\ freeze-out zone.
-
-\subsubsection{Si-burning}
-
-Silicon burning initiates at \( T \gtrsim 2.7\times10^9\,\mathrm{K} \), leading to nuclear statistical equilibrium (NSE) dominated by iron-peak elements:
-\begin{equation}
-\text{Si-group} \rightarrow \text{Fe-group} + \text{neutrinos}.
-\end{equation}
-
-This final hydrostatic phase proceeds through a series of photo-disintegration and rearrangement reactions that populate nuclei such as $^{54}\mathrm{Fe}$, $^{56}\mathrm{Ni}$, and $^{58}\mathrm{Ni}$.
-
-\subsection{Neutron Capture Processes}
-
-\subsubsection{\texorpdfstring{$s$-Process}{s-Process}}
-
-The slow neutron capture process occurs during He- and C-shell burning via reactions such as:
-\begin{equation}
-{}^{13}\mathrm{C}(\alpha,n){}^{16}\mathrm{O}, \quad {}^{22}\mathrm{Ne}(\alpha,n){}^{25}\mathrm{Mg}.
-\end{equation}
-
-In $12-20 \mathrm{M}_\odot$ stars, the weak s-process dominates, producing elements up to Sr-Y-Zr region.
-
-\subsubsection{\texorpdfstring{$i$-Process}{i-Process}}
-
-The intermediate neutron capture process occurs at neutron densities $n_n \sim 10^{13}\text{–}10^{15}\,\mathrm{cm}^{-3}$, between those typical of the s- and r-processes. It may be triggered in convective-reactive environments, e.g., O-C shell mergers, where hydrogen ingestion drives neutron bursts.
-
-\subsubsection{\texorpdfstring{$r$-Process}{r-Process}}
-
-The rapid neutron capture process requires extreme conditions (\( n_n \gtrsim 10^{20}\,\mathrm{cm}^{-3} \)) and short timescales. While unlikely in $12-20 \mathrm{M}_\odot$ stars, it is included for completeness and is typically associated with neutron star mergers or magneto-rotational CCSNe.
-
-\subsection{\texorpdfstring{$p$-Nuclei Nucleosynthesis}{p-Nuclei Nucleosynthesis}}
-
-The classical p-nuclei are proton-rich isotopes not formed via s- or r-processes. In massive stars, these nuclei are produced via photodisintegration reactions:
-
-\subsubsection{\texorpdfstring{$rp$-Process}{rp-Process}}
-
-Occurs in proton-rich, explosive environments (e.g., X-ray bursts), where rapid proton captures compete with $\beta^+$ decays.
-
-\subsubsection{\texorpdfstring{$\nu p$-Process}{nu-p Process}}
-
-Occurs in the neutrino-driven wind of core-collapse supernovae. Antineutrino absorption on protons produces neutrons that allow for bypassing rp-waiting points:
-\begin{equation}
-\bar{\nu}_e + p \rightarrow n + e^+.
-\end{equation}
-
-\subsubsection{\texorpdfstring{$\gamma$-process}{gamma-process}}
-
-The main process responsible for p-nucleus production in massive stars. Involves successive photodisintegration reactions:
-\begin{equation}
-(\gamma, n),\ (\gamma, p),\ (\gamma, \alpha).
-\end{equation}
-
-\subsubsection{Pre-Explosive \texorpdfstring{$\gamma$-process}{gamma-process}}
-
-Occurs during late hydrostatic O/Ne-shell burning in stars with \(M \gtrsim 12\,\mathrm{M}_\odot\), at $T \sim 2\text{–}3\times10^9\,\mathrm{K}$.
-
-\subsubsection{Explosive \texorpdfstring{$\gamma$-process}{gamma-process}}
-
-Triggered during the passage of the supernova shock through the O-Ne layers, reaching $T \sim 3\text{–}4\times10^9\,\mathrm{K}$.
+The $\gamma$-process is the mode in which the $p$-nuclei are produced in massive stars.
+In the O-burning conditions between the temperatures of $1.5{-}3\times10^9 \mathrm{K}$, the $\gamma$-process occurs via a series of ($\gamma,n$), ($\gamma,\alpha$), and ($\gamma,p$) reactions \citep{rauscherNucleosynthesisMassiveStars2002,rappSensitivityPProcessNucleosynthesis2006, rauscherConstrainingAstrophysicalOrigin2013}.
+Pre-explosive O-C shell mergers have been found to be a critical site for the production of the $p$-nuclei regardless of the energy of the supernova explosion \citep{ritterConvectivereactiveNucleosynthesisSc2018, robertiGprocessNucleosynthesisCorecollapse2023, robertiGprocessNucleosynthesisCorecollapse2024b}. 
+The explosive $\gamma$-process has been found to underproduce the $p$-nuclei with $A=90-130$, especially the Mo and Ru isotopes \citep{arnouldPprocessStellarNucleosynthesis2003,woosleyNucleosynthesisRemnantsMassive2007}.
+Further, it has been argued that the $\gamma$-process is too weak to produce $^{113}\mathrm{In}$, $^{115}\mathrm{Sn}$, $^{152}\mathrm{Gd}$, $^{164}\mathrm{Er}$, and $^{180\mathrm{m}}\mathrm{Ta}$ and these isotopes should be considered completely separate from the other $p$-nuclei \citep{rayetPprocessRevisited1990,dillmannPProcessSimulationsModified2008}.
 
 \subsection{Convective-Reactive Nucleosynthesis}
 
-Convective-reactive nucleosynthesis refers to processes where nuclear burning and convective mixing operate on comparable timescales. This often occurs in unstable mixing regions, such as O-C shell mergers, where hydrogen is ingested into He-, C-, or O-rich layers.
-
-This regime is characterized by the Dämkohler number:
+Typically in the stellar environment, the timescales for nuclear burning and convective mixing are vastly different.
+In a convective zone, the timescale for convective mixing is much shorter than the timescale for nuclear burning and in the radiative zone vice versa.
+To describe the relationship between the timescales of nuclear burning and convective mixing, we can use the Dämkohler number \citep{herwigCONVECTIVEREACTIVEPROTON2011}:
 \begin{equation}
-D_\alpha = \frac{\tau_{\mathrm{transport}}}{\tau_{\mathrm{reaction}}}.
+D_\alpha = \frac{\tau_{\mathrm{conv}}}{\tau_{\mathrm{burn}}}.
+\end{equation}
+When $D_\alpha \gg 1$, the timescale for convective mixing is much longer than the timescale for nuclear burning and the burning is slow, leading to homogenization of the convective zone.
+When $D_\alpha \ll 1$, the timescale for convective mixing is much shorter than the timescale for nuclear burning and the burning is fast, leading to localized nucleosynthesis.
+
+Convective-reactive nucleosynthesis refers to processes where nuclear burning and convective mixing operate on comparable timescales \citep{herwigCONVECTIVEREACTIVEPROTON2011,ritterNuGridStellarData2018}.
+In these conditions, different nucleosynthesis pathways can be triggered in the same zone and exchange products.
+This regime is characterized by $D_\alpha\sim 1$ \citep{herwigCONVECTIVEREACTIVEPROTON2011}.
+
+\cite{herwigCONVECTIVEREACTIVEPROTON2011} found that in a convective-reactive environment, the MLT mixing timescale is not always appropriate for describing the mixing timescale.
+They propose a reaction scale height timescale using the generalized principles of scale heights \citep{chapmanScaleTimesScale1961}:
+\begin{equation}
+    H_\phi = \frac{1}{\frac{d ln \phi}{d r}}
+\end{equation}
+where $\phi$ is the quantity of interest, in this case $\phi = \rho N_a \langle \sigma v \rangle$.
+A timescale for this reaction scale height is then given by
+\begin{equation}
+    \tau_{\mathrm{scale}} = \frac{H_\phi^2}{D_{\mathrm{MLT}}}.
 \end{equation}
 
-\begin{itemize}
-\item $D_\alpha \gg 1$: burning is slow; mixing dominates $\Rightarrow$ homogenization.
-\item $D_\alpha \ll 1$: burning is fast; negligible mixing $\Rightarrow$ localized nucleosynthesis.
-\item $D_\alpha \sim 1$: feedback between burning and transport $\Rightarrow$ fully coupled convective-reactive regime.
-\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chapters/1/figures/timescales.pdf}
+\caption{Timescales of mixing and burning during the O-C shell merger of a $15 M_\odot$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018} at model number 9200. The black line show the timescale from MLT mixing. The solid red line shows the timescale for a variety of $^{12}\mathrm{C}$ burning reactions and the jagged red line is its corresponding reaction scale height timescale. The dotted green line shows the timescale for a variety of $^{16}\mathrm{O}$ burning reactions and the jagged green line is its corresponding reaction scale height timescale. The dashed blue line shows the timescale for a variety of $^{20}\mathrm{Ne}$ burning reactions and the jagged blue line is its corresponding reaction scale height timescale.}
+\label{fig:ritter_timescales}
+\end{figure}
 
-Such conditions may trigger neutron bursts and exotic nucleosynthesis pathways (e.g., i-process), potentially contributing to chemical anomalies in metal-poor stars and globular clusters.
+As shown in Figure \ref{fig:ritter_timescales}, the timescales for convective mixing and C- and Ne- nuclear burning are comparable, leading to the possibility of different nucleosynthesis pathways occurring in the same zone.
+In addition to this, Figure \ref{fig:ritter_timescales} shows how the timescales for a reaction scale height are also comparable to the burning timescale.

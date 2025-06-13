@@ -1,30 +1,28 @@
 \section{Advective-Reactive \texorpdfstring{$r$}{r}-process}\label{sec:ar_rprocess}
 
-Advective-reactive nucleosynthesis refers to the generic case where any mixing interaction timescale is similar to the reaction timescale.
-Here I present preliminary work done with Dr. Herwig analyzing a new scenario beyond the post-processed O-shell.
+\jicom{This section is very much a work in progress. I kind of forget what we did. :p}
 
-\begin{itemize}
-    \item do I have to mention that this work was done with Falk more directly
-    \item Rodrigo black hole paper?
-    \item Work was done to estimate both the mixing and nuclear timescale
-    \item Basically found the fraction of trajectories where exchanging mass occurs on the a-r timescale.
-    \item How many freaking r-process papers do I really need to cite here
-\end{itemize}
+Advective-reactive nucleosynthesis is the generalization of the convective-reactive framework to include transport of material beyond convection.
+In this work, we take the \texttt{SkyNet} post-processed trajectories \jitxt{done by Rodrigo ? citation ?} that escape a black hole formed by neutron star mergers and determine whether the advective-reactive framework is relevant to $r$-process nucleosynthesis.
 
-\begin{figure}
-\label{fig:in_timescale}
-\includegraphics[width=\textwidth]{chapters/3/figures/in_timescale.png}
-\caption{In isotope timescale.}
-\end{figure}
+Over time, the distance between any two trajectories increases as they move away from the black hole.
+That means there is a time limit on how long the trajectories are able to exchange material.
+We defin a distance $L_{\mathrm{mix}}$ analogously to $\ell_{\mathrm{mix}}$ and say that any two trajectories that are within this distance can exchange material.
+\begin{equation}
+    L_{\mathrm{mix}} = \sqrt{D t_{\mathrm{nuc}}}
+\end{equation}
+where $D=3\times10^16\mathrm{cm}^2/\mathrm{s}$ is the diffusion coefficient and $t_{\mathrm{nuc}}$ was given an analytic form based on an eyeballed linear fitting of  $\tau=X/(dX/dt)$ vs $t$ plots for some neutron heavy In isotopes.
+Because of this, we get $L_{\mathrm{mix}}$ as a function time.
+If for a time $t \geq t_{\mathrm{mix}}$ the pairwise distance between two trajectories is less than $L_{\mathrm{mix}}(t)$ then we say that they can exchange material. The results of this analysis are shown in Figure \ref{fig:frac_exchanging}.
+It appears that 7.5-15\% of trajectories could be able to exchange material for the optimistic cases.
 
-\begin{figure}
-\label{fig:pairwise}
-\includegraphics[width=\textwidth]{chapters/3/figures/pairwise.png}
-\caption{Pairwise distance.}
-\end{figure}
+Much more work is needed to determine whether this matters because if both trajectories are in NSE they would have roughly the same pattern anyways.
+We were in the early stages of seeing if we could post-process the trajectories with \texttt{ppn} rather than \texttt{SkyNet} and see if maybe we could figure out if the trajectories are exchanging and at least one is not in NSE.
+Also we wanted to ask if the trajectories that were eaten by the black hole could've exchanged material with the ones that escaped.
 
-\begin{figure}
-\label{fig:frac_exchanging}
-\includegraphics[width=\textwidth]{chapters/3/figures/frac_exchanging.png}
-\caption{Fraction of exchanging mass.}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{chapters/3/figures/frac_exchanging.png}
+    \caption{Fraction of trajectories with distance for enough time to exchange mass. Each coloured line represents a size for $L_{\mathrm{mix}}$.
+    \label{fig:frac_exchanging}}
 \end{figure}

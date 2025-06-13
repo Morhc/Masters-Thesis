@@ -22,7 +22,7 @@ The hydrodynamical equations are given in \cite{kippenhahnStellarStructureEvolut
 where $\rho$ is the density, $\mathbf{v}$ is the velocity, $P$ is the pressure, $\Phi$ is the gravitational potential, $E$ is the specific internal energy, $\epsilon$ is the energy generation rate, and $\vec{F}$ is the energy flux.
 
 These equations are solvable in 3-D for simulations, to couple them with a nuclear network becomes too computationally expensive to solve.
-Some studies are able to calculate both the hydrodynamical and nuclear netowrk equations together \cite{rizzutiStellarEvolutionConvection2024}, but even involve limited nuclear networks.
+Some studies are able to calculate both the hydrodynamical and nuclear netowrk equations together \citep{rizzutiStellarEvolutionConvection2024}, but even involve limited nuclear networks.
 Additionally, 3-D simulations are prohibited by the computational cost of evolving a star through its entire evolution for the amount of time necessary.
 Because of this, it is necessary to have a 1-D approximation to be able to study the whole of stellar evolution.
 
@@ -209,7 +209,7 @@ In convective regions, \texttt{MESA} adopts a time-dependent diffusive mixing ap
 \left( \frac{dX_i}{dt} \right)\text{total} = \left( \frac{dX_i}{dt} \right)_\text{nuc} + \left( \frac{dX_i}{dt} \right)_\text{mix},
 \end{equation}
 where $X_i$ is the mass fraction of isotope $i$, and both terms are evaluated and advanced implicitly in a coupled fashion. 
-Species mixing in \texttt{MESA} is taken to be diffusion \cite{paxtonMODULESEXPERIMENTSLAR2010}.
+Species mixing in \texttt{MESA} is taken to be diffusion \citep{paxtonMODULESEXPERIMENTSLAR2010}.
 \texttt{MESA} can include nuclear networks of hundreds of isotopes.
 However, solving large coupled equations takes a lot of computational power, and so stellar evolution calculations typically use reduced networks to capture the reactions that are relevant to energy generation without tracking full nucleosynthetic yields.
 

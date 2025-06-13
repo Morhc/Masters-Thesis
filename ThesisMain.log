@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 JUN 2025 02:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 JUN 2025 06:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -686,33 +686,40 @@ Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count374
 \l__pdf_internal_box=\box72
-) (./ThesisMain.aux (./chapters/1/chapter_intro.aux) (./chapters/2/chapter_paper.aux) (./chapters/3/chapter_further.aux) (./chapters/4/chapter_conclusion.aux))
+) (./ThesisMain.aux (./chapters/1/chapter_intro.aux) (./chapters/2/chapter_paper.aux) (./chapters/3/chapter_further.aux) (./chapters/4/chapter_conclusion.aux
+
+LaTeX Warning: Label `sec:lightoddZ' multiply defined.
+
+
+LaTeX Warning: Label `sec:lightoddZ@cref' multiply defined.
+
+))
 \openout1 = `ThesisMain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 25.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 28.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 28.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    ... okay on input line 28.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -770,7 +777,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 25.
+Package hyperref Info: Link coloring ON on input line 28.
  (./ThesisMain.out) (./ThesisMain.out)
 \@outlinefile=\write5
 \openout5 = `ThesisMain.out'.
@@ -839,7 +846,7 @@ Overfull \hbox (3.46317pt too wide) in paragraph at lines 5--5
 
 
 [6] (./ThesisMain.lof
-Overfull \hbox (7.8948pt too wide) in paragraph at lines 4--4
+Overfull \hbox (7.8948pt too wide) in paragraph at lines 5--5
  \T1/cmr/m/n/12 reactive en-vi-ron-ment at the same sim-u-la-tion time with dif-fer-ent timesteps. 
  []
 
@@ -853,13 +860,15 @@ Overfull \hbox (7.8948pt too wide) in paragraph at lines 4--4
 
 [10]
 
-[11])
+[11]
+
+[12])
 \tf@lof=\write8
 \openout8 = `ThesisMain.lof'.
 
  (./frontmatter/acknowledgements.tex
 
-[12]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
  []
@@ -871,9 +880,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
 ) (./frontmatter/dedications.tex
 
-[13])
-
 [14])
+
+[15])
 \openout2 = `chapters/1/chapter_intro.aux'.
 
  (./chapters/1/chapter_intro.tex
@@ -891,29 +900,35 @@ Chapter 1.
 
 [4]
 
-[5]) (./chapters/1/3_sec_massive_star.tex
-<chapters/1/figures/Prialnik_Fig9.19.png, id=536, 507.8975pt x 353.32pt>
+[5]
+<chapters/1/figures/timescales.pdf, id=633, 867.24pt x 722.7pt>
+File: chapters/1/figures/timescales.pdf Graphic file (type pdf)
+<use chapters/1/figures/timescales.pdf>
+Package pdftex.def Info: chapters/1/figures/timescales.pdf  used on input line 146.
+(pdftex.def)             Requested size: 469.75502pt x 391.46521pt.
+) (./chapters/1/3_sec_massive_star.tex
+
+[6]
+
+[7 <./chapters/1/figures/timescales.pdf>]
+<chapters/1/figures/Prialnik_Fig9.19.png, id=712, 507.8975pt x 353.32pt>
 File: chapters/1/figures/Prialnik_Fig9.19.png Graphic file (type png)
 <use chapters/1/figures/Prialnik_Fig9.19.png>
 Package pdftex.def Info: chapters/1/figures/Prialnik_Fig9.19.png  used on input line 9.
 (pdftex.def)             Requested size: 469.75502pt x 326.79971pt.
 
 
-[6]
-
-[7 <./chapters/1/figures/Prialnik_Fig9.19.png>]
-<chapters/1/figures/Kippenhahn_Ritter+2018.pdf, id=569, 993.45195pt x 848.20386pt>
+[8 <./chapters/1/figures/Prialnik_Fig9.19.png>]
+<chapters/1/figures/Kippenhahn_Ritter+2018.pdf, id=740, 993.45195pt x 848.20386pt>
 File: chapters/1/figures/Kippenhahn_Ritter+2018.pdf Graphic file (type pdf)
 <use chapters/1/figures/Kippenhahn_Ritter+2018.pdf>
 Package pdftex.def Info: chapters/1/figures/Kippenhahn_Ritter+2018.pdf  used on input line 27.
 (pdftex.def)             Requested size: 469.75502pt x 401.07613pt.
 ) (./chapters/1/4_sec_stellar_modelling.tex
 
-[8]
+[9]
 
-[9 <./chapters/1/figures/Kippenhahn_Ritter+2018.pdf>]
-
-[10]
+[10 <./chapters/1/figures/Kippenhahn_Ritter+2018.pdf>]
 
 [11]
 
@@ -922,47 +937,49 @@ Package pdftex.def Info: chapters/1/figures/Kippenhahn_Ritter+2018.pdf  used on 
 [13]
 
 [14]
+
+[15]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 201.
 
 
-[15]
-<chapters/1/figures/time_resolution [temp].png, id=756, 814.04124pt x 605.26125pt>
+[16]
+<chapters/1/figures/time_resolution [temp].png, id=928, 814.04124pt x 605.26125pt>
 File: chapters/1/figures/time_resolution [temp].png Graphic file (type png)
 <use chapters/1/figures/time_resolution [temp].png>
 Package pdftex.def Info: chapters/1/figures/time_resolution [temp].png  used on input line 236.
 (pdftex.def)             Requested size: 469.75502pt x 349.27853pt.
 ) (./chapters/1/5_sec_1d3dmodelling.tex
 
-[16]
+[17]
 
-[17 <./chapters/1/figures/time_resolution [temp].png>]
-<chapters/1/figures/Oshell_ell_MLT.pdf, id=777, 462.52798pt x 346.89601pt>
+[18 <./chapters/1/figures/time_resolution [temp].png>]
+<chapters/1/figures/Oshell_ell_MLT.pdf, id=948, 462.52798pt x 346.89601pt>
 File: chapters/1/figures/Oshell_ell_MLT.pdf Graphic file (type pdf)
 <use chapters/1/figures/Oshell_ell_MLT.pdf>
 Package pdftex.def Info: chapters/1/figures/Oshell_ell_MLT.pdf  used on input line 27.
 (pdftex.def)             Requested size: 469.75502pt x 352.33656pt.
 
 
-[18]
+[19]
 
-[19 <./chapters/1/figures/Oshell_ell_MLT.pdf>]
-<chapters/1/figures/Jones+17_Fig21.png, id=855, 1019.81pt x 764.8575pt>
+[20 <./chapters/1/figures/Oshell_ell_MLT.pdf>]
+<chapters/1/figures/Jones+17_Fig21.png, id=1026, 1019.81pt x 764.8575pt>
 File: chapters/1/figures/Jones+17_Fig21.png Graphic file (type png)
 <use chapters/1/figures/Jones+17_Fig21.png>
 Package pdftex.def Info: chapters/1/figures/Jones+17_Fig21.png  used on input line 56.
 (pdftex.def)             Requested size: 469.75502pt x 352.31721pt.
 
 
-[20]
+[21]
 
-[21 <./chapters/1/figures/Jones+17_Fig21.png>]
+[22 <./chapters/1/figures/Jones+17_Fig21.png>]
 
-[22]))
-
-[23]
+[23]))
 
 [24]
+
+[25]
 \openout2 = `chapters/2/chapter_paper.aux'.
 
  (./chapters/2/chapter_paper.tex
@@ -975,186 +992,186 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--20
 
 
 
-[25
+[26
 
 
 
 
 ]
 
-[26]
-
 [27]
 
 [28]
-<chapters/2/figures/Kippenhahn_Ritter+2018.pdf, id=1054, 993.45195pt x 848.20386pt>
+
+[29]
+<chapters/2/figures/Kippenhahn_Ritter+2018.pdf, id=1213, 993.45195pt x 848.20386pt>
 File: chapters/2/figures/Kippenhahn_Ritter+2018.pdf Graphic file (type pdf)
 <use chapters/2/figures/Kippenhahn_Ritter+2018.pdf>
 Package pdftex.def Info: chapters/2/figures/Kippenhahn_Ritter+2018.pdf  used on input line 89.
 (pdftex.def)             Requested size: 469.75502pt x 401.07613pt.
 
 
-[29 <./chapters/2/figures/Kippenhahn_Ritter+2018.pdf>]
-<chapters/2/figures/Dmlt_forced.pdf, id=1107, 1004.09332pt x 858.63785pt>
+[30 <./chapters/2/figures/Kippenhahn_Ritter+2018.pdf>]
+<chapters/2/figures/Dmlt_forced.pdf, id=1265, 1004.09332pt x 858.63785pt>
 File: chapters/2/figures/Dmlt_forced.pdf Graphic file (type pdf)
 <use chapters/2/figures/Dmlt_forced.pdf>
 Package pdftex.def Info: chapters/2/figures/Dmlt_forced.pdf  used on input line 107.
 (pdftex.def)             Requested size: 469.75502pt x 401.7125pt.
 
 
-[30]
+[31]
 
-[31 <./chapters/2/figures/Dmlt_forced.pdf>]
-<chapters/2/figures/All_Dconv.pdf, id=1190, 1004.09332pt x 858.21715pt>
+[32 <./chapters/2/figures/Dmlt_forced.pdf>]
+<chapters/2/figures/All_Dconv.pdf, id=1348, 1004.09332pt x 858.21715pt>
 File: chapters/2/figures/All_Dconv.pdf Graphic file (type pdf)
 <use chapters/2/figures/All_Dconv.pdf>
 Package pdftex.def Info: chapters/2/figures/All_Dconv.pdf  used on input line 134.
 (pdftex.def)             Requested size: 469.75502pt x 401.51567pt.
-<chapters/2/figures/Dmlt_partial_gosh.pdf, id=1199, 985.19453pt x 858.63785pt>
+<chapters/2/figures/Dmlt_partial_gosh.pdf, id=1357, 985.19453pt x 858.63785pt>
 File: chapters/2/figures/Dmlt_partial_gosh.pdf Graphic file (type pdf)
 <use chapters/2/figures/Dmlt_partial_gosh.pdf>
 Package pdftex.def Info: chapters/2/figures/Dmlt_partial_gosh.pdf  used on input line 157.
 (pdftex.def)             Requested size: 469.75502pt x 409.40321pt.
 
 
-[32]
+[33]
 
-[33 <./chapters/2/figures/All_Dconv.pdf>]
+[34 <./chapters/2/figures/All_Dconv.pdf>]
 
-[34 <./chapters/2/figures/Dmlt_partial_gosh.pdf>]
-<chapters/2/figures/correlation_example.pdf, id=1353, 1011.78pt x 867.24pt>
+[35 <./chapters/2/figures/Dmlt_partial_gosh.pdf>]
+<chapters/2/figures/correlation_example.pdf, id=1512, 1011.78pt x 867.24pt>
 File: chapters/2/figures/correlation_example.pdf Graphic file (type pdf)
 <use chapters/2/figures/correlation_example.pdf>
 Package pdftex.def Info: chapters/2/figures/correlation_example.pdf  used on input line 183.
 (pdftex.def)             Requested size: 469.75502pt x 402.65372pt.
 
 
-[35]
+[36]
 
-[36 <./chapters/2/figures/correlation_example.pdf>]
-<chapters/2/figures/Se74_example.pdf, id=1436, 1011.78pt x 722.7pt>
+[37 <./chapters/2/figures/correlation_example.pdf>]
+<chapters/2/figures/Se74_example.pdf, id=1593, 1011.78pt x 722.7pt>
 File: chapters/2/figures/Se74_example.pdf Graphic file (type pdf)
 <use chapters/2/figures/Se74_example.pdf>
 Package pdftex.def Info: chapters/2/figures/Se74_example.pdf  used on input line 198.
 (pdftex.def)             Requested size: 469.75502pt x 335.54475pt.
 ) (./chapters/2/2_sec_paper_results.tex
 
-[37 <./chapters/2/figures/Se74_example.pdf>]
-<chapters/2/figures/Temperature_Profile_with_X.pdf, id=1499, 1002.93587pt x 712.48888pt>
+[38 <./chapters/2/figures/Se74_example.pdf>]
+<chapters/2/figures/Temperature_Profile_with_X.pdf, id=1655, 1002.93587pt x 712.48888pt>
 File: chapters/2/figures/Temperature_Profile_with_X.pdf Graphic file (type pdf)
 <use chapters/2/figures/Temperature_Profile_with_X.pdf>
 Package pdftex.def Info: chapters/2/figures/Temperature_Profile_with_X.pdf  used on input line 15.
 (pdftex.def)             Requested size: 469.75502pt x 333.71742pt.
 
 
-[38]
+[39]
 
-[39 <./chapters/2/figures/Temperature_Profile_with_X.pdf>]
-<chapters/2/figures/ce136_network_m1.55551.pdf, id=1574, 1004.68759pt x 967.55453pt>
+[40 <./chapters/2/figures/Temperature_Profile_with_X.pdf>]
+<chapters/2/figures/ce136_network_m1.55551.pdf, id=1732, 1004.68759pt x 967.55453pt>
 File: chapters/2/figures/ce136_network_m1.55551.pdf Graphic file (type pdf)
 <use chapters/2/figures/ce136_network_m1.55551.pdf>
 Package pdftex.def Info: chapters/2/figures/ce136_network_m1.55551.pdf  used on input line 29.
 (pdftex.def)             Requested size: 469.75502pt x 452.40327pt.
-<chapters/2/figures/ce136_network_m1.58017.pdf, id=1575, 1004.68759pt x 967.55453pt>
+<chapters/2/figures/ce136_network_m1.58017.pdf, id=1733, 1004.68759pt x 967.55453pt>
 File: chapters/2/figures/ce136_network_m1.58017.pdf Graphic file (type pdf)
 <use chapters/2/figures/ce136_network_m1.58017.pdf>
 Package pdftex.def Info: chapters/2/figures/ce136_network_m1.58017.pdf  used on input line 35.
 (pdftex.def)             Requested size: 469.75502pt x 452.40327pt.
 
 
-[40 <./chapters/2/figures/ce136_network_m1.55551.pdf>]
+[41 <./chapters/2/figures/ce136_network_m1.55551.pdf>]
 
-[41 <./chapters/2/figures/ce136_network_m1.58017.pdf>]
-<chapters/2/figures/impact_mixing_cases.pdf, id=1688, 1445.4pt x 722.7pt>
+[42 <./chapters/2/figures/ce136_network_m1.58017.pdf>]
+<chapters/2/figures/impact_mixing_cases.pdf, id=1845, 1445.4pt x 722.7pt>
 File: chapters/2/figures/impact_mixing_cases.pdf Graphic file (type pdf)
 <use chapters/2/figures/impact_mixing_cases.pdf>
 Package pdftex.def Info: chapters/2/figures/impact_mixing_cases.pdf  used on input line 59.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
 
 
-[42]
+[43]
 
-[43 <./chapters/2/figures/impact_mixing_cases.pdf>]
-<chapters/2/figures/ingest_MLT.pdf, id=1773, 1445.4pt x 722.7pt>
+[44 <./chapters/2/figures/impact_mixing_cases.pdf>]
+<chapters/2/figures/ingest_MLT.pdf, id=1930, 1445.4pt x 722.7pt>
 File: chapters/2/figures/ingest_MLT.pdf Graphic file (type pdf)
 <use chapters/2/figures/ingest_MLT.pdf>
 Package pdftex.def Info: chapters/2/figures/ingest_MLT.pdf  used on input line 88.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
-<chapters/2/figures/ingest_3D.pdf, id=1776, 1445.4pt x 722.7pt>
+<chapters/2/figures/ingest_3D.pdf, id=1933, 1445.4pt x 722.7pt>
 File: chapters/2/figures/ingest_3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/ingest_3D.pdf>
 Package pdftex.def Info: chapters/2/figures/ingest_3D.pdf  used on input line 94.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
-<chapters/2/figures/ingest_3x3D.pdf, id=1779, 1445.4pt x 722.7pt>
+<chapters/2/figures/ingest_3x3D.pdf, id=1936, 1445.4pt x 722.7pt>
 File: chapters/2/figures/ingest_3x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/ingest_3x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/ingest_3x3D.pdf  used on input line 100.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
-<chapters/2/figures/ingest_10x3D.pdf, id=1782, 1445.4pt x 722.7pt>
+<chapters/2/figures/ingest_10x3D.pdf, id=1939, 1445.4pt x 722.7pt>
 File: chapters/2/figures/ingest_10x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/ingest_10x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/ingest_10x3D.pdf  used on input line 106.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
-<chapters/2/figures/ingest_50x3D.pdf, id=1785, 1445.4pt x 722.7pt>
+<chapters/2/figures/ingest_50x3D.pdf, id=1942, 1445.4pt x 722.7pt>
 File: chapters/2/figures/ingest_50x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/ingest_50x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/ingest_50x3D.pdf  used on input line 112.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
 
 
-[44]
+[45]
 
-[45 <./chapters/2/figures/ingest_MLT.pdf>]
+[46 <./chapters/2/figures/ingest_MLT.pdf>]
 
-[46 <./chapters/2/figures/ingest_3D.pdf>]
+[47 <./chapters/2/figures/ingest_3D.pdf>]
 
-[47 <./chapters/2/figures/ingest_3x3D.pdf>]
+[48 <./chapters/2/figures/ingest_3x3D.pdf>]
 
-[48 <./chapters/2/figures/ingest_10x3D.pdf>]
+[49 <./chapters/2/figures/ingest_10x3D.pdf>]
 
-[49 <./chapters/2/figures/ingest_50x3D.pdf>]
-<chapters/2/figures/impact_mixing_GOSH_partial.pdf, id=2183, 1445.4pt x 722.7pt>
+[50 <./chapters/2/figures/ingest_50x3D.pdf>]
+<chapters/2/figures/impact_mixing_GOSH_partial.pdf, id=2340, 1445.4pt x 722.7pt>
 File: chapters/2/figures/impact_mixing_GOSH_partial.pdf Graphic file (type pdf)
 <use chapters/2/figures/impact_mixing_GOSH_partial.pdf>
 Package pdftex.def Info: chapters/2/figures/impact_mixing_GOSH_partial.pdf  used on input line 136.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
 
 
-[50 <./chapters/2/figures/impact_mixing_GOSH_partial.pdf>]
-<chapters/2/figures/nuclearimpact_MLT.pdf, id=2264, 1413.78458pt x 713.60516pt>
+[51 <./chapters/2/figures/impact_mixing_GOSH_partial.pdf>]
+<chapters/2/figures/nuclearimpact_MLT.pdf, id=2421, 1413.78458pt x 713.60516pt>
 File: chapters/2/figures/nuclearimpact_MLT.pdf Graphic file (type pdf)
 <use chapters/2/figures/nuclearimpact_MLT.pdf>
 Package pdftex.def Info: chapters/2/figures/nuclearimpact_MLT.pdf  used on input line 159.
 (pdftex.def)             Requested size: 469.75502pt x 237.11284pt.
-<chapters/2/figures/nuclearimpact_3D.pdf, id=2265, 1413.78458pt x 713.60516pt>
+<chapters/2/figures/nuclearimpact_3D.pdf, id=2422, 1413.78458pt x 713.60516pt>
 File: chapters/2/figures/nuclearimpact_3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/nuclearimpact_3D.pdf>
 Package pdftex.def Info: chapters/2/figures/nuclearimpact_3D.pdf  used on input line 165.
 (pdftex.def)             Requested size: 469.75502pt x 237.11284pt.
-<chapters/2/figures/nuclearimpact_3x3D.pdf, id=2266, 1413.78458pt x 713.60516pt>
+<chapters/2/figures/nuclearimpact_3x3D.pdf, id=2423, 1413.78458pt x 713.60516pt>
 File: chapters/2/figures/nuclearimpact_3x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/nuclearimpact_3x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/nuclearimpact_3x3D.pdf  used on input line 171.
 (pdftex.def)             Requested size: 469.75502pt x 237.11284pt.
-<chapters/2/figures/nuclearimpact_10x3D.pdf, id=2267, 1413.78458pt x 713.60516pt>
+<chapters/2/figures/nuclearimpact_10x3D.pdf, id=2424, 1413.78458pt x 713.60516pt>
 File: chapters/2/figures/nuclearimpact_10x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/nuclearimpact_10x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/nuclearimpact_10x3D.pdf  used on input line 177.
 (pdftex.def)             Requested size: 469.75502pt x 237.11284pt.
-<chapters/2/figures/nuclearimpact_50x3D.pdf, id=2268, 1413.78458pt x 713.60516pt>
+<chapters/2/figures/nuclearimpact_50x3D.pdf, id=2425, 1413.78458pt x 713.60516pt>
 File: chapters/2/figures/nuclearimpact_50x3D.pdf Graphic file (type pdf)
 <use chapters/2/figures/nuclearimpact_50x3D.pdf>
 Package pdftex.def Info: chapters/2/figures/nuclearimpact_50x3D.pdf  used on input line 183.
 (pdftex.def)             Requested size: 469.75502pt x 237.11284pt.
 
 
-[51]
+[52]
 
-[52 <./chapters/2/figures/nuclearimpact_MLT.pdf>]
+[53 <./chapters/2/figures/nuclearimpact_MLT.pdf>]
 
-[53 <./chapters/2/figures/nuclearimpact_3D.pdf> <./chapters/2/figures/nuclearimpact_3x3D.pdf>]
+[54 <./chapters/2/figures/nuclearimpact_3D.pdf> <./chapters/2/figures/nuclearimpact_3x3D.pdf>]
 
-[54 <./chapters/2/figures/nuclearimpact_10x3D.pdf> <./chapters/2/figures/nuclearimpact_50x3D.pdf>]
+[55 <./chapters/2/figures/nuclearimpact_10x3D.pdf> <./chapters/2/figures/nuclearimpact_50x3D.pdf>]
 
 LaTeX Warning: Float too large for page by 42.75755pt on input line 260.
 
@@ -1169,8 +1186,6 @@ LaTeX Warning: Float too large for page by 5.04659pt on input line 606.
 
 ) (./chapters/2/3_sec_paper_discussion.tex
 
-[55]
-
 [56]
 
 [57]
@@ -1184,124 +1199,130 @@ LaTeX Warning: Float too large for page by 5.04659pt on input line 606.
 [61]
 
 [62]
-<chapters/2/figures/impact_mixing_cases_bars_all.pdf, id=2663, 1445.4pt x 722.7pt>
+
+[63]
+<chapters/2/figures/impact_mixing_cases_bars_all.pdf, id=2819, 1445.4pt x 722.7pt>
 File: chapters/2/figures/impact_mixing_cases_bars_all.pdf Graphic file (type pdf)
 <use chapters/2/figures/impact_mixing_cases_bars_all.pdf>
 Package pdftex.def Info: chapters/2/figures/impact_mixing_cases_bars_all.pdf  used on input line 13.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
 
 
-[63 <./chapters/2/figures/impact_mixing_cases_bars_all.pdf>]
-<chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf, id=2753, 1011.78pt x 867.24pt>
+[64 <./chapters/2/figures/impact_mixing_cases_bars_all.pdf>]
+<chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf, id=2911, 1011.78pt x 867.24pt>
 File: chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf Graphic file (type pdf)
 <use chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf>
 Package pdftex.def Info: chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf  used on input line 37.
 (pdftex.def)             Requested size: 469.75502pt x 402.65372pt.
-<chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf, id=2754, 1011.78pt x 867.24pt>
+<chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf, id=2912, 1011.78pt x 867.24pt>
 File: chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf Graphic file (type pdf)
 <use chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf>
 Package pdftex.def Info: chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf  used on input line 42.
 (pdftex.def)             Requested size: 469.75502pt x 402.65372pt.
 
 
-[64]
+[65]
 
-[65 <./chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf>]
+[66 <./chapters/2/figures/grains_Mo92_Mo94_Mo96.pdf>]
 
-[66 <./chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf>])
+[67 <./chapters/2/figures/grains_Ru96_Ru98_Ru100.pdf>])
 
-[67])
+[68])
 
-[68]
+[69]
 \openout2 = `chapters/3/chapter_further.aux'.
 
  (./chapters/3/chapter_further.tex
 Chapter 3.
-(./chapters/3/1_sec_lightoddZ.tex) (./chapters/3/2_sec_rprocess.tex
+(./chapters/3/1_sec_lightoddZ.tex
+<chapters/3/figures/lightoddz_downturn.png, id=3076, 4015.0pt x 2007.5pt>
+File: chapters/3/figures/lightoddz_downturn.png Graphic file (type png)
+<use chapters/3/figures/lightoddz_downturn.png>
+Package pdftex.def Info: chapters/3/figures/lightoddz_downturn.png  used on input line 11.
+(pdftex.def)             Requested size: 469.75502pt x 234.85512pt.
 
-[69
+
+[70
 
 
 
 
 ]
-<chapters/3/figures/in_timescale.png, id=2922, 1104.125pt x 586.19pt>
-File: chapters/3/figures/in_timescale.png Graphic file (type png)
-<use chapters/3/figures/in_timescale.png>
-Package pdftex.def Info: chapters/3/figures/in_timescale.png  used on input line 16.
-(pdftex.def)             Requested size: 469.75502pt x 249.40025pt.
-<chapters/3/figures/pairwise.png, id=2923, 893.3375pt x 577.15625pt>
-File: chapters/3/figures/pairwise.png Graphic file (type png)
-<use chapters/3/figures/pairwise.png>
-Package pdftex.def Info: chapters/3/figures/pairwise.png  used on input line 22.
-(pdftex.def)             Requested size: 469.75502pt x 303.49593pt.
-<chapters/3/figures/frac_exchanging.png, id=2924, 902.37125pt x 564.1075pt>
+
+[71 <./chapters/3/figures/lightoddz_downturn.png>]) (./chapters/3/2_sec_rprocess.tex
+<chapters/3/figures/frac_exchanging.png, id=3092, 902.37125pt x 564.1075pt>
 File: chapters/3/figures/frac_exchanging.png Graphic file (type png)
 <use chapters/3/figures/frac_exchanging.png>
-Package pdftex.def Info: chapters/3/figures/frac_exchanging.png  used on input line 28.
+Package pdftex.def Info: chapters/3/figures/frac_exchanging.png  used on input line 25.
 (pdftex.def)             Requested size: 469.75502pt x 293.66467pt.
 ))
 
-[70 <./chapters/3/figures/in_timescale.png>]
+[72]
 
-[71 <./chapters/3/figures/pairwise.png>]
-
-[72 <./chapters/3/figures/frac_exchanging.png>]
+[73 <./chapters/3/figures/frac_exchanging.png>]
 \openout2 = `chapters/4/chapter_conclusion.aux'.
 
  (./chapters/4/chapter_conclusion.tex
 Chapter 4.
-)
 
-[73
-
-
-
-
-] (./ThesisMain.bbl
 
 [74
 
 
 
+
+])
+
+[75] (./ThesisMain.bbl
+
+[76
+
+
+
 ]
 
-[75]
-Underfull \hbox (badness 10000) in paragraph at lines 143--146
+[77]
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
 []\T1/cmr/m/n/12 Hynes, K. M. and Gy-n-gard, F. (2009).  The Preso-lar Grain Database:
  []
 
 
 
-[76]
-
-[77]
-
 [78]
 
-[79])
+[79]
 
-[80] (./ThesisMain.aux (./chapters/1/chapter_intro.aux) (./chapters/2/chapter_paper.aux) (./chapters/3/chapter_further.aux) (./chapters/4/chapter_conclusion.aux))
+[80]
+
+[81]
+
+[82])
+
+[83] (./ThesisMain.aux (./chapters/1/chapter_intro.aux) (./chapters/2/chapter_paper.aux) (./chapters/3/chapter_further.aux) (./chapters/4/chapter_conclusion.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `ThesisMain.out' has not changed.
-(rerunfilecheck)             Checksum: 56278A7C29EFE3E300C6972D3DC118B1;8980.
+(rerunfilecheck)             Checksum: 340D4C169794A6F494B6FF1D406288CC;9253.
  ) 
 Here is how much of TeX's memory you used:
- 20677 strings out of 473190
- 357449 string characters out of 5715801
+ 20691 strings out of 473190
+ 358334 string characters out of 5715801
  928407 words of memory out of 5000000
- 43153 multiletter control sequences out of 15000+600000
+ 43176 multiletter control sequences out of 15000+600000
  585651 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,12n,120p,1055b,682s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tipa/tipa12.pfb>
-Output written on ThesisMain.pdf (94 pages, 14603122 bytes).
+ 94i,12n,120p,1065b,706s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tipa/tipa12.pfb>
+Output written on ThesisMain.pdf (98 pages, 12663586 bytes).
 PDF statistics:
- 3162 PDF objects out of 3580 (max. 8388607)
- 1639 compressed objects within 17 object streams
- 307 named destinations out of 1000 (max. 500000)
- 521 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3327 PDF objects out of 3580 (max. 8388607)
+ 1752 compressed objects within 18 object streams
+ 298 named destinations out of 1000 (max. 500000)
+ 529 words of extra memory for PDF output out of 10000 (max. 10000000)
 
