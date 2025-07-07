@@ -185,3 +185,5 @@ compile_messages
 # Keep the final PDF but ignore intermediate PDFs
 # Comment out the next line if you want to track your final PDF
 # *.pdf
+
+hydromacros/
