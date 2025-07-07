@@ -1,0 +1,1085 @@
+\section{Abstract}
+\oxygen[]-\carbon[] shell mergers in massive stars are a site for producing the \pnucn{} by the \gprn{}, but 1D stellar models rely on mixing length theory, which does not reproduce the velocity profiles found in 3D hydrodynamic simulations.
+We investigate how 3D macro physics informed mixing impacts the nucleosynthesis of \pnucn{}.
+We post-process the \oxygen[]-shell of the $\mzams=$15\Msun, $Z=0.02$ model from the NuGrid stellar data set \citep{ritterNuGridStellarData2018}.
+Applying a downturn to velocities at the boundary and increasing velocities across the shell \citep{jonesIdealizedHydrodynamicSimulations2017}, we find non-linear, non-monotonic increase in \pnuc{} production with a spread of 0.96\dex, and find that isotopic ratios can change. 
+Reducing \carbon[]-shell ingestion rates \citep{andrassy3DHydrodynamicSimulations2020} suppresses production, with spreads of $1.22$–-1.84\dex across MLT and downturn scenarios. 
+Applying dips to the diffusion profile to mimic quenching events \citep{andrassy3DHydrodynamicSimulations2020} also suppresses production, with a 0.51\dex spread. 
+We also analyze the impact of varying all photo-disintegration rates of unstable \nt-deficient isotopes from \selenium[]{--}\polonium[] by a factor of $10$ up and down.
+The nuclear physics variations for the MLT and downturn cases have a spread of $0.56$--0.78\dex.
+We also provide which reaction rates are correlated with the \pnucn{}, and find few correlations shared between mixing scenarios.
+Our results demonstrate that uncertainties in mixing arising from uncertain 3D macro physics are as significant as nuclear physics and are critical for understanding \pnuc{} production during \oxygen[]-\carbon[] shell mergers quantitatively. 
+
+\section{Introduction} \label{sec:intro}
+
+The origin of the solar pattern of the 35 stable \pnucn{} has been a long-standing problem in nucleosynthesis.
+\cite{burbidgeSynthesisElementsStars1957} first identified these isotopes as a distinct group that were not produced by the $s$ or \rprn, but instead the \pprn{} by $(\pt,\gamma)$, $(\nt,\gamma)$, and $(\gamma,\nt)$ reactions during a Type II supernova.
+Since then, a variety of processes and astrophysical sites have been discussed, but no single mechanism has been identified for the production of all \pnucn{}.
+\cite{woosleyAlphaProcessRProcess1992} found that \selenium[74]--\molybdenum[92] could be produced during the $\alpha$-rich freezeout of a supernova.
+\cite{frohlichNeutrinoInducedNucleosynthesisA>642006} and \cite{arconesProductionLightelementPrimary2011} found high neutrino fluxes during a supernova can create \selenium[74]--\cadmium[108] by $(\nt,\pt)$, $(\nt, \gamma)$, and $(\pt, \gamma)$ reactions in the $\nu\pt$ process.
+\cite{schatzRpprocessNucleosynthesisExtreme1998} suggest that a hydrogen-rich accretion disk around a neutron star could undergo a series of rapid proton captures in the $r p$ process to produce \selenium[74]--\ruthenium[98].
+\cite{xiongProduction$p$Nuclei2024} proposed that neutrino induced reactions of \rpr{} material in a $\nu r$ process could produce \krypton[78]--\lanthanum[138] in the winds of a proto-neutron star. 
+\cite{gorielyHedetonationSubChandrasekharCO2002} proposed that a proton-poor and neutron boosted region could undergo proton-captures could produce all \pnucn{} by the $pn$ process during He-detonation of a \carbon[]-\oxygen[] white dwarf's ejected envelope.
+\cite{woosleyPprocessesSupernovae1978} argued that all of the \pnucn{} could be produced by a series of $(\gamma, \nt)$ and $(\gamma, \alpha)$ reactions on the $s$- and \rprn{} seeds in the \gprn during explosive \carbon[]- or \oxygen[]-shell burning, and \cite{arnouldPossibilitySynthesisProtonrich1976} argued that hydrostatic \oxygen[]-burning could also be a site.
+\cite{rauscherNucleosynthesisMassiveStars2002} found that the \gprn{} could produce the \pnucn{} in massive stars during the core collapse supernova (CCSN), but also prior if the \oxygen[]-shell merges the \carbon[]-shell, but that it underproduced \isotope{}{92,94}{Mo} and \isotope{}{96,98}{Ru}.
+\cite{ritterConvectivereactiveNucleosynthesisSc2018} found that the \pnucn{} could be produced during an \oxygen[]-\carbon[] shell merger.
+The \gprn{} describes the flow of $(\gamma,\nt)$, $(\gamma,\pt)$, and $(\gamma,\alpha)$ reactions on the stable isotopic seeds that are already present in the shell at temperatures of $1.5 \leq T \leq \natlog{3}{9}\K$ \citep{rauscherConstrainingAstrophysicalOrigin2013}.
+However, the \gprn{} in massive stars underproduces not only the \molybdenum[] and \ruthenium[], but all \pnucn{} with $A=90-130$ \citep{arnouldPprocessStellarNucleosynthesis2003, woosleyNucleosynthesisRemnantsMassive2007} and \cite{woosleyNucleosynthesisRemnantsMassive2007}.
+\cite{travaglioTypeIaSupernovae2011} found that the \gpr{} could produce all \pnucn{} of \spr{} material in a Type Ia supernova, without the underproduction of \molybdenum[92,94] and \ruthenium[96,98].
+\cite{travaglioTestingRoleSNe2015} found that modifying the distribution of \spr{} material significantly influenced the production of the \pnucn{}, especially the heaviest ones, and that the lightest three were metallicity dependent.
+\cite{battinoHeavyElementsNucleosynthesis2020} found that the H-flashes of rapidly accreting white dwarfs undergo the \iprn{} which modifies the seed distribution to produce \pnucn{} with $96 < A < 196$ by the \gprn{} during the subsequent SNIa.
+\cite{pignatariProductionProtonrichIsotopes2016} argue that in massive stars the weak \sprn{} can modify the seed distribution to boost production of the \pnucn{} by the \gprn{} during the CCSN.
+The initial seed distribution is important for the \gprn{} as it sets the initial conditions for photodisintegration and subsequent nucleosynthesis pathways.
+
+Since \cite{burbidgeSynthesisElementsStars1957}, it has been found that not all \pnucn{} in the solar pattern are produced by a single process.
+\cite{bisterzoSprocessLowmetallicityStars2011} found that \gadolinium[152], \erbium[164], and \tantalum[180] have significant contributions of $70.5\%$, $75.5\%$, and $74.5\%$ from the \sprn{}.
+\cite{dillmannPProcessSimulationsModified2008} argue that \indium[113] and \tin[115] are made by $\beta$-decays after the \rprn{} through isomeric states.
+\cite{gorielyPuzzleSynthesisRare2001} argue that $(\gamma,\nt)$ was too weak to produce \lanthanum[138], and instead that it is made by $\nu_e$-capture on \barium[138] during the CCSN, and \cite{arnouldPprocessStellarNucleosynthesis2003} similarly argue \tantalum[180m] could also have $\nu$-induced contributions.
+\cite{sieverdingNProcessLightImproved2018} found that the $\nu$-process is important for the nucleosynthesis of \indium[113], \lanthanum[138], and \tantalum[180].
+
+Existing massive star models that include \pnuc{} production are 1D models that rely on mixing length theory (MLT) to describe the mixing of material in convective shells.
+Multi-dimensional hydrodynamic simulations of convective \oxygen[]-shell burning predict higher convective velocities than MLT and a gradual downturn to the velocities at the shell boundaries instead of a sharp cutoff like MLT predicts \citep{bazanConvectionNucleosynthesisCore1994, meakinTurbulentConvectionStellar2007,jonesIdealizedHydrodynamicSimulations2017}.
+In addition to this, 3D \oxygen[]/\neon[]/\carbon[] shell mergers have large scale non-radially asymmetries and could have \carbon[]-shell ingestion rates significantly lower than those predicted by 1D models \citep{andrassy3DHydrodynamicSimulations2020,yadavLargescaleMixingViolent2020a}.
+The 1D models in \cite{ritterNuGridStellarData2018} have \oxygen[]-\carbon[] shell mergers when the upper boundary of the \oxygen[]-shell rapidly changes it entrains \carbon[12] and \neon[20], which burn in the \oxygen[]-shell and flatten the entropy gradient.
+In contrast, \cite{rizzutiShellMergersLate2024a} find in their 3D simulations that the bottom boundary of the \carbon[]-shell extends down and subsumes the \oxygen[]-shell. 
+\cite{yadavLargescaleMixingViolent2020a} find similarly that 3D mergers occur differently than 1D because entropy is created due to nuclear burning hotspots lowering entropy in the \neon[]-shell and that material being carried in by convective downdrafts into the \oxygen[]-shell raising its entropy.
+The shell merger occurs late in the stellar evolution, and the dynamic behaviour of these supernova progenitors are not well-described in 1D models \citep{arnettRealisticProgenitorsCorecollapse2011, mullerStatusMultiDimensionalCoreCollapse2016, yadavLargescaleMixingViolent2020a}.
+
+The \oxygen[]-shell is a convective-reactive environment where mixing and nuclear burning timescales are equal and species are not well-mixed \citep{ritterConvectivereactiveNucleosynthesisSc2018}.
+If these timescales are equal, species could either react or advect to another location and react there.
+If these reactions release little energy, the flow would not be significantly affected, such as \lithium[7] production by the Cameron-Fowler mechanism \citep{cameronLithiumSPROCESSRedGiant1971,sackmannCreationSuperrichLithium1992}.
+However, if there is significant energy released the flow would be modified \citep{dimotakisTurbulentMixing2005}, which occurs during \hydrogen[]-ingestion into \helium[] layer \citep{herwigCONVECTIVEREACTIVEPROTON2011,herwigGLOBALNONSPHERICALOSCILLATIONS2014} or \oxygen[]-\carbon[] shell mergers with violent mixing \citep{andrassy3DHydrodynamicSimulations2020,yadavLargescaleMixingViolent2020a}.
+
+The Damköhler number \citep{dimotakisTurbulentMixing2005} can be used to quantify whether a region is convective-reactive or not.
+\begin{equation}
+    D_\alpha \equiv \frac{\tau_{\mathrm{mix}}}{\tau_{\mathrm{react}}}
+\end{equation}
+where $\tau_{\mathrm{mix}}$ is the mixing timescale and $\tau_{\mathrm{react}}$ is the nuclear reaction timescale.
+Convective regions are regions where $D_\alpha \ll 1$, so the mixing is much faster than the nuclear burning and species are well-mixed across the region.
+Convective-reactive regions have $D_\alpha \sim 1$ and the behaviour described above occurs.
+Mixing in 1D models is treated as a diffusive process with a coefficient $D_{\mathrm{MLT}} = \frac{1}{3} v_{\mathrm{MLT}}\ell$, where $v_{\mathrm{MLT}}$ is the convective velocity and $\ell$ is the mixing length given by $\ell = \alpha H_p$, with $H_p$ the pressure scale height and $\alpha$ a free parameter \citep{joyceReviewMixingLength2023}.
+The mixing timescale is then given by
+\begin{equation}
+    \tau_{\mathrm{mix}} = \frac{\ell^2}{D_{\mathrm{MLT}}}
+\end{equation}
+as in \citep{herwigCONVECTIVEREACTIVEPROTON2011}.
+The reaction timescale is defined as
+\begin{equation}
+    \tau_{\mathrm{react}} = \frac{1}{\rho N_A \langle \sigma v \rangle Y_j}
+\end{equation}
+where $\rho$ is the local density, $N_A$ is Avogadro's number, $\langle \sigma v \rangle$ is the thermally averaged reaction rate, and $Y_j$ is the molar abundance of the interacting species.
+
+Although 3D hydrodynamic simulations may not be solving all relevant equations, such as a robust nuclear network, the 1D predictions lack the ability to describe the mixing during an \oxygen[]-\carbon[] shell merger.
+This is because in 3D simulations, the mixing of ingested \carbon[]-shell material occurs by convective plumes which are non-radial and result in spherically asymmetric instabilities \citep{meakinActiveCarbonOxygen2006,andrassy3DHydrodynamicSimulations2020, yadavLargescaleMixingViolent2020a}.
+Further, 1D simulations do not capture how a merger happens between the \oxygen[]- and \carbon[]-shells.
+This is a problem for \pnuc{} production as \cite{robertiGprocessNucleosynthesisCorecollapse2023} found that \pnucn{} with $A > 110$ were largely produced during the merger rather than during explosive burning.
+This result was found to be independent of the peak energy of the CCSN \citep{robertiGprocessNucleosynthesisCorecollapse2024b}.
+To explore the impact of the uncertainties from MLT to describe the mixing in convective shells, we adopt in this paper a 3D hydrodynamic inspired set of modifed radial mixing profiles to determine the impact of mixing on the \gprn{} in the \oxygen[]-shell as \carbon[]-shell material is entrained.
+In addition to this, the impact of nuclear physics in the \oxygen[]-shell will also be explored.
+
+In Section \ref{sec:methods} we present the methods of how the \cite{ritterNuGridStellarData2018} model is post-processed, the way 3D hydrodynamic results are implemented in 1D, and how the nuclear physics impact is determined. 
+In Section \ref{sec:convreacflow} we explore the nucleosynthesis pathways of the \gprn{} in the convective-reactive environment. 
+Next, in Sections \ref{sec:convdownturnimpact}--\ref{sec:goshimpact} we explore how different mixing details can impact the production of the p-nuclei: Section \ref{sec:convdownturnimpact} explores the impact of gradual downturn to velocities at the lower boundary and boosting velocities in the \oxygen[]-shell, Section \ref{sec:ingestionimpact} considers how lowering the \carbon[]-shell ingestion rate, and Section \ref{sec:goshimpact} looks at the impact of dips in the diffusion profile.
+Section \ref{sec:nuclearimpact} explores the impact from the nuclear physics and its relationship to the mixing details.
+Finally, in Section \ref{sec:discussion_conclusion} we summarize the results and discuss the implications of this work.
+  
+\section{Methodology} \label{sec:methods}
+
+\subsection{Initial Model and Post-Processing Setup}
+
+In this paper, we post-process the massive stellar model $\mzams=15\Msun$,  $Z=0.02$ in the NuGrid data set \citep{ritterNuGridStellarData2018}.
+This 1D stellar model was computed with \MESA{} \citep{paxtonMODULESEXPERIMENTSLAR2010} without rotation. Convective boundary mixing is treated using an exponential-diffusive prescription \citep{freytagHydrodynamicalModelsStellar1996,herwigEvolutionAGBStars2000} with $f=0.022$ at all boundaries except at the base of convective shells where $f=0.005$ until the end of core \helium[] burning, after which $f=0$.
+This model has a merger of its convective \oxygen[] and \carbon[]-burning shells late in its evolution as shown in Figure \ref{fig:kippenhahn}.
+During this merger, the \carbon[]-burning ashes and stable isotopic material are ingested into the much hotter \oxygen[]-burning shell.
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{chapters/2/figures/Kippenhahn_Ritter+2018.pdf}
+\caption{Kippenhahn diagram showing the merger of the convective O and C-burning shells. The O-burning shell extends from $1.55 M_\odot$ to $1.95 M_\odot$. The first convective C-burning shell ingested sits directly on top from $1.96 M_\odot$ to $2.11 M_\odot$ and the other convective C-burning shells are above. A red guideline has been provided to mark the thin radiative layer separating the O- and C-shells. The merger onsets at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr} \approx -3.85$ and reaches full extent at $\approx-4$. A black triangle marks the location where the initial \pnucn{} are taken from and a white star marks the location where the ingested \carbon[]-shell material is taken from.
+\label{fig:kippenhahn}}
+\end{figure}
+
+The detailed nucleosynthesis is calculated with the 1D multi-zone post-processing code \mppnp{} \citep{pignatariNuGridStellarData2016}.
+\mppnp{} is a multi-zone post-processing code that uses stellar structure calculated by stellar evolution codes to calculate the full nucleosynthesis of a stellar model.
+\mppnp{} treats mixing, nuclear burning, and ingestion separately rather than the coupled treatment by a code like \MESA{} \cite{paxtonMODULESEXPERIMENTSLAR2010}. 
+A convergence test was performed by decreasing the timesteps and increasing the number of mass zones.
+It found that a timestep of $\Delta t = 0.01\second$ and $400$ equidistant mass zones with $4$ additional zones at the bottom of the O-shell were sufficient to resolve both the burning and mixing timescales.
+Calculations were initially done with a $5234$ isotope network, but many of these were unnecessary as they were \nt-rich and not needed for the calculations. 
+All necessary isotopes were included, which amounted to the network of 1470 species, focusing on the \pt-rich side allowing for faster calculations.
+The network adopted did not include isomeric states, so the nucleosynthesis of $^{180\mathrm{m}}\mathrm{Ta}$ is not calculated although we calculate the ground state $^{180}\mathrm{Ta}$.
+A single simulation costed approximately $8$ hours on $40$ cores, for a total of $180$ core years for this paper.
+
+The \mppnp{} code calculates both the undecayed mass fraction as a function of mass, and mass-averaged radiogenic decay contribution to the isotopes at a temperature of $T=100~\mathrm{MK}$ which does not include explosive contributions.
+The mass fraction $X_i$ of species $i$ is defined as the ratio of the mass of that species to the total mass of the stellar material, such that $\sum_i X_i = 1$ for all isotopes.
+To analyze the macrophysical impact during the merger on nucleosynthesis, the isotopic mass fractions are taken right before onset of merger at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr}=-3.845$ from $m=1.8\Msun$.
+The ingested \carbon[]-shell material is taken from the same time from $m=2.0\Msun$.
+The results are presented in terms of an overproduction \OP{} compared to the initial amount given by the equation
+\begin{equation}\label{eq:OP}
+    \OP = \log_{10}\Biggl(\frac{X_{f}}{X_{i}}\Biggr)
+\end{equation}
+where $X_{f}$ is the final mass-averaged decayed mass fraction of a species in the O-shell and $X_{i}$ is the inital mass fraction.
+The average overproduction factor is calculated as the arithmetic mean of individual OP values:
+\begin{equation}
+    \langle \OP \rangle = \frac{1}{N}\sum_i^{N} \OP_i
+\end{equation}
+where $N$ is the number of \pnucn{} considered.
+
+Earlier in the evolution of this stellar model, it produces the \pnucn{} by the \gprn{} in the first convective \oxygen[]-shell which extends from $1.55\Msun$ to $1.95\Msun$ during model numbers $6200${--}$7200$.
+The initial mass fractions of the \pnucn{} are set here and are not modified during subsequent radiative \carbon[]- or \oxygen[]-burning. 
+The mass fractions used in this study are shown in Figure \ref{fig:initial_comp}.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{chapters/2/figures/initial_composition.pdf}
+\caption{Mass fractions of the \pnucn{} from $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr}=-3.856$. used for initial \oxygen[]-shell composition and ingested \carbon[]-shell material. Markers are the same as those used in Figure \ref{fig:kippenhahn}.
+\label{fig:initial_comp}}
+\end{figure}
+
+The stellar structure from the onset of the merger at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{\yr}=-3.856$.
+To be able to clearly analyze the impact of mixing alone, we have kept the stellar structure constant.
+The stellar structure is not static, but the change to the temperature, density, and entropy between these timesteps is less than 5\%.
+The merger at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr}=-3.856$ is not fully developed, but \MESA{} cannot accurately model the merger in 1D.
+Therefore, the convective velocity profile is smoothed at the top as if the \carbon[]-shell is merged with the \oxygen[]-shell as seen in Figure \ref{fig:dmlt_forced}.
+
+\begin{figure} 
+\includegraphics[width=\columnwidth]{chapters/2/figures/Dmlt_forced.pdf}
+\caption{The diffusion coefficient profile and mixing length at model number 9200 for the $M_{\mathrm{ZAMS}}=15 M_\odot$, $Z=0.02$ model. The light blue line is $D$ from MESA, the orange line the smoothed $D$ used for the MLT mixing scenario in this paper, and the grey line is the mixing length. Black dashed lines mark the shell boundaries for this paper.
+\label{fig:dmlt_forced}}
+\end{figure}
+
+\subsection{1D implementation of 3D macrophysics}\label{sec:mixing_methods}
+
+MLT predictions of the radial mixing profiles deviate from the more realistic predictions from 3D simulations.
+3D convective \oxygen[]-burning simulations show that the radial convective velocity profile gradually decreases as it approaches the boundary of the \oxygen[]-shell rather than MLT predictions of a stiff boundary \citep{meakinTurbulentConvectionStellar2007,jonesIdealizedHydrodynamicSimulations2017}.
+The downturn can be seen both at the bottom of a shell \cite{herwigHydrodynamicSimulationsHe2006, meakinTurbulentConvectionStellar2007} or at the top \cite{jonesIdealizedHydrodynamicSimulations2017}.
+The decrease in radial velocity happens because mixing in these simulations are driven by convective plumes rather than the blobs of MLT.
+In the middle of a convective region, plumes have strong radial velocities and travel towards the convective boundary, but as they reach the boundary, their radial velocity component diminishes while the other components of the velocity increase.
+This is different from MLT which predicts a stiff boundary where velocities drop to zero at the boundary.
+Using Equation 4 from \cite{jonesIdealizedHydrodynamicSimulations2017}, the downturn to the radial velocity profile can be mimiced in 1D.
+\begin{equation}
+    D_{\mathrm{3D\text{-} insp.}} = \frac{1}{3} v_{\mathrm{MLT}}\times\min{(\ell,r-r_0)}
+\end{equation}
+where $\ell$ is the mixing length, $r_0$ is the Schwarzschild boundary at the bottom of the \oxygen[]-shell, and an additional factor of $1/3$ is applied to match the MLT diffusion coefficient at the top of the shell.
+
+MLT also underpredicts the strength of the convective velocities in the \oxygen[]-shell.
+\cite{jonesIdealizedHydrodynamicSimulations2017} found that convective velocities are stronger by a factor of $\sim 30$ when compared to the MLT predictions. 
+\cite{andrassy3DHydrodynamicSimulations2020} in their 3D C-shell entrainment simulations that their r.m.s. velocities could be up to $\sim 5$ times stronger than \cite{jonesIdealizedHydrodynamicSimulations2017} depending on the luminosity from carbon and oxygen burning.
+It is possible the velocities could be higher as these simulations do not include feedback from a nuclear network and treatment of radiation pressure \citep{jonesIdealizedHydrodynamicSimulations2017, andrassy3DHydrodynamicSimulations2020}.
+\cite{rizzutiShellMergersLate2024a} find that velocities are boosted by a factor of $\sim 10$ due to the feedback from new reactions with the ingested material in their 3D O-C shell mergers.
+In our 1D models, we implement this by applying a boost factor of $3\times$, $10\times$, and $50\times$ to the convective velocities as shown in Figure \ref{fig:all_dconv}.
+
+\begin{figure} 
+\includegraphics[width=\columnwidth]{chapters/2/figures/Dmlt_downturn.pdf}
+\caption{The diffusion coefficient profiles for the MLT and 3D-inspired gradual downturn scenarios. The dashed orange line is the $D_{\mathrm{MLT}}$ profile, and the dashed light grey line, dotted light blue line, solid grey line, and dashed dark blue line are the downturn profiles with boost factors of $1$, $3$, $10$, and $50$ respectively. 
+\label{fig:all_dconv}}
+\end{figure}
+
+The entrainment of \carbon[]-shell material could be different during the merger depending on the strength of burning \citep{jonesIdealizedHydrodynamicSimulations2017, andrassy3DHydrodynamicSimulations2020}.
+To investigate the impact of this, a range of rates are considered: $\natlog{4}{-5}\Msun\second^{-1}$, $\natlog{4}{-4}\Msun\second^{-1}$, and $\natlog{4}{-3}\Msun\second^{-1}$, as well as a scenario with no entrainment.
+The mass of the \carbon[]-shell is 0.8\Msun in the model considered, so for 110\second of merging the maximum possible entrainment rate would be $\natlog{7}{-3}\Msun\second^{-1}$ similar to \cite{ritterConvectivereactiveNucleosynthesisSc2018}.
+
+3D simulations also show the convective profile can be quenched as material is ingested because of entropy entrainment \citep{millerbertolamiNewEvolutionaryCalculations2006, herwigCONVECTIVEREACTIVEPROTON2011,herwigGLOBALNONSPHERICALOSCILLATIONS2014}.
+During \hydrogen[]-ingestion into a \helium[]-shell, the energy feedback from the ingested material could cause a split in the convective profile with very small amount of entrainment \citep{herwigCONVECTIVEREACTIVEPROTON2011}.
+\cite{herwigGLOBALNONSPHERICALOSCILLATIONS2014} likewise found this effect could cause a drop in the radial velocity profile and reduce the entrainment of species and labelled the event Global Oscillation of Shell Hydrogen-Ingestion (GOSH).
+Similar effects during C-shell entrainment are possible, as \cite{andrassy3DHydrodynamicSimulations2020} found that strong oscillatory modes like GOSHs were present in their 3D simulations.
+Energy feedback events like this could explain supernova observations \citep{smithPREPARINGEXPLOSIONHYDRODYNAMIC2014}.
+There is no clear prescription for how to implement this effect into 1D models, but it is clear that there would be decreased mixing because of a split.
+To investigate a possible convective quenching, we consider a GOSH-like event and a partial merger, where a dip (but not full split) occurs in the MLT diffusion profile:
+\begin{equation}
+D_{\mathrm{quench}}=D_{\mathrm{MLT}}-(D_{\mathrm{MLT}}-c)\times\exp\Biggl[-\frac{(r-a)^2}{w^2}\Biggr]
+\end{equation}
+where $c$ is the extent, $w$ is the width, and $a$ is the center of the dip using a simple Gaussian.
+The GOSH-like convective splitting occurs at the location where $D_\alpha=1$ for a significant burning event \citep{herwigCONVECTIVEREACTIVEPROTON2011}. 
+We centre this event at $a=4.95\Mm$ at a location of probable energetic feedback could occur.
+The \oxygen[]-shell could partially merge with the \carbon[]-shell due to feedback effects, so we consider a partial merger at $a=7.5\Mm$ where the unmerged MLT profile has a dip as seen in Figure \ref{fig:dmlt_forced}.
+A width of $w=0.25\Mm$ is used for both scenarios, which is approximately the distance between the top of the O-shell and the convective bump above it in Figure \ref{fig:dmlt_forced}.
+For both scenarios we consider a weaker dip of $c=10^{14}\cm^2\second^{-1}$ and a stronger dip of $c=10^{13}\cm^2\second^{-1}$ to investigate the impact on nucleosynthesis.
+The profiles for the GOSH-like and partial merger scenarios are shown in Figure \ref{fig:dgosh_partial}.
+
+\begin{figure} 
+\includegraphics[width=\columnwidth]{chapters/2/figures/Dmlt_partial_gosh.pdf}
+\caption{The quenched mixing scenario convective profiles. The dashed light orange line and dotted light grey line are the GOSH-like profiles with a dip centred at $r=4.95\Mm$. The solid red line and dashed dark grey line are the partial merger profiles with a dip centred $r=7.5\Mm$. The MLT profile is omitted for clarity. 
+\label{fig:dgosh_partial}}
+\end{figure}
+
+\subsection{Determining impact of varying nuclear reactions}\label{sec:nuclear_methods}
+
+Many unstable \nt-deficient isotopes from \selenium[] to \polonium[] have not been measured experimentally and are determined by theoretical models, and the uncertainties of unmeasured reactions reactions for unstable isotopes are much greater than for stable isotopes.
+To determine the impact of nuclear physics for the \gprn{}, we vary our adopted $(\gamma, \alpha)$, $(\gamma, p)$, and $(\gamma, n)$ photo-disintegration rates used by the NuGrid database \citep{pignatariNuGridStellarData2016} for the unstable \nt-deficient isotopes by a random factor uniformly selected between 0.1 to 10 by a Monte Carlo method for 1000 cases.
+This applies the same approach used for $(\nt,\gamma)$ rates for the \iprn{} developed by \cite{denissenkovImpactReactionRate2018} and \cite{denissenkovImpactNgReaction2021}.
+This was done for the MLT and downturn mixing scenarios with an ingestion rate of $\natlog{4}{-3}\Msun\second^{-1}$.
+This approach also allows for the identification of reaction rates that are relevant for the production of an isotope using correlations.
+The Pearson coefficient describes correlations between $X/X_{\mathrm{no~variation}}$ and the variation factors where $X$ is the final mass-averaged and decayed mass fraction of a Monte Carlo case and $X_{\mathrm{no~variation}}$ is the final decayed mass fraction for the default case where all varation factors are equal to $1$.
+All correlations $|r_\mathrm{P}| \geq 0.15$ are reported in this study.
+In addition to the Pearson coefficient, a logarithmic slope $\zeta$ is also reported to determine the importance of a reaction on the final mass fraction of an isotope.
+The importance of considering $\zeta$ as well as additional caveats for the correlated rates are discussed in Appendix \ref{sec:appendixNuclearRates}.
+
+\section{Results} \label{sec:results}
+
+An overview of our results in terms of overproduction factors and average spreads of overproduction factors are presented in Table \ref{tab:mixing_scenarios}.
+
+\begin{table}
+\caption{$\langle\OP\rangle$ for each mixing scenario and the average spread $(\OP_{\max}-\OP_{\min})$ for the Monte Carlo simulations for the \pnucn. All Monte Carlo simulations are calculated with an ingestion rate of $\natlog{4}{-3} \Msun\second^{-1}$.}
+\label{tab:mixing_scenarios}
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccc}
+\hline
+Scenario & No Ingest. & $\natlog{4}{-5}$ & $\natlog{4}{-4}$ & $\natlog{4}{-3}$ & MC Spread \\
+         &            & $(\Msun\second^{-1})$ & $(\Msun\second^{-1})$ & $(\Msun\second^{-1})$ &  \\
+\hline
+MLT                & $-0.11$ & $1.06$ & $1.92$ & $2.24$ & 0.56 \\
+$1\times$ Downturn & $0.05$  & $1.12$ & $1.98$ & $2.58$ & 0.59 \\
+$3\times$ Downturn & $-0.23$ & $1.28$ & $2.18$ & $2.83$ & 0.69 \\
+$10\times$ Downturn& $-1.23$ & $1.18$ & $2.10$ & $2.89$ & 0.76 \\
+$50\times$ Downturn& $-5.47$ & $0.88$ & $1.81$ & $2.72$ & 0.79 \\
+GOSH-like          & \textendash & \textendash & \textendash & $2.06$ & \textendash \\
+Stronger GOSH-like & \textendash & \textendash & \textendash & $1.78$ & \textendash \\
+Partial Merger     & \textendash & \textendash & \textendash & $2.13$ & \textendash \\
+Stronger Partial Merger & \textendash & \textendash & \textendash & $1.91$ & \textendash \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Convective-reactive production of the \texorpdfstring{\pnucn}{p nuclei}} \label{sec:convreacflow}
+
+Convective-reactive nucleosynthesis is characterized by a region where the timescales for advection and nuclear reactions are similar.
+In the \gprn{}, heavier species are produced at cooler temperatures of $1.5${--}$2\Giga\Kelvin$ and are destroyed at higher temperatures, whereas lighter species are produced in temperatures up to $3.5\Giga\Kelvin$ \citep{rauscherConstrainingAstrophysicalOrigin2013}.
+Whether an isotope undergoes $(\gamma,\nt)$ and $(\nt,\gamma)$ reactions or contributes to the production of lighter \pnucn{} by $(\gamma,\pt)$ and $(\gamma,\alpha)$ reactions depends on the temperature at that position. 
+The convective-reactive environment of the \oxygen[]-shell allows for the production of both light and heavy \pnucn{} because the shell is not well-mixed, and therefore species are produced at their ideal temperatures.
+Figure \ref{fig:temperatureprofile} shows how different mass ranges of \pnucn{} can be produced and peak at different positions in the \oxygen[]-shell.
+
+\begin{figure} 
+\includegraphics[width=\columnwidth]{chapters/2/figures/massfraction_example.pdf}
+\caption{Mass fractions without radiogenic contributions at $t=110~\mathrm{sec}$ for the MLT mixing scenario without \carbon[]-shell ingestion.
+\label{fig:temperatureprofile}}
+\end{figure}
+
+Locations of peak destruction can be identified by a sudden drop in mass fraction as seen for \dysprosium[156], \mercury[196], and to a lesser extent \samarium[144].
+This is the location where $D_\alpha=1$, which is different for each isotope \citep{herwigCONVECTIVEREACTIVEPROTON2011}.
+This is contrary to the normal assumption of a well-mixed convective environment where $D_\alpha \ll 1$ or radiative burning where little to no mixing occurs, and is a key reason why the \gprn{} in the \oxygen[]-shell produces the whole range of \pnucn.
+Figure \ref{fig:dy156_fluxes_zeroingest} shows the dominant reactions that \dysprosium[156] is produced and destroyed by in the simulation without \carbon[]-shell ingestion.
+These reactions are shown as reaction fluxes $f_{ij}$ which are defined as the net flux of a reaction between species $i$ and $j$:
+\begin{equation}
+    f_{ij} = \frac{X_i X_j}{A_i A_j} \rho N_A \Biggl(\langle \sigma v \rangle_{ij} - \langle \sigma v \rangle_{ji}\Biggr)
+\end{equation}
+where $X$ is the mass fraction, $A$ is the atomic mass, $\rho$ is the density, $N_A$ is Avogadro's number $\langle \sigma v \rangle_{ij}$ is the reaction rate between species $i$ and $j$.
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{chapters/2/figures/dy156_fluxes_zeroingest.pdf}
+\caption{Reaction fluxes $f_{ij}$ for \dysprosium[156] and mass fractions $X_i$ for \dysprosium[156-158] without radiogenic contributions for the MLT scenario with no ingestion after $t=110\second$. The direction of reactions $i \rightarrow j$ are written as left to right in the legend.
+\label{fig:dy156_fluxes_zeroingest}}
+\end{figure}
+
+The reactions that \dysprosium[156] undergoes in the \oxygen[]-shell depend on the location in the shell, however Figure \ref{fig:dy156_fluxes_zeroingest} shows that the dominant destruction channel $\dysprosium[156](\gamma,\nt)\dysprosium[155]$ net destroys \dysprosium[156], as Figure \ref{fig:ingest_MLT} will show.
+It is also evident that the mass fraction is not well-mixed as the gradient of the mass fraction is steep at the location of peak destruction.
+
+Entraining \carbon[]-shell material is important for this process, as heavier species can be gradually depleted by $(\gamma,\alpha)$ and $(\gamma,\pt)$ reactions.
+Figure \ref{fig:dy156_fluxes_ingest} shows the same as Figure \ref{fig:dy156_fluxes_zeroingest}, but with a \carbon[]-shell ingestion rate of $\natlog{4}{-3}\Msun\second^{-1}$, the maximum considered in this study.
+Since the initial amount of \dysprosium[156] in the ingested \carbon[]-shell is negligible as shown in Figure \ref{fig:initial_comp}, the merger provides other species that are used to produce \dysprosium[156].
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{chapters/2/figures/dy156_fluxes_ingest.pdf}
+\caption{Reaction fluxes $f_{ij}$ for \dysprosium[156] and mass fractions $X_i$ for \dysprosium[156-158] without radiogenic contributions for the MLT scenario with an ingestion rate of $\natlog{4}{-3}\Msun\second^{-1}$ after $t=110\second$. The direction of reactions $i \rightarrow j$ are written as left to right in the legend.
+\label{fig:dy156_fluxes_ingest}}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{chapters/2/figures/dy156_network_m1.6.pdf}
+\caption{Chart of reactions between isotopes at $m=1.64\Msun$ [$T=2.28\Giga\Kelvin$] for the same conditions as Figure \ref{fig:dy156_fluxes_ingest}. Both arrow colour and size indicate $f_{ij}$, and arrows point in the direction of the reaction. 
+\label{fig:dy156_network}}
+\end{figure}
+
+
+There are several differences between Figures \ref{fig:dy156_fluxes_zeroingest} and \ref{fig:dy156_fluxes_ingest}.
+First, $f_{ij}$ and $X_i$ are larger by several orders of magnitude and \dysprosium[156] has a net production in the shell, as Figure \ref{fig:ingest_MLT} will show in Section \ref{sec:ingestionimpact}.
+Second, the mass fraction of \dysprosium[156] has a tilt up where it is net produced and then drops off sharply at the location of peak destruction instead of the decline seen in Figure \ref{fig:dy156_fluxes_zeroingest}.
+
+\dysprosium[156] is produced because the ingestion of \carbon[]-shell material allows for \dysprosium[158] to be replenished as it advects into the shell.
+With a continual supply of \dysprosium[158], the chain $\dysprosium[158](\gamma,\nt)\dysprosium[157](\gamma,\nt)\dysprosium[156]$ can occur and significantly contribute to the production of \dysprosium[156] equal to $\erbium[160](\gamma,\alpha)\dysprosium[156]$.
+
+Figure \ref{fig:dy156_fluxes_ingest} also shows another feature of this convective-reactive environment: \dysprosium[156] and \dysprosium[157] co-produce each other. 
+\dysprosium[156] is advected from its location of peak production at $\sim$1.63\Msun both deeper into the shell where it is fully destroyed, and toward the top where it undergoes $\dysprosium[156](\nt,\gamma)\dysprosium[157]$, which mildly contributes to the production of \dysprosium[157] and peaks at $\sim$1.73\Msun.
+
+This demonstrates that in a convective-reactive environment isotopes are not well-mixed, and how the reaction rates vary with position.
+They also show how isotopes can produce each other at different locations in the shell.
+Finally, they show why the ingestion of \carbon[]-shell material is necessary for significant production of the \pnucn{} in the \oxygen[]-shell.
+
+\subsection{Impact from a downturn and boosting mixing speeds}\label{sec:convdownturnimpact}
+
+Here we present the impact of a 3D-inspired gradual downturn at the lower boundary and boosting mixing speeds as explained in Section \ref{sec:mixing_methods} with the diffusion coefficients in Figure \ref{fig:all_dconv}. 
+These cases are calculated with an ingestion speed of $\natlog{4}{-3}\Msun\second^{-1}$ and the results are shown in Figure \ref{fig:impactmixingcases}.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{chapters/2/figures/impact_mixing_cases.pdf}
+\caption{The overproduction compared to initial of the \pnucn{} for the MLT and  3D-inspired mixing scenarios. The average spread in production $\OP_{\max} - \OP_{\min} = 0.96\dex$. $\OP=0$ is the initial amount.
+\label{fig:impactmixingcases}}
+\end{figure}
+
+The MLT simulation has an $\langle\OP\rangle$ of $2.24\dex$, and the downturn scenarios have $\langle\OP\rangle$ of $2.58\dex$, $2.83\dex$, $2.89\dex$, and $2.72\dex$ for the $1\times$, $3\times$, $10\times$, and $50\times$3D-inspired mixing scenarios respectively.
+The average spread in production for each isotope $\OP_{\max} - \OP_{\min} = 0.96\dex$, which shows that mixing speeds are important for the production of the \pnucn{}.
+This \oxygen[]-shell during the merger significantly produces all \pnucn{} except \selenium[74], \krypton[78], and \strontium[84].
+
+The 3D-inspired $1\times$ scenario favours the production of the heavier \pnucn{} compared to the MLT scenario because $\tau_{\mathrm{mix}}$ decreases as the temperature.
+Because of this, more reactions occur at the cooler temperatures where the $(\nt, \gamma)$ and $(\gamma, \nt)$ reactions are more favoured than the $(\gamma, \alpha)$ and $(\gamma, \pt)$ reactions.
+All isotopes are comparably produced to MLT or more produced except \selenium[74], \krypton[78], and \strontium[84] who require the hottest temperatures for their production.
+
+As mixing speeds increase, the production increases in a non-linear and non-monotonic way.
+For the $50\times$ case, the average production of all \pnucn{} is lower than the $3\times$ and $10\times$ scenarios. 
+This is because the mixing speeds are high enough that material is advected to the bottom of the \oxygen[]-shell fast enough despite the downturn, and correspondingly the lighter \pnucn{} are generally more favoured including \selenium[74], \krypton[78], and \strontium[84].
+Production for individual isotopes also can be non-linear and non-monotonic. 
+For example, \tin[115], \barium[132], and \lanthanum[138] all increase for the $1\times$ and $3\times$ scenarios, but then their production is not as strong for the $10\times$ and $50\times$ scenarios.
+
+Another result is that isotopic pairs of the same element are not affected the same way by the downturn compared to MLT, nor by the increase in mixing speed and we find that the ratio between these isotopes is dependent on the mixing scenario.
+Since these isotopes are connected by $(\gamma,\nt)$ and $(\nt,\gamma)$ reactions, if the location of $D_\alpha = 1$ for a reaction changes because of a change to the mixing speed or the presence of the decreasing diffusion profile, then the production of these isotopes will change.
+\molybdenum[94] is produced more for all mixing scenarios except for the $50\times$ scenario, where \molybdenum[92] has a larger \OP, and likewise \tin[115] exhibits this behaviour when compared to \tin[112] and \tin[114].
+We find that it is possible that the ratio can tend to uniity as mixing speeds increase as seen for \ruthenium[96,98], \cadmium[106,108], and \tin[112, 114].
+For \cerium[136,138] the lighter isotope is always favoured as mixing speed increases and for \dysprosium[156,158] the opposite is true.
+This demonstrates the importance of the decreasing diffusion profile and increasing mixing speed  is for the production of the \pnucn{}.
+
+\subsection{Impact from varying the ingestion rate}\label{sec:ingestionimpact}
+Here we present the impact of entraining \carbon[]-shell material with $\natlog{4}{-5}\Msun\second^{-1}$, $\natlog{4}{-4}\Msun\second^{-1}$, and $\natlog{4}{-3}\Msun\second^{-1}$ as well as no entrainment as explained in Section \ref{sec:mixing_methods}.
+Figure \ref{fig:ingest_MLT} shows the results for the MLT mixing scenario and Figures \ref{fig:ingest_3D}{--}\ref{fig:ingest_50x3D} in Appendix \ref{sec:appendixResultsIngestion} show the results for all downturn scenarios.
+
+\begin{figure} 
+\includegraphics[width=\textwidth]{chapters/2/figures/ingest_MLT.pdf}
+\caption{The overproduction compared to initial of the \pnucn{} for the MLT mixing scenario for no ingestion, $\natlog{4}{-5}\Msun\second^{-1}$, $\natlog{4}{-4}\Msun\second^{-1}$, and $\natlog{4}{-3}\Msun\second^{-1}$. The average spread in production $\OP_{\max} - \OP_{\min} = 1.22\dex$ excluding the no ingestion case. $\OP=0$ is the initial amount.
+\label{fig:ingest_MLT}}
+\end{figure}
+
+The results show that the production of the \pnucn{} is monotonically increased by the ingestion of \carbon[]-shell material for all isotopes except \selenium[74], \krypton[78], and \strontium[84] who exhibit the opposite behaviour for all mixing scenarios.
+The only exception is that \selenium[74] production increases for the $10\times$ and $50\times$3D-inspired scenarios with ingestion rate.
+This is because with higher ingestion rates, the more stable isotopes enter the shell as demonstrated in Section \ref{sec:convreacflow}.
+The lightest three have the opposite behaviour because without ingestion they are destroyed less by $(\nt,\gamma)$ reactions.
+The difference in \OP between two ingestion rates is largely uniformly for \molybdenum[92]{-}\mercury[196].
+The average spread $\OP_{\max} - \OP_{\min}$ between the different ingestion rates for the MLT and 3D-inspired scenarios is $1.22$, $1.58$, $1.64$, $1.78$, and $1.84 \dex$.
+This shows that the non-linear and non-monotonic behaviour in Section \ref{sec:convdownturnimpact} is because of the changing location of peak burning in the convective-reactive environment and not just more material being present.
+
+Without ingestion of \carbon[]-shell material, the MLT, $1\times$, and $3\times$ scenarios see little to no production, but for the $19\times$ and $50\times$ scenarios there is a significant underproduction of the heavier \pnucn{}. 
+\tantalum[180] in particular experiences a significant underproduction of $\OP=-83\dex$ for the $50\times$3D-inspired scenario.
+This is because in the fastest cases the species are advected to the bottom of the shell where the temperatures are purely destructive and there is no replenishment from the \carbon[]-shell.
+This shows that entrainment of \carbon[]-shell material is necessary for significant contributions from pre-explosive \gprn.
+
+The sign of the ratio of isotopic pairs is largely preserved across the ingestion rates for the MLT, $1\times$, $3\times$, and $50\times$ scenarios, but the magnitude of the ratio does change.
+The few exceptions are \erbium[162,164] in the $1\times$ and $3\times$ scenarios who become roughly equal for the fastest ingestion rate, \tin[115] which becomes more abundant than \tin[112,114] in the $3\times$ scenario.
+In the $10\times$ scenario production of isotopic pairs is largely equal for the slower ingestion rates, but at the fastest ingestion rate the ratio can become unequal.
+This shows that the the ingestion rate matters for the magnitude of the ratio between isotopic pairs, but that the sign of the ratio depends on which diffusion profile is used.
+
+\subsection{Impact from dips from convective quenching}\label{sec:goshimpact}
+
+Here we present the impact of dips from convective quenching using the profiles shown in Figure \ref{fig:dgosh_partial} from Section \ref{sec:mixing_methods} which represent GOSH-like feedback and a partial merger.
+The results are shown in Figure \ref{fig:impactmixingcases_GOSH_partial}.
+
+\begin{figure} 
+\includegraphics[width=\textwidth]{chapters/2/figures/impact_mixing_GOSH_partial.pdf}
+\caption{The overproduction compared to initial of the \pnucn{} for the MLT, GOSH-like, and partial merger scenarios with ingestion rate $\natlog{4}{-3}\Msun\second^{-1}$. The average spread in production $\OP_{\max} - \OP_{\min} = 0.51\dex$. $\OP=0$ is the initial amount.
+\label{fig:impactmixingcases_GOSH_partial}}
+\end{figure}
+
+The MLT simulation has $\langle\OP\rangle$ of $2.24\dex$, the GOSH-like scenarios have $\OP=2.06\dex$ and $1.78\dex$, and the partial merger scenarios have $\OP=2.13\dex$ and $1.91\dex$.
+We find that the GOSH-like scenarios suppresses the production more than the partial merger scenarios of equal dip depths, and that the deeper dips are suppress production more than the shallow with an average spread $\OP_{\max}-\OP_{\min}=0.51$.
+
+The dip functions as a barrier for the convective-reactive flow, and can section off parts of the \oxygen[]-shell.
+The partial merger scenario both limits the ingested \carbon[]-shell material and slows down the material from deeper in the \oxygen[]-shell from advecting up to the top of the shell where very few reactions occur.
+The GOSH-like dip slows down the material from reaching their preferential temperatures, and also prevents material at the deepest part of the \oxygen[]-shell from mixing up to the top of the shell which keeps it at hotter temperatures where it can be destroyed.
+This is also why the deeper dips suppress production more, as the velocities are slower by an additional factor of $10$ at the deepest point of the dip.
+
+The suppression of production is largely uniform for all isotopes except for \selenium[74], \krypton[78], \strontium[84], and \tantalum[180].
+Additionally, it appears that isotopes $A\geq138$ are more strongly affected by the stronger GOSH-like dip. 
+The isotopes \selenium[74], \krypton[78], and \strontium[84] have a minor increase from these dips because the location of their production is at the bottom of the \oxygen[]-shell where the dips are not present.
+The boost in production of \tantalum[180] is because the peak production and destruction locations happen to be centered at the exact same location as the GOSH dip, which lowers its destruction and slightly boosts its production.
+Isotopic ratios are not significantly affected by the dips, although the magnitude of the ratios can increase slightly.
+This demonstrates the importance of both the location and magnitude of the convective dips in the \oxygen[]-shell for convective-reactive \gprn.
+
+\subsection{Nuclear physics impact and mixing dependencies}\label{sec:nuclearimpact}
+
+Here we present the impact of varying our adopted nuclear physics rates for the MLT and 3D-inspired mixing scenarios for an ingestion rate of $\natlog{4}{-3}\Msun\second^{-1}$.
+The result for the MLT mixing scenario is shown in Figure \ref{fig:nuclearimpact_MLT} and Table \ref{tab:mlt_corr}, and the 3D-inspired mixing scenarios are shown in Figures \ref{fig:nuclearimpact_3D}{--}\ref{fig:nuclearimpact_50x3D} and Tables \ref{tab:mlt_corr}{--}\ref{tab:50x3d_corr} which can be found in Appendix \ref{sec:appendixResultsNuclear}.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{chapters/2/figures/nuclearimpact_MLT.pdf}
+\caption{Histogram showing the spread due to varying $(\gamma,\pt)$, $(\gamma,\nt)$, $(\gamma,\alpha)$ and corresponding capture rates for unstable \nt-deficient isotopes from \selenium[]{--}\polonium[] for the MLT mixing scenario. Colour and size both correspond to the logarthimic binning of Monte Carlo runs. The average spread $\OP_{\max}-\OP_{\min}=0.56\dex$. $\OP=0$ is the initial amount.
+\label{fig:nuclearimpact_MLT}}
+\end{figure}
+
+The MLT mixing scenario has an average spread in production of $\OP_{\max}-\OP_{\min}=0.56\dex$, and the 3D-inspired scenarios have an average spread of $0.59\dex$, $0.69\dex$, $0.76\dex$, and $0.79\dex$ for the $1\times$, $3\times$, $10\times$, and $50\times$ scenarios respectively.
+We find that the spread in production increases with mixing speed because the material is able to reach hotter temperatures and the number of possible nucleosynthetic pathways changes.
+
+In the MLT mixing scenario about a third of the isotopes are not affected in any significant way, but in the 3D-inspired scenarios only 5 are not affected although the specific isotopes vary.
+The isotopes that appear the least affected across mixing scenario are \cerium[138], \gadolinium[152], \dysprosium[158], and \tantalum[180].
+
+The spread of an individual isotope is dependent on the mixing scenario.
+Species like \cadmium[106], \dysprosium[156], and \tungsten[180] have a different spread in production for each mixing scenario.
+While the change can be monotonic for species like \tungsten[180], \osmium[184], and \platnium[190], for \cadmium[106] and \tin[112], and \barium[130] they decrease for the $50\times$3D-inspired scenario.
+
+This mixing scenario dependence for the spread is also seen for the distribution of \OP as no isotope is double peaked across all mixing scenarios.
+As examples, \selenium[74], \indium[113], and \lanthanum[138] in some mixing scenarios clearly are double peaked, indicating that there are distinctive branches in the nucleosynthetic pathways, but do not have it in others.
+Additionally, the magnitude of which peak is favoured is also dependent on the mixing scenario as seen for \krypton[78] and \strontium[84].
+
+Whether a particular reaction rate is correlated an isotope's final mass fraction along with the strength of the correlation is dependent on the mixing scenario.
+Table \ref{tab:unique_rates} lists the rates unique to single mixing scenario.
+
+\begin{table}
+\caption{Reactions correlated with the production/destruction of an isotope unique to an individual mixing scenario.
+\label{tab:unique_rates}}
+\centering
+\begin{tabular}{ll}
+\hline
+\textbf{Isotope} & \textbf{Unique Correlated Reaction Rates} \\
+\hline
+\multicolumn{2}{l}{\textbf{MLT Mixing Case}} \\ 
+$^{138}\mathrm{Ce}$ & $^{139}\mathrm{Pr}(\gamma,\pt)$ \\
+$^{168}\mathrm{Yb}$ & $^{176}\mathrm{W}(\gamma,\alpha)$ \\
+$^{174}\mathrm{Hf}$ & $^{178}\mathrm{W}(\gamma,\nt)$ \\
+$^{184}\mathrm{Os}$ & $^{186}\mathrm{Pt}(\gamma,\nt)$, $^{188}\mathrm{Pt}(\gamma,\nt)$ \\
+\hline
+\multicolumn{2}{l}{\textbf{3D-inspired Mixing Scenario}} \\ 
+$^{113}\mathrm{In}$ & $^{114}\mathrm{In}(\gamma,\nt)$ \\
+$^{152}\mathrm{Gd}$ & $^{150}\mathrm{Gd}(\gamma,\alpha)$, $^{196}\mathrm{Pb}(\gamma,\nt)$ \\
+$^{180}\mathrm{Ta}$ & $^{179}\mathrm{Ta}(\gamma,\alpha)$ \\
+\hline
+\multicolumn{2}{l}{$\mathbf{3\times}$\textbf{3D-inspired Mixing Scenario}} \\ 
+$^{180}\mathrm{W}$ & $^{181}\mathrm{Os}(\gamma,\nt)$ \\
+\hline
+\multicolumn{2}{l}{$\mathbf{10\times}$\textbf{3D-inspired Mixing Scenario}} \\ 
+$^{84}\mathrm{Sr}$ & $^{84}\mathrm{Rb}(\gamma,\nt)$ \\
+$^{120}\mathrm{Te}$ & $^{119}\mathrm{Te}(\gamma,\nt)$ \\
+$^{126}\mathrm{Xe}$ & $^{122}\mathrm{Xe}(\gamma,\nt)$ \\
+$^{130}\mathrm{Ba}$ & $^{126}\mathrm{Ba}(\gamma,\pt)$, $^{128}\mathrm{Ba}(\gamma,\alpha)$, $^{128}\mathrm{Ba}(\gamma,\pt)$ \\
+$^{132}\mathrm{Ba}$ & $^{128}\mathrm{Ba}(\gamma,\alpha)$ \\
+$^{168}\mathrm{Yb}$ & $^{169}\mathrm{Hf}(\gamma,\nt)$ \\
+$^{174}\mathrm{Hf}$ & $^{176}\mathrm{W}(\gamma,\alpha)$ \\
+$^{184}\mathrm{Os}$ & $^{185}\mathrm{Pt}(\gamma,\alpha)$ \\
+\hline
+\multicolumn{2}{l}{$\mathbf{50\times}$\textbf{3D-inspired Mixing Scenario}} \\ 
+$^{92}\mathrm{Mo}$ & $^{100}\mathrm{Pd}(\gamma,\alpha)$, $^{100}\mathrm{Pd}(\gamma,\pt)$, $^{110}\mathrm{Sn}(\gamma,\nt)$, $^{110}\mathrm{Sn}(\gamma,\pt)$ \\
+$^{96}\mathrm{Ru}$ & $^{97}\mathrm{Ru}(\gamma,\alpha)$, $^{110}\mathrm{Sn}(\gamma,\alpha)$, $^{110}\mathrm{Sn}(\gamma,\nt)$, $^{110}\mathrm{Sn}(\gamma,\pt)$ \\
+$^{102}\mathrm{Pd}$ & $^{104}\mathrm{Cd}(\gamma,\alpha)$, $^{104}\mathrm{Cd}(\gamma,\pt)$ \\
+$^{106}\mathrm{Cd}$ & $^{104}\mathrm{Cd}(\gamma,\pt)$, $^{110}\mathrm{Sn}(\gamma,\pt)$ \\
+$^{108}\mathrm{Cd}$ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ \\
+$^{112}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\pt)$ \\
+$^{115}\mathrm{Sn}$ & $^{122}\mathrm{Xe}(\gamma,\nt)$ \\
+$^{120}\mathrm{Te}$ & $^{120}\mathrm{Xe}(\gamma,\alpha)$ \\
+$^{126}\mathrm{Xe}$ & $^{127}\mathrm{Ba}(\gamma,\nt)$ \\
+$^{130}\mathrm{Ba}$ & $^{132}\mathrm{Ce}(\gamma,\alpha)$, $^{132}\mathrm{Ce}(\gamma,\nt)$, $^{132}\mathrm{Ce}(\gamma,\pt)$, $^{134}\mathrm{Ce}(\gamma,\alpha)$, $^{134}\mathrm{Ce}(\gamma,\nt)$ \\
+$^{132}\mathrm{Ba}$ & $^{132}\mathrm{Ce}(\gamma,\alpha)$, $^{132}\mathrm{Ce}(\gamma,\nt)$, $^{132}\mathrm{Ce}(\gamma,\pt)$, $^{133}\mathrm{Ce}(\gamma,\nt)$, $^{134}\mathrm{Ce}(\gamma,\alpha)$ \\
+$^{138}\mathrm{Ce}$ & $^{139}\mathrm{Nd}(\gamma,\nt)$ \\
+$^{156}\mathrm{Dy}$ & $^{156}\mathrm{Er}(\gamma,\alpha)$, $^{158}\mathrm{Er}(\gamma,\alpha)$, $^{158}\mathrm{Er}(\gamma,\nt)$ \\
+$^{162}\mathrm{Er}$ & $^{168}\mathrm{Hf}(\gamma,\nt)$, $^{162}\mathrm{Yb}(\gamma,\alpha)$, $^{164}\mathrm{Yb}(\gamma,\alpha)$ \\
+$^{184}\mathrm{Os}$ & $^{184}\mathrm{Pt}(\gamma,\nt)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+It is clearly important to consider the mixing conditions if an experiment is to be proposed to measure a reaction rate.
+As Table \ref{tab:unique_rates} shows for the $50\times$3D-inspired scenario, there are many reactions even for a single isotope that can be correlated uniquely in that mixing scenario.
+This clearly shows that a decreasing radial velocity profile and the exact magnitude of the mixing speeds are critical for understanding the nuclear reactions in this convective-reactive environment.
+
+There are also correlated reactions that all mixing scenarios share as shown in Table \ref{tab:shared_rates}.
+Additionally, all downturn cases share correlations not found in the MLT scenario: $X(\tin[115])$ with $\tin[110](\gamma,\alpha)$ and $X(\cerium[138])$ with $\neodymium[138](\gamma,\pt)$. 
+However, the shared correlations are not of equal strength across all mixing scenarios. 
+As an example the final mass fraction of \dysprosium[156] is correlated with \erbium[160]$(\gamma,\alpha)$, but in the $50\times$3D-inspired the correlation is much weaker.
+This underscores the possible difficulties in using 1D astrophysical sites to identify important reactions for nuclear physics experiments.
+
+\begin{table}
+\caption{Reactions correlated with the production/destruction of an isotope shared across all mixing scenarios.
+\label{tab:shared_rates}}
+\centering
+\begin{tabular}{ll}
+\hline
+\textbf{Isotope} & \textbf{Shared Correlated Reaction Rates} \\
+\hline
+$^{74}\mathrm{Se}$ & $^{75}\mathrm{Se}(\gamma,\nt)$ \\
+$^{78}\mathrm{Kr}$ & $^{79}\mathrm{Kr}(\gamma,\nt)$ \\
+$^{84}\mathrm{Sr}$ & $^{85}\mathrm{Sr}(\gamma,\nt)$ \\
+$^{92}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ \\
+$^{94}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ \\
+$^{96}\mathrm{Ru}$ & $^{97}\mathrm{Ru}(\gamma,\nt)$ \\
+$^{98}\mathrm{Ru}$ & $^{100}\mathrm{Pd}(\gamma,\alpha)$, $^{100}\mathrm{Pd}(\gamma,\pt)$ \\
+$^{102}\mathrm{Pd}$ & $^{100}\mathrm{Pd}(\gamma,\alpha)$, $^{100}\mathrm{Pd}(\gamma,\pt)$, $^{103}\mathrm{Pd}(\gamma,\nt)$ \\
+$^{106}\mathrm{Cd}$ & $^{107}\mathrm{Cd}(\gamma,\nt)$, $^{110}\mathrm{Sn}(\gamma,\alpha)$ \\
+$^{108}\mathrm{Cd}$ & $^{107}\mathrm{Cd}(\gamma,\nt)$ \\
+$^{113}\mathrm{In}$ & $^{113}\mathrm{Sn}(\gamma,\nt)$ \\
+$^{112}\mathrm{Sn}$ & $^{113}\mathrm{Sn}(\gamma,\nt)$ \\
+$^{114}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\alpha)$, $^{113}\mathrm{Sn}(\gamma,\nt)$, $^{122}\mathrm{Xe}(\gamma,\alpha)$ \\
+$^{115}\mathrm{Sn}$ & $^{113}\mathrm{Sn}(\gamma,\nt)$ \\
+$^{120}\mathrm{Te}$ & $^{122}\mathrm{Xe}(\gamma,\alpha)$, $^{122}\mathrm{Xe}(\gamma,\pt)$ \\
+$^{124}\mathrm{Xe}$ & $^{122}\mathrm{Xe}(\gamma,\alpha)$, $^{122}\mathrm{Xe}(\gamma,\pt)$ \\
+$^{138}\mathrm{La}$ & $^{137}\mathrm{La}(\gamma,\nt)$ \\
+$^{136}\mathrm{Ce}$ & $^{138}\mathrm{Nd}(\gamma,\nt)$, $^{138}\mathrm{Nd}(\gamma,\pt)$, $^{140}\mathrm{Nd}(\gamma,\alpha)$ \\
+$^{144}\mathrm{Sm}$ & $^{196}\mathrm{Pb}(\gamma,\nt)$, $^{142}\mathrm{Sm}(\gamma,\nt)$, $^{142}\mathrm{Sm}(\gamma,\pt)$, $^{143}\mathrm{Sm}(\gamma,\nt)$ \\
+$^{152}\mathrm{Gd}$ & $^{152}\mathrm{Dy}(\gamma,\alpha)$ \\
+$^{156}\mathrm{Dy}$ & $^{160}\mathrm{Er}(\gamma,\alpha)$ \\
+$^{164}\mathrm{Er}$ & $^{164}\mathrm{Yb}(\gamma,\alpha)$, $^{164}\mathrm{Yb}(\gamma,\nt)$ \\
+$^{174}\mathrm{Hf}$ & $^{174}\mathrm{W}(\gamma,\alpha)$ \\
+$^{180}\mathrm{Ta}$ & $^{179}\mathrm{Ta}(\gamma,\nt)$ \\
+$^{180}\mathrm{W}$ & $^{180}\mathrm{Os}(\gamma,\alpha)$, $^{180}\mathrm{Os}(\gamma,\nt)$, $^{196}\mathrm{Pb}(\gamma,\nt)$ \\
+$^{184}\mathrm{Os}$ & $^{196}\mathrm{Pb}(\gamma,\nt)$, $^{184}\mathrm{Pt}(\gamma,\alpha)$ \\
+$^{190}\mathrm{Pt}$ & $^{190}\mathrm{Hg}(\gamma,\alpha)$, $^{190}\mathrm{Hg}(\gamma,\nt)$, $^{196}\mathrm{Pb}(\gamma,\nt)$ \\
+$^{196}\mathrm{Hg}$ & $^{196}\mathrm{Pb}(\gamma,\nt)$, $^{202}\mathrm{Pb}(\gamma,\nt)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+The spread in production for varying our adopted nuclear physics rates for each of the mixing scenarios is comparable to the spread seen from varying the mixing conditions.
+The results in Section \ref{sec:goshimpact} have a spread of $0.51\dex$, Section \ref{sec:convdownturnimpact} $0.96\dex$, and the maximum spread in Section \ref{sec:ingestionimpact} is $1.84\dex$.
+The average spread in production from varying the nuclear physics rates ranges from $0.56${-}$0.79\dex$.
+
+\cite{rauscherUncertaintiesProductionNuclei2016} determined uncertainties for the explosive \gpr{} for a $15\Msun$ and two $25\Msun$ models with solar metallicity using a Monte Carlo method.
+The spread in their 90\% probability interval for the $15\Msun$ model was $0.61\dex$, and for the $25\Msun$ models were $0.63\dex$ and $0.99\dex$.
+This is comparable to the maximum spread found in this work, although we are considering pre-explosive \gprn{}.
+\cite{rauscherUncertaintiesProductionNuclei2016} also provide tables of correlated rates, but only a handful of these rates appear in our Tables \ref{tab:mlt_corr}{--}\ref{tab:50x3d_corr} including those they find with $r_\mathrm{P} \geq |0.65|$.
+This is because the convective-reactive environment we consider allows for different reaction pathways to be favoured depending on the mixing conditions.
+
+\section{Discussions and Conclusion} \label{sec:discussion_conclusion}
+
+In this paper, we have shown that understanding the mixing details in the \oxygen[]-burning shell during an \oxygen[]-\carbon[] shell merger is critical for accurately modelling the nucleosynthesis of the \pnucn.
+This work raises the importance of 3D hydrodynamic simulations for understanding the nucleosynthesis in O-C shell mergers \citep{bazanConvectionNucleosynthesisCore1994, yadavLargescaleMixingViolent2020a, rizzutiShellMergersLate2024a}.
+We have demonstrated the convective-reactive nature of the nucleosynthesis in the \oxygen[]-shell, where the timescales for advection and reaction are comparable and our results show that:
+\begin{itemize}
+\item A gradual downturn motivated by 3D simulations increases production of the \pnucn{}, but increasing mixing speeds impacts the production in a non-linear and non-monotonic way.
+\item The ratio of isotopic pairs are sensitive to the mixing scenario.
+\item Increasing the entrainment rate of \carbon[]-shell material increases the production of the \pnucn{}.
+\item Without entrainment, the \pnucn{} are negligibly produced or net destroyed.
+\item A dip in the convective profile can suppress the production of the \pnucn{}.
+\item The location and magnitude of the convective dip impacts the nucleosynthesis of the \pnucn{}.
+\item Varying the adopted reactions rates have a comparable spread in production to changing mixing conditions.
+\item The spread due to varying the reaction rates is dependent on the mixing scenario.
+\item Whether a reaction rate is correlated with an isotope is dependent on the mixing scenario, and some are unique to a single mixing scenario.
+\end{itemize}
+
+Figure \ref{fig:impact_mixing_cases_bars_all} shows the maximum spread for the \pnucn{} across all mixing scenarios considered in this paper, excluding the case of no merger, have an average spread of 2.45\dex.
+This shows the significant impact of the macrophysical uncertainties in 1D stellar models on nucleosynthesis, and this highlights the importance of understanding hydrodynamic models better as the shell merger dominates production of the \pnucn{} \citep{robertiGprocessNucleosynthesisCorecollapse2023,robertiGprocessNucleosynthesisCorecollapse2024b}.
+
+\begin{figure} 
+\includegraphics[width=\textwidth]{chapters/2/figures/impact_mixing_cases_bars_all.pdf}
+\caption{Bars representing the maximum and minimum \OP{} across all mixing scenarios, excluding those without \carbon[]-shell ingestion.
+The average spread $\OP_{\max} - \OP_{\min} = 2.45\dex$. $\OP=0$ is the initial amount.
+\label{fig:impact_mixing_cases_bars_all}}
+\end{figure}
+
+Although we find that the mixing conditions significantly impact the results of Section \ref{sec:nuclearimpact}, not all scenarios are equally likely to represent the conditions in a merger.
+The MLT mixing scenario, $1\times$, and $50\times$ case may not be representative of the conditions for realistic O-C shell mergers.
+3D hydrodynamic simulations show the \oxygen[]-shell has a downturn to radial convective velocities and mixing speeds roughly $3-10$ times larger than what MLT predicts \citep{jonesIdealizedHydrodynamicSimulations2017,andrassy3DHydrodynamicSimulations2020, rizzutiShellMergersLate2024a}.
+This suggests that the $3\times$ and $10\times$ downturn mixing scenarios are likely more representative of the conditions in a merger.
+The exploration done in this paper shows the importance of understanding the mixing conditions, but not all scenarios are equally likely to represent the conditions in a merger.
+
+The results in this work are important for the interpretation of presolar grains.
+\cite{fokSiliconIsotopicComposition2024} argue that the nucleosynthesis in \oxygen[]-\carbon[] shell mergers matter when interpreting the $^{29}\mathrm{Si}/^{28}\mathrm{Si}$ ratio seen in grains.
+As shown in this work, the ratio of isotopic pairs is sensitive to the mixing conditions in the \oxygen[]-shell. 
+This means that comparing the grains data to the results of this work can be used as a diagnostic tool to constrain the mixing details of \oxygen[]-\carbon[] shell mergers and connect measured isotopic ratios to 3D hydrodynamics.
+
+There are limitations to the results provided in this work and further extensions that could be done.
+We have focused on the impact of mixing conditions and varying reaction rates, but do not investigate how different stellar conditions are relevant to the nucleosynthesis or if changing the stable seeds from the \carbon[]-shell impact these results.
+The distribution of stable seeds and the metallicity of the star are of significant importance for the nucleosynthesis of the \pnucn{} \citep{travaglioTestingRoleSNe2015, battinoHeavyElementsNucleosynthesis2020}.
+It is possible that earlier in stellar evolution that weak \sprn{} in the \carbon[]-shell could modify the stable seeds \citep{pignatariWEAKSPROCESSMASSIVE2010}, which could be relevant for the lighter \pnucn.
+The NuGrid $15\Msun$ $Z=0.02$ model does have the largest overproduction factor compared to the other NuGrid models with shell mergers \citep{ritterConvectivereactiveNucleosynthesisSc2018}.
+However, the other models have $Z=0.01$, and since there is a metallicity dependency of the \gprn{} \cite{travaglioTestingRoleSNe2015}, this is not surprising and it is likely that the spread in production due to the mixing conditions would be similar.
+
+Other stellar models could have different \oxygen[]-shell sizes and temperature profiles due to different mixing prescriptions, initial mass, and rotations, which would directly affect locations of peak burning and how the mixing conditions impact the nucleosynthesis.
+However, if the shell is convective-reactive, a spread in production comparing mixing scenarios would still be expected.
+
+Finally, explosive \gprn{} can contribute 10\% to 40\% of the final yields of the \pnucn{} even with a shell merger \citep{robertiGprocessNucleosynthesisCorecollapse2023}.
+However, \oxygen[]-\carbon[] shell mergers are critical to the nucleosynthesis of a massive star prior to the CCSN regardless of explosive energy \citep{ robertiGprocessNucleosynthesisCorecollapse2024b}.
+Even if the results in Figure \ref{fig:impact_mixing_cases_bars_all} do not represent the whole of the nucleosynthesis of the \pnucn{}, they are still critical for understanding the nucleosynthesis in the \oxygen[]-shell prior to the CCSN.
+
+The results of this work have implications beyond the \pnucn.
+The light odd-Z isotopes \phosphorus[31], \chlorine[35], \potassium[39], and \scandium[45] are also produced during O-C shell mergers and are likewise impacted by varying the mixing conditions \citep{ritterConvectivereactiveNucleosynthesisSc2018, robertiOccurrenceImpactCarbonOxygen2025}.
+Observations have found \phosphorus[]-enhanced stars \citep{masseronPhosphorusrichStarsUnusual2020, braunerUnveilingChemicalFingerprint2023, braunerUnveilingChemicalFingerprint2024} which could be explained by a previous massive star having a \oxygen[]-\carbon[] shell merger.
+Additionally, \potassium[40] has been shown to be relevant to the heating of planets early in their formation \citep{frankRadiogenicHeatingEvolution2014, oneillEffectGalacticChemical2020}
+The shell merger also has a distinct impact on galactic chemical evolution (GCE) models \citep{ritterConvectivereactiveNucleosynthesisSc2018}, and massive star models show this feature regardless of metallicity and stellar evolution model \citep{robertiOccurrenceImpactCarbonOxygen2025}.
+Further work is needed to understand the impact of the macrophysical uncertainties in 1D stellar models on the nucleosynthesis of these light odd-Z isotopes.
+
+
+\section{Appendix}\label{sec:appendix}
+
+\subsection{Correlations of nuclear reaction rates}\label{sec:appendixNuclearRates}
+
+The Pearson correlation coefficient, $r_\mathrm{P}$, is insufficient to quantify the importnace of a correlated rate as demonstrated by Figure \ref{fig:corr_ex}.
+A strong correlation does not correspond directly to a signifcant change to the final mass fraction of a species.
+In addition to the correlation coefficient, a slope $\zeta$ is provided that better describes this behaviour.
+$\zeta$ is the slope of a linear regression between $\log_{10}(X/X_\mathrm{no~variation})$ and $\log_{10}(\mathrm{variation~factor})$ where $X$ is the final decayed mass fraction for Monte Carlo rates and $X_\mathrm{no~variation})$ is the final decayed mass fraction for the default case where all variation factors are equal to $1$.
+
+
+\begin{figure}[!ht]
+\includegraphics[width=\columnwidth]{chapters/2/figures/correlation_example.pdf}
+\caption{Examples of strongly correlated mass fractions with reaction rates for four species for the MLT mixing scenario. The orange dots are the values and the black line is the best linear fit to $\OP_{\mathrm{var}}$ and $\log_{10}(\mathrm{variation~factor})$. The top left plot and bottom right plot show strong correlations for $^{74}\mathrm{Se}$ and $^{196}\mathrm{Hg}$ that directly impact the mass fraction. The top right plot shows a correlation for $^{98}\mathrm{Ru}$ where there is considerable spread in the mass fraction. The bottom left plot shows a correlation for $^{184}\mathrm{Os}$ where the mass fraction is strongly affected only for multiplication factors less than $1$.}
+\label{fig:corr_ex}
+\end{figure}
+
+It is clear from Figure \ref{fig:corr_ex} that similarly correlations do not directly mean that the reaction rate is relevant for the production of a species, but the slope $\zeta$ also does not directly point to this.
+The bottom right plot showing the impact on the final mass fraction of $^{196}\mathrm{Hg}$ from varying the input rate for $^{196}\mathrm{Pb}(\gamma,\nt)$ has both a strong slope and correlation, but the bottom left plot has a strong correlation and a weak slope.
+Reaction rates that are both highly correlated and have a strong slope will have direct impact on the production of species.
+
+Another caveat is that this method of varying the reaction rates in a Monte Carlo way does not distinguish between the photo-disintegration and corresponding capture rate.
+All correlated rates are reported according to their photo-disintegration rates, but as shown by the upper left plot of Figure \ref{fig:corr_ex} for $^{74}\mathrm{Se}$ and $^{75}\mathrm{Se}(\gamma,\nt)$$^{74}\mathrm{Se}$ this results sometimes in saying that a reaction that would be considered a production term is strongly anti-correlated with production.
+This is because when we apply the variation factor, we do so for both $^{75}\mathrm{Se}(\gamma,\nt)$ and $^{74}\mathrm{Se}(\nt,\gamma)$.
+As shown in Section \ref{sec:convreacflow}, the reactions in this shell are not balanced and both could be relevant, although as Figure \ref{fig:dy156_fluxes_ingest} shows for heavier species the $(\gamma,\nt)$ rate is typically the dominant reaction.
+
+\clearpage
+
+\subsection{Results of varying ingestion rate}\label{sec:appendixResultsIngestion}
+
+Here we provide the results for varying the ingestion rates for the downturn mixing scenarios.
+
+\begin{figure}[!ht] 
+\includegraphics[width=\textwidth]{chapters/2/figures/ingest_3D.pdf}
+\caption{The overproduction compared to initial of the \pnucn{} for the 3D-inspired mixing scenario for no ingestion, $\natlog{4}{-5}\Msun\second^{-1}$, $\natlog{4}{-4}\Msun\second^{-1}$, and $\natlog{4}{-3}\Msun\second^{-1}$. The average spread in production $\OP_{\max} - \OP_{\min} = 1.58\dex$. $\OP=0$ is the initial amount.
+\label{fig:ingest_3D}}
+\end{figure} 
+
+\begin{figure}[!ht]
+\includegraphics[width=\textwidth]{chapters/2/figures/ingest_3x3D.pdf}
+\caption{The overproduction compared to initial of the \pnucn{} for the $3\times$3D-inspired mixing scenario for no ingestion, $\natlog{4}{-5}\Msun\second^{-1}$, $\natlog{4}{-4}\Msun\second^{-1}$, and $\natlog{4}{-3}\Msun\second^{-1}$. The average spread in production $\OP_{\max} - \OP_{\min} = 1.64\dex$ excluding the no ingestion case. $\OP=0$ is the initial amount.
+\label{fig:ingest_3x3D}}
+\end{figure}
+
+\begin{figure}[!ht]
+\includegraphics[width=\textwidth]{chapters/2/figures/ingest_10x3D.pdf}
+\caption{The overproduction compared to initial of the \pnucn{} for the $10\times$3D-inspired mixing scenario for no ingestion, $\natlog{4}{-5}\Msun\second^{-1}$, $\natlog{4}{-4}\Msun\second^{-1}$, and $\natlog{4}{-3}\Msun\second^{-1}$. Arrows denote \OP out of bounds and the true \OP is written above. The average spread in production $\OP_{\max} - \OP_{\min} = 1.78\dex$ excluding the no ingestion case. $\OP=0$ is the initial amount.
+\label{fig:ingest_10x3D}} 
+\end{figure}
+
+\begin{figure}[!ht]
+\includegraphics[width=\textwidth]{chapters/2/figures/ingest_50x3D.pdf}
+\caption{The overproduction compared to initial of the \pnucn{} for the $50\times$3D-inspired mixing scenario for no ingestion, $\natlog{4}{-5}\Msun\second^{-1}$, $\natlog{4}{-4}\Msun\second^{-1}$, and $\natlog{4}{-3}\Msun\second^{-1}$. Arrows denote \OP out of bounds and the true \OP is written above. The average spread in production $\OP_{\max} - \OP_{\min} = 1.84\dex$ excluding the no ingestion case. $\OP=0$ is the initial amount.
+\label{fig:ingest_50x3D}}
+\end{figure}
+
+\clearpage
+
+\subsection{Results of varying the input nuclear physics}\label{sec:appendixResultsNuclear}
+
+Here we provide the results for varying the input nuclear reactions for the  downturn mixing scenarios and the reaction rate correlation tables for the MLT and downturn scenarios.  
+
+\begin{figure}[!ht] 
+\includegraphics[width=\textwidth]{chapters/2/figures/nuclearimpact_3D.pdf}
+\caption{Histogram showing the spread due to varying $(\gamma,\pt)$, $(\gamma,\nt)$, $(\gamma,\alpha)$ and corresponding capture rates for unstable \nt-deficient isotopes from \selenium[]{--}\polonium[] for the 3D-inspired mixing scenario. Colour and size both correspond to the logarthimic binning of Monte Carlo runs.  The average spread $\OP_{\max}-\OP_{\min}=0.59\dex$. $\OP=0$ is the initial amount.
+\label{fig:nuclearimpact_3D}}
+\end{figure}
+
+\begin{figure} [!ht]
+\includegraphics[width=\textwidth]{chapters/2/figures/nuclearimpact_3x3D.pdf}
+\caption{Histogram showing the spread due to varying $(\gamma,\pt)$, $(\gamma,\nt)$, $(\gamma,\alpha)$ and corresponding capture rates for unstable \nt-deficient isotopes from \selenium[]{--}\polonium[] for the $3\times$3D-inspired mixing scenario. Colour and size both correspond to the logarthimic binning of Monte Carlo runs. The average spread $\OP_{\max}-\OP_{\min}=0.69\dex$. $\OP=0$ is the initial amount.
+\label{fig:nuclearimpact_3x3D}}
+\end{figure}
+
+\begin{figure} 
+\includegraphics[width=\textwidth]{chapters/2/figures/nuclearimpact_10x3D.pdf}
+\caption{Histogram showing the spread due to varying $(\gamma,\pt)$, $(\gamma,\nt)$, $(\gamma,\alpha)$ and corresponding capture rates for unstable \nt-deficient isotopes from \selenium[]{--}\polonium[] for the $10\times$3D-inspired mixing scenario. Colour and size both correspond to the logarthimic binning of Monte Carlo runs. The average spread $\OP_{\max}-\OP_{\min}=0.76\dex$. $\OP=0$ is the initial amount.
+\label{fig:nuclearimpact_10x3D}}
+\end{figure}
+
+\begin{figure} [!ht]
+\includegraphics[width=\textwidth]{chapters/2/figures/nuclearimpact_50x3D.pdf}
+\caption{Histogram showing the spread due to varying $(\gamma,\pt)$, $(\gamma,\nt)$, $(\gamma,\alpha)$ and corresponding capture rates for unstable \nt-deficient isotopes from \selenium[]{--}\polonium[] for the $50\times$3D-inspired mixing scenario. Colour and size both correspond to the logarthimic binning of Monte Carlo runs. The average spread $\OP_{\max}-\OP_{\min}=0.79\dex$. $\OP=0$ is the initial amount.
+\label{fig:nuclearimpact_50x3D}}
+\end{figure}
+
+{\small
+\begin{longtable}{llcc llcc}
+\caption{Correlations and $\zeta$ slopes between mass fraction and reaction rates for the MLT mixing scenario.
+\label{tab:mlt_corr}}\\
+\toprule
+\textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ & \textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ \\
+\midrule
+\endfirsthead
+\multicolumn{8}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\toprule
+\textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ & \textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ \\
+\midrule
+\endhead
+\midrule \multicolumn{8}{r}{{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+$^{74}\mathrm{Se}$ & $^{75}\mathrm{Se}(\gamma,\nt)$ & $-0.93$ & $-0.18$ & $^{144}\mathrm{Sm}$ & $^{142}\mathrm{Sm}(\gamma,\nt)$ & $-0.19$ & $-0.02$ \\ 
+$^{78}\mathrm{Kr}$ & $^{79}\mathrm{Kr}(\gamma,\nt)$ & $-0.88$ & $-0.28$ & $ $ & $^{142}\mathrm{Sm}(\gamma,\pt)$ & $-0.17$ & $-0.02$ \\ 
+$^{84}\mathrm{Sr}$ & $^{85}\mathrm{Sr}(\gamma,\nt)$ & $-0.88$ & $-0.28$ & $ $ & $^{143}\mathrm{Sm}(\gamma,\nt)$ & $-0.25$ & $-0.03$ \\ 
+$^{92}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ & $-0.94$ & $-0.07$ & $ $ & $^{146}\mathrm{Sm}(\gamma,\nt)$ & $0.20$ & $0.03$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $0.16$ & $0.01$ & $ $ & $^{150}\mathrm{Gd}(\gamma,\nt)$ & $0.17$ & $0.02$ \\ 
+$^{94}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ & $0.97$ & $0.06$ & $ $ & $^{150}\mathrm{Gd}(\gamma,\alpha)$ & $-0.15$ & $-0.02$ \\ 
+$^{96}\mathrm{Ru}$ & $^{97}\mathrm{Ru}(\gamma,\nt)$ & $-0.88$ & $-0.12$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.47$ & $0.06$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $0.20$ & $0.03$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.21$ & $0.03$ \\ 
+$^{98}\mathrm{Ru}$ & $^{97}\mathrm{Ru}(\gamma,\nt)$ & $0.36$ & $0.02$ & $^{152}\mathrm{Gd}$ & $^{152}\mathrm{Dy}(\gamma,\alpha)$ & $-0.40$ & $-0.01$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\pt)$ & $0.62$ & $0.04$ & $ $ & $^{154}\mathrm{Dy}(\gamma,\alpha)$ & $-0.15$ & $-0.00$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $-0.51$ & $-0.03$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.39$ & $0.00$ \\ 
+$^{102}\mathrm{Pd}$ & $^{100}\mathrm{Pd}(\gamma,\pt)$ & $-0.29$ & $-0.05$ & $^{156}\mathrm{Dy}$ & $^{159}\mathrm{Er}(\gamma,\nt)$ & $-0.18$ & $-0.06$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $-0.30$ & $-0.05$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.74$ & $0.26$ \\ 
+$ $ & $^{103}\mathrm{Pd}(\gamma,\nt)$ & $-0.66$ & $-0.12$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.18$ & $0.05$ \\ 
+$^{106}\mathrm{Cd}$ & $^{107}\mathrm{Cd}(\gamma,\nt)$ & $-0.86$ & $-0.16$ & $^{158}\mathrm{Dy}$ & $^{158}\mathrm{Er}(\gamma,\alpha)$ & $-0.23$ & $-0.01$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $0.23$ & $0.05$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.56$ & $0.01$ \\ 
+$^{108}\mathrm{Cd}$ & $^{107}\mathrm{Cd}(\gamma,\nt)$ & $0.72$ & $0.10$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.00$ \\ 
+$ $ & $^{109}\mathrm{Cd}(\gamma,\nt)$ & $-0.46$ & $-0.06$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.18$ & $0.00$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $0.16$ & $0.02$ & $^{162}\mathrm{Er}$ & $^{159}\mathrm{Er}(\gamma,\nt)$ & $-0.18$ & $-0.06$ \\ 
+$^{113}\mathrm{In}$ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.91$ & $0.37$ & $ $ & $^{160}\mathrm{Er}(\gamma,\nt)$ & $-0.18$ & $-0.06$ \\ 
+$^{112}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.17$ & $-0.03$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $-0.26$ & $-0.07$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $-0.83$ & $-0.15$ & $ $ & $^{161}\mathrm{Er}(\gamma,\nt)$ & $0.21$ & $0.06$ \\ 
+$^{114}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.15$ & $-0.01$ & $ $ & $^{166}\mathrm{Yb}(\gamma,\alpha)$ & $0.53$ & $0.14$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.74$ & $0.06$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.25$ & $0.07$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\nt)$ & $-0.18$ & $-0.01$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.17$ & $0.05$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.20$ & $0.02$ & $^{164}\mathrm{Er}$ & $^{164}\mathrm{Yb}(\gamma,\nt)$ & $-0.24$ & $-0.09$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $0.41$ & $0.04$ & $ $ & $^{164}\mathrm{Yb}(\gamma,\alpha)$ & $-0.58$ & $-0.32$ \\ 
+$^{115}\mathrm{Sn}$ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.80$ & $0.05$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.17$ & $0.05$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.17$ & $0.01$ & $^{168}\mathrm{Yb}$ & $^{168}\mathrm{Hf}(\gamma,\alpha)$ & $-0.28$ & $-0.14$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $0.35$ & $0.02$ & $ $ & $^{172}\mathrm{Hf}(\gamma,\alpha)$ & $0.60$ & $0.24$ \\ 
+$^{120}\mathrm{Te}$ & $^{121}\mathrm{Te}(\gamma,\nt)$ & $-0.71$ & $-0.09$ & $ $ & $^{176}\mathrm{W}(\gamma,\alpha)$ & $0.20$ & $0.07$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.45$ & $0.05$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.21$ & $0.07$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.32$ & $-0.04$ & $^{174}\mathrm{Hf}$ & $^{174}\mathrm{W}(\gamma,\nt)$ & $-0.21$ & $-0.03$ \\ 
+$^{124}\mathrm{Xe}$ & $^{122}\mathrm{Xe}(\gamma,\nt)$ & $-0.17$ & $-0.04$ & $ $ & $^{174}\mathrm{W}(\gamma,\alpha)$ & $-0.40$ & $-0.08$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $-0.24$ & $-0.06$ & $ $ & $^{178}\mathrm{W}(\gamma,\nt)$ & $-0.15$ & $-0.03$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.45$ & $-0.15$ & $ $ & $^{178}\mathrm{W}(\gamma,\alpha)$ & $0.42$ & $0.07$ \\ 
+$ $ & $^{123}\mathrm{Xe}(\gamma,\nt)$ & $0.16$ & $0.03$ & $^{180}\mathrm{Ta}$ & $^{179}\mathrm{Ta}(\gamma,\nt)$ & $-0.91$ & $-0.02$ \\ 
+$ $ & $^{125}\mathrm{Xe}(\gamma,\nt)$ & $-0.46$ & $-0.16$ & $^{180}\mathrm{W}$ & $^{180}\mathrm{Os}(\gamma,\nt)$ & $-0.28$ & $-0.07$ \\ 
+$^{126}\mathrm{Xe}$ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.34$ & $-0.09$ & $ $ & $^{180}\mathrm{Os}(\gamma,\alpha)$ & $-0.52$ & $-0.21$ \\ 
+$ $ & $^{125}\mathrm{Xe}(\gamma,\nt)$ & $0.49$ & $0.13$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.21$ & $0.05$ \\ 
+$ $ & $^{127}\mathrm{Xe}(\gamma,\nt)$ & $-0.25$ & $-0.07$ & $^{184}\mathrm{Os}$ & $^{185}\mathrm{Os}(\gamma,\nt)$ & $0.33$ & $0.02$ \\ 
+$ $ & $^{126}\mathrm{Ba}(\gamma,\pt)$ & $-0.18$ & $-0.04$ & $ $ & $^{184}\mathrm{Pt}(\gamma,\alpha)$ & $-0.44$ & $-0.03$ \\ 
+$ $ & $^{126}\mathrm{Ba}(\gamma,\alpha)$ & $-0.32$ & $-0.09$ & $ $ & $^{186}\mathrm{Pt}(\gamma,\nt)$ & $0.17$ & $0.01$ \\ 
+$^{130}\mathrm{Ba}$ & $^{126}\mathrm{Ba}(\gamma,\alpha)$ & $-0.17$ & $-0.01$ & $ $ & $^{186}\mathrm{Pt}(\gamma,\alpha)$ & $-0.16$ & $-0.01$ \\ 
+$ $ & $^{128}\mathrm{Ba}(\gamma,\nt)$ & $-0.19$ & $-0.01$ & $ $ & $^{188}\mathrm{Pt}(\gamma,\nt)$ & $-0.17$ & $-0.01$ \\ 
+$ $ & $^{129}\mathrm{Ba}(\gamma,\nt)$ & $0.23$ & $0.01$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.01$ \\ 
+$ $ & $^{131}\mathrm{Ba}(\gamma,\nt)$ & $-0.79$ & $-0.05$ & $^{190}\mathrm{Pt}$ & $^{190}\mathrm{Hg}(\gamma,\nt)$ & $-0.28$ & $-0.03$ \\ 
+$^{132}\mathrm{Ba}$ & $^{131}\mathrm{Ba}(\gamma,\nt)$ & $0.66$ & $0.09$ & $ $ & $^{190}\mathrm{Hg}(\gamma,\alpha)$ & $-0.51$ & $-0.06$ \\ 
+$ $ & $^{133}\mathrm{Ba}(\gamma,\nt)$ & $-0.61$ & $-0.08$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.20$ & $0.02$ \\ 
+$^{138}\mathrm{La}$ & $^{137}\mathrm{La}(\gamma,\nt)$ & $-0.71$ & $-0.37$ & $^{196}\mathrm{Hg}$ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $-0.71$ & $-0.41$ \\ 
+$^{136}\mathrm{Ce}$ & $^{138}\mathrm{Nd}(\gamma,\nt)$ & $-0.38$ & $-0.05$ & $ $ & $^{197}\mathrm{Pb}(\gamma,\nt)$ & $-0.16$ & $-0.06$ \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\pt)$ & $0.65$ & $0.08$ & $ $ & $^{200}\mathrm{Pb}(\gamma,\nt)$ & $0.19$ & $0.10$ \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\alpha)$ & $-0.16$ & $-0.02$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.30$ & $0.14$ \\ 
+$ $ & $^{140}\mathrm{Nd}(\gamma,\alpha)$ & $0.34$ & $0.04$ & $ $ & $ $ &  &  \\ 
+$^{138}\mathrm{Ce}$ & $^{137}\mathrm{Ce}(\gamma,\nt)$ & $0.51$ & $0.02$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{139}\mathrm{Ce}(\gamma,\nt)$ & $-0.43$ & $-0.01$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{139}\mathrm{Pr}(\gamma,\pt)$ & $0.29$ & $0.01$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\nt)$ & $-0.30$ & $-0.01$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\alpha)$ & $-0.22$ & $-0.01$ & $ $ & $ $ &  &  \\ 
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{llcc llcc}
+\caption{Correlations and $\zeta$ slopes between mass fraction and reaction rates for the 3D-inspired mixing scenario.
+\label{tab:3d_corr}}\\
+\toprule
+\textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ & \textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ \\
+\midrule
+\endfirsthead
+\multicolumn{8}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\toprule
+\textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ & \textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ \\
+\midrule
+\endhead
+\midrule \multicolumn{8}{r}{{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+$^{74}\mathrm{Se}$ & $^{75}\mathrm{Se}(\gamma,\nt)$ & $-0.83$ & $-0.22$ & $^{152}\mathrm{Gd}$ & $^{150}\mathrm{Gd}(\gamma,\alpha)$ & $-0.18$ & $-0.00$ \\ 
+$^{78}\mathrm{Kr}$ & $^{79}\mathrm{Kr}(\gamma,\nt)$ & $-0.79$ & $-0.24$ & $ $ & $^{151}\mathrm{Gd}(\gamma,\nt)$ & $-0.20$ & $-0.00$ \\ 
+$^{84}\mathrm{Sr}$ & $^{85}\mathrm{Sr}(\gamma,\nt)$ & $-0.80$ & $-0.34$ & $ $ & $^{152}\mathrm{Dy}(\gamma,\alpha)$ & $-0.31$ & $-0.01$ \\ 
+$^{92}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ & $-0.91$ & $-0.14$ & $ $ & $^{154}\mathrm{Dy}(\gamma,\alpha)$ & $-0.17$ & $-0.00$ \\ 
+$^{94}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ & $0.93$ & $0.10$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.39$ & $0.01$ \\ 
+$^{96}\mathrm{Ru}$ & $^{97}\mathrm{Ru}(\gamma,\nt)$ & $-0.82$ & $-0.14$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.00$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $0.21$ & $0.04$ & $^{156}\mathrm{Dy}$ & $^{157}\mathrm{Dy}(\gamma,\nt)$ & $-0.28$ & $-0.12$ \\ 
+$^{98}\mathrm{Ru}$ & $^{97}\mathrm{Ru}(\gamma,\nt)$ & $0.50$ & $0.02$ & $ $ & $^{159}\mathrm{Er}(\gamma,\nt)$ & $-0.17$ & $-0.05$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\pt)$ & $0.58$ & $0.03$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.68$ & $0.26$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $-0.31$ & $-0.01$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.05$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $0.22$ & $0.01$ & $^{158}\mathrm{Dy}$ & $^{157}\mathrm{Dy}(\gamma,\nt)$ & $0.24$ & $0.03$ \\ 
+$^{102}\mathrm{Pd}$ & $^{100}\mathrm{Pd}(\gamma,\pt)$ & $-0.18$ & $-0.04$ & $ $ & $^{159}\mathrm{Dy}(\gamma,\nt)$ & $-0.21$ & $-0.03$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $-0.21$ & $-0.04$ & $ $ & $^{159}\mathrm{Er}(\gamma,\nt)$ & $-0.17$ & $-0.02$ \\ 
+$ $ & $^{103}\mathrm{Pd}(\gamma,\nt)$ & $-0.72$ & $-0.16$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.66$ & $0.07$ \\ 
+$^{106}\mathrm{Cd}$ & $^{107}\mathrm{Cd}(\gamma,\nt)$ & $-0.75$ & $-0.16$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.02$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $0.31$ & $0.07$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.20$ & $0.02$ \\ 
+$^{108}\mathrm{Cd}$ & $^{107}\mathrm{Cd}(\gamma,\nt)$ & $0.20$ & $0.05$ & $^{162}\mathrm{Er}$ & $^{159}\mathrm{Er}(\gamma,\nt)$ & $-0.25$ & $-0.10$ \\ 
+$ $ & $^{109}\mathrm{Cd}(\gamma,\nt)$ & $-0.83$ & $-0.20$ & $ $ & $^{159}\mathrm{Er}(\gamma,\alpha)$ & $-0.16$ & $-0.05$ \\ 
+$^{113}\mathrm{In}$ & $^{114}\mathrm{In}(\gamma,\nt)$ & $-0.32$ & $-0.05$ & $ $ & $^{160}\mathrm{Er}(\gamma,\nt)$ & $-0.23$ & $-0.09$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $-0.16$ & $-0.02$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $-0.44$ & $-0.15$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.27$ & $-0.04$ & $ $ & $^{161}\mathrm{Er}(\gamma,\nt)$ & $0.16$ & $0.06$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.60$ & $0.10$ & $ $ & $^{166}\mathrm{Yb}(\gamma,\alpha)$ & $0.33$ & $0.11$ \\ 
+$ $ & $^{169}\mathrm{Lu}(\gamma,\nt)$ & $0.15$ & $0.02$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.27$ & $0.10$ \\ 
+$^{112}\mathrm{Sn}$ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $-0.80$ & $-0.18$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.06$ \\ 
+$^{114}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.17$ & $-0.01$ & $^{164}\mathrm{Er}$ & $^{164}\mathrm{Yb}(\gamma,\nt)$ & $-0.26$ & $-0.07$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.65$ & $0.05$ & $ $ & $^{164}\mathrm{Yb}(\gamma,\alpha)$ & $-0.56$ & $-0.18$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.21$ & $0.02$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.21$ & $0.06$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $0.44$ & $0.03$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.18$ & $0.05$ \\ 
+$^{115}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.16$ & $-0.01$ & $^{168}\mathrm{Yb}$ & $^{164}\mathrm{Yb}(\gamma,\alpha)$ & $-0.19$ & $-0.09$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.74$ & $0.06$ & $ $ & $^{166}\mathrm{Yb}(\gamma,\nt)$ & $-0.22$ & $-0.08$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.16$ & $0.01$ & $ $ & $^{166}\mathrm{Yb}(\gamma,\alpha)$ & $-0.38$ & $-0.13$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $0.33$ & $0.03$ & $ $ & $^{167}\mathrm{Yb}(\gamma,\nt)$ & $0.20$ & $0.07$ \\ 
+$^{120}\mathrm{Te}$ & $^{121}\mathrm{Te}(\gamma,\nt)$ & $-0.76$ & $-0.19$ & $ $ & $^{172}\mathrm{Hf}(\gamma,\alpha)$ & $0.43$ & $0.16$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.26$ & $0.05$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.28$ & $0.09$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.23$ & $-0.05$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.19$ & $0.06$ \\ 
+$^{124}\mathrm{Xe}$ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $-0.19$ & $-0.05$ & $^{174}\mathrm{Hf}$ & $^{172}\mathrm{Hf}(\gamma,\alpha)$ & $-0.40$ & $-0.07$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.39$ & $-0.15$ & $ $ & $^{174}\mathrm{W}(\gamma,\alpha)$ & $-0.19$ & $-0.04$ \\ 
+$ $ & $^{125}\mathrm{Xe}(\gamma,\nt)$ & $-0.54$ & $-0.23$ & $ $ & $^{178}\mathrm{W}(\gamma,\alpha)$ & $0.51$ & $0.09$ \\ 
+$^{126}\mathrm{Xe}$ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.35$ & $-0.14$ & $ $ & $^{182}\mathrm{Os}(\gamma,\alpha)$ & $0.18$ & $0.03$ \\ 
+$ $ & $^{125}\mathrm{Xe}(\gamma,\nt)$ & $0.22$ & $0.09$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.19$ & $0.03$ \\ 
+$ $ & $^{127}\mathrm{Xe}(\gamma,\nt)$ & $-0.63$ & $-0.27$ & $^{180}\mathrm{Ta}$ & $^{179}\mathrm{Ta}(\gamma,\nt)$ & $-0.91$ & $-0.07$ \\ 
+$^{130}\mathrm{Ba}$ & $^{131}\mathrm{Ba}(\gamma,\nt)$ & $-0.82$ & $-0.13$ & $ $ & $^{179}\mathrm{Ta}(\gamma,\alpha)$ & $-0.15$ & $-0.01$ \\ 
+$^{132}\mathrm{Ba}$ & $^{131}\mathrm{Ba}(\gamma,\nt)$ & $0.36$ & $0.14$ & $^{180}\mathrm{W}$ & $^{180}\mathrm{Os}(\gamma,\nt)$ & $-0.27$ & $-0.05$ \\ 
+$ $ & $^{133}\mathrm{Ba}(\gamma,\nt)$ & $-0.76$ & $-0.30$ & $ $ & $^{180}\mathrm{Os}(\gamma,\alpha)$ & $-0.51$ & $-0.13$ \\ 
+$^{138}\mathrm{La}$ & $^{133}\mathrm{La}(\gamma,\pt)$ & $-0.20$ & $-0.07$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.23$ & $0.04$ \\ 
+$ $ & $^{135}\mathrm{La}(\gamma,\nt)$ & $-0.35$ & $-0.12$ & $^{184}\mathrm{Os}$ & $^{182}\mathrm{Os}(\gamma,\alpha)$ & $-0.38$ & $-0.02$ \\ 
+$ $ & $^{136}\mathrm{La}(\gamma,\nt)$ & $0.26$ & $0.08$ & $ $ & $^{184}\mathrm{Pt}(\gamma,\alpha)$ & $-0.33$ & $-0.02$ \\ 
+$ $ & $^{137}\mathrm{La}(\gamma,\nt)$ & $-0.34$ & $-0.14$ & $ $ & $^{186}\mathrm{Pt}(\gamma,\alpha)$ & $-0.15$ & $-0.01$ \\ 
+$^{136}\mathrm{Ce}$ & $^{137}\mathrm{Ce}(\gamma,\nt)$ & $-0.49$ & $-0.07$ & $ $ & $^{188}\mathrm{Pt}(\gamma,\alpha)$ & $0.23$ & $0.01$ \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\nt)$ & $-0.27$ & $-0.03$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.19$ & $0.01$ \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\pt)$ & $0.48$ & $0.06$ & $^{190}\mathrm{Pt}$ & $^{190}\mathrm{Hg}(\gamma,\nt)$ & $-0.30$ & $-0.02$ \\ 
+$ $ & $^{140}\mathrm{Nd}(\gamma,\alpha)$ & $0.38$ & $0.04$ & $ $ & $^{190}\mathrm{Hg}(\gamma,\alpha)$ & $-0.50$ & $-0.05$ \\ 
+$^{138}\mathrm{Ce}$ & $^{137}\mathrm{Ce}(\gamma,\nt)$ & $0.65$ & $0.07$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.20$ & $0.02$ \\ 
+$ $ & $^{139}\mathrm{Ce}(\gamma,\nt)$ & $-0.52$ & $-0.05$ & $^{196}\mathrm{Hg}$ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $-0.68$ & $-0.35$ \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\pt)$ & $0.16$ & $0.01$ & $ $ & $^{197}\mathrm{Pb}(\gamma,\nt)$ & $-0.26$ & $-0.10$ \\ 
+$^{144}\mathrm{Sm}$ & $^{142}\mathrm{Sm}(\gamma,\nt)$ & $-0.15$ & $-0.02$ & $ $ & $^{200}\mathrm{Pb}(\gamma,\nt)$ & $0.17$ & $0.07$ \\ 
+$ $ & $^{142}\mathrm{Sm}(\gamma,\pt)$ & $-0.16$ & $-0.02$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.24$ & $0.10$ \\ 
+$ $ & $^{143}\mathrm{Sm}(\gamma,\nt)$ & $-0.19$ & $-0.03$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{146}\mathrm{Sm}(\gamma,\nt)$ & $0.19$ & $0.03$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{146}\mathrm{Sm}(\gamma,\alpha)$ & $-0.22$ & $-0.03$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{150}\mathrm{Gd}(\gamma,\nt)$ & $0.21$ & $0.03$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{150}\mathrm{Gd}(\gamma,\alpha)$ & $-0.20$ & $-0.03$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.46$ & $0.06$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.20$ & $0.03$ & $ $ & $ $ &  &  \\ 
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{llcc llcc}
+\caption{Correlations and $\zeta$ slopes between mass fraction and reaction rates for the $3\times$3D-inspired mixing scenario.
+\label{tab:3x3d_corr}}\\
+\toprule
+\textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ & \textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ \\
+\midrule
+\endfirsthead
+\multicolumn{8}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\toprule
+\textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ & \textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ \\
+\midrule
+\endhead
+\midrule \multicolumn{8}{r}{{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+$^{74}\mathrm{Se}$ & $^{75}\mathrm{Se}(\gamma,\nt)$ & $-0.81$ & $-0.24$ & $^{144}\mathrm{Sm}$ & $^{142}\mathrm{Sm}(\gamma,\nt)$ & $-0.23$ & $-0.02$ \\ 
+$^{78}\mathrm{Kr}$ & $^{79}\mathrm{Kr}(\gamma,\nt)$ & $-0.76$ & $-0.20$ & $ $ & $^{142}\mathrm{Sm}(\gamma,\pt)$ & $-0.23$ & $-0.03$ \\ 
+$^{84}\mathrm{Sr}$ & $^{85}\mathrm{Sr}(\gamma,\nt)$ & $-0.75$ & $-0.26$ & $ $ & $^{143}\mathrm{Sm}(\gamma,\nt)$ & $-0.30$ & $-0.04$ \\ 
+$^{92}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ & $-0.91$ & $-0.23$ & $ $ & $^{146}\mathrm{Sm}(\gamma,\alpha)$ & $-0.17$ & $-0.02$ \\ 
+$^{94}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ & $0.92$ & $0.17$ & $ $ & $^{150}\mathrm{Gd}(\gamma,\nt)$ & $0.17$ & $0.02$ \\ 
+$^{96}\mathrm{Ru}$ & $^{97}\mathrm{Ru}(\gamma,\nt)$ & $-0.84$ & $-0.25$ & $ $ & $^{150}\mathrm{Gd}(\gamma,\alpha)$ & $-0.16$ & $-0.02$ \\ 
+$^{98}\mathrm{Ru}$ & $^{97}\mathrm{Ru}(\gamma,\nt)$ & $0.65$ & $0.05$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.44$ & $0.05$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\pt)$ & $0.47$ & $0.03$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.17$ & $0.02$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $-0.23$ & $-0.02$ & $^{152}\mathrm{Gd}$ & $^{151}\mathrm{Gd}(\gamma,\nt)$ & $-0.17$ & $-0.00$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $0.21$ & $0.01$ & $ $ & $^{152}\mathrm{Dy}(\gamma,\alpha)$ & $-0.39$ & $-0.01$ \\ 
+$^{102}\mathrm{Pd}$ & $^{100}\mathrm{Pd}(\gamma,\pt)$ & $-0.20$ & $-0.06$ & $ $ & $^{154}\mathrm{Dy}(\gamma,\alpha)$ & $-0.19$ & $-0.00$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $-0.22$ & $-0.06$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.33$ & $0.01$ \\ 
+$ $ & $^{103}\mathrm{Pd}(\gamma,\nt)$ & $-0.71$ & $-0.26$ & $^{156}\mathrm{Dy}$ & $^{157}\mathrm{Dy}(\gamma,\nt)$ & $-0.21$ & $-0.08$ \\ 
+$^{106}\mathrm{Cd}$ & $^{107}\mathrm{Cd}(\gamma,\nt)$ & $-0.78$ & $-0.27$ & $ $ & $^{159}\mathrm{Er}(\gamma,\nt)$ & $-0.18$ & $-0.06$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $0.21$ & $0.08$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.69$ & $0.25$ \\ 
+$^{108}\mathrm{Cd}$ & $^{107}\mathrm{Cd}(\gamma,\nt)$ & $0.24$ & $0.08$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.15$ & $0.05$ \\ 
+$ $ & $^{109}\mathrm{Cd}(\gamma,\nt)$ & $-0.80$ & $-0.24$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.15$ & $0.05$ \\ 
+$^{113}\mathrm{In}$ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $-0.22$ & $-0.04$ & $^{158}\mathrm{Dy}$ & $^{157}\mathrm{Dy}(\gamma,\nt)$ & $0.20$ & $0.02$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.33$ & $-0.06$ & $ $ & $^{159}\mathrm{Er}(\gamma,\nt)$ & $-0.19$ & $-0.02$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.62$ & $0.15$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.67$ & $0.07$ \\ 
+$ $ & $^{169}\mathrm{Lu}(\gamma,\nt)$ & $0.16$ & $0.03$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.02$ \\ 
+$^{112}\mathrm{Sn}$ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $-0.78$ & $-0.31$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.20$ & $0.02$ \\ 
+$^{114}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $-0.17$ & $-0.02$ & $^{162}\mathrm{Er}$ & $^{159}\mathrm{Er}(\gamma,\nt)$ & $-0.29$ & $-0.12$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.26$ & $-0.03$ & $ $ & $^{159}\mathrm{Er}(\gamma,\alpha)$ & $-0.17$ & $-0.05$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.70$ & $0.08$ & $ $ & $^{160}\mathrm{Er}(\gamma,\nt)$ & $-0.22$ & $-0.09$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.16$ & $0.02$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $-0.40$ & $-0.13$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $0.27$ & $0.03$ & $ $ & $^{161}\mathrm{Er}(\gamma,\nt)$ & $0.18$ & $0.08$ \\ 
+$ $ & $^{169}\mathrm{Lu}(\gamma,\nt)$ & $0.15$ & $0.01$ & $ $ & $^{166}\mathrm{Yb}(\gamma,\alpha)$ & $0.32$ & $0.11$ \\ 
+$^{115}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $-0.17$ & $-0.02$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.27$ & $0.10$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.25$ & $-0.03$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.15$ & $0.06$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.73$ & $0.08$ & $^{164}\mathrm{Er}$ & $^{164}\mathrm{Yb}(\gamma,\nt)$ & $-0.24$ & $-0.08$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $0.24$ & $0.03$ & $ $ & $^{164}\mathrm{Yb}(\gamma,\alpha)$ & $-0.56$ & $-0.24$ \\ 
+$ $ & $^{169}\mathrm{Lu}(\gamma,\nt)$ & $0.15$ & $0.01$ & $ $ & $^{165}\mathrm{Yb}(\gamma,\nt)$ & $-0.17$ & $-0.06$ \\ 
+$^{120}\mathrm{Te}$ & $^{121}\mathrm{Te}(\gamma,\nt)$ & $-0.78$ & $-0.24$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.19$ & $0.06$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.24$ & $0.06$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.15$ & $0.06$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.22$ & $-0.06$ & $^{168}\mathrm{Yb}$ & $^{164}\mathrm{Yb}(\gamma,\alpha)$ & $-0.22$ & $-0.10$ \\ 
+$^{124}\mathrm{Xe}$ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $-0.20$ & $-0.07$ & $ $ & $^{166}\mathrm{Yb}(\gamma,\nt)$ & $-0.18$ & $-0.07$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.36$ & $-0.18$ & $ $ & $^{166}\mathrm{Yb}(\gamma,\alpha)$ & $-0.34$ & $-0.12$ \\ 
+$ $ & $^{125}\mathrm{Xe}(\gamma,\nt)$ & $-0.54$ & $-0.33$ & $ $ & $^{167}\mathrm{Yb}(\gamma,\nt)$ & $0.19$ & $0.07$ \\ 
+$^{126}\mathrm{Xe}$ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $-0.19$ & $-0.07$ & $ $ & $^{172}\mathrm{Hf}(\gamma,\alpha)$ & $0.43$ & $0.16$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.39$ & $-0.18$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.29$ & $0.10$ \\ 
+$ $ & $^{125}\mathrm{Xe}(\gamma,\nt)$ & $0.22$ & $0.11$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.19$ & $0.06$ \\ 
+$ $ & $^{127}\mathrm{Xe}(\gamma,\nt)$ & $-0.57$ & $-0.29$ & $^{174}\mathrm{Hf}$ & $^{172}\mathrm{Hf}(\gamma,\alpha)$ & $-0.31$ & $-0.06$ \\ 
+$^{130}\mathrm{Ba}$ & $^{126}\mathrm{Ba}(\gamma,\alpha)$ & $-0.16$ & $-0.02$ & $ $ & $^{174}\mathrm{W}(\gamma,\nt)$ & $-0.19$ & $-0.03$ \\ 
+$ $ & $^{131}\mathrm{Ba}(\gamma,\nt)$ & $-0.81$ & $-0.15$ & $ $ & $^{174}\mathrm{W}(\gamma,\alpha)$ & $-0.30$ & $-0.07$ \\ 
+$^{132}\mathrm{Ba}$ & $^{131}\mathrm{Ba}(\gamma,\nt)$ & $0.41$ & $0.15$ & $ $ & $^{178}\mathrm{W}(\gamma,\alpha)$ & $0.46$ & $0.08$ \\ 
+$ $ & $^{133}\mathrm{Ba}(\gamma,\nt)$ & $-0.74$ & $-0.27$ & $ $ & $^{182}\mathrm{Os}(\gamma,\alpha)$ & $0.17$ & $0.03$ \\ 
+$^{138}\mathrm{La}$ & $^{133}\mathrm{La}(\gamma,\pt)$ & $-0.19$ & $-0.08$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.20$ & $0.04$ \\ 
+$ $ & $^{135}\mathrm{La}(\gamma,\nt)$ & $-0.31$ & $-0.12$ & $^{180}\mathrm{Ta}$ & $^{179}\mathrm{Ta}(\gamma,\nt)$ & $-0.89$ & $-0.07$ \\ 
+$ $ & $^{136}\mathrm{La}(\gamma,\nt)$ & $0.25$ & $0.08$ & $^{180}\mathrm{W}$ & $^{180}\mathrm{Os}(\gamma,\nt)$ & $-0.26$ & $-0.08$ \\ 
+$ $ & $^{137}\mathrm{La}(\gamma,\nt)$ & $-0.35$ & $-0.16$ & $ $ & $^{180}\mathrm{Os}(\gamma,\alpha)$ & $-0.50$ & $-0.21$ \\ 
+$^{136}\mathrm{Ce}$ & $^{137}\mathrm{Ce}(\gamma,\nt)$ & $-0.47$ & $-0.07$ & $ $ & $^{181}\mathrm{Os}(\gamma,\nt)$ & $-0.16$ & $-0.04$ \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\nt)$ & $-0.31$ & $-0.04$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.22$ & $0.06$ \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\pt)$ & $0.52$ & $0.07$ & $^{184}\mathrm{Os}$ & $^{182}\mathrm{Os}(\gamma,\alpha)$ & $-0.19$ & $-0.02$ \\ 
+$ $ & $^{140}\mathrm{Nd}(\gamma,\alpha)$ & $0.32$ & $0.04$ & $ $ & $^{185}\mathrm{Os}(\gamma,\nt)$ & $0.17$ & $0.01$ \\ 
+$^{138}\mathrm{Ce}$ & $^{137}\mathrm{Ce}(\gamma,\nt)$ & $0.66$ & $0.08$ & $ $ & $^{184}\mathrm{Pt}(\gamma,\alpha)$ & $-0.45$ & $-0.04$ \\ 
+$ $ & $^{139}\mathrm{Ce}(\gamma,\nt)$ & $-0.37$ & $-0.04$ & $ $ & $^{186}\mathrm{Pt}(\gamma,\alpha)$ & $-0.16$ & $-0.01$ \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\nt)$ & $-0.16$ & $-0.02$ & $ $ & $^{188}\mathrm{Pt}(\gamma,\alpha)$ & $0.16$ & $0.01$ \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\pt)$ & $0.28$ & $0.03$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.20$ & $0.01$ \\ 
+$ $ & $^{140}\mathrm{Nd}(\gamma,\alpha)$ & $0.18$ & $0.02$ & $^{190}\mathrm{Pt}$ & $^{190}\mathrm{Hg}(\gamma,\nt)$ & $-0.30$ & $-0.04$ \\ 
+$ $ & $ $ &  &  & $ $ & $^{190}\mathrm{Hg}(\gamma,\alpha)$ & $-0.51$ & $-0.07$ \\ 
+$ $ & $ $ &  &  & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.19$ & $0.02$ \\ 
+$ $ & $ $ &  &  & $^{196}\mathrm{Hg}$ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $-0.68$ & $-0.42$ \\ 
+$ $ & $ $ &  &  & $ $ & $^{197}\mathrm{Pb}(\gamma,\nt)$ & $-0.28$ & $-0.13$ \\ 
+$ $ & $ $ &  &  & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.20$ & $0.10$ \\ 
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{llcc llcc}
+\caption{Correlations and $\zeta$ slopes between mass fraction and reaction rates for the $10\times$3D-inspired mixing scenario.
+\label{tab:10x3d_corr}}\\
+\toprule
+\textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ & \textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ \\
+\midrule
+\endfirsthead
+\multicolumn{8}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\toprule
+\textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ & \textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ \\
+\midrule
+\endhead
+\midrule \multicolumn{8}{r}{{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+$^{74}\mathrm{Se}$ & $^{75}\mathrm{Se}(\gamma,\nt)$ & $-0.87$ & $-0.30$ & $^{138}\mathrm{Ce}$ & $^{137}\mathrm{Ce}(\gamma,\nt)$ & $0.58$ & $0.05$ \\ 
+$^{78}\mathrm{Kr}$ & $^{79}\mathrm{Kr}(\gamma,\nt)$ & $-0.81$ & $-0.35$ & $ $ & $^{139}\mathrm{Ce}(\gamma,\nt)$ & $-0.19$ & $-0.01$ \\ 
+$^{84}\mathrm{Sr}$ & $^{84}\mathrm{Rb}(\gamma,\nt)$ & $0.16$ & $0.06$ & $ $ & $^{138}\mathrm{Nd}(\gamma,\nt)$ & $-0.31$ & $-0.02$ \\ 
+$ $ & $^{85}\mathrm{Sr}(\gamma,\nt)$ & $-0.81$ & $-0.33$ & $ $ & $^{138}\mathrm{Nd}(\gamma,\pt)$ & $0.37$ & $0.03$ \\ 
+$^{92}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ & $-0.93$ & $-0.17$ & $ $ & $^{138}\mathrm{Nd}(\gamma,\alpha)$ & $-0.17$ & $-0.01$ \\ 
+$^{94}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ & $0.94$ & $0.21$ & $ $ & $^{140}\mathrm{Nd}(\gamma,\alpha)$ & $0.20$ & $0.01$ \\ 
+$^{96}\mathrm{Ru}$ & $^{97}\mathrm{Ru}(\gamma,\nt)$ & $-0.88$ & $-0.25$ & $^{144}\mathrm{Sm}$ & $^{142}\mathrm{Sm}(\gamma,\nt)$ & $-0.31$ & $-0.04$ \\ 
+$^{98}\mathrm{Ru}$ & $^{97}\mathrm{Ru}(\gamma,\nt)$ & $0.68$ & $0.07$ & $ $ & $^{142}\mathrm{Sm}(\gamma,\pt)$ & $-0.29$ & $-0.03$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\pt)$ & $0.45$ & $0.05$ & $ $ & $^{143}\mathrm{Sm}(\gamma,\nt)$ & $-0.41$ & $-0.05$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $-0.29$ & $-0.03$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.35$ & $0.04$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $0.18$ & $0.02$ & $^{152}\mathrm{Gd}$ & $^{152}\mathrm{Dy}(\gamma,\alpha)$ & $-0.50$ & $-0.02$ \\ 
+$^{102}\mathrm{Pd}$ & $^{100}\mathrm{Pd}(\gamma,\pt)$ & $-0.29$ & $-0.08$ & $ $ & $^{154}\mathrm{Dy}(\gamma,\alpha)$ & $-0.16$ & $-0.00$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $-0.30$ & $-0.08$ & $ $ & $^{158}\mathrm{Er}(\gamma,\nt)$ & $0.15$ & $0.00$ \\ 
+$ $ & $^{103}\mathrm{Pd}(\gamma,\nt)$ & $-0.65$ & $-0.21$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.19$ & $0.00$ \\ 
+$^{106}\mathrm{Cd}$ & $^{107}\mathrm{Cd}(\gamma,\nt)$ & $-0.83$ & $-0.30$ & $^{156}\mathrm{Dy}$ & $^{159}\mathrm{Er}(\gamma,\nt)$ & $-0.19$ & $-0.06$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $0.19$ & $0.07$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.70$ & $0.26$ \\ 
+$^{108}\mathrm{Cd}$ & $^{107}\mathrm{Cd}(\gamma,\nt)$ & $0.63$ & $0.15$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.05$ \\ 
+$ $ & $^{109}\mathrm{Cd}(\gamma,\nt)$ & $-0.50$ & $-0.10$ & $^{158}\mathrm{Dy}$ & $^{159}\mathrm{Dy}(\gamma,\nt)$ & $0.19$ & $0.01$ \\ 
+$^{113}\mathrm{In}$ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $-0.17$ & $-0.05$ & $ $ & $^{158}\mathrm{Er}(\gamma,\nt)$ & $-0.16$ & $-0.01$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.24$ & $-0.08$ & $ $ & $^{158}\mathrm{Er}(\gamma,\alpha)$ & $-0.28$ & $-0.01$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.82$ & $0.34$ & $ $ & $^{159}\mathrm{Er}(\gamma,\nt)$ & $-0.18$ & $-0.01$ \\ 
+$^{112}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.17$ & $-0.05$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.56$ & $0.02$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $-0.78$ & $-0.33$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.17$ & $0.01$ \\ 
+$^{114}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $-0.18$ & $-0.02$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.17$ & $0.01$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.27$ & $-0.04$ & $^{162}\mathrm{Er}$ & $^{159}\mathrm{Er}(\gamma,\nt)$ & $-0.28$ & $-0.10$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.76$ & $0.12$ & $ $ & $^{159}\mathrm{Er}(\gamma,\alpha)$ & $-0.16$ & $-0.05$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $0.15$ & $0.03$ & $ $ & $^{160}\mathrm{Er}(\gamma,\nt)$ & $-0.19$ & $-0.07$ \\ 
+$ $ & $^{169}\mathrm{Lu}(\gamma,\nt)$ & $0.16$ & $0.02$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $-0.29$ & $-0.09$ \\ 
+$^{115}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $-0.18$ & $-0.02$ & $ $ & $^{161}\mathrm{Er}(\gamma,\nt)$ & $0.18$ & $0.06$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.27$ & $-0.04$ & $ $ & $^{166}\mathrm{Yb}(\gamma,\alpha)$ & $0.40$ & $0.12$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.77$ & $0.12$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.26$ & $0.09$ \\ 
+$ $ & $^{169}\mathrm{Lu}(\gamma,\nt)$ & $0.16$ & $0.02$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.15$ & $0.05$ \\ 
+$^{120}\mathrm{Te}$ & $^{119}\mathrm{Te}(\gamma,\nt)$ & $-0.20$ & $-0.04$ & $^{164}\mathrm{Er}$ & $^{164}\mathrm{Yb}(\gamma,\nt)$ & $-0.23$ & $-0.10$ \\ 
+$ $ & $^{121}\mathrm{Te}(\gamma,\nt)$ & $-0.66$ & $-0.13$ & $ $ & $^{164}\mathrm{Yb}(\gamma,\alpha)$ & $-0.59$ & $-0.43$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.42$ & $0.07$ & $ $ & $^{165}\mathrm{Yb}(\gamma,\nt)$ & $-0.17$ & $-0.09$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.35$ & $-0.06$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.07$ \\ 
+$^{124}\mathrm{Xe}$ & $^{122}\mathrm{Xe}(\gamma,\nt)$ & $-0.22$ & $-0.08$ & $^{168}\mathrm{Yb}$ & $^{168}\mathrm{Hf}(\gamma,\nt)$ & $-0.16$ & $-0.05$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $-0.27$ & $-0.10$ & $ $ & $^{168}\mathrm{Hf}(\gamma,\alpha)$ & $-0.40$ & $-0.21$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.44$ & $-0.23$ & $ $ & $^{169}\mathrm{Hf}(\gamma,\nt)$ & $-0.17$ & $-0.05$ \\ 
+$ $ & $^{125}\mathrm{Xe}(\gamma,\nt)$ & $-0.40$ & $-0.22$ & $ $ & $^{172}\mathrm{Hf}(\gamma,\alpha)$ & $0.41$ & $0.19$ \\ 
+$^{126}\mathrm{Xe}$ & $^{122}\mathrm{Xe}(\gamma,\nt)$ & $-0.21$ & $-0.06$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.22$ & $0.08$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $-0.26$ & $-0.08$ & $^{174}\mathrm{Hf}$ & $^{174}\mathrm{W}(\gamma,\nt)$ & $-0.23$ & $-0.06$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.46$ & $-0.19$ & $ $ & $^{174}\mathrm{W}(\gamma,\alpha)$ & $-0.52$ & $-0.19$ \\ 
+$ $ & $^{125}\mathrm{Xe}(\gamma,\nt)$ & $0.38$ & $0.16$ & $ $ & $^{176}\mathrm{W}(\gamma,\alpha)$ & $-0.15$ & $-0.05$ \\ 
+$ $ & $^{127}\mathrm{Xe}(\gamma,\nt)$ & $-0.26$ & $-0.11$ & $^{180}\mathrm{Ta}$ & $^{179}\mathrm{Ta}(\gamma,\nt)$ & $-0.88$ & $-0.03$ \\ 
+$^{130}\mathrm{Ba}$ & $^{126}\mathrm{Ba}(\gamma,\pt)$ & $-0.18$ & $-0.02$ & $^{180}\mathrm{W}$ & $^{180}\mathrm{Os}(\gamma,\nt)$ & $-0.30$ & $-0.12$ \\ 
+$ $ & $^{126}\mathrm{Ba}(\gamma,\alpha)$ & $-0.31$ & $-0.03$ & $ $ & $^{180}\mathrm{Os}(\gamma,\alpha)$ & $-0.54$ & $-0.39$ \\ 
+$ $ & $^{128}\mathrm{Ba}(\gamma,\nt)$ & $-0.26$ & $-0.03$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.21$ & $0.08$ \\ 
+$ $ & $^{128}\mathrm{Ba}(\gamma,\pt)$ & $-0.16$ & $-0.01$ & $^{184}\mathrm{Os}$ & $^{184}\mathrm{Pt}(\gamma,\alpha)$ & $-0.49$ & $-0.10$ \\ 
+$ $ & $^{128}\mathrm{Ba}(\gamma,\alpha)$ & $-0.27$ & $-0.02$ & $ $ & $^{185}\mathrm{Pt}(\gamma,\alpha)$ & $-0.16$ & $-0.02$ \\ 
+$ $ & $^{129}\mathrm{Ba}(\gamma,\nt)$ & $0.21$ & $0.02$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.02$ \\ 
+$ $ & $^{131}\mathrm{Ba}(\gamma,\nt)$ & $-0.51$ & $-0.05$ & $^{190}\mathrm{Pt}$ & $^{190}\mathrm{Hg}(\gamma,\nt)$ & $-0.27$ & $-0.06$ \\ 
+$^{132}\mathrm{Ba}$ & $^{128}\mathrm{Ba}(\gamma,\alpha)$ & $-0.18$ & $-0.02$ & $ $ & $^{190}\mathrm{Hg}(\gamma,\alpha)$ & $-0.52$ & $-0.15$ \\ 
+$ $ & $^{131}\mathrm{Ba}(\gamma,\nt)$ & $0.63$ & $0.12$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.18$ & $0.04$ \\ 
+$ $ & $^{133}\mathrm{Ba}(\gamma,\nt)$ & $-0.56$ & $-0.10$ & $^{196}\mathrm{Hg}$ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $-0.75$ & $-0.53$ \\ 
+$^{138}\mathrm{La}$ & $^{137}\mathrm{La}(\gamma,\nt)$ & $-0.65$ & $-0.35$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.20$ & $0.12$ \\ 
+$^{136}\mathrm{Ce}$ & $^{138}\mathrm{Nd}(\gamma,\nt)$ & $-0.39$ & $-0.06$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\pt)$ & $0.65$ & $0.10$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{138}\mathrm{Nd}(\gamma,\alpha)$ & $-0.16$ & $-0.03$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{140}\mathrm{Nd}(\gamma,\alpha)$ & $0.31$ & $0.05$ & $ $ & $ $ &  &  \\ 
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{llcc llcc}
+\caption{Correlations and $\zeta$ slopes between mass fraction and reaction rates for the $50\times$3D-inspired mixing scenario.
+\label{tab:50x3d_corr}}\\
+\toprule
+\textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ & \textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ \\
+\midrule
+\endfirsthead
+\multicolumn{8}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\toprule
+\textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ & \textbf{Isotope} & \textbf{Reaction} & $\mathbf{r_\mathrm{\mathbf{P}}}$ & $\mathbf{\zeta}$ \\
+\midrule
+\endhead
+\midrule \multicolumn{8}{r}{{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+$^{74}\mathrm{Se}$ & $^{75}\mathrm{Se}(\gamma,\nt)$ & $-0.95$ & $-0.10$ & $^{130}\mathrm{Ba}$ & $^{126}\mathrm{Ba}(\gamma,\alpha)$ & $-0.19$ & $-0.01$ \\ 
+$^{78}\mathrm{Kr}$ & $^{79}\mathrm{Kr}(\gamma,\nt)$ & $-0.91$ & $-0.28$ & $ $ & $^{132}\mathrm{Ce}(\gamma,\nt)$ & $-0.23$ & $-0.01$ \\ 
+$^{84}\mathrm{Sr}$ & $^{85}\mathrm{Sr}(\gamma,\nt)$ & $-0.92$ & $-0.26$ & $ $ & $^{132}\mathrm{Ce}(\gamma,\pt)$ & $0.32$ & $0.01$ \\ 
+$^{92}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ & $-0.57$ & $-0.03$ & $ $ & $^{132}\mathrm{Ce}(\gamma,\alpha)$ & $-0.20$ & $-0.01$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\pt)$ & $0.19$ & $0.01$ & $ $ & $^{134}\mathrm{Ce}(\gamma,\nt)$ & $-0.20$ & $-0.01$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $0.20$ & $0.01$ & $ $ & $^{134}\mathrm{Ce}(\gamma,\alpha)$ & $0.41$ & $0.02$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\nt)$ & $0.16$ & $0.01$ & $^{132}\mathrm{Ba}$ & $^{132}\mathrm{Ce}(\gamma,\nt)$ & $-0.28$ & $-0.04$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $0.23$ & $0.01$ & $ $ & $^{132}\mathrm{Ce}(\gamma,\pt)$ & $-0.25$ & $-0.03$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $0.37$ & $0.02$ & $ $ & $^{132}\mathrm{Ce}(\gamma,\alpha)$ & $-0.31$ & $-0.04$ \\ 
+$^{94}\mathrm{Mo}$ & $^{93}\mathrm{Mo}(\gamma,\nt)$ & $0.89$ & $0.08$ & $ $ & $^{133}\mathrm{Ce}(\gamma,\nt)$ & $-0.19$ & $-0.03$ \\ 
+$^{96}\mathrm{Ru}$ & $^{97}\mathrm{Ru}(\gamma,\nt)$ & $-0.62$ & $-0.05$ & $ $ & $^{134}\mathrm{Ce}(\gamma,\alpha)$ & $-0.18$ & $-0.02$ \\ 
+$ $ & $^{97}\mathrm{Ru}(\gamma,\alpha)$ & $-0.18$ & $-0.01$ & $^{138}\mathrm{La}$ & $^{137}\mathrm{La}(\gamma,\nt)$ & $-0.75$ & $-0.45$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $0.33$ & $0.03$ & $^{136}\mathrm{Ce}$ & $^{138}\mathrm{Nd}(\gamma,\nt)$ & $-0.42$ & $-0.09$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\nt)$ & $0.16$ & $0.01$ & $ $ & $^{138}\mathrm{Nd}(\gamma,\pt)$ & $0.66$ & $0.14$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $0.16$ & $0.01$ & $ $ & $^{140}\mathrm{Nd}(\gamma,\alpha)$ & $0.25$ & $0.06$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $0.23$ & $0.02$ & $^{138}\mathrm{Ce}$ & $^{138}\mathrm{Nd}(\gamma,\nt)$ & $-0.33$ & $-0.04$ \\ 
+$^{98}\mathrm{Ru}$ & $^{100}\mathrm{Pd}(\gamma,\pt)$ & $0.70$ & $0.13$ & $ $ & $^{138}\mathrm{Nd}(\gamma,\pt)$ & $-0.31$ & $-0.04$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $-0.53$ & $-0.10$ & $ $ & $^{138}\mathrm{Nd}(\gamma,\alpha)$ & $-0.24$ & $-0.02$ \\ 
+$^{102}\mathrm{Pd}$ & $^{100}\mathrm{Pd}(\gamma,\pt)$ & $-0.39$ & $-0.06$ & $ $ & $^{139}\mathrm{Nd}(\gamma,\nt)$ & $-0.31$ & $-0.04$ \\ 
+$ $ & $^{100}\mathrm{Pd}(\gamma,\alpha)$ & $-0.38$ & $-0.05$ & $^{144}\mathrm{Sm}$ & $^{142}\mathrm{Sm}(\gamma,\nt)$ & $-0.36$ & $-0.06$ \\ 
+$ $ & $^{103}\mathrm{Pd}(\gamma,\nt)$ & $-0.23$ & $-0.04$ & $ $ & $^{142}\mathrm{Sm}(\gamma,\pt)$ & $-0.29$ & $-0.04$ \\ 
+$ $ & $^{104}\mathrm{Cd}(\gamma,\pt)$ & $0.17$ & $0.03$ & $ $ & $^{143}\mathrm{Sm}(\gamma,\nt)$ & $-0.50$ & $-0.09$ \\ 
+$ $ & $^{104}\mathrm{Cd}(\gamma,\alpha)$ & $-0.27$ & $-0.04$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.19$ & $0.03$ \\ 
+$^{106}\mathrm{Cd}$ & $^{104}\mathrm{Cd}(\gamma,\pt)$ & $-0.23$ & $-0.03$ & $^{152}\mathrm{Gd}$ & $^{152}\mathrm{Dy}(\gamma,\alpha)$ & $-0.50$ & $-0.05$ \\ 
+$ $ & $^{107}\mathrm{Cd}(\gamma,\nt)$ & $-0.62$ & $-0.07$ & $ $ & $^{158}\mathrm{Er}(\gamma,\nt)$ & $0.18$ & $0.01$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $0.20$ & $0.02$ & $^{156}\mathrm{Dy}$ & $^{156}\mathrm{Er}(\gamma,\alpha)$ & $-0.44$ & $-0.27$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $0.40$ & $0.05$ & $ $ & $^{158}\mathrm{Er}(\gamma,\nt)$ & $0.19$ & $0.09$ \\ 
+$^{108}\mathrm{Cd}$ & $^{107}\mathrm{Cd}(\gamma,\nt)$ & $0.61$ & $0.11$ & $ $ & $^{158}\mathrm{Er}(\gamma,\alpha)$ & $-0.18$ & $-0.07$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $0.49$ & $0.08$ & $ $ & $^{160}\mathrm{Er}(\gamma,\alpha)$ & $0.25$ & $0.15$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.33$ & $-0.06$ & $^{158}\mathrm{Dy}$ & $^{158}\mathrm{Er}(\gamma,\nt)$ & $-0.28$ & $-0.02$ \\ 
+$^{113}\mathrm{In}$ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.94$ & $0.44$ & $ $ & $^{158}\mathrm{Er}(\gamma,\alpha)$ & $-0.53$ & $-0.05$ \\ 
+$^{112}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\pt)$ & $-0.25$ & $-0.03$ & $^{162}\mathrm{Er}$ & $^{162}\mathrm{Yb}(\gamma,\alpha)$ & $-0.49$ & $-0.30$ \\ 
+$ $ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.34$ & $-0.04$ & $ $ & $^{164}\mathrm{Yb}(\gamma,\alpha)$ & $-0.16$ & $-0.07$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $-0.65$ & $-0.08$ & $ $ & $^{168}\mathrm{Hf}(\gamma,\nt)$ & $0.17$ & $0.07$ \\ 
+$^{114}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.21$ & $-0.02$ & $^{164}\mathrm{Er}$ & $^{164}\mathrm{Yb}(\gamma,\nt)$ & $-0.31$ & $-0.17$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.78$ & $0.08$ & $ $ & $^{164}\mathrm{Yb}(\gamma,\alpha)$ & $-0.56$ & $-0.51$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\nt)$ & $-0.28$ & $-0.03$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.09$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.16$ & $0.02$ & $^{168}\mathrm{Yb}$ & $^{168}\mathrm{Hf}(\gamma,\nt)$ & $-0.28$ & $-0.12$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $0.23$ & $0.03$ & $ $ & $^{168}\mathrm{Hf}(\gamma,\alpha)$ & $-0.55$ & $-0.57$ \\ 
+$ $ & $^{169}\mathrm{Lu}(\gamma,\nt)$ & $0.15$ & $0.01$ & $^{174}\mathrm{Hf}$ & $^{174}\mathrm{W}(\gamma,\nt)$ & $-0.30$ & $-0.13$ \\ 
+$^{115}\mathrm{Sn}$ & $^{110}\mathrm{Sn}(\gamma,\alpha)$ & $-0.21$ & $-0.02$ & $ $ & $^{174}\mathrm{W}(\gamma,\alpha)$ & $-0.53$ & $-0.37$ \\ 
+$ $ & $^{113}\mathrm{Sn}(\gamma,\nt)$ & $0.80$ & $0.08$ & $^{180}\mathrm{Ta}$ & $^{179}\mathrm{Ta}(\gamma,\nt)$ & $-0.87$ & $-0.00$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\nt)$ & $-0.27$ & $-0.03$ & $^{180}\mathrm{W}$ & $^{180}\mathrm{Os}(\gamma,\nt)$ & $-0.38$ & $-0.21$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.15$ & $0.02$ & $ $ & $^{180}\mathrm{Os}(\gamma,\alpha)$ & $-0.52$ & $-0.46$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $0.22$ & $0.03$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.19$ & $0.11$ \\ 
+$ $ & $^{169}\mathrm{Lu}(\gamma,\nt)$ & $0.15$ & $0.01$ & $^{184}\mathrm{Os}$ & $^{184}\mathrm{Pt}(\gamma,\nt)$ & $-0.16$ & $-0.05$ \\ 
+$^{120}\mathrm{Te}$ & $^{120}\mathrm{Xe}(\gamma,\alpha)$ & $-0.22$ & $-0.05$ & $ $ & $^{184}\mathrm{Pt}(\gamma,\alpha)$ & $-0.55$ & $-0.29$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $0.58$ & $0.11$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.16$ & $0.04$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.49$ & $-0.10$ & $^{190}\mathrm{Pt}$ & $^{190}\mathrm{Hg}(\gamma,\nt)$ & $-0.30$ & $-0.13$ \\ 
+$^{124}\mathrm{Xe}$ & $^{122}\mathrm{Xe}(\gamma,\nt)$ & $-0.28$ & $-0.10$ & $ $ & $^{190}\mathrm{Hg}(\gamma,\alpha)$ & $-0.49$ & $-0.30$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\pt)$ & $-0.31$ & $-0.11$ & $ $ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $0.20$ & $0.08$ \\ 
+$ $ & $^{122}\mathrm{Xe}(\gamma,\alpha)$ & $-0.43$ & $-0.21$ & $^{196}\mathrm{Hg}$ & $^{196}\mathrm{Pb}(\gamma,\nt)$ & $-0.76$ & $-0.60$ \\ 
+$ $ & $^{123}\mathrm{Xe}(\gamma,\nt)$ & $0.18$ & $0.06$ & $ $ & $^{202}\mathrm{Pb}(\gamma,\nt)$ & $0.18$ & $0.11$ \\ 
+$^{126}\mathrm{Xe}$ & $^{126}\mathrm{Ba}(\gamma,\pt)$ & $-0.35$ & $-0.17$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{126}\mathrm{Ba}(\gamma,\alpha)$ & $-0.48$ & $-0.32$ & $ $ & $ $ &  &  \\ 
+$ $ & $^{127}\mathrm{Ba}(\gamma,\nt)$ & $-0.22$ & $-0.12$ & $ $ & $ $ &  &  \\ 
+\end{longtable}
+}

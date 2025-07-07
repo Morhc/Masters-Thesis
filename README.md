@@ -28,3 +28,5 @@ The thesis content is structured according to the following chapter breakdown.
     - chapter_conclusion
     - figures/
   - appendix/
+
+  Note to compile this you need to use the hydropaper resources repo: https://gitlab.ppmstar.org/csa/hydropaper-resources.git.
