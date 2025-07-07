@@ -3,16 +3,15 @@
 
 \section*{\large Abstract}
 
-O-C shell mergers in massive stars are a site for the production of the p-nuclei via the $\gamma$-process. 
-During these mergers, the ingested C-shell material undergoes convective-reactive nucleosynthesis in the O-burning shell where the timescales for advection and nuclear reactions become equal.
-1-D stellar models rely on the predictions of mixing length theory which does not match the results of 3-D hydrodynamic simulations in this region.
-In this paper, we use the $M_{\mathrm{ZAMS}}=15 M_\odot$, $Z=0.02$ model from the NuGrid stellar data set \cite{ritterNuGridStellarData2018} to create a detailed post-processed model of the O-shell during a merger event to investigate how 3-D macrophysics impacts nucleosynthesis.
-This is done by introducing a convective downturn at the bottom of the O-burning shell, varying the rate of ingesting C-shell material, and implementing a dip in the difussion profile due to both a GOSH-like event and partial merger.
-In addition to this, we also investigate the impact of varying the input nuclear physics of all photo-disintegration reactions of unstable p-heavy isotopes from Se$-$Po by a factor of $10$ up and down in a Monte Carlo way in various mixing conditions.
-The results show that the mixing details have a significant impact on the production of the p-nuclei and influence the impact of the nuclear physics.
-Introducing a convective downturn has a non-linear, non-monotonic impact on the production of the p-nuclei, with an average spread of $0.96~\mathrm{dex}$ between MLT and downturn scenarios.
-Increasing the C-shell ingestion rate is found to increase production and has a spread in production of $1.22-1.84~\mathrm{dex}$ across MLT and convective downturn scenarios.
-GOSH-like and partial merger dips where were found to decrease production in a uniform way by and hasa  spread in production including MLT of $0.51~\mathrm{dex}$.
-Finally, the nuclear physics impact was found to have cause a spread in the final mass fraction on average $0.56-0.79~\mathrm{dex}$ across mixing scenarios which is similar to the spread across the various mixing scenarios.
-Additionally, we find whether there is a correlation and the strength of it are both dependent on the mixing scenario.
-We conclude that understanding the mixing details of the O-C shell merger along with the nuclear physics is critical for understanding the production of p-nuclei and that there are comparable model uncertainties as the nuclear physics.
+Massive stars models at the end of their evolution can have a merger between the convective O-burning shell and C-burning shells.
+This is known as an O-C shell merger and occurs in a large number of 1D models.
+The O-shell at this time in the evolution is convective-reactive, meaning that the timescales for advection and nuclear reactions are equal.
+This type of environment allows for nucleosynthetic pathways to occur that would not normally happen because material that would otherwise react can mix deeper to hotter temperatures. 
+During the merger, the material in the C-shell which includes C-burning ashes and  stable isotopes heavier than Fe are ingested into the convective-reactive O-burning shell where temperatures are much hotter than C-burning conditions.
+Stellar models that have O-C shell mergers uniquely produce the stable isotopes of phosphorus, potassium, chlorine, and scandium which are otherwise not produced by stellar models to match the solar observations \citep{ritterNuGridStellarData2018,robertiOccurrenceImpactCarbonOxygen2025}.
+In addition to this, O-C shell mergers are a site for the production of the \pnucn{} \citep{rauscherNucleosynthesisMassiveStars2002,ritterNuGridStellarData2018, robertiGprocessNucleosynthesisCorecollapse2023}.
+The \pnucn{} are 35 stable isotopes that are classically understood to not be produced by the neutron capture processes, but in the temperatures of the O-shell they can be produced by photodisintegration reactions of pre-existing stable isotopes \citep{burbidgeSynthesisElementsStars1957,woosleyPprocessesSupernovae1978}.
+Stellar models calculate the stellar evolution and nucleosynthesis of the merger in 1D \citep{ritterNuGridStellarData2018}, but 3D hydrodynamic simulations show that there are significant disagreements with the structure of the flow in both the O-burning shell and during the merger.
+Convective velocities in 3D are much higher than 1D, the radial component of the velocities have a gradual downturn at the boundaries not found in 1D, the flow has large scale non-radial asymmetries, and the rate of entraining C-shell material can be significantly different \citep{meakinActiveCarbonOxygen2006, jonesIdealizedHydrodynamicSimulations2017,andrassy3DHydrodynamicSimulations2020,yadavLargescaleMixingViolent2020a}. 
+Because of the O-shell is a convective-reactive environment, the macrophysical uncertainties in the 3D hydrodynamic simulations can have a significant impact on the nucleosynthesis of the \pnucn{} as the mixing timescale could be different.
+In this thesis, I explore how to implement 3D hydrodynamic results in 1D simulations to determine how macrophysical uncertainties in the O-C shell merger impact the nucleosynthesis in a convective-reactive environment, particular for the \pnucn.

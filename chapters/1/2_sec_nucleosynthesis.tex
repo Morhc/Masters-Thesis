@@ -1,40 +1,43 @@
+\section{Nucleosynthesis of the Elements}
+
+Put the general nucleosynthesis stuff here and the solar measurements of things
+
 \section{Stellar Nucleosynthesis in Massive Stars}
 
 Stellar nucleosynthesis is the process by which elements are formed through nuclear reactions in stars.
 \cite{burbidgeSynthesisElementsStars1957} set the foundation for the field describing the synthesis of all elements in hydrostatic and explosive burning.
 From theoretical calculations and a handful of observations, they described the nucleosynthesis of all isotopes in stars via a series of burning stages and nuclear processes while proposing the likely astrophysical sites.
-In the following years, through observational data and computational developments, the work remains a foundational text to stellar nuclear astrophysics.\footnote{One is reminded of Alfred North Whitehead's quote: \textit{The safest general characterization of the European philosophical tradition is that it consists of a series of footnotes to Plato.} Or in our case, B$^2$FH.}
+In the following years, through observational data and computational developments, the work remains a foundational text to stellar nuclear astrophysics.
 Shortly after, \cite{henyeyNewMethodAutomatic1964} proposed a method for calculating nucleosynthesis of the CNO cycle in stars.
 Since then, the field has expanded to modelling the nucleosynthesis of isotopes during all stages of stellar evolution and produce data sets of stellar models at any mass and metallicity \citep{pignatariNuGridStellarData2016, ritterNuGridStellarData2018, battinoNuGridStellarData2019}.
 
-\subsection{Hydrostatic Burning Phases}
+\subsection{Nuclear Burning and Convective Mixing Interaction}
 
-Hydrostatic burning describes the nuclear fusion processes that occurs in during the lifetime of a star, where the energy produced by nuclear reactions balance the gravitational forces and allowing the star to maintain hydrostatic equilibrium.
+Nuclear burning in convective regions of stars occurs largely in hydrostatic equilibrium, where the energy produced by nuclear reactions balance the gravitational forces and allowing the star to maintain hydrostatic equilibrium.
 Each of these burning phases is characterized by a specific temperature, density, and timescale where the nucleosynthesis takes place.
 
 \begin{table}[H]
-\caption{Details about hydrostatic burning phases in massive stars taken from the $13\text{-}25 M_\odot$ stars in Table 1 of \cite{woosleyEvolutionExplosionMassive2002}}
+\caption{Details about hydrostatic burning phases in massive stars taken from the $13\text{-}25 \Msun$ stars in Table 1 of \cite{woosleyEvolutionExplosionMassive2002}}
 \begin{tabular}{|l|c|c|c|}
     \hline
-    \textbf{Burning Phase} & \textbf{Temperature ($\mathbf{10^7}$ K)} & \textbf{Density (g cm$^{-3}$)} & \textbf{Timescale (yrs)} 
+    \textbf{Burning Phase} & \textbf{Temperature (MK)} & \textbf{Density (g cm$^{-3}$)} & \textbf{Timescale (yrs)} 
     \\ \hline
-    H-burning & 3.44 - 3.81 & 6.66 - 3.81 & 13.5 - 6.70 $\times 10^7$ \\ \hline
-    He-burning & 17.2 - 19.6 & 1.73 - 0.762 $\times 10^3$  & 2.67 - 0.839 $\times 10^7$ \\ \hline
-    C-burning & 81.5 - 84.1 & 3.13 - 1.29 $\times 10^5$ & 2.82 - 0.522 $\times 10^3$ \\ \hline
-    Ne-burning & 169 - 157  & 10.8 - 3.95 $\times 10^6$ & 0.341 - 0.891 \\ \hline
-    O-burning & 189 - 209  & 8.19 - 3.60 $\times 10^6$ & 4.77 - 0.402 \\ \hline
-    Si-burning &  328 - 365 & 4.83 - 3.01 $\times 10^7$ & 48.8 - 2.0 $\times 10^{-3}$\\
+    H-burning & 34.4 - 38.1 & 6.66 - 3.81 & 13.5 - 6.70 $\times 10^7$ \\ \hline
+    He-burning & 172 - 196 & 1.73 - 0.762 $\times 10^3$  & 2.67 - 0.839 $\times 10^7$ \\ \hline
+    C-burning & 815 - 841 & 3.13 - 1.29 $\times 10^5$ & 2.82 - 0.522 $\times 10^3$ \\ \hline
+    Ne-burning & 1690 - 1570  & 10.8 - 3.95 $\times 10^6$ & 0.341 - 0.891 \\ \hline
+    O-burning & 1890 - 2090  & 8.19 - 3.60 $\times 10^6$ & 4.77 - 0.402 \\ \hline
+    Si-burning &  3280 - 3650 & 4.83 - 3.01 $\times 10^7$ & 48.8 - 2.0 $\times 10^{-3}$\\
     \hline
 \end{tabular}
 \end{table}
 
-\jicom{Flesh out these burning stages with some more references + non-standard burning like maybe C12 + p flames or partial CNO etc}
-The following section describes the burning stages following \cite{woosleyEvolutionExplosionMassive2002, iliadisNuclearPhysicsStars2015}.
+The following section describes the burning stages following \citet{woosleyEvolutionExplosionMassive2002} and \citet{iliadisNuclearPhysicsStars2015}.
 H-burning is the first stage of hydrostatic burning which occurs in massive stars primarily by the CNO cycle.
 \[
     ^{12}\mathrm{C}(p,\gamma)^{13}\mathrm{N}(\beta^+)^{13}\mathrm{C}(p,\gamma)^{14}\mathrm{N}(p,\gamma)^{15}\mathrm{O}(\beta^+)^{15}\mathrm{N}(p,\alpha)^{12}\mathrm{C}
 \]
-In the CNO cycle, carbon, nitrogen, and oxygen act as a catalyst for the fusion of four $^{H}$ isotopes into $^{4}\mathrm{He}$.
+In the CNO cycle, carbon, nitrogen, and oxygen act as a catalyst for the fusion of four $^{1}\mathrm{H}$ isotopes into $^{4}\mathrm{He}$. 
 
 Next is He-burning which has two main processes
 \[
@@ -114,39 +117,3 @@ In the O-burning conditions between the temperatures of $1.5{-}3\times10^9 \math
 Pre-explosive O-C shell mergers have been found to be a critical site for the production of the $p$-nuclei regardless of the energy of the supernova explosion \citep{ritterConvectivereactiveNucleosynthesisSc2018, robertiGprocessNucleosynthesisCorecollapse2023, robertiGprocessNucleosynthesisCorecollapse2024b}. 
 The explosive $\gamma$-process has been found to underproduce the $p$-nuclei with $A=90-130$, especially the Mo and Ru isotopes \citep{arnouldPprocessStellarNucleosynthesis2003,woosleyNucleosynthesisRemnantsMassive2007}.
 Further, it has been argued that the $\gamma$-process is too weak to produce $^{113}\mathrm{In}$, $^{115}\mathrm{Sn}$, $^{152}\mathrm{Gd}$, $^{164}\mathrm{Er}$, and $^{180\mathrm{m}}\mathrm{Ta}$ and these isotopes should be considered completely separate from the other $p$-nuclei \citep{rayetPprocessRevisited1990,dillmannPProcessSimulationsModified2008}.
-
-\subsection{Convective-Reactive Nucleosynthesis}
-
-Typically in the stellar environment, the timescales for nuclear burning and convective mixing are vastly different.
-In a convective zone, the timescale for convective mixing is much shorter than the timescale for nuclear burning and in the radiative zone vice versa.
-To describe the relationship between the timescales of nuclear burning and convective mixing, we can use the Dämkohler number \citep{herwigCONVECTIVEREACTIVEPROTON2011}:
-\begin{equation}
-D_\alpha = \frac{\tau_{\mathrm{conv}}}{\tau_{\mathrm{burn}}}.
-\end{equation}
-When $D_\alpha \gg 1$, the timescale for convective mixing is much longer than the timescale for nuclear burning and the burning is slow, leading to homogenization of the convective zone.
-When $D_\alpha \ll 1$, the timescale for convective mixing is much shorter than the timescale for nuclear burning and the burning is fast, leading to localized nucleosynthesis.
-
-Convective-reactive nucleosynthesis refers to processes where nuclear burning and convective mixing operate on comparable timescales \citep{herwigCONVECTIVEREACTIVEPROTON2011,ritterNuGridStellarData2018}.
-In these conditions, different nucleosynthesis pathways can be triggered in the same zone and exchange products.
-This regime is characterized by $D_\alpha\sim 1$ \citep{herwigCONVECTIVEREACTIVEPROTON2011}.
-
-\cite{herwigCONVECTIVEREACTIVEPROTON2011} found that in a convective-reactive environment, the MLT mixing timescale is not always appropriate for describing the mixing timescale.
-They propose a reaction scale height timescale using the generalized principles of scale heights \citep{chapmanScaleTimesScale1961}:
-\begin{equation}
-    H_\phi = \frac{1}{\frac{d ln \phi}{d r}}
-\end{equation}
-where $\phi$ is the quantity of interest, in this case $\phi = \rho N_a \langle \sigma v \rangle$.
-A timescale for this reaction scale height is then given by
-\begin{equation}
-    \tau_{\mathrm{scale}} = \frac{H_\phi^2}{D_{\mathrm{MLT}}}.
-\end{equation}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chapters/1/figures/timescales.pdf}
-\caption{Timescales of mixing and burning during the O-C shell merger of a $15 M_\odot$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018} at model number 9200. The black line show the timescale from MLT mixing. The solid red line shows the timescale for a variety of $^{12}\mathrm{C}$ burning reactions and the jagged red line is its corresponding reaction scale height timescale. The dotted green line shows the timescale for a variety of $^{16}\mathrm{O}$ burning reactions and the jagged green line is its corresponding reaction scale height timescale. The dashed blue line shows the timescale for a variety of $^{20}\mathrm{Ne}$ burning reactions and the jagged blue line is its corresponding reaction scale height timescale.}
-\label{fig:ritter_timescales}
-\end{figure}
-
-As shown in Figure \ref{fig:ritter_timescales}, the timescales for convective mixing and C- and Ne- nuclear burning are comparable, leading to the possibility of different nucleosynthesis pathways occurring in the same zone.
-In addition to this, Figure \ref{fig:ritter_timescales} shows how the timescales for a reaction scale height are also comparable to the burning timescale.
