@@ -177,13 +177,13 @@ where $X_i$ is the mass fraction of a particular isotope.
 Following his insight, \cite{bohm-vitenseUberWasserstoffkonvektionszoneSternen1958} developed the first stellar model using the idea of a characteristic length scale to describe the convective motions of the Sun.
 
 Turbulent motions are complex 3D flows involving eddies of different shapes, velocities, and distances they travel before mixing with their environment.
-Rather than describing the flow of every individual fluid element, instead consider that on average, each fluid element travels a distance $\ell$ before mixing with its surroundings.
-In addition to this, assume that the average size of the fluid elements is equal to this travel distance $\ell$.
-This is the mixing length theory (MLT) approximation.
-In addition to $\ell$, these balls of fluid also have other average properties such as their velocity $\bar{v}$ and therefore an average timescale they travel for before mixing with their surroundings $\tau=\ell/\bar{v}$ \citep{kippenhahnStellarStructureEvolution2013,coxPrinciplesStellarStructure1968,joyceReviewMixingLength2023}.
-In stars, the mixing length is given by:
+Rather than describing the flow of every individual fluid element, it models the average distance each fluid element travels, $\ell$, before mixing with its surroundings.
+It also assumes that the average size of the fluid elements is equal to the travel distance $\ell$.
+This is the "mixing length theory" (MLT) approximation.
+Fluid elements also have other average properties such as the velocity $\bar{v}$ they travel at and therefore an average timescale they travel for before becoming mixed with their surroundings $\tau=\ell/\bar{v}$ \citep{kippenhahnStellarStructureEvolution2013,coxPrinciplesStellarStructure1968,joyceReviewMixingLength2023}.
+In stars, the average distance traveled $\ell$ is the mixing length $\ell_{\mathrm{MLT}}$ and is given by:
 \begin{equation}
-\ell_{\mathrm{MLT}} = \alpha_{\text{MLT}} H_P,
+\ell_{\mathrm{MLT}} = \alpha_{\text{MLT}} \cdot H_P
 \end{equation}
 where $H_P$ is the pressure scale height and $\alpha_{\mathrm{ MLT}}$ is a dimensionless free parameter and can be chosen to match stellar evolution tracks to empirical data \citep{joyceReviewMixingLength2023}.
 
@@ -245,3 +245,46 @@ While these lighter isotopes $^{12}\mathrm{C}$, $^{16}\mathrm{O}$, and $^{20}\ma
 In addition to the importance for timescale resolution, there is also spatial resolution.
 Changing the number of mass zones in the simulation can change the final result as the mixing of the isotopes depends on the number of fluid elements that can be resolved.
 By ensuring that the number of mass zones is high enough, the mixing can be resolved to a point where the final result is not changed by the number of mass zones.
+
+\subsection{Convective-Reactive Nucleosynthesis}
+
+Typically in the stellar environment, the timescales for nuclear burning and convective mixing are vastly different.
+In a convective zone, the timescale for convective mixing is much shorter than the timescale for nuclear burning and in the radiative zone vice versa.
+To describe the relationship between the timescales of nuclear burning and convective mixing, we can use the Dämkohler number \citep{dimotakisTurbulentMixing2005}:
+\begin{equation}
+D_\alpha = \frac{\tau_{\mathrm{mix}}}{\tau_{\mathrm{burn}}}.
+\end{equation}
+For the MLT scenario, $\tau_{\mathrm{mix}}$ is given by Equation \ref{eq:t_mlt} and $\tau_{\mathrm{burn}}$ is given by the timescale for nuclear burning, which can be approximated as the inverse of the energy generation rate:
+\begin{equation}
+    \tau_{\mathrm{react}} = \sum_j \frac{1}{\rho N_A \langle \sigma v \rangle X_j/A_j}
+\end{equation}
+where $\rho$ is the density, $N_A$ is Avogadro's number, $\langle \sigma v \rangle_j$ the reaction rates contributing to some species, $X_j$ is the mass fraction of the reacting species, and $A_j$ is the mass number of the reacting species.
+
+Hydrostatic burning in convective regions is characterized by $D_\alpha \ll 1$.
+In this case, the mixing timescale is much shorter than the nuclear burning timescale, and the convective mixing is fast enough that the isotopes are mixed before they can undergo significant nuclear burning.
+Convective-reactive nucleosynthesis occurs when nuclear burning and convective mixing operate on comparable timescales, $D_\alpha=1$ \citep{dimotakisTurbulentMixing2005, herwigCONVECTIVEREACTIVEPROTON2011,ritterNuGridStellarData2018}.
+In these conditions, the mass fractions of species are not well-mixed, and can undergo significant nuclear burning as they are being mixed.
+Reactions are not balanced across the region, and species are able to have different nucleosynthetic pathways depending on the temperature where $D_\alpha=1$.
+
+\cite{herwigCONVECTIVEREACTIVEPROTON2011} found that in a convective-reactive environment, the MLT mixing timescale is not always appropriate for describing the mixing timescale.
+They propose a reaction scale height timescale using the generalized principles of scale heights \citep{chapmanScaleTimesScale1961}:
+\begin{equation}
+    H_\phi = \Biggl(\frac{d ln \phi}{d r}\Biggr)^{-1}
+\end{equation}
+where $\phi$ is the quantity of interest, in this case $\phi = \rho N_a \langle \sigma v \rangle$.
+The timescale associated with this scale height is given by \citep{herwigCONVECTIVEREACTIVEPROTON2011}:
+\begin{equation}
+    \tau_{\mathrm{scale}} = \frac{H_\phi^2}{D_{\mathrm{MLT}}}.
+\end{equation}
+and there would likewise be a Dämkohler number for the scale height where $\tau_{\mathrm{mix}}$ is $\tau_{\mathrm{scale}}$.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chapters/1/figures/timescales.pdf}
+\caption{$\tau_{\mathrm{MLT}}$, $\tau_{\mathrm{react}}$, and $\tau_{\mathrm{scale}}$ for the $15~\Msun$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018} at $\log_{10}(t-t_{\mathrm{end}})\approx-3.85$ (model number 9200). The black line is $\tau_{\mathrm{MLT}}$. The solid red line is $\tau_{\mathrm{react}}$ for \carbon[12], and the jagged red line is $\tau_{\mathrm{scale}}$ for \carbon[12]. Likewise, the green lines are $\tau_{\mathrm{react}}$ and $\tau_{\mathrm{scale}}$ for \oxygen[16], and the purple lines are $\tau_{\mathrm{react}}$ and $\tau_{\mathrm{scale}}$ for \neon[20]. Black circles are provided where $D_\alpha = 1$ for \carbon[12] and \neon[20].}
+\label{fig:ritter_timescales}
+\end{figure}
+
+Figure \ref{fig:ritter_timescales} shows that both \carbon[12] and \neon[20] experience convective-reactive nucleosynthesis in the O-shell, but that \oxygen[16] does not.
+This is because $D_\alpha = \tau_{\mathrm{MLT}}/\tau_{\mathrm{react}} = 1$ and $D_\alpha = \tau_{\mathrm{MLT}}/\tau_{\mathrm{scale}} = 1$ for \carbon[12] and \neon[20] but $D_\alpha < 1$ for \oxygen[16].
+The principal species ingested into the shell will experience convective-reactive nucleosynthesis.

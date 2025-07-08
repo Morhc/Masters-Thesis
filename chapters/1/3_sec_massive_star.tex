@@ -37,39 +37,3 @@ The O-C shell merger nucleosynthesis has been found to dominate this production 
 
 O-C shell mergers have also been understood to be important for seeding asymmetries important for the supernova \citep{mullerStatusMultiDimensionalCoreCollapse2016, collinsPropertiesConvectiveOxygen2018, mullerHydrodynamicsCorecollapseSupernovae2020, yadavLargescaleMixingViolent2020a, andrassy3DHydrodynamicSimulations2020}.
 The shell mergers are highly asymmetric and provide perturbations necessary for the supernova explosion in the O-shell \citep{collinsPropertiesConvectiveOxygen2018}.
-
-\subsection{Convective-Reactive Nucleosynthesis}
-
-Typically in the stellar environment, the timescales for nuclear burning and convective mixing are vastly different.
-In a convective zone, the timescale for convective mixing is much shorter than the timescale for nuclear burning and in the radiative zone vice versa.
-To describe the relationship between the timescales of nuclear burning and convective mixing, we can use the Dämkohler number \citep{herwigCONVECTIVEREACTIVEPROTON2011}:
-\begin{equation}
-D_\alpha = \frac{\tau_{\mathrm{conv}}}{\tau_{\mathrm{burn}}}.
-\end{equation}
-When $D_\alpha \gg 1$, the timescale for convective mixing is much longer than the timescale for nuclear burning and the burning is slow, leading to homogenization of the convective zone.
-When $D_\alpha \ll 1$, the timescale for convective mixing is much shorter than the timescale for nuclear burning and the burning is fast, leading to localized nucleosynthesis.
-
-Convective-reactive nucleosynthesis refers to processes where nuclear burning and convective mixing operate on comparable timescales \citep{herwigCONVECTIVEREACTIVEPROTON2011,ritterNuGridStellarData2018}.
-In these conditions, different nucleosynthesis pathways can be triggered in the same zone and exchange products.
-This regime is characterized by $D_\alpha\sim 1$ \citep{herwigCONVECTIVEREACTIVEPROTON2011}.
-
-\cite{herwigCONVECTIVEREACTIVEPROTON2011} found that in a convective-reactive environment, the MLT mixing timescale is not always appropriate for describing the mixing timescale.
-They propose a reaction scale height timescale using the generalized principles of scale heights \citep{chapmanScaleTimesScale1961}:
-\begin{equation}
-    H_\phi = \frac{1}{\frac{d ln \phi}{d r}}
-\end{equation}
-where $\phi$ is the quantity of interest, in this case $\phi = \rho N_a \langle \sigma v \rangle$.
-A timescale for this reaction scale height is then given by
-\begin{equation}
-    \tau_{\mathrm{scale}} = \frac{H_\phi^2}{D_{\mathrm{MLT}}}.
-\end{equation}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chapters/1/figures/timescales.pdf}
-\caption{Timescales of mixing and burning during the O-C shell merger of a $15 \Msun$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018} at model number 9200. The black line show the timescale from MLT mixing. The solid red line shows the timescale for a variety of $^{12}\mathrm{C}$ burning reactions and the jagged red line is its corresponding reaction scale height timescale. The dotted green line shows the timescale for a variety of $^{16}\mathrm{O}$ burning reactions and the jagged green line is its corresponding reaction scale height timescale. The dashed blue line shows the timescale for a variety of $^{20}\mathrm{Ne}$ burning reactions and the jagged blue line is its corresponding reaction scale height timescale.}
-\label{fig:ritter_timescales}
-\end{figure}
-
-As shown in Figure \ref{fig:ritter_timescales}, the timescales for convective mixing and C- and Ne- nuclear burning are comparable, leading to the possibility of different nucleosynthesis pathways occurring in the same zone.
-In addition to this, Figure \ref{fig:ritter_timescales} shows how the timescales for a reaction scale height are also comparable to the burning timescale.

@@ -1,8 +1,15 @@
-\section{Nucleosynthesis of the Elements}
+\section{Origin of the Elements}
 
-Put the general nucleosynthesis stuff here and the solar measurements of things
+The origin of the elements in our solar system. Give a big picture of stars smaller than 8 \Msun{}.
 
-\section{Stellar Nucleosynthesis in Massive Stars}
+\begin{figure}
+\includegraphics[width=\textwidth]{chapters/1/figures/periodictable_solar_system.png}
+\caption{Taken from \url{https://blog.sdss.org/2017/01/09/origin-of-the-elements-in-the-solar-system/}: Periodic table shaded according to the origin of the elements in the solar system.}
+\end{figure}
+
+\jicom{Include a Figure of s/r/p percentages}
+
+\section{Stellar Nucleosynthesis}
 
 Stellar nucleosynthesis is the process by which elements are formed through nuclear reactions in stars.
 \cite{burbidgeSynthesisElementsStars1957} set the foundation for the field describing the synthesis of all elements in hydrostatic and explosive burning.
@@ -47,27 +54,47 @@ Therefore, the main products of He-burning are $^{12}\mathrm{C}$ and $^{16}\math
 
 Following this is C-burning which has the following main processes
 \[
-    ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{24}\mathrm{Mg} + n \\
-    ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{20}\mathrm{Ne} + \alpha \\
-    ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{23}\mathrm{Na} + p \\
-    ^{12}\mathrm{C} + ^{16}\mathrm{O} \rightarrow ^{24}\mathrm{Mg} + \alpha \\
+    ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{24}\mathrm{Mg} + n 
+\]
+\[
+    ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{20}\mathrm{Ne} + \alpha
+\]
+\[
+    ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{23}\mathrm{Na} + p
+\]
+\[
+    ^{12}\mathrm{C} + ^{16}\mathrm{O} \rightarrow ^{24}\mathrm{Mg} + \alpha
 \]
 
 After is Ne-burning which undergoes
 \[
-    ^{20}\mathrm{Ne} + ^{20} \mathrm{Ne} \rightarrow ^{16}\mathrm{O} + ^{24}\mathrm{Mg}\\
-    ^{20}\mathrm{Ne}(\gamma,\alpha)^{16}\mathrm{O} \\ 
+    ^{20}\mathrm{Ne}(\gamma,\alpha)^{16}\mathrm{O}
+\]
+\[
     ^{20}\mathrm{Ne}(\alpha,\gamma)^{24}\mathrm{Mg}
+\]
+\[
+     ^{20}\mathrm{Ne} + ^{20} \mathrm{Ne} \rightarrow ^{16}\mathrm{O} + ^{24}\mathrm{Mg}
 \]
 
 Next is O-burning which undergoes
 \[
-    ^{16}\mathrm{O}(^{16}\mathrm{O},p)^{31}\mathrm{P} \\
-    ^{16}\mathrm{O}(^{16}\mathrm{O},2p)^{30}\mathrm{Si} \\
-    ^{16}\mathrm{O}(^{16}\mathrm{O},\alpha)^{28}\mathrm{Si} \\
-    ^{16}\mathrm{O}(^{16}\mathrm{O},2\alpha)^{24}\mathrm{Mg} \\
-    ^{16}\mathrm{O}(^{16}\mathrm{O},d)^{30}\mathrm{P} \\
-    ^{16}\mathrm{O}(^{16}\mathrm{O},n)^{31}\mathrm{S} \\
+    ^{16}\mathrm{O}(^{16}\mathrm{O},p)^{31}\mathrm{P}
+\]
+\[
+    ^{16}\mathrm{O}(^{16}\mathrm{O},2p)^{30}\mathrm{Si}
+\]
+\[
+    ^{16}\mathrm{O}(^{16}\mathrm{O},\alpha)^{28}\mathrm{Si}
+\]
+\[
+    ^{16}\mathrm{O}(^{16}\mathrm{O},2\alpha)^{24}\mathrm{Mg}
+\]
+\[
+    ^{16}\mathrm{O}(^{16}\mathrm{O},d)^{30}\mathrm{P}
+\]
+\[
+    ^{16}\mathrm{O}(^{16}\mathrm{O},n)^{31}\mathrm{S}
 \]
 
 In the final stage of hydrostatic burning, Si-burning occurs by a series of ($\alpha, \gamma$) reactions:
@@ -84,7 +111,7 @@ The unstable nucleus then decays via $\beta^-$ decay until it reaches a stable s
 This process is controlled by the timescale of neutron capture compared to the timescale of $\beta^-$ decay \citep{burbidgeSynthesisElementsStars1957, iliadisNuclearPhysicsStars2015}.
 
 
-The $s$-process in massive stars occurs during the He- and C-burning phases where $^{22}\mathrm{Ne}$ from $^{14}\mathrm{N}(\alpha,\gamma)^{18}\mathrm{F}(\beta^+)^{18}\mathrm{O}(\gamma,\alpha)^{22}\mathrm{Ne}$ undergoes the reaction $^{22}\mathrm{Ne}(\alpha,\gamma)^{25}\mathrm{Mg}$ and produces neutron densities of $10^6\text{–}10^8\,\mathrm{cm}^{-3}$ \citep{pignatariWEAKSPROCESSMASSIVE2010,kappelerProcessNuclearPhysics2011}.
+The $s$-process in massive stars occurs during the He- and C-burning phases where $^{22}\mathrm{Ne}$ from $^{14}\mathrm{N}(\alpha,\gamma)^{18}\mathrm{F}(\beta^+)^{18}\mathrm{O}(\gamma,\alpha)^{22}\mathrm{Ne}$ undergoes the reaction $^{22}\mathrm{Ne}(\alpha,\nt)^{25}\mathrm{Mg}$ and produces neutron densities of $10^6\text{–}10^8\,\mathrm{cm}^{-3}$ \citep{pignatariWEAKSPROCESSMASSIVE2010,kappelerProcessNuclearPhysics2011}.
 
 The $i$- and $r$-processes are not well-determined in massive stars as the neutron densities needed ($10^{13}\text{–}10^{15}$ and $\geq 10^{20}\,\mathrm{cm}^{-3}$) are not reached in these conditions.
 \cite{denissenkovImpactReactionRate2018,battinoHeavyElementsNucleosynthesis2020} find these conditions can be met in rapidly accreting white dwarfs where a white dwarf accretes H from a companion main sequence star leading to H-flashes where $^{12}\mathrm{C}(p,\gamma)^{13}N(\beta^+)^{13}\mathrm{C}(\alpha,n)^{16}\mathrm{O}$ is a source for neutrons.
@@ -92,12 +119,12 @@ The $r$-process is thought to occur in neutron star mergers \citep{mumpowerVdela
 
 \section{\texorpdfstring{$p$}{p}-Nuclei Nucleosynthesis}
 
-The $p$-nuclei are a set of 35 proton heavy stable isotopes heavier than iron that were all originally considered to be produced in a process other than neutron captures.
-\cite{burbidgeSynthesisElementsStars1957} proposed that the $p$-nuclei were produced in a series of ($p,\gamma$) reactions in equilibrium with ($\gamma,p
-$) and ($\gamma,n$)  reactions in the H-rich envelope of a Type II supernova in a process they labelled the $p$-process.
-\cite{woosleyPprocessesSupernovae1978} later proposed that the temperature conditions were not sufficient in the H-envelope of a supernova to produce the $p$-nuclei, and instead proposed that in explosive O-burning during the supernova explosion, the $p$-nuclei could be produced in a process they labelled the $\gamma$-process.
-The $\gamma$-process is a series of ($\gamma,n$) and ($\gamma,\alpha$) reactions along with $\beta^+$ decays that occur during explosive O-burning, or potentially C-burning, at $2{-}3 \times 10^9 \mathrm{K}$.
-However, they also show that a single temperature is not sufficient to produce all of the $p$-nuclei as at cooler temperatures the heavier $p$-nuclei are more easily produced while at hotter temperatures the lighter $p$-nuclei are more easily produced.
+The \pnucn{} are a set of 35 \nt-deficient stable isotopes heavier than iron that were all originally considered to be produced in a process other than neutron captures.
+\cite{burbidgeSynthesisElementsStars1957} proposed that the \pnucn{} were produced in a series of ($p,\gamma$) reactions in equilibrium with ($\gamma,p
+$) and ($\gamma,n$)  reactions in the H-rich envelope of a Type II supernova in a process they labelled the "$p$ process".
+\cite{woosleyPprocessesSupernovae1978} later proposed that the temperature conditions were not sufficient in the H-envelope of a supernova to produce the \pnucn, and instead proposed that in explosive O-burning during the supernova explosion, the \pnucn could be produced in a process they labelled the "\gprn".
+The \gprn{} is a secondary process that requires pre-existing seed nuclei up to Pb from the \sprn{} that series of ($\gamma,n$) and ($\gamma,\alpha$) reactions along with $\beta^+$ decays that occur during explosive O-burning, or potentially C-burning, at $2{-}3 \times 10^9 \mathrm{K}$.
+However, they also showed that a single temperature is not sufficient to produce all of the $p$-nuclei as at cooler temperatures the heavier $p$-nuclei are more easily produced while at hotter temperatures the lighter $p$-nuclei are more easily produced.
 
 Since then, many astrophysical sites have been proposed for the production of the $p$-nuclei. 
 \cite{woosleyAlphaProcessRProcess1992} proposed that the lighter $p$-nuclei could be produced in the $\alpha$-process in Type II supernovae.
