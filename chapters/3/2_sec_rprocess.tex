@@ -1,24 +1,20 @@
 \section{Advective-Reactive \texorpdfstring{$r$}{r}-process}\label{sec:ar_rprocess}
 
-\jicom{This section is very much a work in progress. I kind of forget what we did. :p}
-
 Advective-reactive nucleosynthesis is the generalization of the convective-reactive framework to include transport of material beyond convection.
-In this work, we take the \texttt{SkyNet} post-processed trajectories \jitxt{done by Rodrigo ? citation ?} that escape a black hole formed by neutron star mergers and determine whether the advective-reactive framework is relevant to $r$-process nucleosynthesis.
+In this work, Dr.\ Herwig and I took \texttt{SkyNet} post-processed trajectories that escape a black hole formed by neutron star mergers and determine whether the advective-reactive framework is relevant to $r$-process nucleosynthesis.
 
 Over time, the distance between any two trajectories increases as they move away from the black hole.
 That means there is a time limit on how long the trajectories are able to exchange material.
-We defin a distance $L_{\mathrm{mix}}$ analogously to $\ell_{\mathrm{mix}}$ and say that any two trajectories that are within this distance can exchange material.
+We define a distance $L_{\mathrm{mix}}$ analogously to $\ell_{\mathrm{mix}}$ and if any two trajectories are within this distance can exchange material.
 \begin{equation}
     L_{\mathrm{mix}} = \sqrt{D t_{\mathrm{nuc}}}
 \end{equation}
-where $D=3\times10^16\mathrm{cm}^2/\mathrm{s}$ is the diffusion coefficient and $t_{\mathrm{nuc}}$ was given an analytic form based on an eyeballed linear fitting of  $\tau=X/(dX/dt)$ vs $t$ plots for some neutron heavy In isotopes.
-Because of this, we get $L_{\mathrm{mix}}$ as a function time.
-If for a time $t \geq t_{\mathrm{mix}}$ the pairwise distance between two trajectories is less than $L_{\mathrm{mix}}(t)$ then we say that they can exchange material. The results of this analysis are shown in Figure \ref{fig:frac_exchanging}.
-It appears that 7.5-15\% of trajectories could be able to exchange material for the optimistic cases.
-
-Much more work is needed to determine whether this matters because if both trajectories are in NSE they would have roughly the same pattern anyways.
-We were in the early stages of seeing if we could post-process the trajectories with \texttt{ppn} rather than \texttt{SkyNet} and see if maybe we could figure out if the trajectories are exchanging and at least one is not in NSE.
-Also we wanted to ask if the trajectories that were eaten by the black hole could've exchanged material with the ones that escaped.
+where $D=3\times10^{16}~\mathrm{cm}^2/\mathrm{s}$ is the diffusion coefficient and $t_{\mathrm{nuc}}$ was given an analytic form based on a linear fitting of $\tau=X/(dX/dt)$ vs $t$ plots for some \nt-heavy In isotopes.
+From this, we get $L_{\mathrm{mix}}$ as a function of time.
+Not only do trajectories need to be within a mixing distance, they also need to be within this distance for a sufficient amount of time to exchange material.
+We define that if two trajectories are within $L_{\mathrm{mix}}(t)$ of each other for $t=t_{\mathrm{mix}}$, then they have exchanged material. 
+Since there is some ambiguity in the definition of $t_{\mathrm{mix}}$, we consider five cases of 0.25, 0.5, 0.75, 1, and 1.5 times $L_{\mathrm{mix}}(t)$.
+The results of this analysis are shown in Figure \ref{fig:frac_exchanging} which shows that 7.5-15\% of trajectories could be able to exchange material for the optimistic cases.
 
 \begin{figure}[htbp]
     \centering
@@ -26,3 +22,6 @@ Also we wanted to ask if the trajectories that were eaten by the black hole coul
     \caption{Fraction of trajectories with distance for enough time to exchange mass. Each coloured line represents a size for $L_{\mathrm{mix}}$.
     \label{fig:frac_exchanging}}
 \end{figure}
+
+Much more work needs to be done to understand whether this analysis reveals anything impactful for $r$-process nucleosynthesis.
+If all nearby trajectories are in nuclear static equilibrium, then it is likely that there is no significnat difference in the final production.

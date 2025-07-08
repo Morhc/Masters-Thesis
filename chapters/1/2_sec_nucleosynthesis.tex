@@ -1,23 +1,67 @@
 \section{Stars and the Origin of the Elements}
 
-The origin of the elements in our solar system. Give a big picture of stars smaller than 8 \Msun{}.
+Stars are the primary location where the elements are formed by nuclear fusion, but they do not form all of the elements at the same time in their life cycle.
+All stars begin their lives by fusing hydrogen to helium in their cores as part of the main sequence.
+However, how much they produce is dependent on their initial mass. 
+Low mass stars, those lighter than 3 solar masses, will primarily produce helium for their entire lives. 
+After they exhaust the hydrogen in their cores, they will puff up into red giants and no longer fuse hydrogen in their cores, but begin burning hydrogen in a shell structure above the center of the star.
+Eventually, they will become degenerate in their cores and undergo what is known as a helium flash and suddenly begin to fuse helium into carbon and oxygen in their cores as they continue to evolve as asymptotic giant branch stars.
+As asymptotic giants, they will stop fusing helium in their cores, but continue to burn helium in a shell surrounding the core.
+When this happens, the convective envelope of the star can expand and mix some hydrogen into the helium burning shell and the star will begin to flash again in what is known as a thermal pulse.
+During these thermal pulses, a large number of neutrons are released and the star can produce a large number of the elements heavier than iron.
+Eventually, the star will shed its outer layers and leave behind either a white dwarf or a planetary nebula and they cease to produce new elements.
+Intermediate mass stars, those between 3 and 8 solar masses, will not undergo a helium flash, but will instead begin to fuse helium into carbon and oxygen in their cores after they exhaust the hydrogen in their cores.
+After they exhaust the helium in their cores, they can also fuse carbon into neon, but do not form elements beyond this, and will become white dwarfs.
+\citep{prialnikIntroductionTheoryStellar2009, herwigEvolutionSolarIntermediateMass2013}.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{chapters/1/figures/periodictable_solar_system.png}
 \caption{Taken from \url{https://blog.sdss.org/2017/01/09/origin-of-the-elements-in-the-solar-system/}: Periodic table shaded according to the origin of the elements in the solar system.}
 \end{figure}
 
-\jicom{Include a Figure of s/r/p percentages}
+Mass stars, heavier than 8 solar mass, also begin their lives by fusing hydrogen to helium in their cores, but they continue to fuse into heavier and heavier elements as they evolve. 
+After they exhaust hydrogen in their cores, they will begin to fuse helium into carbon and oxygen in their cores.
+Then they will continue to fuse carbon, neon, oxygen, and eventually silicon.
+Once they begin to fuse silicon in their cores, they will begin to produce iron. 
+Once iron begins to form in the core of stars, they begin to collapse as the fusion of elements heavier than iron is endothermic and does not produce energy.
+This collapse cause the star to explode in a supernova and many nuclear reactions can occur.
+After the supernova, the remnant core of the star can either become a neutron star or a black hole depending on the mass before collapse \citep{prialnikIntroductionTheoryStellar2009,woosleyEvolutionExplosionMassive2002}.
 
-\section{Stellar Nucleosynthesis}
+The rest of the elements heavier than iron that are not produced in asymptotic giants are produced during the merger of two neutron stars.
+When two neutron stars merge, they produce extremely high densities of neutrons and the heaviest stable elements in the universe are formed \citep{kobayashiOriginElementsCarbon2020}.
 
-Stellar nucleosynthesis describes how elements are formed within stars through nuclear reactions. 
-Beginning with the fusion of hydrogen into helium in stellar cores, progressively heavier elements are synthesized as stars evolve and undergo successive stages of nuclear burning.
+\subsection{Massive Star Evolution}
+Stars with an inital mass $>8 \Msun$ undergo the series of nuclear burning phases described above.
+\[
+\mathrm{H} \rightarrow \mathrm{He} \rightarrow \mathrm{C} \rightarrow \mathrm{Ne} \rightarrow \mathrm{O} \rightarrow \mathrm{Si} \rightarrow \mathrm{Fe} \rightarrow \text{core collapse}.
+\]
+These burning phases lead to the structure of the star being separated convective shells with primary burning structures, as seen in Figures \ref{fig:Prialnik_Fig9.19} and \ref{fig:fullkipp}.
+
+\begin{figure}[!htbp]
+\includegraphics[width=\textwidth]{chapters/1/figures/Prialnik_Fig9.19.png}
+\caption{Taken from \cite{prialnikIntroductionTheoryStellar2009} Figure 9.19: Schematic structure of a supernova progenitor star. The Ne-burning layer is not shown but would be between the C- and O-layers.
+\label{fig:Prialnik_Fig9.19}}
+\end{figure}
+
+\begin{figure}[!htbp]
+\includegraphics[width=\textwidth]{chapters/1/figures/massive_star_kipp.pdf}
+\caption{Kippenhahn diagram of the inner 6 \Msun{} of the $15~\Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018} with labels for the main shell and core burning phases. Grey areas are convective regions, white areas are radiative regions, and blue areas show where nuclear burning occurs.}
+\label{fig:fullkipp}
+\end{figure}
+
+After the formation of the Fe-core the star begins to rapidly contract as nuclear burning no longer can balance the gravitational force.
+This leads to a core collapse supernova explosion where further shockwave induced nucleosynthesis can occur \citep{prialnikIntroductionTheoryStellar2009}.
+The core of the star leaves behind a neutron star or black hole, and all other material beyond the mass cut is ejected into the interstellar medium.
+The exact border of where mass is ejected from changes the yields of massive star nucleosynthesis.
+\cite{ritterNuGridStellarData2018} place this mass cut for massive stars around the interface of the Si/O-shell.
 
 \subsection{Nuclear Burning and Convective Mixing Interaction}
 
-Nuclear burning in convective regions of stars occurs largely in hydrostatic equilibrium, where the energy produced by nuclear reactions balance the gravitational forces and allowing the star to maintain hydrostatic equilibrium.
-Each of these burning phases is characterized by a specific temperature, density, and timescale where the nucleosynthesis takes place.
+Burning in stars largely occurs in hydrostatic equilibrium, where the energy produced by nuclear reactions balances the gravitational forces acting on the star.
+This balance allows the star to maintain a stable structure and prevents it from collapsing under its own gravity.
+The burning phases in stars occur at specific temperatures and densities, depending on the initial mass of the star.
+Much of the nuclear burning in the core and shells of stars happens in convective regions which is a region where the stratification of the star is unstable and the material mixes.  
+In this section, the details of the hydrostatic burning phases in massive stars are described in more detail, along with the nuclear reactions that occur during these phases.
 
 \begin{table}[H]
 \caption{Details about hydrostatic burning phases in massive stars taken from the $13\text{-}25 \Msun$ stars in Table 1 of \cite{woosleyEvolutionExplosionMassive2002}}
@@ -41,17 +85,11 @@ H-burning is the first stage of hydrostatic burning which occurs in massive star
     ^{12}\mathrm{C}(p,\gamma)^{13}\mathrm{N}(\beta^+)^{13}\mathrm{C}(p,\gamma)^{14}\mathrm{N}(p,\gamma)^{15}\mathrm{O}(\beta^+)^{15}\mathrm{N}(p,\alpha)^{12}\mathrm{C}
 \]
 In the CNO cycle, carbon, nitrogen, and oxygen act as a catalyst for the fusion of four $^{1}\mathrm{H}$ isotopes into $^{4}\mathrm{He}$. 
-
-Next is He-burning which has two main processes
+After the hydrogen in the core of the star is used up, the star will begin to burn helium by two main processes that creates carbon and oxygen:
 \[
     ^{4}\mathrm{He}(\alpha,\gamma)^{8}\mathrm{Be}(\alpha,\gamma)^{12}\mathrm{C}, \quad ^{12}\mathrm{C}(\alpha,\gamma)^{16}\mathrm{O}
 \]
-Therefore, the main products of He-burning are $^{12}\mathrm{C}$ and $^{16}\mathrm{O}$.
-
-Following this is C-burning which has the following main processes
-\[
-    ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{24}\mathrm{Mg} + n 
-\]
+After helium is exhausted, the massive star will begin to burn carbon either in its core or slighly above the core and primarily produce neon, magnesium, and sodium:
 \[
     ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{20}\mathrm{Ne} + \alpha
 \]
@@ -61,51 +99,50 @@ Following this is C-burning which has the following main processes
 \[
     ^{12}\mathrm{C} + ^{16}\mathrm{O} \rightarrow ^{24}\mathrm{Mg} + \alpha
 \]
-
-After is Ne-burning which undergoes
+\[
+    ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{24}\mathrm{Mg} + n 
+\]
+When the carbon burning stops, the star will begin to burn neon in a shell above the core which produces oxygen and magnesium:
 \[
     ^{20}\mathrm{Ne}(\gamma,\alpha)^{16}\mathrm{O}
 \]
 \[
     ^{20}\mathrm{Ne}(\alpha,\gamma)^{24}\mathrm{Mg}
 \]
+After neon burning is complete, the star will begin to burn oxygen in a shell and then in its core to silicon, sulfur, phosphorus, and magnesium:
 \[
-     ^{20}\mathrm{Ne} + ^{20} \mathrm{Ne} \rightarrow ^{16}\mathrm{O} + ^{24}\mathrm{Mg}
-\]
-
-Next is O-burning which undergoes
-\[
-    ^{16}\mathrm{O}(^{16}\mathrm{O},p)^{31}\mathrm{P}
+    ^{16}\mathrm{O}+^{16}\mathrm{O}\rightarrow^{28}\mathrm{Si} + \alpha
 \]
 \[
-    ^{16}\mathrm{O}(^{16}\mathrm{O},2p)^{30}\mathrm{Si}
+    ^{16}\mathrm{O} + ^{16}\mathrm{O} \rightarrow ^{31}\mathrm{S} + n
 \]
 \[
-    ^{16}\mathrm{O}(^{16}\mathrm{O},\alpha)^{28}\mathrm{Si}
+    ^{16}\mathrm{O} + ^{16}\mathrm{O} \rightarrow ^{31}\mathrm{P} + p
 \]
 \[
-    ^{16}\mathrm{O}(^{16}\mathrm{O},2\alpha)^{24}\mathrm{Mg}
+    ^{16}\mathrm{O} + ^{16}\mathrm{O} \rightarrow ^{30}\mathrm{Si} + 2p
 \]
 \[
-    ^{16}\mathrm{O}(^{16}\mathrm{O},d)^{30}\mathrm{P}
+    ^{16}\mathrm{O} + ^{16}\mathrm{O} \rightarrow ^{24}\mathrm{Mg} + 2\alpha
 \]
-\[
-    ^{16}\mathrm{O}(^{16}\mathrm{O},n)^{31}\mathrm{S}
-\]
-
-In the final stage of hydrostatic burning, Si-burning occurs by a series of ($\alpha, \gamma$) reactions:
+Finally, the star will begin to burn silicon where by a series captures of $\alpha$ particles, the star will produce iron and nickel: 
 \[
     ^{28}\mathrm{Si}(\alpha,\gamma)^{32}\mathrm{S}(\alpha,\gamma)^{36}\mathrm{Ar}(\alpha,\gamma)^{40}\mathrm{Ca}(\alpha,\gamma)^{44}\mathrm{Ti}(\alpha,\gamma)^{48}\mathrm{Cr}(\alpha,\gamma)^{52}\mathrm{Fe}(\alpha,\gamma)^{56}\mathrm{Ni}
 \]
 
 \subsection{Neutron Captures}
 
+Although neutron captures are not a large part of the nucleosynthesis in massive stars, they are an important part of how the elements heavier than iron are formed.
 The neutron capture processes are the primary mechanism for the production of elements heavier than iron in stars \citep{burbidgeSynthesisElementsStars1957}.
 There are three main regimes to the neutron capture processes: the slow, intermediate, and rapid neutron capture processes, commonly referred to as the $s$-, $i$-, and $r$-processes.
 Generically, in the neutron capture processes, a nucleus in a neutron rich environment captures neutrons and becomes increasingly neutron-rich and unstable. 
 The unstable nucleus then decays via $\beta^-$ decay until it reaches a stable state.
 This process is controlled by the timescale of neutron capture compared to the timescale of $\beta^-$ decay \citep{burbidgeSynthesisElementsStars1957, iliadisNuclearPhysicsStars2015}.
 
+\begin{figure}
+\includegraphics[width=\textwidth]{chapters/1/figures/Rapp_2006.png}
+\caption{Taken from \cite{rappSensitivityPProcessNucleosynthesis2006}: Abundance distribution of heavy isotopes that can be entirely ascribed to s-process ( filled circles), r-process (squares), and p-process (open circles) nucleosynthesis.}
+\end{figure}
 
 The $s$-process in massive stars occurs during the He- and C-burning phases where $^{22}\mathrm{Ne}$ from $^{14}\mathrm{N}(\alpha,\gamma)^{18}\mathrm{F}(\beta^+)^{18}\mathrm{O}(\gamma,\alpha)^{22}\mathrm{Ne}$ undergoes the reaction $^{22}\mathrm{Ne}(\alpha,\nt)^{25}\mathrm{Mg}$ and produces neutron densities of $10^6\text{–}10^8\,\mathrm{cm}^{-3}$ \citep{pignatariWEAKSPROCESSMASSIVE2010,kappelerProcessNuclearPhysics2011}.
 
@@ -140,3 +177,27 @@ In the O-burning conditions between the temperatures of $1.5{-}3\times10^9 \math
 Pre-explosive O-C shell mergers have been found to be a critical site for the production of the $p$-nuclei regardless of the energy of the supernova explosion \citep{ritterConvectivereactiveNucleosynthesisSc2018, robertiGprocessNucleosynthesisCorecollapse2023, robertiGprocessNucleosynthesisCorecollapse2024b}. 
 The explosive $\gamma$-process has been found to underproduce the $p$-nuclei with $A=90-130$, especially the Mo and Ru isotopes \citep{arnouldPprocessStellarNucleosynthesis2003,woosleyNucleosynthesisRemnantsMassive2007}.
 Further, it has been argued that the $\gamma$-process is too weak to produce $^{113}\mathrm{In}$, $^{115}\mathrm{Sn}$, $^{152}\mathrm{Gd}$, $^{164}\mathrm{Er}$, and $^{180\mathrm{m}}\mathrm{Ta}$ and these isotopes should be considered completely separate from the other $p$-nuclei \citep{rayetPprocessRevisited1990,dillmannPProcessSimulationsModified2008}.
+
+\subsection{O-C Shell Mergers}
+
+The burning shells of stars, as shown in Figures \ref{fig:Prialnik_Fig9.19} and \ref{fig:fullkipp}, are separated by radiative regions.
+Because of this, there is no material shared between the shells, but in the final stages of advanced O-shell stellar burning, hours before the core collapse of the star, anywhere from 20\% to 40\% of 1D massive star models have been found to have a merger of the O-, Ne-, and C-shells \citep{rauscherNucleosynthesisMassiveStars2002, ritterConvectivereactiveNucleosynthesisSc2018, collinsPropertiesConvectiveOxygen2018, robertiGprocessNucleosynthesisCorecollapse2023, robertiOccurrenceImpactCarbonOxygen2025}.
+This phenomenon is known as an "O-C shell merger".
+Figure \ref{fig:kippenhahn_ritter} shows a Kippenhahn diagram of the merger of the O- and C-burning shells for a $15~\Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018}.
+These mergers occur when the convective O- and C-shells grow large enough to overlap, forming a single extended convective region.
+This happens when the upper boundary of the O-shell starts to grow and ingest some of the C-shell material.
+As this material enters the O-shell, it begins to burn at the higher temperatures of the O-shell and the compositions of the shells begin to mix.
+
+\begin{figure}[!htbp]
+\includegraphics[width=\textwidth]{chapters/1/figures/kippenhahn_merger.pdf}
+\caption{Zoom in view of Figure \ref{fig:fullkipp} showing the merger of the convective O and C-burning shells for the $15~\Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018}. The O-burning shell extends from $1.55{-}1.95~\Msun$. The first convective C-burning shell sits directly on top from $1.96{-}2.11~\Msun$ and additional convective C-burning shells that are ingested are above. The merger onsets at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr} \approx -3.85$ and reaches full extent at $\approx-4$.
+\label{fig:kippenhahn_ritter}}
+\end{figure}
+
+These mergers are known to have peculiar markers of nucleosynthesis because the convective-reactive environment of the O-shell, such as the production of the odd-Z elements P, Cl, K, and Sc which are underproduced in galactic chemical evolution calculations \citep{ritterConvectivereactiveNucleosynthesisSc2018,robertiOccurrenceImpactCarbonOxygen2025}.
+In addition to these isotopes, the O-C shell merger has been a location for the production of the \pnucn{} \citep{rauscherNucleosynthesisMassiveStars2002, ritterConvectivereactiveNucleosynthesisSc2018, robertiGprocessNucleosynthesisCorecollapse2023}.
+As C-shell material containing stable $s$- and $r$-process seeds is ingested into the much hotter O-shell temperatures, they undergo \gprn.
+The O-C shell merger nucleosynthesis has been found to dominate this production independent of the peak energy of the supernova explosion \citep{robertiGprocessNucleosynthesisCorecollapse2024b}. 
+
+O-C shell mergers have also been understood to be important for seeding asymmetries important for the supernova.
+The shell mergers are highly asymmetric and provide perturbations necessary for the supernova explosion in the O-shell \citep{mullerStatusMultiDimensionalCoreCollapse2016, collinsPropertiesConvectiveOxygen2018, mullerHydrodynamicsCorecollapseSupernovae2020, yadavLargescaleMixingViolent2020a, andrassy3DHydrodynamicSimulations2020}.

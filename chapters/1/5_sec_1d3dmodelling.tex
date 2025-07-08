@@ -4,7 +4,7 @@ Despite the value of 1D stellar evolution codes, stars are 3D objects that exhib
 The simplifications made by spherical symmetry and the MLT approximation do not sufficiently capture the 3D physics of convection.
 Because of this, there are modelling inconsistencies between 1D MLT predictions and 3D hydrodynamic simulations.
 
-\subsection{Insufficiencies of MLT}
+\subsection{Limitations of MLT}
 
 As explained before, MLT assumes that there is some average length $\ell_{\mathrm{MLT}}$ that all fluid elements travel in a convective environment before mixing with their surroundings.
 
@@ -13,7 +13,7 @@ As explained in Section \ref{sec:1d_stellar_modelling} as defined by Equations \
 The boundary between these two regions is defined by the Schwarzschild criterion where $\nabla_{\mathrm{ad}} = \nabla_{\mathrm{rad}}$.
 According to Equation \ref{eq:d_mlt}, the diffusive coefficient for mixing is equal to the convective velocities.
 Outside the boundary of a convective region, suddenly $v_{\mathrm{conv}} = 0$ which would imply an unphysical infinite acceleration to stop the fluid at the edges.
-To more accurately treat the boundaries, stellar evolution codes like \texttt{MESA} implement a convective overshooting parameterization where 
+To treat the boundaries of convective regions, stellar evolution codes like \texttt{MESA} implement a convective overshooting parameterization where 
 \begin{equation}\label{eq:d_overshoot}
     D_{\mathrm{OV}} = D_{\mathrm{conv,0}}\times\exp{\Biggl(-\frac{2z}{f\lambda_{P,0}}\Biggr)}
 \end{equation}
