@@ -156,6 +156,7 @@ ehthumbs.db
 Thumbs.db
 *~
 .#*
+*.txt
 
 # Backup files
 *~
