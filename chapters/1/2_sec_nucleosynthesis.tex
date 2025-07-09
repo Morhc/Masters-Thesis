@@ -5,11 +5,11 @@ All stars begin their lives by fusing hydrogen to helium in their cores as part 
 However, how much they produce is dependent on their initial mass. 
 Low mass stars, those lighter than 3 solar masses, will primarily produce helium for their entire lives. 
 After they exhaust the hydrogen in their cores, they will puff up into red giants and no longer fuse hydrogen in their cores, but begin burning hydrogen in a shell structure above the center of the star.
-Eventually, they will become degenerate in their cores and undergo what is known as a helium flash and suddenly begin to fuse helium into carbon and oxygen in their cores as they continue to evolve as asymptotic giant branch stars.
-As asymptotic giants, they will stop fusing helium in their cores, but continue to burn helium in a shell surrounding the core.
+Eventually, they will become degenerate in their cores and undergo what is known as a helium flash and suddenly begin to fuse helium into carbon and oxygen in their cores as they continue to evolve as asymptotic giant branch (AGB) stars.
+As AGBs, they will stop fusing helium in their cores, but continue to burn helium in a shell surrounding the core.
 When this happens, the convective envelope of the star can expand and mix some hydrogen into the helium burning shell and the star will begin to flash again in what is known as a thermal pulse.
 During these thermal pulses, a large number of neutrons are released and the star can produce a large number of the elements heavier than iron.
-Eventually, the star will shed its outer layers and leave behind either a white dwarf or a planetary nebula and they cease to produce new elements.
+Eventually, the star will shed its outer layers and leave behind either a planetary nebula or white dwarf and they cease to produce new elements.
 Intermediate mass stars, those between 3 and 8 solar masses, will not undergo a helium flash, but will instead begin to fuse helium into carbon and oxygen in their cores after they exhaust the hydrogen in their cores.
 After they exhaust the helium in their cores, they can also fuse carbon into neon, but do not form elements beyond this, and will become white dwarfs.
 \citep{prialnikIntroductionTheoryStellar2009, herwigEvolutionSolarIntermediateMass2013}.
@@ -25,9 +25,9 @@ Then they will continue to fuse carbon, neon, oxygen, and eventually silicon.
 Once they begin to fuse silicon in their cores, they will begin to produce iron. 
 Once iron begins to form in the core of stars, they begin to collapse as the fusion of elements heavier than iron is endothermic and does not produce energy.
 This collapse cause the star to explode in a supernova and many nuclear reactions can occur.
-After the supernova, the remnant core of the star can either become a neutron star or a black hole depending on the mass before collapse \citep{prialnikIntroductionTheoryStellar2009,woosleyEvolutionExplosionMassive2002}.
+After the supernova, the remnant core of the star can either become a neutron star or a black hole depending on the mass before collapse \citep{woosleyEvolutionExplosionMassive2002,prialnikIntroductionTheoryStellar2009}.
 
-The rest of the elements heavier than iron that are not produced in asymptotic giants are produced during the merger of two neutron stars.
+The rest of the elements heavier than iron that are not produced in AGB stars are largely produced during the merger of two neutron stars.
 When two neutron stars merge, they produce extremely high densities of neutrons and the heaviest stable elements in the universe are formed \citep{kobayashiOriginElementsCarbon2020}.
 
 \subsection{Massive Star Evolution}
@@ -50,21 +50,23 @@ These burning phases lead to the structure of the star being separated convectiv
 \end{figure}
 
 After the formation of the Fe-core the star begins to rapidly contract as nuclear burning no longer can balance the gravitational force.
-This leads to a core collapse supernova explosion where further shockwave induced nucleosynthesis can occur \citep{prialnikIntroductionTheoryStellar2009}.
+This leads to a core collapse supernova explosion where further shockwave induced nucleosynthesis can occur \citep{woosleyEvolutionExplosionMassive2002}.
 The core of the star leaves behind a neutron star or black hole, and all other material beyond the mass cut is ejected into the interstellar medium.
 The exact border of where mass is ejected from changes the yields of massive star nucleosynthesis.
 \cite{ritterNuGridStellarData2018} place this mass cut for massive stars around the interface of the Si/O-shell.
 
-\subsection{Nuclear Burning and Convective Mixing Interaction}
+\subsection{Nuclear Burning and Convective Mixing Interaction in Massive Stars}
 
 Burning in stars largely occurs in hydrostatic equilibrium, where the energy produced by nuclear reactions balances the gravitational forces acting on the star.
 This balance allows the star to maintain a stable structure and prevents it from collapsing under its own gravity.
-The burning phases in stars occur at specific temperatures and densities, depending on the initial mass of the star.
+The burning phases in stars occur at specific range of temperatures and densities, depending on the initial mass of the star as shown in Table \ref{tab:massivestarsburning}.
 Much of the nuclear burning in the core and shells of stars happens in convective regions which is a region where the stratification of the star is unstable and the material mixes.  
 In this section, the details of the hydrostatic burning phases in massive stars are described in more detail, along with the nuclear reactions that occur during these phases.
 
 \begin{table}[H]
-\caption{Details about hydrostatic burning phases in massive stars taken from the $13\text{-}25 \Msun$ stars in Table 1 of \cite{woosleyEvolutionExplosionMassive2002}}
+\caption{Details about hydrostatic burning phases in massive stars of $13\text{-}25 ~\Msun$ from Table 1 of \cite{woosleyEvolutionExplosionMassive2002}. 
+}
+\label{tab:massivestarsburning}
 \begin{tabular}{|l|c|c|c|}
     \hline
     \textbf{Burning Phase} & \textbf{Temperature (MK)} & \textbf{Density (g cm$^{-3}$)} & \textbf{Timescale (yrs)} 
@@ -80,16 +82,20 @@ In this section, the details of the hydrostatic burning phases in massive stars 
 \end{table}
 
 The following section describes the burning stages following \citet{woosleyEvolutionExplosionMassive2002} and \citet{iliadisNuclearPhysicsStars2015}.
-H-burning is the first stage of hydrostatic burning which occurs in massive stars primarily by the CNO cycle.
+H-burning is the first stage of hydrostatic burning which occurs in stars, primarily by the CNO cycle.
 \[
     ^{12}\mathrm{C}(p,\gamma)^{13}\mathrm{N}(\beta^+)^{13}\mathrm{C}(p,\gamma)^{14}\mathrm{N}(p,\gamma)^{15}\mathrm{O}(\beta^+)^{15}\mathrm{N}(p,\alpha)^{12}\mathrm{C}
 \]
 In the CNO cycle, carbon, nitrogen, and oxygen act as a catalyst for the fusion of four $^{1}\mathrm{H}$ isotopes into $^{4}\mathrm{He}$. 
+If the star does not have enough carbon, nitrogen, and oxygen to catalyze the fusion of hydrogen, it will instead fuse hydrogen into helium by the p-p chain.
+\[
+    \pt(\pt,e^+\nu)\hydrogen[2](\pt,\gamma)\helium[3](\helium[3],2\pt)\helium[4]
+\]
 After the hydrogen in the core of the star is used up, the star will begin to burn helium by two main processes that creates carbon and oxygen:
 \[
-    ^{4}\mathrm{He}(\alpha,\gamma)^{8}\mathrm{Be}(\alpha,\gamma)^{12}\mathrm{C}, \quad ^{12}\mathrm{C}(\alpha,\gamma)^{16}\mathrm{O}
+    3\times\helium[4] \rightarrow ^{12}\mathrm{C} \quad \mathrm{and~then} \quad ^{12}\mathrm{C}(\alpha,\gamma)^{16}\mathrm{O}
 \]
-After helium is exhausted, the massive star will begin to burn carbon either in its core or slighly above the core and primarily produce neon, magnesium, and sodium:
+After helium is exhausted, the massive star will begin to fuse carbon either in its core or slighly above the core and primarily produce neon, magnesium, and sodium:
 \[
     ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{20}\mathrm{Ne} + \alpha
 \]
@@ -102,14 +108,14 @@ After helium is exhausted, the massive star will begin to burn carbon either in 
 \[
     ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{24}\mathrm{Mg} + n 
 \]
-When the carbon burning stops, the star will begin to burn neon in a shell above the core which produces oxygen and magnesium:
+When the carbon burning stops, the star will begin to burn neon in the core which produces oxygen and magnesium by photodisintegration:
 \[
     ^{20}\mathrm{Ne}(\gamma,\alpha)^{16}\mathrm{O}
 \]
 \[
     ^{20}\mathrm{Ne}(\alpha,\gamma)^{24}\mathrm{Mg}
 \]
-After neon burning is complete, the star will begin to burn oxygen in a shell and then in its core to silicon, sulfur, phosphorus, and magnesium:
+After neon burning is complete, the star will begin to fuse oxygen in its core into silicon, sulfur, phosphorus, and magnesium:
 \[
     ^{16}\mathrm{O}+^{16}\mathrm{O}\rightarrow^{28}\mathrm{Si} + \alpha
 \]
@@ -125,7 +131,8 @@ After neon burning is complete, the star will begin to burn oxygen in a shell an
 \[
     ^{16}\mathrm{O} + ^{16}\mathrm{O} \rightarrow ^{24}\mathrm{Mg} + 2\alpha
 \]
-Finally, the star will begin to burn silicon where by a series captures of $\alpha$ particles, the star will produce iron and nickel: 
+With a core composed of \silicon[28] and \sulfur[32], these isotopes will undergo photodisintegration reactions $(\gamma,\alpha)$, $(\gamma,\nt)$, and $(\gamma,p)$.
+Once enough \helium[4] is produced by these photodisintegration reactions, there is a net production of the elements up to iron and nickel:
 \[
     ^{28}\mathrm{Si}(\alpha,\gamma)^{32}\mathrm{S}(\alpha,\gamma)^{36}\mathrm{Ar}(\alpha,\gamma)^{40}\mathrm{Ca}(\alpha,\gamma)^{44}\mathrm{Ti}(\alpha,\gamma)^{48}\mathrm{Cr}(\alpha,\gamma)^{52}\mathrm{Fe}(\alpha,\gamma)^{56}\mathrm{Ni}
 \]
@@ -133,24 +140,42 @@ Finally, the star will begin to burn silicon where by a series captures of $\alp
 \subsection{Neutron Captures}
 
 Although neutron captures are not a large part of the nucleosynthesis in massive stars, they are an important part of how the elements heavier than iron are formed.
-The neutron capture processes are the primary mechanism for the production of elements heavier than iron in stars \citep{burbidgeSynthesisElementsStars1957}.
-There are three main regimes to the neutron capture processes: the slow, intermediate, and rapid neutron capture processes, commonly referred to as the $s$-, $i$-, and $r$-processes.
-Generically, in the neutron capture processes, a nucleus in a neutron rich environment captures neutrons and becomes increasingly neutron-rich and unstable. 
-The unstable nucleus then decays via $\beta^-$ decay until it reaches a stable state.
-This process is controlled by the timescale of neutron capture compared to the timescale of $\beta^-$ decay \citep{burbidgeSynthesisElementsStars1957, iliadisNuclearPhysicsStars2015}.
+In the neutron capture process, an iron nucleus in a neutron rich environment captures neutrons by $(\nt,\gamma)$ reactions and becomes increasingly \nt-rich and unstable.
+The unstable nucleus then $\beta^-$ decays until it becomes a stable isotope.
+The neutron capture processes are divided into three main regimes: the slow, intermediate, and rapid neutron capture processes, commonly referred to as the $s$, $i$, and $r$ processes.
+The $s$ and $r$ processes were originally proposed by \cite{burbidgeSynthesisElementsStars1957} and the $i$ process was later identified by \cite{cowanProduction14CNeutrons1977}.
+The name of each process refers to the speed at which the neutron captures occur compared to the $\beta^-$ decay timescale.
+The faster the neutron captures occur, the more unstable the nucleus becomes and it travels further from the valley of stability.
+Finally, a neutron shell becomes full when a nucleus has $N=50$, $82$, or $126$ neutrons, which corresponds to Sr/Y/Zr, Ba/La/Ce/Nd, and Pb/Bi.
+When this happens, the $(\nt,\gamma)$ cross section becomes lower, making it more likely that the nucleus will undergo $\beta^-$ decay rather than capture another neutron.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{chapters/1/figures/Rapp_2006.png}
-\caption{Taken from \cite{rappSensitivityPProcessNucleosynthesis2006}: Abundance distribution of heavy isotopes that can be entirely ascribed to s-process ( filled circles), r-process (squares), and p-process (open circles) nucleosynthesis.}
+\caption{Taken from \cite{rappSensitivityPProcessNucleosynthesis2006}: Abundance distribution of heavy isotopes that can be entirely ascribed to $s$ process (filled circles), $r$ process (squares), and $p$ process (open circles) nucleosynthesis.}
 \end{figure}
 
-The $s$-process in massive stars occurs during the He- and C-burning phases where $^{22}\mathrm{Ne}$ from $^{14}\mathrm{N}(\alpha,\gamma)^{18}\mathrm{F}(\beta^+)^{18}\mathrm{O}(\gamma,\alpha)^{22}\mathrm{Ne}$ undergoes the reaction $^{22}\mathrm{Ne}(\alpha,\nt)^{25}\mathrm{Mg}$ and produces neutron densities of $10^6\text{–}10^8\,\mathrm{cm}^{-3}$ \citep{pignatariWEAKSPROCESSMASSIVE2010,kappelerProcessNuclearPhysics2011}.
+The \sprn{} primarily occurs in AGB stars during their thermal pulse phase. Periodic He-shell flashes generate a convective zone in the He-intershell, which mixes freshly synthesized \carbon[12]. After the pulse, the convective envelope can penetrate into this region (third dredge-up), bringing carbon and other products to the surface.
+Between pulses, a \carbon[13] pocket is formed when protons partially mix into the \carbon[12]-rich intershell, leading to \carbon[13] production via $^{12}\mathrm{C}(p,\gamma)^{13}\mathrm{N}(\beta^+)^{13}\mathrm{C}$.
+The \carbon[13] subsequently reacts via $^{13}\mathrm{C}(\alpha,n)^{16}\mathrm{O}$, releasing neutrons with densities of $10^6{-}10^{10}~\mathrm{cm}^{-3}$, driving the \spr{} nucleosynthesis close to the valley of stability. 
+Additional neutrons are briefly produced during He-shell flashes from \neon[22] which comes from $^{14}\mathrm{N}(\alpha,\gamma)^{18}\mathrm{F}(\beta^+)^{18}\mathrm{O}(\gamma,\alpha)^{22}\mathrm{Ne}$ and releases neutrons by $^{22}\mathrm{Ne}(\alpha,n)^{25}\mathrm{Mg}$ \citep{snedenNeutroncaptureElementsEarly2008,herwigEvolutionSolarIntermediateMass2013}.
+In massive stars, a weaker form of the \sprn{} occurs during the He- and C-burning phases where neutrons are released by $^{22}\mathrm{Ne}(\alpha,\nt)^{25}\mathrm{Mg}$ \citep{pignatariWEAKSPROCESSMASSIVE2010,kappelerProcessNuclearPhysics2011}.
 
-The $i$- and $r$-processes are not well-determined in massive stars as the neutron densities needed ($10^{13}\text{–}10^{15}$ and $\geq 10^{20}\,\mathrm{cm}^{-3}$) are not reached in these conditions.
-\cite{denissenkovImpactReactionRate2018,battinoHeavyElementsNucleosynthesis2020} find these conditions can be met in rapidly accreting white dwarfs where a white dwarf accretes H from a companion main sequence star leading to H-flashes where $^{12}\mathrm{C}(p,\gamma)^{13}N(\beta^+)^{13}\mathrm{C}(\alpha,n)^{16}\mathrm{O}$ is a source for neutrons.
-The $r$-process is thought to occur in neutron star mergers \citep{mumpowerVdelayedFissionRprocess2018} where the neutrons densities are high enough to produce the heaviest elements in the universe.
+The \iprn{} has two sites considered for its production: metal poor AGB stars and rapidly accreting white dwarfs.
+If an AGB star is metal poor, when it undergoes its third thermal pulse it can sustain a longer connection between the H and He rich layers and produce neutron densities of $10^{13}{-}10^{15}\cm^{-3}$ \citep{choplinIntermediateNeutronCapture2021}.
+If a white dwarf has a main sequence star binary companion, it can accrete the H-rich material from its companion.
+As hydrogen is accreted onto the white dwarf, it burns and creates a \helium[]-shell.
+When the \helium[]-shell reaches a critical mass, it will undergo a flash and release neutrons by $^{13}\mathrm{C}(\alpha,n)^{16}\mathrm{O}$ \citep{denissenkovImpactNgReaction2021}.
+\ipr{} nucleosynthesis has a similar peak abundance pattern to the \sprn{} as it does not travel significantly farther from the valley of stability, the primary difference being which isotope is the most abundant \citep{choplinIntermediateNeutronCapture2021}.
 
-\section{\texorpdfstring{$p$}{p}-Nuclei Nucleosynthesis}
+The \rprn{} is thought to occur in the merger of two neutron stars, as when they merge they produce a large number of neutrons at densities greater than $10^{20}\cm^{-3}$.
+The neutron captures in the \rprn{} occur so rapidly that the nuclei produced are extremely unstable and travel far from the valley of stability.
+The \rprn{} abundance distribution shows peaks at $A=80$, $A=130$, and $A=195$. 
+The $A=130$ and $A=195$ peaks come from the fission of \nt-heavy actinides \citep{arnouldRprocessStellarNucleosynthesis2007, gorielyImpactWeakInteractions2015,mumpowerVdelayedFissionRprocess2018}.
+
+
+\subsection{\texorpdfstring{$p$}{p}-Nuclei Nucleosynthesis}
+
+The \pnucn{} are a set of 35 
 
 The \pnucn{} are a set of 35 \nt-deficient stable isotopes heavier than iron that were all originally considered to be produced in a process other than neutron captures.
 \cite{burbidgeSynthesisElementsStars1957} proposed that the \pnucn{} were produced in a series of ($p,\gamma$) reactions in equilibrium with ($\gamma,p

@@ -192,36 +192,15 @@ Unlike the coupled equations of \texttt{MESA}, \texttt{mppnp} adopts an operator
 By decoupling the nuclear physics from the stellar structure, \texttt{mppnp} is able to calculate large nuclear networks.
 However, if the timescales of mixing and burning are comparable, the operator-split approach can lead to inaccuracies in the final abundances.
 
-\jicom{fix}
-
-In regular convective burning, $D_\alpha$ is much smaller than $1$ as mixing occurs much faster than nuclear burning (and vice versa for radiative burning).
-In convective-reactive environments $D_\alpha$ is equal to $1$, and since these timescales are near equal, the evolution of the mass fraction is coupled to both operators. 
-Therefore, it is important when calculating the results of a convective-reactive environment, that the timestep is small enough that there is no significant change in the final mass fraction.
-This would mean that we have resolved both the mixing and burning timescales.
-
-%\begin{figure}[!htbp]
-%\includegraphics[width=\textwidth]{chapters/1/figures/time_resolution [temp].png}
-%\caption{Evolution of the mass fraction of $^{12}\mathrm{C}$, $^{16}\mathrm{O}$, $^{20}\mathrm{Ne}$, and $^{35}\mathrm{Cl}$ in a convective-reactive environment at the same simulation time with different timesteps. The solid line corresponds to a simulation with timestep of $\Delta t = 0.5 \mathrm{s}$, the dashed line corresponds to $\Delta t = 0.1 \mathrm{s}$, and the dotted line corresponds to $\Delta t = 0.01 \mathrm{s}$. 
-%\label{fig:time_resolution}}
-%\end{figure}
-
-%As shown in Figure \ref{fig:time_resolution}, there is a noticable change in the final mass fraction of the isotopic abundances.
-%While these lighter isotopes $^{12}\mathrm{C}$, $^{16}\mathrm{O}$, and $^{20}\mathrm{Ne}$ are not drastically changed, the final production of heavier isotopes such as the $p$-nuclei can be orders of magnitude.
-
-In addition to the importance for timescale resolution, there is also spatial resolution.
-Changing the number of mass zones in the simulation can change the final result as the mixing of the isotopes depends on the number of fluid elements that can be resolved.
-By ensuring that the number of mass zones is high enough, the mixing can be resolved to a point where the final result is not changed by the number of mass zones.
-
 \subsection{Convective-Reactive Environments}
 
-Typically when modelling stars, a safe assumption is that the timescales for nuclear burning and convective mixing are sufficiently different.
-One of the ways that regions can be characterized is through the Dämkohler number \citep{dimotakisTurbulentMixing2005}:
+One of the ways that a region of a star can be characterized is through the Dämkohler number \citep{dimotakisTurbulentMixing2005}:
 \begin{equation}
 D_\alpha = \frac{\tau_{\mathrm{mix}}}{\tau_{\mathrm{burn}}}.
 \end{equation}
 For the MLT scenario, $\tau_{\mathrm{mix}}$ is given by Equation \ref{eq:t_mlt} and $\tau_{\mathrm{burn}}$ is given by the timescale for nuclear burning, which can be approximated as the inverse of the reaction rates:
 \begin{equation}
-    \tau_{\mathrm{react}} = \sum_j \frac{1}{\rho N_A \langle \sigma v \rangle X_j/A_j}
+    \tau_{\mathrm{react}} = \sum_j \frac{1}{\rho N_A \langle \sigma v \rangle X_j}
 \end{equation}
 where $\rho$ is the density, $N_A$ is Avogadro's number, $\langle \sigma v \rangle_j$ the reaction rates contributing to some species, $X_j$ is the mass fraction of the reacting species, and $A_j$ is the mass number of the reacting species.
 
@@ -230,6 +209,13 @@ In this case, the mixing timescale is much shorter than the nuclear burning time
 Convective-reactive nucleosynthesis occurs when nuclear burning and convective mixing operate on comparable timescales, $D_\alpha=1$ \citep{dimotakisTurbulentMixing2005, herwigCONVECTIVEREACTIVEPROTON2011,ritterNuGridStellarData2018}.
 In these conditions, the mass fractions of species are not well-mixed, and can undergo significant nuclear burning as they are being mixed.
 Reactions are not balanced across the region, and species are able to have different nucleosynthetic pathways depending on the temperature where $D_\alpha=1$.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chapters/1/figures/timescales.pdf}
+\caption{Timescales $\tau_{\mathrm{MLT}}$, $\tau_{\mathrm{react}}$, and $\tau_{\mathrm{scale}}$ vs mass for the $15~\Msun$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018} during the merger at $\log_{10}(t-t_{\mathrm{end}})\approx-3.88$. The black line is $\tau_{\mathrm{MLT}}$. The dashed red line is $\tau_{\mathrm{react}}$ for \carbon[12], and the solid red line is $\tau_{\mathrm{scale}}$ for \carbon[12]. Likewise, the green lines are for \oxygen[16], and the purple lines are for \neon[20]. Black circles are provided where $D_\alpha = 1$ for \carbon[12] and \neon[20].}
+\label{fig:ritter_timescales}
+\end{figure}
 
 \cite{herwigCONVECTIVEREACTIVEPROTON2011} found that in a convective-reactive environment, the MLT mixing timescale is not always appropriate for describing the mixing timescale.
 They propose a reaction scale height timescale using the generalized principles of scale heights \citep{chapmanScaleTimesScale1961}:
@@ -243,12 +229,24 @@ The timescale associated with this scale height is given by \citep{herwigCONVECT
 \end{equation}
 and there would likewise be a Dämkohler number for the scale height where $\tau_{\mathrm{mix}}$ is $\tau_{\mathrm{scale}}$.
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{chapters/1/figures/timescales.pdf}
-\caption{Timescales $\tau_{\mathrm{MLT}}$, $\tau_{\mathrm{react}}$, and $\tau_{\mathrm{scale}}$ vs mass for the $15~\Msun$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018} during the merger at $\log_{10}(t-t_{\mathrm{end}})\approx-3.88$. The black line is $\tau_{\mathrm{MLT}}$. The dashed red line is $\tau_{\mathrm{react}}$ for \carbon[12], and the solid red line is $\tau_{\mathrm{scale}}$ for \carbon[12]. Likewise, the green lines are for \oxygen[16], and the purple lines are for \neon[20]. Black circles are provided where $D_\alpha = 1$ for \carbon[12] and \neon[20].}
-\label{fig:ritter_timescales}
-\end{figure}
-
 Figure \ref{fig:ritter_timescales} shows that $D_\alpha = \tau_{\mathrm{MLT}}/\tau_{\mathrm{react}} = 1$ and $D_\alpha = \tau_{\mathrm{MLT}}/\tau_{\mathrm{scale}} = 1$ for \carbon[12] and \neon[20] but $D_\alpha < 1$ for \oxygen[16] during the merger shown in Figure \ref{fig:kippenhahn_ritter}.
 As the merger progresses, the material that is ingested from the C-shell undergoes convective-reactive nucleosynthesis.
+
+Since this is a convective-reactive environment, it is important to resolve the timescales for both mixing and burning.
+This is done by ensuring that there is little change in the final mass fraction when increasing the number of timesteps and mass zones in the simulation.
+As Figures \ref{fig:timeresolution} and \ref{fig:massresolution} show, for the post-processing of the $15~\Msun$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018}, there is very little change in the final mass fractions of the \pnucn{} when the number of timesteps and mass zones are increased.
+The case with 200 mass zones in Figure \ref{fig:massresolution} is strangely quite different from the other cases, but as the mass zones are increased to 400, the final mass fractions do not change significantly.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chapters/1/figures/timeresolution.pdf}
+\caption{Time resolution test for the \pnucn{} using a post-processed model of the $15~\Msun$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018} at $110~\second$ of ingestion and 400 mass zones. Percent difference is calculated as the (case $-$ $\Delta t = 0.5~\second$)/($\Delta t = 0.5~\second$). The $\Delta t = 0.5~\second$ case has a percent difference of 0\%.}
+\label{fig:timeresolution}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{chapters/1/figures/massresolution.pdf}
+\caption{Mass resolution test for the \pnucn{} using a post-processed model of the $15~\Msun$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018} at $110~\second$ of ingestion and 400 mass zones. Percent difference is calculated as the (case $-$ 100 zones)/(100 zones). The 100 zones case has a percent difference of 0\%.}
+\label{fig:massresolution}
+\end{figure}
