@@ -30,8 +30,9 @@ After the supernova, the remnant core of the star can either become a neutron st
 The rest of the elements heavier than iron that are not produced in AGB stars are largely produced during the merger of two neutron stars.
 When two neutron stars merge, they produce extremely high densities of neutrons and the heaviest stable elements in the universe are formed \citep{kobayashiOriginElementsCarbon2020}.
 
+
 \subsection{Massive Star Evolution}
-Stars with an inital mass $>8 \Msun$ undergo the series of nuclear burning phases described above.
+Stars with an inital mass greater than $8~\Msun$ undergo a series of nuclear burning phases:
 \[
 \mathrm{H} \rightarrow \mathrm{He} \rightarrow \mathrm{C} \rightarrow \mathrm{Ne} \rightarrow \mathrm{O} \rightarrow \mathrm{Si} \rightarrow \mathrm{Fe} \rightarrow \text{core collapse}.
 \]
@@ -39,7 +40,7 @@ These burning phases lead to the structure of the star being separated convectiv
 
 \begin{figure}[!htbp]
 \includegraphics[width=\textwidth]{chapters/1/figures/Prialnik_Fig9.19.png}
-\caption{Taken from \cite{prialnikIntroductionTheoryStellar2009} Figure 9.19: Schematic structure of a supernova progenitor star. The Ne-burning layer is not shown but would be between the C- and O-layers.
+\caption{Taken from \cite{prialnikIntroductionTheoryStellar2009}: Schematic structure of a supernova progenitor star. The Ne-burning layer is not shown but would be between the C- and O-layers.
 \label{fig:Prialnik_Fig9.19}}
 \end{figure}
 
@@ -55,7 +56,29 @@ The core of the star leaves behind a neutron star or black hole, and all other m
 The exact border of where mass is ejected from changes the yields of massive star nucleosynthesis.
 \cite{ritterNuGridStellarData2018} place this mass cut for massive stars around the interface of the Si/O-shell.
 
-\subsection{Nuclear Burning and Convective Mixing Interaction in Massive Stars}
+\subsection{O-C Shell Mergers}\label{sec:oc_mergers_intro}
+
+The burning shells of stars, as shown in Figures \ref{fig:Prialnik_Fig9.19} and \ref{fig:fullkipp}, are separated by radiative regions.
+Because of this, there is no material shared between the shells, but in the final stages of advanced O-shell stellar burning, hours before the core collapse of the star, anywhere from 20\% to 40\% of 1D massive star models have been found to have a merger of the O-, Ne-, and C-shells \citep{rauscherNucleosynthesisMassiveStars2002, ritterConvectivereactiveNucleosynthesisSc2018, collinsPropertiesConvectiveOxygen2018, robertiGprocessNucleosynthesisCorecollapse2023, robertiOccurrenceImpactCarbonOxygen2025}.
+This phenomenon is known as an "O-C shell merger".
+Figure \ref{fig:kippenhahn_ritter} shows a Kippenhahn diagram of the merger of the O- and C-burning shells for a $15~\Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018}.
+These mergers occur when the convective O- and C-shells grow large enough to overlap, forming a single extended convective region.
+This happens when the upper boundary of the O-shell starts to grow and ingest some of the C-shell material.
+As this material enters the O-shell, it begins to burn at the higher temperatures of the O-shell and the compositions of the shells begin to mix.
+
+\begin{figure}[!htbp]
+\includegraphics[width=\textwidth]{chapters/1/figures/kippenhahn_merger.pdf}
+\caption{Zoom in view of Figure \ref{fig:fullkipp} showing the merger of the convective O and C-burning shells for the $15~\Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018}. The O-burning shell extends from $1.55{-}1.95~\Msun$. The first convective C-burning shell sits directly on top from $1.96{-}2.11~\Msun$ and additional convective C-burning shells that are ingested are above. The merger onsets at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr} \approx -3.85$ and reaches full extent at $\approx-4$.
+\label{fig:kippenhahn_ritter}}
+\end{figure}
+
+These mergers are known to have peculiar markers of nucleosynthesis because the convective-reactive environment of the O-shell, such as the production of the odd-Z elements P, Cl, K, and Sc which are underproduced in galactic chemical evolution calculations \citep{ritterConvectivereactiveNucleosynthesisSc2018,robertiOccurrenceImpactCarbonOxygen2025}.
+The O-C shell merger has also been found to produce the \pnucn{}, heavy \nt-deficient isotopes, by photo-disintegrating stable heavy isotopes \citep{rauscherNucleosynthesisMassiveStars2002, ritterConvectivereactiveNucleosynthesisSc2018, robertiGprocessNucleosynthesisCorecollapse2023}.
+
+O-C shell mergers have also been understood to be important for seeding asymmetries important for the supernova.
+The shell mergers are highly asymmetric and provide perturbations necessary for the supernova explosion in the O-shell \citep{mullerStatusMultiDimensionalCoreCollapse2016, collinsPropertiesConvectiveOxygen2018, mullerHydrodynamicsCorecollapseSupernovae2020, yadavLargescaleMixingViolent2020a, andrassy3DHydrodynamicSimulations2020}.
+
+\subsection{Hydrostatic Burning in Massive Stars}
 
 Burning in stars largely occurs in hydrostatic equilibrium, where the energy produced by nuclear reactions balances the gravitational forces acting on the star.
 This balance allows the star to maintain a stable structure and prevents it from collapsing under its own gravity.
@@ -108,7 +131,7 @@ After helium is exhausted, the massive star will begin to fuse carbon either in 
 \[
     ^{12}\mathrm{C} + ^{12}\mathrm{C} \rightarrow ^{24}\mathrm{Mg} + n 
 \]
-When the carbon burning stops, the star will begin to burn neon in the core which produces oxygen and magnesium by photodisintegration:
+When the carbon burning stops, the star will begin to burn neon in the core which produces oxygen and magnesium by photo-disintegration:
 \[
     ^{20}\mathrm{Ne}(\gamma,\alpha)^{16}\mathrm{O}
 \]
@@ -131,8 +154,8 @@ After neon burning is complete, the star will begin to fuse oxygen in its core i
 \[
     ^{16}\mathrm{O} + ^{16}\mathrm{O} \rightarrow ^{24}\mathrm{Mg} + 2\alpha
 \]
-With a core composed of \silicon[28] and \sulfur[32], these isotopes will undergo photodisintegration reactions $(\gamma,\alpha)$, $(\gamma,\nt)$, and $(\gamma,p)$.
-Once enough \helium[4] is produced by these photodisintegration reactions, there is a net production of the elements up to iron and nickel:
+With a core composed of \silicon[28] and \sulfur[32], these isotopes will undergo photo-disintegration reactions $(\gamma,\alpha)$, $(\gamma,\nt)$, and $(\gamma,p)$.
+Once enough \helium[4] is produced by these photo-disintegration reactions, there is a net production of the elements up to iron and nickel:
 \[
     ^{28}\mathrm{Si}(\alpha,\gamma)^{32}\mathrm{S}(\alpha,\gamma)^{36}\mathrm{Ar}(\alpha,\gamma)^{40}\mathrm{Ca}(\alpha,\gamma)^{44}\mathrm{Ti}(\alpha,\gamma)^{48}\mathrm{Cr}(\alpha,\gamma)^{52}\mathrm{Fe}(\alpha,\gamma)^{56}\mathrm{Ni}
 \]
@@ -152,6 +175,7 @@ When this happens, the $(\nt,\gamma)$ cross section becomes lower, making it mor
 \begin{figure}
 \includegraphics[width=\textwidth]{chapters/1/figures/Rapp_2006.png}
 \caption{Taken from \cite{rappSensitivityPProcessNucleosynthesis2006}: Abundance distribution of heavy isotopes that can be entirely ascribed to $s$ process (filled circles), $r$ process (squares), and $p$ process (open circles) nucleosynthesis.}
+\label{fig:Rapp_2006}
 \end{figure}
 
 The \sprn{} primarily occurs in AGB stars during their thermal pulse phase. Periodic He-shell flashes generate a convective zone in the He-intershell, which mixes freshly synthesized \carbon[12]. After the pulse, the convective envelope can penetrate into this region (third dredge-up), bringing carbon and other products to the surface.
@@ -171,58 +195,47 @@ The \rprn{} is thought to occur in the merger of two neutron stars, as when they
 The neutron captures in the \rprn{} occur so rapidly that the nuclei produced are extremely unstable and travel far from the valley of stability.
 The \rprn{} abundance distribution shows peaks at $A=80$, $A=130$, and $A=195$. 
 The $A=130$ and $A=195$ peaks come from the fission of \nt-heavy actinides \citep{arnouldRprocessStellarNucleosynthesis2007, gorielyImpactWeakInteractions2015,mumpowerVdelayedFissionRprocess2018}.
+A weaker form of the \rprn{} may occur in the supernova of a massive star which produces isotopes up to $A=130$ \citep{woosleyAlphaProcessRProcess1992, kobayashiOriginElementsCarbon2020}.
 
+\subsection{\texorpdfstring{$p$}{p}-Nuclei Nucleosynthesis}\label{sec:pnuclei_intro}
 
-\subsection{\texorpdfstring{$p$}{p}-Nuclei Nucleosynthesis}
+The \pnucn{} are a set of 35 \nt-deficient stable isotopes from \selenium[74] to $^{196}\mathrm{Hg}$ that make up a small fraction of the observed solar abundance distribution of their respective elements \citep{rappSensitivityPProcessNucleosynthesis2006,rauscherConstrainingAstrophysicalOrigin2013}.
+These isotopes are typically 10{-}1000 times less abundant than their stable \nt-rich counterparts as seen in Figure \ref{fig:Rapp_2006}.
+\cite{burbidgeSynthesisElementsStars1957} first identified these isotopes as a distinct group, and did not think that the \pnucn{} were produced by the neutron capture processes.
+Instead, they proposed that a series of ($p,\gamma$) reactions in equilibrium with ($\gamma,p$) and ($\gamma,n$) reactions in the H-rich envelope of a Type II supernova in a process they labelled the "$p$ process".
+This is because the \pnucn{} are shielded from neutron captures by stable isotopes, as shown in Figure \ref{fig:Rauscher2013_Fig1}.
 
-The \pnucn{} are a set of 35 
-
-The \pnucn{} are a set of 35 \nt-deficient stable isotopes heavier than iron that were all originally considered to be produced in a process other than neutron captures.
-\cite{burbidgeSynthesisElementsStars1957} proposed that the \pnucn{} were produced in a series of ($p,\gamma$) reactions in equilibrium with ($\gamma,p
-$) and ($\gamma,n$)  reactions in the H-rich envelope of a Type II supernova in a process they labelled the "$p$ process".
-\cite{woosleyPprocessesSupernovae1978} later proposed that the temperature conditions were not sufficient in the H-envelope of a supernova to produce the \pnucn, and instead proposed that in explosive O-burning during the supernova explosion, the \pnucn could be produced in a process they labelled the "\gprn".
-The \gprn{} is a secondary process that requires pre-existing seed nuclei up to Pb from the \sprn{} that series of ($\gamma,n$) and ($\gamma,\alpha$) reactions along with $\beta^+$ decays that occur during explosive O-burning, or potentially C-burning, at $2{-}3 \times 10^9 \mathrm{K}$.
-However, they also showed that a single temperature is not sufficient to produce all of the $p$-nuclei as at cooler temperatures the heavier $p$-nuclei are more easily produced while at hotter temperatures the lighter $p$-nuclei are more easily produced.
-
-Since then, many astrophysical sites have been proposed for the production of the $p$-nuclei. 
-\cite{woosleyAlphaProcessRProcess1992} proposed that the lighter $p$-nuclei could be produced in the $\alpha$-process in Type II supernovae.
-\cite{frohlichNeutrinoInducedNucleosynthesisA>642006,arconesProductionLightelementPrimary2011} found that $\nu$ induced ($n,p$) reactions in the $\nu p$-process could produce the lighter $p$-nuclei in the winds of a supernova.
-\cite{schatzEndPointRp2001} likewise found that they could produce the lighter $p$-nuclei in the $rp$-process in a H-rich accretion disk around a neutron star where they are made by rapid ($p,\gamma$) and $\beta^+$ decay analogous to the neutron capture process.
-\cite{gorielyHedetonationSubChandrasekharCO2002} found taht they could produce both the light and heavy $p$-nuclei in a He-detonation of a C-O white dwarf in a cousin of the $rp$-process called the $pn$-process where ($\alpha,p$) and ($\alpha,n$) reactions create the needed sources of neutrons and protons.
-\cite{rauscherNucleosynthesisMassiveStars2002} found that the $\gamma$-process could take place in both the pre-explosive and explosive O-burning phases of massive stars and could produce all the p-nuclei, but underproduced $^{92}\mathrm{Mo},^{94}\mathrm{Mo}, ^{96}\mathrm{Ru}$ and $^{98}\mathrm{Ru}$.
-\cite{travaglioTypeIaSupernovae2011,travaglioTestingRoleSNe2015} found that they could produce $\gamma$-process conditions that could produce all of the $p$-nuclei in Type Ia supernovae including the underproduced Mo and Ru isotopes.
-\cite{battinoHeavyElementsNucleosynthesis2020} found that the $p$-nuclei could be produced in the He-shell flahes of a rapidly accreting white dwarf by the $\gamma$-process during the $i$-process.
-
-Not all the p-nuclei are produced in these ways, however.
-Despite the claims of \cite{burbidgeSynthesisElementsStars1957}, $^{152}\mathrm{Gd}$, $^{164}\mathrm{Er}$, $^{180\mathrm{m}}\mathrm{Ta}$ have a majority of their production in the $s$-process \citep{bisterzoSprocessLowmetallicityStars2011}, and $^{113}\mathrm{In}$ and $^{115}\mathrm{In}$ can be made during the $r$-process \citep{dillmannPProcessSimulationsModified2008}.
-$\nu$-capture reactions have been found to play a role in the production of $^{113}\mathrm{In}$, $^{138}\mathrm{La}$, and $^{180\mathrm{m}}\mathrm{Ta}$ \citep{gorielyPuzzleSynthesisRare2001, arnouldPprocessStellarNucleosynthesis2003,sieverdingNProcessLightImproved2018}.
-
-The $\gamma$-process is the mode in which the $p$-nuclei are produced in massive stars.
-In the O-burning conditions between the temperatures of $1.5{-}3\times10^9 \mathrm{K}$, the $\gamma$-process occurs via a series of ($\gamma,n$), ($\gamma,\alpha$), and ($\gamma,p$) reactions \citep{rauscherNucleosynthesisMassiveStars2002,rappSensitivityPProcessNucleosynthesis2006, rauscherConstrainingAstrophysicalOrigin2013}.
-Pre-explosive O-C shell mergers have been found to be a critical site for the production of the $p$-nuclei regardless of the energy of the supernova explosion \citep{ritterConvectivereactiveNucleosynthesisSc2018, robertiGprocessNucleosynthesisCorecollapse2023, robertiGprocessNucleosynthesisCorecollapse2024b}. 
-The explosive $\gamma$-process has been found to underproduce the $p$-nuclei with $A=90-130$, especially the Mo and Ru isotopes \citep{arnouldPprocessStellarNucleosynthesis2003,woosleyNucleosynthesisRemnantsMassive2007}.
-Further, it has been argued that the $\gamma$-process is too weak to produce $^{113}\mathrm{In}$, $^{115}\mathrm{Sn}$, $^{152}\mathrm{Gd}$, $^{164}\mathrm{Er}$, and $^{180\mathrm{m}}\mathrm{Ta}$ and these isotopes should be considered completely separate from the other $p$-nuclei \citep{rayetPprocessRevisited1990,dillmannPProcessSimulationsModified2008}.
-
-\subsection{O-C Shell Mergers}
-
-The burning shells of stars, as shown in Figures \ref{fig:Prialnik_Fig9.19} and \ref{fig:fullkipp}, are separated by radiative regions.
-Because of this, there is no material shared between the shells, but in the final stages of advanced O-shell stellar burning, hours before the core collapse of the star, anywhere from 20\% to 40\% of 1D massive star models have been found to have a merger of the O-, Ne-, and C-shells \citep{rauscherNucleosynthesisMassiveStars2002, ritterConvectivereactiveNucleosynthesisSc2018, collinsPropertiesConvectiveOxygen2018, robertiGprocessNucleosynthesisCorecollapse2023, robertiOccurrenceImpactCarbonOxygen2025}.
-This phenomenon is known as an "O-C shell merger".
-Figure \ref{fig:kippenhahn_ritter} shows a Kippenhahn diagram of the merger of the O- and C-burning shells for a $15~\Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018}.
-These mergers occur when the convective O- and C-shells grow large enough to overlap, forming a single extended convective region.
-This happens when the upper boundary of the O-shell starts to grow and ingest some of the C-shell material.
-As this material enters the O-shell, it begins to burn at the higher temperatures of the O-shell and the compositions of the shells begin to mix.
-
-\begin{figure}[!htbp]
-\includegraphics[width=\textwidth]{chapters/1/figures/kippenhahn_merger.pdf}
-\caption{Zoom in view of Figure \ref{fig:fullkipp} showing the merger of the convective O and C-burning shells for the $15~\Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018}. The O-burning shell extends from $1.55{-}1.95~\Msun$. The first convective C-burning shell sits directly on top from $1.96{-}2.11~\Msun$ and additional convective C-burning shells that are ingested are above. The merger onsets at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr} \approx -3.85$ and reaches full extent at $\approx-4$.
-\label{fig:kippenhahn_ritter}}
+\begin{figure}
+\includegraphics[width=\textwidth]{chapters/1/figures/Rauscher2013_Fig1.png}
+    \caption{Taken from \cite{rauscherConstrainingAstrophysicalOrigin2013}: The $p$ isotopes are shielded from \rprn{} decay chains by stable isotopes and are bypassed in the \sprn{} reaction flow.
+    \label{fig:Rauscher2013_Fig1}}
 \end{figure}
 
-These mergers are known to have peculiar markers of nucleosynthesis because the convective-reactive environment of the O-shell, such as the production of the odd-Z elements P, Cl, K, and Sc which are underproduced in galactic chemical evolution calculations \citep{ritterConvectivereactiveNucleosynthesisSc2018,robertiOccurrenceImpactCarbonOxygen2025}.
-In addition to these isotopes, the O-C shell merger has been a location for the production of the \pnucn{} \citep{rauscherNucleosynthesisMassiveStars2002, ritterConvectivereactiveNucleosynthesisSc2018, robertiGprocessNucleosynthesisCorecollapse2023}.
-As C-shell material containing stable $s$- and $r$-process seeds is ingested into the much hotter O-shell temperatures, they undergo \gprn.
-The O-C shell merger nucleosynthesis has been found to dominate this production independent of the peak energy of the supernova explosion \citep{robertiGprocessNucleosynthesisCorecollapse2024b}. 
+Since the proposal of the $p$ process by \cite{burbidgeSynthesisElementsStars1957}, the common understanding is that the observed solar abundance of the 35 \pnucn{} is produced by a superposition of astrophysical processes.
+Some of the varied processes and sites that can produce the \pnucn{} include:
+\begin{itemize}
+    \item \selenium[74]${-}$\molybdenum[94] can be produced in the ejecta of a supernova during the $\alpha$ capture process by photo-disintegrations \citep{woosleyAlphaProcessRProcess1992}.
+    \item \selenium[74]${-}$\cadmium[108] can be produced by $\nu$ induced $(\nt,\pt)$ reactions in the winds of a supernova \citep{frohlichNeutrinoInducedNucleosynthesisA>642006,arconesProductionLightelementPrimary2011}.
+    \item \strontium[84]${-}$\ruthenium[98] can be produced in a H-rich accretion disk around a neutron star by rapid ($p,\gamma$) and $\beta^+$ decay analogous to the neutron capture process \citep{schatzEndPointRp2001}.
+    \item \gadolinium[152], \erbium[164], and \tantalum[180m] have significant contributions from the \sprn{} \citep{bisterzoSprocessLowmetallicityStars2011}.
+    \item $^{113}\mathrm{In}$ and $^{115}\mathrm{Sn}$ can be made during the $r$ process \citep{dillmannPProcessSimulationsModified2008}.
+    \item $\nu$ capture reactions have been found to play a role in the production of $^{113}\mathrm{In}$, $^{138}\mathrm{La}$, and $^{180\mathrm{m}}\mathrm{Ta}$ \citep{gorielyPuzzleSynthesisRare2001, arnouldPprocessStellarNucleosynthesis2003,sieverdingNProcessLightImproved2018}.
+\end{itemize}
 
-O-C shell mergers have also been understood to be important for seeding asymmetries important for the supernova.
-The shell mergers are highly asymmetric and provide perturbations necessary for the supernova explosion in the O-shell \citep{mullerStatusMultiDimensionalCoreCollapse2016, collinsPropertiesConvectiveOxygen2018, mullerHydrodynamicsCorecollapseSupernovae2020, yadavLargescaleMixingViolent2020a, andrassy3DHydrodynamicSimulations2020}.
+The majority of the \pnucn{} can be produced by the "\gprn{}", a process that was first proposed by \cite{woosleyPprocessesSupernovae1978} who did not think the temperatures of the H-envelope during a supernova were sufficient.
+The \gprn{} is a secondary process that requires pre-existing stable nuclei that undergo photo-disintegrations $(\gamma,\nt)$, $(\gamma,\alpha)$, and $(\gamma,\pt)$ reactions to produce the \pnucn{} at temperatures of $1.5{-}3 \times 10^9 \mathrm{K}$ \citep{rauscherConstrainingAstrophysicalOrigin2013}. 
+Because it is a secondary process, the \gprn{} is dependent on the metallicity of the star and seeds available \citep{travaglioTestingRoleSNe2015, battinoHeavyElementsNucleosynthesis2020}.
+
+One site where the \gprn{} could take place is in the explosive O and Ne burning shells of a massive star \citep{woosleyPprocessesSupernovae1978,rayetPprocessRevisited1990,rauscherNucleosynthesisMassiveStars2002}.
+In this site, the \pnucn{} are produced, but there are serious underproductions of the light isotopes, especially \molybdenum[92,94] and \ruthenium[96,96], \lanthanum[138], and \tantalum[180m] \citep{rappSensitivityPProcessNucleosynthesis2006,rauscherConstrainingAstrophysicalOrigin2013,pignatariProductionProtonrichIsotopes2016}.
+
+Another site is the explosion of white dwarfs during Type Ia supernova if the seeds for the process are enhanced.
+White dwarfs have \spr{} material from either during the prior AGB phase or from He-flashes during accretion from a companion star.
+When the white dwarf reaches the Chandrasekhar mass limit, it can explode in a Type Ia supernova and produce the \pnucn{} by the \gprn{} \citep{travaglioTypeIaSupernovae2011, travaglioTestingRoleSNe2015}.
+Rapidly accreting white dwarfs that have \ipr{} nucleosynthesis are also able to produce the \pnucn{} by the \gprn{} in the Type Ia supernovae \citep{battinoHeavyElementsNucleosynthesis2020}.
+White dwarf explosions are able to produce the \pnucn{} apart from \indium[113], \tin[115], \lanthanum[138], \gadolinium[152], and \tantalum[180m] without an underproduction of the molybdenum and ruthenium isotopes \citep{rauscherConstrainingAstrophysicalOrigin2013}.
+
+It has also been found that the \pnucn{} can be produced in the O-C shell merger of a massive star before the supernova explosion \citep{rauscherNucleosynthesisMassiveStars2002,ritterConvectivereactiveNucleosynthesisSc2018,robertiGprocessNucleosynthesisCorecollapse2023}.
+As explained in Section \ref{sec:oc_mergers_intro}, the stable isotopes in the C-shell are ingested into the much hotter temperatures of the O-shell.
+In the O-shell, the stable isotopes undergo photo-disintegration reactions and produce the \pnucn{}.
+A significant percentage of the final yields of the \pnucn{} with $A>100$ are produced during the O-C shell merger independent of the peak explosion energy of the subsequent supernova \citep{robertiGprocessNucleosynthesisCorecollapse2023, robertiGprocessNucleosynthesisCorecollapse2024b}.

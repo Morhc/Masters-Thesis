@@ -1,6 +1,6 @@
 \section{1D Stellar Modelling}\label{sec:1d_stellar_modelling}
 
-Stars are 3D fluids that are governed by the Navier-Stokes equations where the fluid is undergoing a series of nuclear reactions. 
+Stars are 3D objects that are governed by the Navier-Stokes equations where the fluid is undergoing a series of nuclear reactions. 
 The equations governing the hydrodynamic flow are given below \citep{kippenhahnStellarStructureEvolution2013}:
 
 \begin{equation}
@@ -28,7 +28,7 @@ The CFL condition which must be satisfied for the whole simulation is given by:
 \Delta t \leq \frac{\Delta x}{|u| + c_s}
 \end{equation}
 where $\Delta x$ is the grid cell size, and $|u|+c_s$ is the fastest wave speed in the simulation.
-Depending on how much of the star is included and which stage of stellar evolution is being simulated, the timestep can be very short and to evolve the star will take too much time computationally.
+Depending on how much of the star is included and which stage of stellar evolution is being simulated, the timestep can be very short and following the evolution of a star can become computationally prohibitive.
 It becomes even more expensive if a nuclear reaction network is included.
 Some studies are able to calculate both the hydrodynamical and nuclear network equations together \citep{rizzutiStellarEvolutionConvection2024}, but these are limited to a couple dozen species.
 Because of this, it is necessary to have a 1D approximation to be able to study the whole of stellar evolution.
@@ -192,7 +192,7 @@ Unlike the coupled equations of \texttt{MESA}, \texttt{mppnp} adopts an operator
 By decoupling the nuclear physics from the stellar structure, \texttt{mppnp} is able to calculate large nuclear networks.
 However, if the timescales of mixing and burning are comparable, the operator-split approach can lead to inaccuracies in the final abundances.
 
-\subsection{Convective-Reactive Environments}
+\subsection{Convective-Reactive Environments}\label{sec:convective_reactive_env}
 
 One of the ways that a region of a star can be characterized is through the Dämkohler number \citep{dimotakisTurbulentMixing2005}:
 \begin{equation}
