@@ -3,16 +3,17 @@
 
 \section*{\large Abstract}
 
-Massive stars models at the end of their lives can have a merger between the convective O-burning shell and C-burning shells.
-This is known as an O-C shell merger and occurs in a large number of 1D models.
-The O-shell at this time in the evolution is convective-reactive, meaning that the timescales for advection and nuclear reactions are equal.
-This type of environment allows for nucleosynthetic pathways to occur that would not normally happen because material that would otherwise react can mix deeper to hotter temperatures. 
-During the merger, the material in the C-shell which includes C-burning ashes and  stable isotopes heavier than Fe are ingested into the convective-reactive O-burning shell where temperatures are much hotter than C-burning conditions.
-Stellar models that have O-C shell mergers uniquely produce the stable isotopes of phosphorus, potassium, chlorine, and scandium which are otherwise not produced by stellar models to match the solar observations \citep{ritterNuGridStellarData2018,robertiOccurrenceImpactCarbonOxygen2025}.
-O-C shell mergers are also a site for the production of the \pnucn{} \citep{rauscherNucleosynthesisMassiveStars2002,ritterNuGridStellarData2018, robertiGprocessNucleosynthesisCorecollapse2023}.
-The \pnucn{} are 35 stable isotopes that are classically understood to not be produced by the neutron capture processes, but in the temperatures of the O-shell they can be produced by photo-disintegration reactions of pre-existing stable isotopes \citep{burbidgeSynthesisElementsStars1957,woosleyPprocessesSupernovae1978}.
-Stellar models calculate the stellar evolution and nucleosynthesis of the merger in 1D \citep{ritterNuGridStellarData2018}, but 3D hydrodynamic simulations show that there are significant disagreements with the structure of the flow in both the O-burning shell and during the merger.
-Convective velocities in 3D are much higher than 1D, the radial component of the velocities have a gradual downturn at the boundaries not found in 1D, the flow has large scale non-radial asymmetries, and the rate of entraining C-shell material can be significantly different \citep{meakinActiveCarbonOxygen2006, jonesIdealizedHydrodynamicSimulations2017,andrassy3DHydrodynamicSimulations2020,yadavLargescaleMixingViolent2020a}. 
-Because of the O-shell is a convective-reactive environment, the macrophysical uncertainties in the 3D hydrodynamic simulations can have a significant impact on the nucleosynthesis of the \pnucn{} as the mixing timescale could be different.
-In this thesis, insights from 3D hydrodynamic simulations are implemented in 1D simulations to determine how macrophysical uncertainties in the O-C shell merger impact the nucleosynthesis in a convective-reactive environment, particularly for the \pnucn.
-Additionally, this work investigates the impact of nuclear reaction uncertainties on the nucleosynthesis of the \pnucn{} during the O-C shell merger.
+Many massive stars models at the end of their lives can have a merger between the convective O-burning shell and C-burning shells known as a O-C shell merger.
+During the merger, the material in the C-burning shell is ingested into the much hotter O-burning shell.
+Stellar models that have O-C shell mergers have been found to produce the stable isotopes of phosphorus, potassium, chlorine, and scandium which are otherwise not produced by stellar models to match the solar observations.
+O-C shell mergers are also a site for the production of the \pnucn{}, a group of 35 \nt-deficient stable isotopes produced by photo-disintegrations.
+Part of the reason for this is that the O-burning shell is a convective-reactive environment, meaning that the timescales of the convective mixing and the nuclear reactions are comparable.
+Because of this, isotopes can be react at one location in the shell and the products can be transported to another location in the shell where they can be further processed.
+This changes which nucleosynthetic pathways are dominant and which isotopes are produced.
+
+Stellar models calculate the stellar evolution and nucleosynthesis of the merger in 1D, but 3D hydrodynamic simulations significantly disagree with the 1D models at these late stages of stellar evolution.
+Convective velocities in 3D are much higher than 1D, the convective mixing profile features a downturn near the convective boundaries, the flow has large scale non-radial asymmetries, and the rate of ingesting C-shell material can be significantly lower.
+This is important for understanding the nucleosynthesis in the O-C shell merger, because if the convective velocities are different, then the timescale for mixing changes and the possible nucleosynthetic pathways can be altered.
+
+In this thesis, I implement the insights from 3D hydrodynamic simulations into 1D stellar evolution models to determine how the macrophysical uncertainties in the O-C shell merger impact the nucleosynthesis in a convective-reactive environment, particularly for the \pnucn.
+I also investigate the impact of nuclear reaction uncertainties on the nucleosynthesis of the \pnucn{} during the O-C shell merger and this is influenced by the mixing conditions.
