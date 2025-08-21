@@ -8,7 +8,7 @@ Eventually, the core becomes degenerate and undergoes a sudden flash of helium f
 During the AGB phase, core helium fusion ceases, but helium continues to burn in a shell around the core.
 At this stage, the convective envelope can expand and mix hydrogen into the helium-burning shell, leading to recurrent flashes known as thermal pulses.
 These thermal pulses release large numbers of neutrons, enabling the synthesis of many elements heavier than iron.
-Ultimately, the star sheds its outer layers, leaving behind a planetary nebula or a white dwarf, and ceases to produce new elements.
+Ultimately, the star sheds its outer layers, leaving behind a planetary nebula and a white dwarf, and ceases to produce new elements.
 Intermediate-mass stars, with masses between $3~\Msun$ and $8~\Msun$, do not undergo a helium flash.
 Instead, after exhausting core hydrogen, they fuse helium into carbon and oxygen in their cores.
 Once core helium is depleted, these stars may also fuse carbon into neon, but do not produce elements heavier than this, and eventually become white dwarfs.
@@ -27,7 +27,7 @@ When two neutron stars merge, they produce extremely high densities of neutrons 
 These astrophysical sites for the production of the elements are summarized in Figure \ref{fig:periodic_table_solar_system}.
 
 \begin{figure}
-\includegraphics[width=\textwidth]{chapters/1/figures/periodictable_solar_system.png}
+\includegraphics[width=\textwidth]{chapters/1/figures/Johnson2017.png}
 \caption{\sloppy Taken from \cite{johnsonOriginElementsSolar2017}: Periodic table shaded according to the origin of the elements in the solar system.\label{fig:periodic_table_solar_system}}
 \end{figure}
 
@@ -88,19 +88,19 @@ Much of the nuclear burning in the core and shells of stars happens in convectiv
 In this section, the details of the hydrostatic burning phases in massive stars are described in more detail, along with the nuclear reactions that occur during these phases.
 
 \begin{table}[H]
-\caption{Details about hydrostatic burning phases in massive stars of $13\text{-}25 ~\Msun$ from Table 1 of \cite{woosleyEvolutionExplosionMassive2002}. 
+\caption{Details about hydrostatic burning phases in massive stars of $13\text{--}25 ~\Msun$ from Table 1 of \cite{woosleyEvolutionExplosionMassive2002}. 
 }
 \label{tab:massivestarsburning}
 \begin{tabular}{|l|c|c|c|}
     \hline
     \textbf{Burning Phase} & \textbf{Temperature (MK)} & \textbf{Density (g cm$^{-3}$)} & \textbf{Timescale (yrs)} 
     \\ \hline
-    H-burning & 34.4 - 38.1 & 6.66 - 3.81 & 13.5 - 6.70 $\times 10^7$ \\ \hline
-    He-burning & 172 - 196 & 1.73 - 0.762 $\times 10^3$  & 2.67 - 0.839 $\times 10^7$ \\ \hline
-    C-burning & 815 - 841 & 3.13 - 1.29 $\times 10^5$ & 2.82 - 0.522 $\times 10^3$ \\ \hline
-    Ne-burning & 1690 - 1570  & 10.8 - 3.95 $\times 10^6$ & 0.341 - 0.891 \\ \hline
-    O-burning & 1890 - 2090  & 8.19 - 3.60 $\times 10^6$ & 4.77 - 0.402 \\ \hline
-    Si-burning &  3280 - 3650 & 4.83 - 3.01 $\times 10^7$ & 48.8 - 2.0 $\times 10^{-3}$\\
+    H-burning & 34.4--38.1 & 6.66--3.81 & (13.5--6.70) $\times 10^7$ \\ \hline
+    He-burning & 172--196 & (1.73--0.762) $\times 10^3$  & (2.67--0.839) $\times 10^7$ \\ \hline
+    C-burning & 815--841 & (3.13--1.29) $\times 10^5$ & (2.82--0.522) $\times 10^3$ \\ \hline
+    Ne-burning & 1690--1570  & (10.8--3.95) $\times 10^6$ & (0.341--0.891) \\ \hline
+    O-burning & 1890--2090  & (8.19--3.60) $\times 10^6$ & (4.77--0.402) \\ \hline
+    Si-burning &  3280--3650 & (4.83--3.01) $\times 10^7$ & (48.8--2.0) $\times 10^{-3}$\\
     \hline
 \end{tabular}
 \end{table}
@@ -111,14 +111,22 @@ H-burning is the first stage of hydrostatic burning which occurs in stars, prima
     \carbon[12](p,\gamma)\nitrogen[13](\beta^+)\carbon[13](p,\gamma)\nitrogen[14](p,\gamma)\oxygen[15](\beta^+)\nitrogen[15](p,\alpha)\carbon[12]
 \]
 In the CNO cycle, carbon, nitrogen, and oxygen act as a catalyst for the fusion of four $^{1}\mathrm{H}$ isotopes into $^{4}\mathrm{He}$. 
-If the star does not have enough carbon, nitrogen, and oxygen to catalyze the fusion of hydrogen, it will instead fuse hydrogen into helium by the p-p chain.
+If the star does not have enough carbon, nitrogen, and oxygen to catalyze the fusion of hydrogen, it will instead fuse hydrogen into helium by the three p-p chains:
 \[
     \pt(\pt,e^+\nu)\hydrogen[2](\pt,\gamma)\helium[3](\helium[3],2\pt)\helium[4]
 \]
-After the hydrogen in the core of the star is used up, the star will begin to burn helium by two main processes that creates carbon and oxygen:
 \[
-    3\times\helium[4] \rightarrow \carbon[12] \quad \mathrm{and~then} \quad \carbon[12](\alpha,\gamma)\oxygen[16]
+    \pt(\pt,e^+\nu)\hydrogen[2](\pt,\gamma)\helium[3](\alpha,\gamma)\beryllium[7](e^-,\nu)\lithium[7](\pt,\alpha)\alpha
 \]
+\[
+    \pt(\pt,e^+\nu)\hydrogen[2](\pt,\gamma)\helium[3](\alpha,\gamma)\beryllium[7](\pt,\gamma)\boron[8](\beta^+\nu)\beryllium[8](\alpha)\alpha
+\]
+After the hydrogen in the core of the star is used up, the star will begin to burn helium by two main processes that create carbon and oxygen:
+\[
+    \helium[4]+\helium[4]\longleftrightarrow\beryllium[8] + \alpha\rightarrow\carbon[12]+\gamma \quad \mathrm{and} \quad \carbon[12]+\alpha\rightarrow\oxygen[16]+\gamma
+\]
+\beryllium[8] has a very short half-life of $8.2\times10^{-17}~\mathrm{s}$ and decays back into two $\alpha$ particles, but a quasi-equilibrium state is reached between its formation and decay rate.
+A small fraction of these \beryllium[8] nuclei capture another $\alpha$ before decaying, forming \carbon[12] through the resonant Hoyle state.
 After helium is exhausted, the massive star will begin to fuse carbon either in its core or slighly above the core and primarily produce neon, magnesium, and sodium:
 \[
     \carbon[12] + \carbon[12] \rightarrow \neon[20] + \alpha
@@ -134,10 +142,10 @@ After helium is exhausted, the massive star will begin to fuse carbon either in 
 \]
 When the carbon burning stops, the star will begin to burn neon in the core which first produces \oxygen[16] by photo-induced emission of an $\alpha$ particle, and then produces \magnesium[24] by the capture of the released $\alpha$ on \neon[20]:
 \[
-    \neon[20](\gamma,\alpha)\oxygen[16]
+    \neon[20]+\gamma\rightarrow\oxygen[16]+\alpha
 \]
 \[
-    \neon[20](\alpha,\gamma)\magnesium[24]
+    \neon[20]+\alpha\rightarrow\magnesium[24]+\gamma
 \]
 After neon burning is complete, the star will begin to fuse oxygen in its core into silicon, sulfur, phosphorus, and magnesium:
 \[
@@ -149,12 +157,6 @@ After neon burning is complete, the star will begin to fuse oxygen in its core i
 \[
     \oxygen[16] + \oxygen[16] \rightarrow \phosphorus[31] + p
 \]
-\[
-    \oxygen[16] + \oxygen[16] \rightarrow \silicon[30] + 2p
-\]
-\[
-    \oxygen[16] + \oxygen[16] \rightarrow \magnesium[24] + 2\alpha
-\]
 With a core composed of \silicon[28], it will be burned by photo-disintegration reactions $(\gamma,\alpha)$, $(\gamma,\nt)$, and $(\gamma,p)$.
 Once enough $\alpha$ particles are produced by these photo-disintegration reactions, there can be a net production elements up to iron and nickel:
 \[
@@ -164,8 +166,8 @@ Finally, during the explosive burning conditions of the core collapse, the star 
 
 \subsection{Neutron Captures}
 
-Although neutron captures are not a large part of the nucleosynthesis in massive stars, they are an important part of how the elements heavier than iron are formed.
-In the neutron capture process, an iron nucleus in a neutron rich environment captures neutrons by $(\nt,\gamma)$ reactions and becomes increasingly \nt-rich and unstable.
+Neutron captures are an important part of how elements heavier than iron are formed.
+In the neutron capture processes, an iron nucleus in a neutron rich environment captures neutrons by $(\nt,\gamma)$ reactions and becomes increasingly $\nt$ rich and unstable.
 The unstable nucleus then $\beta^-$ decays until it becomes a stable isotope.
 The neutron capture processes are divided into three main regimes: the slow, intermediate, and rapid neutron capture processes, commonly referred to as the $s$, $i$, and $r$ processes.
 The $s$ and $r$ processes were originally proposed by \cite{burbidgeSynthesisElementsStars1957} and the $i$ process was later identified by \cite{cowanProduction14CNeutrons1977}.

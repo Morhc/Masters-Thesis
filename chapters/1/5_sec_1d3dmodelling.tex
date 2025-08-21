@@ -8,7 +8,7 @@ Because of this, there are modelling inconsistencies between 1D MLT predictions 
 
 As explained before, MLT assumes that there is some average length $\ell_{\mathrm{MLT}}$ that all fluid elements travel in a convective environment before mixing with their surroundings.
 
-One of the problems with MLT is how it treats the the boundary between a convective region and a radiative region.
+One of the problems with MLT is how it treats the boundary between a convective region and a radiative region.
 As explained in Section \ref{sec:1d_stellar_modelling} as defined by Equations \ref{eq:nabla_rad} and \ref{eq:nabla_ad}, convective regions are described by $\nabla_{\mathrm{ad}} < \nabla_{\mathrm{rad}}$ and radiative regions where $\nabla_{\mathrm{ad}} > \nabla_{\mathrm{rad}}$.
 The boundary between these two regions is defined by the Schwarzschild criterion where $\nabla_{\mathrm{ad}} = \nabla_{\mathrm{rad}}$.
 According to Equation \ref{eq:d_mlt}, the diffusive coefficient for mixing is equal to the convective velocities.
@@ -27,13 +27,13 @@ Therefore, for MLT to be a valid description, $\ell_{\mathrm{MLT}}$ must be suff
 
 \begin{figure}
 \includegraphics[width=\textwidth]{chapters/1/figures/Oshell_ell_MLT.pdf}
-\caption{O- and C-burning shells in the $15 \Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018} at model number 9200 right before the merger with the C-shell is fully realized. The left y-axis shows the diffusion coefficient in blue, and the right y-axis shows the mixing length in black. The O-shell is from $2.79{-}7.49\times 10^6~\mathrm{m}$, the merger region is from $7.49{-}8.56\times 10^6~\mathrm{m}$, and the C-burning shell is from $8.56{-}18\times 10^6~\mathrm{m}$.
+\caption{O- and C-burning shells in the $15 \Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018} at model number 9200 right before the merger with the C-shell is fully realized. The left y-axis shows the diffusion coefficient in blue, and the right y-axis shows the mixing length in black. The O-shell is from $(2.79{-}7.49)\times 10^6~\mathrm{m}$, the merger region is from $(7.49{-}8.56)\times 10^6~\mathrm{m}$, and the C-burning shell is from $(8.56{-}18)\times 10^6~\mathrm{m}$.
 \label{fig:Oshell_ell_MLT}}
 \end{figure}
 
 As recognized by \cite{bazanConvectionNucleosynthesisCore1994}, the O-burning shell cannot adequately be described by MLT.
-For example, Figure \ref{fig:Oshell_ell_MLT} shows the $15 \Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018} as it is merging.
-The O-burning shell has a size of $4.7\times 10^6~\mathrm{m}$, merging region $1.07\times 10^6~\mathrm{m}$, and C-burning shell $9.44\times 10^6~\mathrm{m}$.
+For example, Figure \ref{fig:Oshell_ell_MLT} shows the $15~\Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018} as it is merging.
+The O-burning shell has a size of $4.7\times 10^6~\mathrm{m}$, the merging region $1.07\times 10^6~\mathrm{m}$, and the C-burning shell $9.44\times 10^6~\mathrm{m}$.
 Since the fluid element in MLT is assumed to be the same size as the mixing length, it can be estimated that each region can resolve $3.2$, $0.3$, and $2.2$ fluid elements respectively by dividing the lowest mixing length by the size of the region in Figure \ref{fig:Oshell_ell_MLT}.
 Clearly, these regions are not well resolved by MLT, especially the region where the O- and C-shells are merging.
 
@@ -44,7 +44,7 @@ Multidimensional hydrodynamic simulations have been done of O-shell burning and 
 
 \cite{meakinActiveCarbonOxygen2006} performed a 2D simulation of both the O- and C-burning shells with a limited nuclear network and compared to a 3D simulation of just the O-shell.
 They found that the non-convective region between the two shells had comparable velocities to the convective shells and that the convective shells have large, round vortices and asymmetric density perturbations.
-Additionally, they found that the convective motions excited waves in the radiative layer that allowed for C-shell entrainment into the O-shell at $\sim10^{-4} \Msun s^{-1}$.
+Additionally, they found that the convective motions excited waves in the radiative layer that allowed for C-shell entrainment into the O-shell at $\sim10^{-4}~\mathrm{\Msun s^{-1}}$.
 Because of this entrainment, they found there would be sudden O-flames burning in the O-shell that would turn on and off.
 However, they note that their 3D O-shell simulation show plumes rather than vortices to describe the flow and caution against using 2D simulations to describe the convective motions in this scenario. 
 
@@ -52,7 +52,7 @@ However, they note that their 3D O-shell simulation show plumes rather than vort
 This is explained by the distance to the convective boundary acting as an upper limit to the mixing length, as fluid elements cannot travel a full mixing length if the remaining space they have is less than it.
 They also find turbulent entrainment of material from the stable layer above the O-shell. 
 
-\cite{jonesIdealizedHydrodynamicSimulations2017} in their 3D simulation of O-shell burning find that the 3D radial velocity profile exhibits the same gradual decrease at the upper boundary and find an entrainment from the stable layer of $1.33\times10^{-6}\Msun s^{-1}$.
+\cite{jonesIdealizedHydrodynamicSimulations2017} in their 3D simulation of O-shell burning find that the 3D radial velocity profile exhibits the same gradual decrease at the upper boundary and find an entrainment from the stable layer of $1.33\times10^{-6}~\mathrm{\Msun s^{-1}}$.
 \begin{figure}[!htbp]
 \includegraphics[width=\textwidth]{chapters/1/figures/Jones+17_Fig21.png}
 \caption{Taken from \cite{jonesIdealizedHydrodynamicSimulations2017}: Time-averaged radial diffusion coefficient profile calculated from the spherically averaged abundance profiles by the method described in Section 3.5 (brown solid line; black solid line is a fit to the noisy region). The convective velocities computing using MLT agree with the spherically averaged 3D velocities to within about a factor of 2 inside the convection zone but are too large in the vicinity of the convective boundary, resulting in an overestimation of the diffusion coefficient there. Limiting the mixing length to the distance from the convective boundary reproduces the fall-off of the diffusion coefficient inside the convection zone approaching the boundary which is seen in the spherically averaged 3D simulation results.
@@ -74,11 +74,12 @@ These are behaviours which cannot be captured by MLT.
 \cite{yadavLargescaleMixingViolent2020a} in their 3D simulation of an O-Ne shell merger find that 3D simulations have much faster convective velocities than predicted in 1D, and as the Ne-shell merges strong plumes carry the material to the bottom of the O-shell where burn in a convective-reactive environment.
 The asymmetric plume distribution leads to local hotspots of burning causing as difference in the Si, O, and Ne mass fractions when compared to 1D.
 
-\cite{andrassy3DHydrodynamicSimulations2020} performed 3D simulation of C-ingestion into a convective O-shell and found a range of possible ingestion rates from $9.5\times10^{-8} \Msun s^{-1}$ to $1.18\times10^{-8} \Msun s^{-4}$ and convective velocities of $38~\mathrm{km~s^{-1}}$ to $181~\mathrm{km~s^{-1}}$ depending on the luminosity of the $^{12}\mathrm{C}+^{12}\mathrm{C}$, $^{16}\mathrm{O}+^{16}\mathrm{O}$, and $^{12}\mathrm{C}+^{16}\mathrm{O}$ reactions.
+\cite{andrassy3DHydrodynamicSimulations2020} performed 3D simulation of C-ingestion into a convective O-shell and found a range of possible ingestion rates from $9.5\times10^{-8}~\mathrm{\Msun s^{-1}}$ to $1.18\times10^{-4}~\mathrm{\Msun s^{-1}}$ and convective velocities of $38~\mathrm{km~s^{-1}}$ to $181~\mathrm{km~s^{-1}}$ depending on the luminosity of the $^{12}\mathrm{C}+^{12}\mathrm{C}$, $^{16}\mathrm{O}+^{16}\mathrm{O}$, and $^{12}\mathrm{C}+^{16}\mathrm{O}$ reactions.
 In their simulations they find large scale asymmetries in the luminosity and density during entrainment.
 The radial velocity profile they find exhibits a gradual decline at the top of the O-shell, but also a less steep decline at the bottom of the shell.
 In addition to this, they boost the energy of C-burning and find large scale asymmetric oscillations like the Global Oscillation of Shell H-ingestion (GOSH) as found in \cite{herwigGLOBALNONSPHERICALOSCILLATIONS2014}.
-GOSHs can lead to increased entrainment of material, but also quench convective motions.
+These are events where a sudden ingestion of hydrogen into a helium-rich convective shell.
+GOSHs can lead to increased entrainment of material, but also quench convective motions due to the energy feedback from the burning.
 
 \cite{rizzutiShellMergersLate2024a} performed a 3D hydrodynamic simulation of an O-C shell merger with a limited nuclear network and find significant differences from their 1D model.
 In the 1D model, the top convective boundary of the O-shell grows until it merges with the Ne/C-shell above it, but in the 3D simulation the bottom of the C-shell grows until it merges with the Ne and O-shells under it.
@@ -106,6 +107,6 @@ Finally, to address energy feedback such as the GOSH-like events seen in \cite{a
 \begin{equation}
 D_{\mathrm{dip}}=D_{\mathrm{MLT}}-(D_{\mathrm{MLT}}-c)\times\exp\Biggl[-\frac{(r-a)^2}{w^2}\Biggr]
 \end{equation}
-where $c$ is the depth of the dip, $a$ is the location of the dip, $w$ is width of the dip, and $r$ is the radius in the region.
+where $c$ is the depth of the dip, $a$ is the centre of the dip, $w$ is width of the dip, and $r$ is the radius in the region.
 All variables are in $10^6~\meter$.
 Using the results of 3D hydrodynamic simulations, we can explore the possible impact on nucleosynthesis from macrophysics.
