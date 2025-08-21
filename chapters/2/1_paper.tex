@@ -86,7 +86,7 @@ This 1D stellar model was computed with \MESA{} \citep{paxtonMODULESEXPERIMENTSL
 This model has a merger of its convective \oxygen[] and \carbon[]-burning shells late in its evolution as shown in Figure \ref{fig:kippenhahn}.
 During this merger, the \carbon[]-burning ashes and stable isotopic material are ingested into the much hotter \oxygen[]-burning shell.
 
-\begin{figure}
+\begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/Kippenhahn_Ritter+2018.pdf}
 \caption{Kippenhahn diagram showing the merger of the convective O and C-burning shells. The O-burning shell extends from $1.55 M_\odot$ to $1.95 M_\odot$. The first convective C-burning shell ingested sits directly on top from $1.96 M_\odot$ to $2.11 M_\odot$ and the other convective C-burning shells are above. A red guideline has been provided to mark the thin radiative layer separating the O- and C-shells. The merger onsets at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr} \approx -3.85$ and reaches full extent at $\approx-4$. A black triangle marks the location where the initial \pnucn{} are taken from and a white star marks the location where the ingested \carbon[]-shell material is taken from.
 \label{fig:kippenhahn}}
@@ -121,7 +121,7 @@ Earlier in the evolution of this stellar model, it produces the \pnucn{} by the 
 The initial mass fractions of the \pnucn{} are set here and are not modified during subsequent radiative \carbon[]- or \oxygen[]-burning. 
 The mass fractions used in this study are shown in Figure \ref{fig:initial_comp}.
 
-\begin{figure}
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/initial_composition.pdf}
 \caption{Logarithmic ratio to solar value for the \pnucn{} from $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr}=-3.856$ used for initial \oxygen[]-shell composition and ingested \carbon[]-shell material. The solar values are taken from \cite{loddersAbundancesElementsSolar2009} and the grey line at zero is equal to the solar value.  Markers are the same as those used in Figure \ref{fig:kippenhahn}.
 \label{fig:initial_comp}}
@@ -133,7 +133,7 @@ The stellar structure is not static, but the change to the temperature, density,
 The merger at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr}=-3.856$ is not fully developed, but \MESA{} cannot accurately model the merger in 1D.
 Therefore, the convective velocity profile is smoothed at the top as if the \carbon[]-shell is merged with the \oxygen[]-shell as seen in Figure \ref{fig:dmlt_forced}.
 
-\begin{figure} 
+\begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/Dmlt_forced.pdf}
 \caption{The diffusion coefficient profile and mixing length at model number 9200 for the $M_{\mathrm{ZAMS}}=15~M_\odot$, $Z=0.02$ model. The light blue line is $D$ from MESA, the orange line the smoothed $D$ used for the MLT mixing scenario in this paper, and the grey line is the mixing length. Black dashed lines mark the shell boundaries for this paper.
 \label{fig:dmlt_forced}}
@@ -160,7 +160,7 @@ It is possible the velocities could be higher as these simulations do not includ
 \cite{rizzutiShellMergersLate2024a} find that velocities are boosted by a factor of $\sim 10$ due to the feedback from new reactions with the ingested material in their 3D O-C shell mergers.
 In our 1D models, we implement this by applying a boost factor of $3\times$, $10\times$, and $50\times$ to the convective velocities as shown in Figure \ref{fig:all_dconv}.
 
-\begin{figure} 
+\begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/Dmlt_downturn.pdf}
 \caption{The diffusion coefficient profiles for the MLT and 3D-inspired gradual downturn scenarios. The dashed orange line is the $D_{\mathrm{MLT}}$ profile, and the dashed light grey line, dotted light blue line, solid grey line, and dashed dark blue line are the downturn profiles with boost factors of $1$, $3$, $10$, and $50$ respectively. 
 \label{fig:all_dconv}}
@@ -188,7 +188,7 @@ A width of $w=0.25~\Mm$ is used for both scenarios, which is approximately the d
 For both scenarios we consider a weaker dip of $c=10^{14}~\cm^2\second^{-1}$ and a stronger dip of $c=10^{13}~\cm^2\second^{-1}$ to investigate the impact on nucleosynthesis.
 The profiles for the GOSH-like and partial merger scenarios are shown in Figure \ref{fig:dgosh_partial}.
 
-\begin{figure} 
+\begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/Dmlt_partial_gosh.pdf}
 \caption{The quenched mixing scenario convective profiles. The dashed light orange line and dotted light grey line are the GOSH-like profiles with a dip centred at $r=4.95~\Mm$. The solid red line and dashed dark grey line are the partial merger profiles with a dip centred $r=7.5~\Mm$. The MLT profile is omitted for clarity. 
 \label{fig:dgosh_partial}}
@@ -210,7 +210,7 @@ The importance of considering $\zeta$ as well as additional caveats for the corr
 
 An overview of our results in terms of overproduction factors and average spreads of overproduction factors is presented in Table \ref{tab:mixing_scenarios}.
 
-\begin{table}
+\begin{table}[!htb]
 \caption{$\langle\OP\rangle$ for each mixing scenario and the average spread $(\OP_{\max}-\OP_{\min})$ for the Monte Carlo simulations for the \pnucn. All Monte Carlo simulations are calculated with an ingestion rate of $\natlog{4}{-3} ~\Msun\second^{-1}$.}
 \label{tab:mixing_scenarios}
 \centering
@@ -241,7 +241,7 @@ Whether an isotope undergoes $(\gamma,\nt)$ and $(\nt,\gamma)$ reactions or cont
 The convective-reactive environment of the \oxygen[]-shell allows for the production of both light and heavy \pnucn{} because the shell is not well-mixed, and therefore species are produced at their ideal temperatures.
 Figure \ref{fig:temperatureprofile} shows how different mass ranges of \pnucn{} can be produced and peak at different positions in the \oxygen[]-shell.
 
-\begin{figure} 
+\begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/massfraction_example.pdf}
 \caption{Mass fractions without radiogenic contributions at $t=110~\mathrm{sec}$ for the MLT mixing scenario without \carbon[]-shell ingestion.
 \label{fig:temperatureprofile}}
@@ -257,7 +257,7 @@ These reactions are shown as reaction fluxes $f_{ij}$ which are defined as the n
 \end{equation}
 where $X$ is the mass fraction, $A$ is the atomic mass, $\rho$ is the density, $N_A$ is Avogadro's number $\langle \sigma v \rangle_{ij}$ is the reaction rate between species $i$ and $j$.
 
-\begin{figure}
+\begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/dy156_fluxes_zeroingest.pdf}
 \caption{Reaction fluxes $f_{ij}$ for \dysprosium[156] and mass fractions $X_i$ for \dysprosium[156,158] and \dysprosium[157] ($t_{1/2} = 8.1~\hour$) without radiogenic contributions for the MLT scenario with no ingestion after $t=110~\second$. The flow of reactions are written left to right in the legend.
 \label{fig:dy156_fluxes_zeroingest}}
@@ -270,13 +270,13 @@ Entraining \carbon[]-shell material is important for this process, as heavier sp
 Figure \ref{fig:dy156_fluxes_ingest} shows the same as Figure \ref{fig:dy156_fluxes_zeroingest}, but with a \carbon[]-shell ingestion rate of $\natlog{4}{-3}~\Msun\second^{-1}$, the maximum considered in this study.
 Since the initial amount of \dysprosium[156] in the ingested \carbon[]-shell is negligible as shown in Figure \ref{fig:initial_comp}, the merger provides other species that are used to produce \dysprosium[156].
 
-\begin{figure}
+\begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/dy156_fluxes_ingest.pdf}
 \caption{Reaction fluxes $f_{ij}$ for \dysprosium[156] and mass fractions $X_i$ for \dysprosium[156-158] without radiogenic contributions for the MLT scenario with an ingestion rate of $\natlog{4}{-3}~\Msun\second^{-1}$ after $t=110~\second$. The direction of reactions $i \rightarrow j$ are written as left to right in the legend.
 \label{fig:dy156_fluxes_ingest}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/dy156_network_m1.6.pdf}
 \caption{Chart of reactions between isotopes at $m=1.64~\Msun$ [$T=2.28~\Giga\Kelvin$] for the same conditions as Figure \ref{fig:dy156_fluxes_ingest}. Both arrow colour and size indicate $f_{ij}$, and arrows point in the direction of the reaction. 
 \label{fig:dy156_network}}
@@ -302,7 +302,7 @@ Finally, they show why the ingestion of \carbon[]-shell material is necessary fo
 Here we present the impact of a 3D-inspired gradual downturn at the lower boundary and boosting mixing speeds as explained in Section \ref{sec:mixing_methods} with the diffusion coefficients in Figure \ref{fig:all_dconv}. 
 These cases are calculated with an ingestion speed of $\natlog{4}{-3}~\Msun\second^{-1}$ and the results are shown in Figure \ref{fig:impactmixingcases}.
 
-\begin{figure}
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/impact_mixing_cases.pdf}
 \caption{The overproduction compared to initial of the \pnucn{} for the MLT and  3D-inspired mixing scenarios. The average spread in production $\OP_{\max} - \OP_{\min} = 0.96~\dex$. $\OP=0$ is the initial amount.
 \label{fig:impactmixingcases}}
@@ -333,7 +333,7 @@ This demonstrates the importance of the decreasing diffusion profile and increas
 Here we present the impact of entraining \carbon[]-shell material with $\natlog{4}{-5}~\Msun\second^{-1}$, $\natlog{4}{-4}~\Msun\second^{-1}$, and $\natlog{4}{-3}~\Msun\second^{-1}$ as well as no entrainment as explained in Section \ref{sec:mixing_methods}.
 Figure \ref{fig:ingest_MLT} shows the results for the MLT mixing scenario and Figures \ref{fig:ingest_3D}{--}\ref{fig:ingest_50x3D} in Appendix \ref{sec:appendixResultsIngestion} show the results for all downturn scenarios.
 
-\begin{figure} 
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/ingest_MLT.pdf}
 \caption{The overproduction compared to initial of the \pnucn{} for the MLT mixing scenario for no ingestion, $\natlog{4}{-5}~\Msun\second^{-1}$, $\natlog{4}{-4}~\Msun\second^{-1}$, and $\natlog{4}{-3}~\Msun\second^{-1}$. The average spread in production $\OP_{\max} - \OP_{\min} = 1.22~\dex$ excluding the no ingestion case. $\OP=0$ is the initial amount.
 \label{fig:ingest_MLT}}
@@ -362,7 +362,7 @@ This shows that the the ingestion rate matters for the magnitude of the ratio be
 Here we present the impact of dips from convective quenching using the profiles shown in Figure \ref{fig:dgosh_partial} from Section \ref{sec:mixing_methods} which represent GOSH-like feedback and a partial merger.
 The results are shown in Figure \ref{fig:impactmixingcases_GOSH_partial}.
 
-\begin{figure} 
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/impact_mixing_GOSH_partial.pdf}
 \caption{The overproduction compared to initial of the \pnucn{} for the MLT, GOSH-like, and partial merger scenarios with ingestion rate $\natlog{4}{-3}~\Msun\second^{-1}$. The average spread in production $\OP_{\max} - \OP_{\min} = 0.51~\dex$. $\OP=0$ is the initial amount.
 \label{fig:impactmixingcases_GOSH_partial}}
@@ -388,7 +388,7 @@ This demonstrates the importance of both the location and magnitude of the conve
 Here we present the impact of varying our adopted nuclear physics rates for the MLT and 3D-inspired mixing scenarios for an ingestion rate of $\natlog{4}{-3}~\Msun\second^{-1}$.
 The result for the MLT mixing scenario is shown in Figure \ref{fig:nuclearimpact_MLT} and Table \ref{tab:mlt_corr}, and the 3D-inspired mixing scenarios are shown in Figures \ref{fig:nuclearimpact_3D}{--}\ref{fig:nuclearimpact_50x3D} and Tables \ref{tab:mlt_corr}{--}\ref{tab:50x3d_corr} which can be found in Appendix \ref{sec:appendixResultsNuclear}.
 
-\begin{figure}
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/nuclearimpact_MLT.pdf}
 \caption{Histogram showing the spread due to varying $(\gamma,\pt)$, $(\gamma,\nt)$, $(\gamma,\alpha)$ and corresponding capture rates for unstable \nt-deficient isotopes from \selenium[]{--}\polonium[] for the MLT mixing scenario. Colour and size both correspond to the logarthimic binning of Monte Carlo runs. The average spread $\OP_{\max}-\OP_{\min}=0.56~\dex$. $\OP=0$ is the initial amount.
 \label{fig:nuclearimpact_MLT}}
@@ -411,7 +411,7 @@ Additionally, the magnitude of which peak is favoured is also dependent on the m
 Whether a particular reaction rate is correlated with an isotope's final mass fraction along with the strength of the correlation is dependent on the mixing scenario.
 Table \ref{tab:unique_rates} lists the rates unique to single mixing scenario.
 
-\begin{table}
+\begin{table}[!htb]
 \caption{Reactions correlated with the production/destruction of an isotope unique to an individual mixing scenario.
 \label{tab:unique_rates}}
 \centering
@@ -473,7 +473,7 @@ However, the shared correlations are not of equal strength across all mixing sce
 As an example the final mass fraction of \dysprosium[156] is correlated with \erbium[160]$(\gamma,\alpha)$, but in the $50\times$3D-inspired the correlation is much weaker.
 This underscores the possible difficulties in using 1D astrophysical sites to identify important reactions for nuclear physics experiments.
 
-\begin{table}
+\begin{table}[!htb]
 \caption{Reactions correlated with the production/destruction of an isotope shared across all mixing scenarios.
 \label{tab:shared_rates}}
 \centering
@@ -543,7 +543,7 @@ We have demonstrated the convective-reactive nature of the nucleosynthesis in th
 Figure \ref{fig:impact_mixing_cases_bars_all} shows the maximum spread for the \pnucn{} across all mixing scenarios considered in this paper, excluding the case of no merger, with an average spread of 2.45~\dex.
 This shows the significant impact of the macrophysical uncertainties in 1D stellar models on nucleosynthesis, and this highlights the importance of understanding hydrodynamic models better as the shell merger dominates production of the \pnucn{} \citep{robertiGprocessNucleosynthesisCorecollapse2023,robertiGprocessNucleosynthesisCorecollapse2024b}.
 
-\begin{figure} 
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/impact_mixing_cases_bars_all.pdf}
 \caption{Bars representing the maximum and minimum \OP{} across all mixing scenarios, excluding those without \carbon[]-shell ingestion.
 The average spread $\OP_{\max} - \OP_{\min} = 2.45~\dex$. $\OP=0$ is the initial amount.
@@ -593,7 +593,7 @@ In addition to the correlation coefficient, a slope $\zeta$ is provided that bet
 $\zeta$ is the slope of a linear regression between $\log_{10}(X/X_\mathrm{no~variation})$ and $\log_{10}(\mathrm{variation~factor})$ where $X$ is the final decayed mass fraction for Monte Carlo rates and $X_\mathrm{no~variation})$ is the final decayed mass fraction for the default case where all variation factors are equal to $1$.
 
 
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/correlation_example.pdf}
 \caption{Examples of strongly correlated mass fractions with reaction rates for four species for the MLT mixing scenario. The orange dots are the values and the black line is the best linear fit to $\OP_{\mathrm{var}}$ and $\log_{10}(\mathrm{variation~factor})$. The top left plot and bottom right plot show strong correlations for $^{74}\mathrm{Se}$ and $^{196}\mathrm{Hg}$ that directly impact the mass fraction. The top right plot shows a correlation for $^{98}\mathrm{Ru}$ where there is considerable spread in the mass fraction. The bottom left plot shows a correlation for $^{184}\mathrm{Os}$ where the mass fraction is strongly affected only for multiplication factors less than $1$.}
 \label{fig:corr_ex}
@@ -614,19 +614,19 @@ As shown in Section \ref{sec:convreacflow}, the reactions in this shell are not 
 
 Here we provide the results for varying the ingestion rates for the downturn mixing scenarios.
 
-\begin{figure}[!ht] 
+\begin{figure}[!htb] 
 \includegraphics[width=\textwidth]{chapters/2/figures/ingest_3D.pdf}
 \caption{The overproduction compared to initial of the \pnucn{} for the 3D-inspired mixing scenario for no ingestion, $\natlog{4}{-5}~\Msun\second^{-1}$, $\natlog{4}{-4}~\Msun\second^{-1}$, and $\natlog{4}{-3}~\Msun\second^{-1}$. The average spread in production $\OP_{\max} - \OP_{\min} = 1.58~\dex$. $\OP=0$ is the initial amount.
 \label{fig:ingest_3D}}
 \end{figure} 
 
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/ingest_3x3D.pdf}
 \caption{The overproduction compared to initial of the \pnucn{} for the $3\times$3D-inspired mixing scenario for no ingestion, $\natlog{4}{-5}~\Msun\second^{-1}$, $\natlog{4}{-4}~\Msun\second^{-1}$, and $\natlog{4}{-3}~\Msun\second^{-1}$. The average spread in production $\OP_{\max} - \OP_{\min} = 1.64~\dex$ excluding the no ingestion case. $\OP=0$ is the initial amount.
 \label{fig:ingest_3x3D}}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/ingest_10x3D.pdf}
 \caption{The overproduction compared to initial of the \pnucn{} for the $10\times$3D-inspired mixing scenario for no ingestion, $\natlog{4}{-5}~\Msun\second^{-1}$, $\natlog{4}{-4}~\Msun\second^{-1}$, and $\natlog{4}{-3}~\Msun\second^{-1}$. Arrows denote \OP{} out of bounds and the true \OP{} is written above. The average spread in production $\OP_{\max} - \OP_{\min} = 1.78~\dex$ excluding the no ingestion case. $\OP=0$ is the initial amount.
 \label{fig:ingest_10x3D}} 
@@ -638,35 +638,35 @@ Here we provide the results for varying the ingestion rates for the downturn mix
 \label{fig:ingest_50x3D}}
 \end{figure}
 
-\clearpage
-
 \subsection{Results of varying the input nuclear physics}\label{sec:appendixResultsNuclear}
 
 Here we provide the results for varying the input nuclear reactions for the  downturn mixing scenarios and the reaction rate correlation tables for the MLT and downturn scenarios.  
 
-\begin{figure}[!ht] 
+\begin{figure}[!htb] 
 \includegraphics[width=\textwidth]{chapters/2/figures/nuclearimpact_3D.pdf}
 \caption{Histogram showing the spread due to varying $(\gamma,\pt)$, $(\gamma,\nt)$, $(\gamma,\alpha)$ and corresponding capture rates for unstable \nt-deficient isotopes from \selenium[]{--}\polonium[] for the 3D-inspired mixing scenario. Colour and size both correspond to the logarthimic binning of Monte Carlo runs.  The average spread $\OP_{\max}-\OP_{\min}=0.59~\dex$. $\OP=0$ is the initial amount.
 \label{fig:nuclearimpact_3D}}
 \end{figure}
 
-\begin{figure} [!ht]
+\begin{figure} [!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/nuclearimpact_3x3D.pdf}
 \caption{Histogram showing the spread due to varying $(\gamma,\pt)$, $(\gamma,\nt)$, $(\gamma,\alpha)$ and corresponding capture rates for unstable \nt-deficient isotopes from \selenium[]{--}\polonium[] for the $3\times$3D-inspired mixing scenario. Colour and size both correspond to the logarthimic binning of Monte Carlo runs. The average spread $\OP_{\max}-\OP_{\min}=0.69~\dex$. $\OP=0$ is the initial amount.
 \label{fig:nuclearimpact_3x3D}}
 \end{figure}
 
-\begin{figure} 
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/nuclearimpact_10x3D.pdf}
 \caption{Histogram showing the spread due to varying $(\gamma,\pt)$, $(\gamma,\nt)$, $(\gamma,\alpha)$ and corresponding capture rates for unstable \nt-deficient isotopes from \selenium[]{--}\polonium[] for the $10\times$3D-inspired mixing scenario. Colour and size both correspond to the logarthimic binning of Monte Carlo runs. The average spread $\OP_{\max}-\OP_{\min}=0.76~\dex$. $\OP=0$ is the initial amount.
 \label{fig:nuclearimpact_10x3D}}
 \end{figure}
 
-\begin{figure} [!ht]
+\begin{figure} [!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/nuclearimpact_50x3D.pdf}
 \caption{Histogram showing the spread due to varying $(\gamma,\pt)$, $(\gamma,\nt)$, $(\gamma,\alpha)$ and corresponding capture rates for unstable \nt-deficient isotopes from \selenium[]{--}\polonium[] for the $50\times$3D-inspired mixing scenario. Colour and size both correspond to the logarthimic binning of Monte Carlo runs. The average spread $\OP_{\max}-\OP_{\min}=0.79~\dex$. $\OP=0$ is the initial amount.
 \label{fig:nuclearimpact_50x3D}}
 \end{figure}
+
+\clearpage
 
 {\small
 \begin{longtable}{llcc llcc}

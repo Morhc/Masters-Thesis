@@ -26,7 +26,7 @@ The rest of the elements heavier than iron that are not produced in AGB stars or
 When two neutron stars merge, they produce extremely high densities of neutrons and the heaviest stable elements in the universe are formed \citep{gorielyImpactWeakInteractions2015}.
 These astrophysical sites for the production of the elements are summarized in Figure \ref{fig:periodic_table_solar_system}.
 
-\begin{figure}
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/1/figures/Johnson2017.png}
 \caption{\sloppy Taken from \cite{johnsonOriginElementsSolar2017}: Periodic table shaded according to the origin of the elements in the solar system.\label{fig:periodic_table_solar_system}}
 \end{figure}
@@ -39,13 +39,13 @@ Stars with an inital mass greater than $8~\Msun$ undergo a series of nuclear bur
 \]
 These burning phases lead to the structure of the star being separated convective shells with primary burning structures, as seen in Figures \ref{fig:Prialnik_Fig9.19} and \ref{fig:fullkipp}.
 
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/1/figures/Prialnik_Fig9.19.png}
 \caption{Taken from \cite{prialnikIntroductionTheoryStellar2009}: Schematic structure of a supernova progenitor star. The Ne-burning layer is not shown but would be between the C- and O-layers.
 \label{fig:Prialnik_Fig9.19}}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/1/figures/massive_star_kipp.pdf}
 \caption{Kippenhahn diagram of the inner 6 \Msun{} of the $15~\Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018} with labels for the main shell and core burning phases. Grey areas are convective regions, white areas are radiative regions, and blue areas show where nuclear burning occurs.}
 \label{fig:fullkipp}
@@ -67,7 +67,7 @@ These mergers occur when the convective O- and C-shells grow large enough to ove
 This happens when the upper boundary of the O-shell starts to grow and ingest some of the C-shell material.
 As this material enters the O-shell, it begins to burn at the higher temperatures of the O-shell and the compositions of the shells begin to mix.
 
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/1/figures/kippenhahn_merger.pdf}
 \caption{Zoom in view of Figure \ref{fig:fullkipp} showing the merger of the convective O and C-burning shells for the $15~\Msun$ $Z=0.02$ model from \cite{ritterNuGridStellarData2018}. The O-burning shell extends from $1.55{-}1.95~\Msun$. The first convective C-burning shell sits directly on top from $1.96{-}2.11~\Msun$ and additional convective C-burning shells that are ingested are above. The merger onsets at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr} \approx -3.85$ and reaches full extent at $\approx-4$.
 \label{fig:kippenhahn_ritter}}
@@ -87,7 +87,7 @@ The burning phases in stars occur at specific range of temperatures and densitie
 Much of the nuclear burning in the core and shells of stars happens in convective regions which is a region where the stratification of the star is unstable and the material mixes.  
 In this section, the details of the hydrostatic burning phases in massive stars are described in more detail, along with the nuclear reactions that occur during these phases.
 
-\begin{table}[H]
+\begin{table}[!htb]
 \caption{Details about hydrostatic burning phases in massive stars of $13\text{--}25 ~\Msun$ from Table 1 of \cite{woosleyEvolutionExplosionMassive2002}. 
 }
 \label{tab:massivestarsburning}
@@ -98,8 +98,8 @@ In this section, the details of the hydrostatic burning phases in massive stars 
     H-burning & 34.4--38.1 & 6.66--3.81 & (13.5--6.70) $\times 10^7$ \\ \hline
     He-burning & 172--196 & (1.73--0.762) $\times 10^3$  & (2.67--0.839) $\times 10^7$ \\ \hline
     C-burning & 815--841 & (3.13--1.29) $\times 10^5$ & (2.82--0.522) $\times 10^3$ \\ \hline
-    Ne-burning & 1690--1570  & (10.8--3.95) $\times 10^6$ & (0.341--0.891) \\ \hline
-    O-burning & 1890--2090  & (8.19--3.60) $\times 10^6$ & (4.77--0.402) \\ \hline
+    Ne-burning & 1690--1570  & (10.8--3.95) $\times 10^6$ & 0.341--0.891 \\ \hline
+    O-burning & 1890--2090  & (8.19--3.60) $\times 10^6$ & 4.77--0.402 \\ \hline
     Si-burning &  3280--3650 & (4.83--3.01) $\times 10^7$ & (48.8--2.0) $\times 10^{-3}$\\
     \hline
 \end{tabular}
@@ -181,7 +181,7 @@ The faster the neutron captures occur, the more unstable the nucleus becomes and
 Finally, a neutron shell becomes full when a nucleus has $50$, $82$, or $126$ neutrons, which corresponds to Sr/Y/Zr, Ba/La/Ce/Nd, and Pb/Bi.
 When this happens, the $(\nt,\gamma)$ cross section becomes lower, making it more likely that the nucleus will undergo $\beta^-$ decay rather than capture another neutron.
 
-\begin{figure}
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/1/figures/Rapp_2006.png}
 \caption{Taken from \cite{rappSensitivityPProcessNucleosynthesis2006}: Abundance distribution of heavy isotopes that can be entirely ascribed to $s$ process (filled circles), $r$ process (squares), and $p$ process (open circles) nucleosynthesis.}
 \label{fig:Rapp_2006}
@@ -194,13 +194,13 @@ Additional neutrons are briefly produced during He-shell flashes from \neon[22] 
 In massive stars, a weaker form of the \sprn{} occurs during the He- and C-burning phases where neutrons are released by $\neon[22](\alpha,\nt)$ \citep{pignatariWEAKSPROCESSMASSIVE2010,kappelerProcessNuclearPhysics2011}.
 
 The \iprn{} has two sites considered for its production: metal poor AGB stars and rapidly accreting white dwarfs.
-If an AGB star is metal poor, when it undergoes its third thermal pulse it can sustain a longer connection between the H and He rich layers and produce neutron densities of $10^{13}{-}10^{15}\cm^{-3}$ \citep{choplinIntermediateNeutronCapture2021}.
+If an AGB star is metal poor, when it undergoes its third thermal pulse it can sustain a longer connection between the H and He rich layers and produce neutron densities of $10^{13}{-}10^{15}~\cm^{-3}$ \citep{choplinIntermediateNeutronCapture2021}.
 If a white dwarf has a main sequence star binary companion, it can accrete the H-rich material from its companion.
 As hydrogen is accreted onto the white dwarf, it burns and creates a \helium[]-shell.
 When the \helium[]-shell reaches a critical mass, it will undergo a flash and release neutrons by $\carbon[13](\alpha,n)\oxygen[16]$ \citep{denissenkovImpactNgReaction2021}.
 \ipr{} nucleosynthesis has a similar peak abundance pattern to the \sprn{} as it does not travel significantly farther from the valley of stability, the primary difference being which isotope is the most abundant \citep{choplinIntermediateNeutronCapture2021}.
 
-The \rprn{} is thought to occur in the merger of two neutron stars, as when they merge they produce a large number of neutrons at densities greater than $10^{20}\cm^{-3}$.
+The \rprn{} is thought to occur in the merger of two neutron stars, as when they merge they produce a large number of neutrons at densities greater than $10^{20}~\cm^{-3}$.
 The neutron captures in the \rprn{} occur so rapidly that the nuclei produced are extremely unstable and travel far from the valley of stability.
 The \rprn{} abundance distribution shows peaks at $A=80$, $A=130$, and $A=195$. 
 The $A=130$ and $A=195$ peaks come from the fission of \nt-heavy actinides \citep{arnouldRprocessStellarNucleosynthesis2007, gorielyImpactWeakInteractions2015,mumpowerVdelayedFissionRprocess2018}.
@@ -209,12 +209,12 @@ A weaker form of the \rprn{} may occur in the supernova of a massive star which 
 \subsection{\texorpdfstring{$p$}{p}-Nuclei Nucleosynthesis}\label{sec:pnuclei_intro}
 
 The \pnucn{} are a set of 35 \nt-deficient stable isotopes from \selenium[74] to $^{196}\mathrm{Hg}$ that make up a small fraction of the observed solar abundance distribution of their respective elements \citep{rappSensitivityPProcessNucleosynthesis2006,rauscherConstrainingAstrophysicalOrigin2013}.
-These isotopes are typically 10{-}1000 times less abundant than their stable \nt-rich counterparts as seen in Figure \ref{fig:Rapp_2006}.
+These isotopes are typically 10{--}1000 times less abundant than their stable \nt-rich counterparts as seen in Figure \ref{fig:Rapp_2006}.
 \cite{burbidgeSynthesisElementsStars1957} first identified these isotopes as a distinct group, and did not think that the \pnucn{} were produced by the neutron capture processes.
 Instead, they proposed that a series of ($p,\gamma$) reactions in equilibrium with ($\gamma,p$) and ($\gamma,n$) reactions in the H-rich envelope of a Type II supernova in a process they labelled the "$p$ process".
 This is because the \pnucn{} are shielded from neutron captures by stable isotopes, as shown in Figure \ref{fig:Rauscher2013_Fig1}.
 
-\begin{figure}
+\begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/1/figures/Rauscher2013_Fig1.png}
     \caption{Taken from \cite{rauscherConstrainingAstrophysicalOrigin2013}: The $p$ isotopes are shielded from \rprn{} decay chains by stable isotopes and are bypassed in the \sprn{} reaction flow.
     \label{fig:Rauscher2013_Fig1}}
@@ -232,7 +232,7 @@ Some of the varied processes and sites that can produce the \pnucn{} include:
 \end{itemize}
 
 The majority of the \pnucn{} can be produced by the "\gprn{}", a process that was first proposed by \cite{woosleyPprocessesSupernovae1978} who did not think the temperatures of the H-envelope during a supernova were sufficient.
-The \gprn{} is a secondary process that requires pre-existing stable nuclei that undergo photo-disintegrations $(\gamma,\nt)$, $(\gamma,\alpha)$, and $(\gamma,\pt)$ reactions to produce the \pnucn{} at temperatures of $1.5{-}3 \times 10^9 \mathrm{K}$ \citep{rauscherConstrainingAstrophysicalOrigin2013}. 
+The \gprn{} is a secondary process that requires pre-existing stable nuclei that undergo photo-disintegrations $(\gamma,\nt)$, $(\gamma,\alpha)$, and $(\gamma,\pt)$ reactions to produce the \pnucn{} at temperatures of $(1.5{-}3) \times 10^9 \mathrm{K}$ \citep{rauscherConstrainingAstrophysicalOrigin2013}. 
 Because it is a secondary process, the \gprn{} is dependent on the metallicity of the star and seeds available \citep{travaglioTestingRoleSNe2015, battinoHeavyElementsNucleosynthesis2020}.
 
 One site where the \gprn{} could take place is in the explosive O and Ne burning shells of a massive star \citep{woosleyPprocessesSupernovae1978,rayetPprocessRevisited1990,rauscherNucleosynthesisMassiveStars2002}.

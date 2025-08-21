@@ -38,31 +38,31 @@ Under spherical symmetry, all variables depend only on the radial coordinate $r$
 However, it is typical to replace the radial coordinate $r$ with the mass coordinate $m$, defined as the mass enclosed within radius $r$.  
 This transformation allows all structural variables to be expressed as functions of $m$ and $t$:  
 \[
-\rho = \rho(m,t), \quad P = P(m,t), \quad T = T(m,t), \quad L = L(m,t), \quad r = r(m,t).
+\rho = \rho(m,t), \quad P = P(m,t), \quad T = T(m,t), \quad L = L(m,t), \quad r = r(m,t)
 \]
 
 The assumption of hydrostatic equilibrium implies that each mass shell remains static, with pressure gradients exactly balancing gravity at all times.  
 This condition can be expressed as  
 \[
-\frac{\partial P}{\partial r} = -\frac{G m \rho}{r^2}.
+\frac{\partial P}{\partial r} = -\frac{G m \rho}{r^2}
 \]
 Here, $m$ is the mass enclosed within radius $r$, and $G$ is the gravitational constant.  
 
 The radius as a function of $m$ can be derived from mass conservation:  
 \[
-\frac{\partial r}{\partial m} = \frac{1}{4\pi r^2 \rho}.
+\frac{\partial r}{\partial m} = \frac{1}{4\pi r^2 \rho}
 \]
 This equation relates the incremental change in radius to the local density and defines the geometry of the star.
 
 The pressure gradient in terms of $m$ follows from hydrostatic equilibrium and the geometric relation above:  
 \begin{equation}\label{eq:dP_dm}
-\frac{\partial P}{\partial m} = -\frac{G m}{4\pi r^4}.
+\frac{\partial P}{\partial m} = -\frac{G m}{4\pi r^4}
 \end{equation}
 
 The luminosity gradient is derived from energy conservation.  
 The luminosity $L$ changes with $m$ due to local energy generation and changes in internal energy:  
 \begin{equation}
-\frac{\partial L}{\partial m} = \varepsilon_{\mathrm{nuc}} - \varepsilon_\nu - c_P \frac{\partial T}{\partial t} + \frac{\delta}{\rho}\frac{\partial P}{\partial t}.
+\frac{\partial L}{\partial m} = \varepsilon_{\mathrm{nuc}} - \varepsilon_\nu - c_P \frac{\partial T}{\partial t} + \frac{\delta}{\rho}\frac{\partial P}{\partial t}
 \end{equation}
 Here, $\varepsilon_{\mathrm{nuc}}$ is the local nuclear energy generation rate per unit mass, and $\varepsilon_\nu$ is the energy loss rate from neutrinos.  
 The terms involving $c_P$ (specific heat at constant pressure) and $\delta$ account for changes in thermal and mechanical energy content, respectively.
@@ -70,44 +70,44 @@ The terms involving $c_P$ (specific heat at constant pressure) and $\delta$ acco
 The temperature structure is governed by the thermal gradient.  
 The temperature gradient can be written as  
 \[
-\nabla \equiv \frac{d \ln T}{d \ln P}.
+\nabla \equiv \frac{d \ln T}{d \ln P}
 \]
 In mass coordinates, this gives  
 \begin{equation}\label{eq:dT_dm}
-\frac{\partial T}{\partial m} = -\frac{G m T}{4\pi r^4 P} \nabla.
+\frac{\partial T}{\partial m} = -\frac{G m T}{4\pi r^4 P} \nabla
 \end{equation}
 
 The actual value of $\nabla$ depends on the mode of energy transport.  
 In radiative regions, energy is carried by photons diffusing outward.  
 The mean free path of photons is given by  
 \[
-\ell_{\mathrm{mfp}} = \frac{1}{\kappa \rho},
+\ell_{\mathrm{mfp}} = \frac{1}{\kappa \rho}
 \]
 where $\kappa$ is the opacity.  
 Assuming local thermodynamic equilibrium and that $\ell_{\mathrm{mfp}} \ll r$, the radiative flux can be described as a diffusive process:  
 \[
-F = -\frac{4ac}{3}\frac{T^3}{\kappa \rho}\frac{\partial T}{\partial r},
+F = -\frac{4ac}{3}\frac{T^3}{\kappa \rho}\frac{\partial T}{\partial r}
 \]
 where $a$ is the radiation constant and $c$ is the speed of light.  
 Using the relation $L = 4\pi r^2 F$, one finds for the radiative gradient:  
 \begin{equation}\label{eq:nabla_rad}
-\nabla_{\mathrm{rad}} = \frac{3\kappa P L}{16\pi~G~a~c~m~T^4}.
+\nabla_{\mathrm{rad}} = \frac{3\kappa P L}{16\pi~G~a~c~m~T^4}
 \end{equation}
 
 In convective regions, energy is transported by adiabatic motions of fluid elements.  
 If the gas is assumed to behave ideally, then  
 \[
-P = \frac{\mathscr{R}}{\mu}\rho T,
+P = \frac{\mathscr{R}}{\mu}\rho T
 \]
 where $\mathscr{R}$ is the gas constant and $\mu$ is the mean molecular weight.  
 For adiabatic displacements, the pressure and density satisfy  
 \[
-P \propto \rho^\gamma,
+P \propto \rho^\gamma
 \]
 with adiabatic index $\gamma$.  
 This yields  
 \begin{equation}\label{eq:nabla_ad}
-\nabla_{\mathrm{ad}} = 1 - \frac{1}{\gamma}.
+\nabla_{\mathrm{ad}} = 1 - \frac{1}{\gamma}
 \end{equation}
 In general, the actual temperature gradient in convective regions is close to $\nabla_{\mathrm{ad}}$ due to efficient mixing.  
 
@@ -119,18 +119,18 @@ If a region transitions from radiative to convective, the entropy gradient must 
 Finally, the chemical composition in stellar evolution is described by the mass fractions $X_i$, satisfying $\sum_i X_i = 1$.  
 The change in composition due to nuclear burning is given by  
 \begin{equation}\label{eq:dX_dt_burn}
-\frac{d X_i}{dt}\Big|_{\mathrm{burn}} = \sum_j R_{ij},
+\frac{d X_i}{dt}\Big|_{\mathrm{burn}} = \sum_j R_{ij}
 \end{equation}
 where $R_{ij}$ represents net reaction rates involving species $i$ and $j$.  
 Alternatively, in terms of number densities $N_i$, the general form is  
 \[
-\frac{dN_i}{dt} = \sum_{j,k} N_j N_k \langle\sigma v\rangle_{jk} - N_i \sum_j N_j \langle\sigma v\rangle_{ij} + \ldots + \sum_n N_n \lambda_n - N_i \lambda_i.
+\frac{dN_i}{dt} = \sum_{j,k} N_j N_k \langle\sigma v\rangle_{jk} - N_i \sum_j N_j \langle\sigma v\rangle_{ij} + \ldots + \sum_n N_n \lambda_n - N_i \lambda_i
 \]
 Here, $\langle\sigma v\rangle$ denotes thermally averaged reaction rates, and $\lambda$ represents decay rates.
 
 Mixing of chemical species is described as a diffusive process:  
 \begin{equation}\label{eq:dX_dm}
-\frac{d X_i}{dt}\Big|_{\mathrm{mix}} = \frac{\partial}{\partial m}\left[(4\pi r^2 \rho)^2 D \frac{\partial X_i}{\partial m}\right],
+\frac{d X_i}{dt}\Big|_{\mathrm{mix}} = \frac{\partial}{\partial m}\left[(4\pi r^2 \rho)^2 D \frac{\partial X_i}{\partial m}\right]
 \end{equation}
 where $D$ is the effective diffusion coefficient describing convective or other mixing processes.
 \subsection{Mixing Length Theory Approximation}
@@ -168,7 +168,7 @@ The code employs a Newton-Raphson method to simultaneously solve the coupled set
 The coupled equations allow \texttt{MESA} to resolve multi-timescale problems.
 In convective regions, \texttt{MESA} adopts a time-dependent diffusive mixing approximation, solving the mixing (subscript "mix") and nuclear burning (subscript "nuc") processes at the same time with operator coupling:
 \begin{equation}
-\left( \frac{dX_i}{dt} \right)\text{total} = \left( \frac{dX_i}{dt} \right)_\text{nuc} + \left( \frac{dX_i}{dt} \right)_\text{mix},
+\left( \frac{dX_i}{dt} \right)\text{total} = \left( \frac{dX_i}{dt} \right)_\text{nuc} + \left( \frac{dX_i}{dt} \right)_\text{mix}
 \end{equation}
 where $X_i$ is the mass fraction of isotope $i$, and both terms are evaluated and advanced implicitly in a coupled fashion. 
 Species mixing in \texttt{MESA} is taken to be diffusion \citep{paxtonMODULESEXPERIMENTSLAR2010}.
@@ -196,7 +196,7 @@ However, if the timescales of mixing and burning are comparable, the operator-sp
 
 One of the ways that a region of a star can be characterized is through the Dämkohler number \citep{dimotakisTurbulentMixing2005}:
 \begin{equation}
-D_\alpha = \frac{\tau_{\mathrm{mix}}}{\tau_{\mathrm{burn}}}.
+D_\alpha = \frac{\tau_{\mathrm{mix}}}{\tau_{\mathrm{burn}}}a
 \end{equation}
 For the MLT scenario, $\tau_{\mathrm{mix}}$ is given by Equation \ref{eq:t_mlt} and $\tau_{\mathrm{burn}}$ is given by the timescale for nuclear burning, which can be approximated as the inverse of the reaction rates:
 \begin{equation}
@@ -210,7 +210,7 @@ Convective-reactive nucleosynthesis occurs when nuclear burning and convective m
 In these conditions, the mass fractions of species are not well-mixed, and can undergo significant nuclear burning as they are being mixed.
 Reactions are not balanced across the region, and species are able to have different nucleosynthetic pathways depending on the temperature where $D_\alpha=1$.
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{chapters/1/figures/timescales.pdf}
 \caption{Timescales $\tau_{\mathrm{MLT}}$, $\tau_{\mathrm{react}}$, and $\tau_{\mathrm{scale}}$ vs mass for the $15~\Msun$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018} during the merger at $\log_{10}(t-t_{\mathrm{end}})\approx-3.88$. The black line is $\tau_{\mathrm{MLT}}$. The dashed red line is $\tau_{\mathrm{react}}$ for \carbon[12], and the solid red line is $\tau_{\mathrm{scale}}$ for \carbon[12]. Likewise, the green lines are for \oxygen[16], and the purple lines are for \neon[20]. Black circles are provided where $D_\alpha = 1$ for \carbon[12] and \neon[20].}
@@ -225,7 +225,7 @@ They propose a reaction scale height timescale using the generalized principles 
 where $\phi$ is the quantity of interest, in this case $\phi = \rho N_a \langle \sigma v \rangle$.
 The timescale associated with this scale height is given by \citep{herwigCONVECTIVEREACTIVEPROTON2011}:
 \begin{equation}
-    \tau_{\mathrm{scale}} = \frac{H_\phi^2}{D_{\mathrm{MLT}}}.
+    \tau_{\mathrm{scale}} = \frac{H_\phi^2}{D_{\mathrm{MLT}}}
 \end{equation}
 and there would likewise be a Dämkohler number for the scale height where $\tau_{\mathrm{mix}}$ is $\tau_{\mathrm{scale}}$.
 
@@ -237,14 +237,14 @@ This is done by ensuring that there is little change in the final mass fraction 
 As Figures \ref{fig:timeresolution} and \ref{fig:massresolution} show, for the post-processing of the $15~\Msun$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018}, there is very little change in the final mass fractions of the \pnucn{} when the number of timesteps and mass zones are increased.
 The case with 200 mass zones in Figure \ref{fig:massresolution} is strangely quite different from the other cases, but as the mass zones are increased to 400, the final mass fractions do not change significantly.
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{chapters/1/figures/timeresolution.pdf}
 \caption{Time resolution test for the \pnucn{} using a post-processed model of the $15~\Msun$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018} at $110~\second$ of ingestion and 400 mass zones. Percent difference is calculated as the (case $-$ $\Delta t = 0.5~\second$)/($\Delta t = 0.5~\second$). The $\Delta t = 0.5~\second$ case has a percent difference of 0\%.}
 \label{fig:timeresolution}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{chapters/1/figures/massresolution.pdf}
 \caption{Mass resolution test for the \pnucn{} using a post-processed model of the $15~\Msun$ $Z=0.02$ stellar model from \cite{ritterNuGridStellarData2018} at $110~\second$ of ingestion and 400 mass zones. Percent difference is calculated as the (case $-$ 100 zones)/(100 zones). The 100 zones case has a percent difference of 0\%.}
