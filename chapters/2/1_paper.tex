@@ -32,8 +32,6 @@ However, the \gprn{} in massive stars underproduces not only the \molybdenum[] a
 \cite{travaglioTypeIaSupernovae2011} showed that the \gprn{} could produce all \pnucn{} during a Type Ia supernova from the \spr{} material synthesized during stellar evolution without the underproduction of \molybdenum[92,94] and \ruthenium[96,98].
 Furthermore, \cite{travaglioTestingRoleSNe2015} found that modifying the distribution of \spr{} material significantly influenced the production of the \pnucn{}, especially the heaviest ones, and that the lightest three were strongly dependent on the metallicity.
 \cite{battinoHeavyElementsNucleosynthesis2020} additionally found that the H-flashes of rapidly accreting white dwarfs which undergo the \iprn{} could modify the seed distribution to produce \pnucn{} with $96 < A < 196$ by the \gprn{} during the subsequent SNIa.
-%\cite{pignatariProductionProtonrichIsotopes2016} argue that in massive stars the weak \sprn{} can modify the seed distribution to boost production of the \pnucn{} by the \gprn{} during the CCSN.
-%The initial seed distribution is important for the \gprn{} as it sets the initial conditions for photodisintegration and subsequent nucleosynthesis pathways.
 
 Since the first isotopic classification made by \cite{burbidgeSynthesisElementsStars1957}, it has been found that not all \pnucn{} in the solar abundance pattern are produced by a single process.
 \cite{bisterzoSprocessLowmetallicityStars2011} state that \gadolinium[152], \erbium[164], and \tantalum[180] have significant contributions of $70.5\%$, $75.5\%$, and $74.5\%$ from the \sprn{}.
@@ -81,130 +79,127 @@ Finally, Section \ref{sec:discussion_conclusion} summarizes our findings and the
 
 \subsection{Initial Model and Post-Processing Setup}
 
-In this paper, we post-process the massive stellar model $\mzams=15\Msun$,  $Z=0.02$ in the NuGrid data set \citep{ritterNuGridStellarData2018}.
-This 1D stellar model was computed with \MESA{} \citep{paxtonMODULESEXPERIMENTSLAR2010} without rotation. Convective boundary mixing is treated using an exponential-diffusive prescription \citep{freytagHydrodynamicalModelsStellar1996,herwigEvolutionAGBStars2000} with $f=0.022$ at all boundaries except at the base of convective shells where $f=0.005$ until the end of core \helium[] burning, after which $f=0$.
+We post-process the $\mzams=15~\Msun$, $Z=0.02$ massive stellar model from the NuGrid data set \citep{ritterNuGridStellarData2018}.
+The 1D stellar model was computed with \MESA{} \citep{paxtonMODULESEXPERIMENTSLAR2010} without rotation and convective boundary mixing is treated using an exponential-diffusive prescription \citep{freytagHydrodynamicalModelsStellar1996,herwigEvolutionAGBStars2000} with an overshoot parameter of $f=0.022$ at all boundaries except at the base of convective shells where $f=0.005$ until the end of core \helium[] burning, after which $f=0$.
 This model has a merger of its convective \oxygen[] and \carbon[]-burning shells late in its evolution as shown in Figure \ref{fig:kippenhahn}.
 During this merger, the \carbon[]-burning ashes and stable isotopic material are ingested into the much hotter \oxygen[]-burning shell.
 
 \begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/Kippenhahn_Ritter+2018.pdf}
-\caption{Kippenhahn diagram showing the merger of the convective O and C-burning shells. The O-burning shell extends from $1.55 M_\odot$ to $1.95 M_\odot$. The first convective C-burning shell ingested sits directly on top from $1.96 M_\odot$ to $2.11 M_\odot$ and the other convective C-burning shells are above. A red guideline has been provided to mark the thin radiative layer separating the O- and C-shells. The merger onsets at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr} \approx -3.85$ and reaches full extent at $\approx-4$. A black triangle marks the location where the initial \pnucn{} are taken from and a white star marks the location where the ingested \carbon[]-shell material is taken from.
+\caption{Kippenhahn diagram showing the merger of the convective O and \carbon[]burning shells. The \oxygen[]burning shell extends from $1.55~\Msun$ to $1.95~\Msun$, and the first ingested \carbon[]burning shell from $1.96~\Msun$ to $2.11~\Msun$. A red guideline has been provided to mark the thin radiative layer separating the \oxygen[] and \carbon[]-shell. Other convective regions are also \carbon[]burning shells. The merger onsets at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr} \approx -3.85$ and reaches full extent at $\approx-4$. A black triangle marks where the initial composition is taken from and a white star marks the location where the ingested \carbon[]-shell material is taken from for this study.
 \label{fig:kippenhahn}}
 \end{figure}
 
 The detailed nucleosynthesis is calculated with the 1D multi-zone post-processing code \mppnp{} \citep{pignatariNuGridStellarData2016}.
 \mppnp{} is a multi-zone post-processing code that uses stellar structure calculated by stellar evolution codes to calculate the full nucleosynthesis of a stellar model.
-\mppnp{} treats mixing, nuclear burning, and ingestion separately rather than the coupled treatment by a code like \MESA{} \cite{paxtonMODULESEXPERIMENTSLAR2010}. 
+\mppnp{} treats mixing, nuclear burning, and ingestion separately rather than the coupled treatment by a code like \MESA{} \citep{paxtonMODULESEXPERIMENTSLAR2010}. 
 A convergence test was performed by decreasing the timesteps and increasing the number of mass zones.
-It found that a timestep of $\Delta t = 0.01~\second$ and $400$ equidistant mass zones with $4$ additional zones at the bottom of the O-shell were sufficient to resolve both the burning and mixing timescales.
-Calculations were initially done with a $5234$ isotope network, but many of these were unnecessary as they were \nt-rich and not needed for the calculations. 
-All necessary isotopes were included, which amounted to the network of 1470 species, focusing on the \nt-deficient isotopes allowing for faster calculations.
-The network adopted did not include isomeric states, so the nucleosynthesis of $^{180\mathrm{m}}\mathrm{Ta}$ is not calculated although we calculate the ground state $^{180}\mathrm{Ta}$.
-A single simulation costed approximately $8$ hours on $40$ cores, for a total of $180$ core years for this paper.
+It found that a timestep of $\Delta t = 0.01~\second$ and $400$ equidistant mass zones with $4$ additional zones at the bottom of the \oxygen[]-shell were sufficient to resolve both the burning and mixing timescales with a decreasing mixing efficiency profile.
+Calculations initially used a $5234$ isotope network, but many \nt-rich species were unnecessary.  
+A network of only the necessary $1470$ isotopes was adopted, focusing on the  \nt-deficient isotopes, for faster calculations.  
+Isomeric states were not included in this network so \tantalum[180m] is not calculated. 
+A single simulation costs approximately $8$ hours on $40$ cores, for a total of $274$ core years for this work.
 
-The \mppnp{} code calculates both the undecayed mass fraction as a function of mass, and mass-averaged radiogenic decay contribution to the isotopes at a temperature of $T=100~\mathrm{MK}$ which does not include explosive contributions.
+The \mppnp{} code calculates both the undecayed mass fraction as a function of mass and the mass-averaged contribubtions from radiogenic decay at a temperature of $T=100~\mathrm{MK}$ without explosive contributions.
 The mass fraction $X_i$ of species $i$ is defined as the ratio of the mass of that species to the total mass of the stellar material, such that $\sum_i X_i = 1$ for all isotopes.
-To analyze the macrophysical impact during the merger on nucleosynthesis, the isotopic mass fractions are taken right before onset of merger at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr}=-3.845$ from $m=1.8~\Msun$.
-The ingested \carbon[]-shell material is taken from the same time from $m=2.0~\Msun$.
-The results are presented in terms of an overproduction \OP{} compared to the initial amount given by the equation
-\begin{equation}\label{eq:OP}
-    \OP = \log_{10}\Biggl(\frac{X_{f}}{X_{i}}\Biggr)
-\end{equation}
-where $X_{f}$ is the final mass-averaged decayed mass fraction of a species in the O-shell and $X_{i}$ is the inital mass fraction.
-The average overproduction factor is calculated as the arithmetic mean of individual OP values:
-\begin{equation}
-    \langle \OP \rangle = \frac{1}{N}\sum_i^{N} \OP_i
-\end{equation}
-where $N$ is the number of \pnucn{} considered.
 
-Earlier in the evolution of this stellar model, it produces the \pnucn{} by the \gprn{} in the first convective \oxygen[]-shell which extends from $1.55{-}1.95~\Msun$ during model numbers $6200${--}$7200$.
-The initial mass fractions of the \pnucn{} are set here and are not modified during subsequent radiative \carbon[]- or \oxygen[]-burning. 
-The mass fractions used in this study are shown in Figure \ref{fig:initial_comp}.
+To analyze the impact of macrophysical uncertainties and varying the nuclear reaction rates during the merger, isotopic mass fractions are taken just before the onset of merger at $\log_{10}(t - t_{\mathrm{end}})/\mathrm{yr} = -3.845$ from $m = 1.8~\Msun$, and the ingested \carbon[]-shell material is taken from $m = 2.0~\Msun$ at the same time, as shown in Figures~\ref{fig:kippenhahn} and~\ref{fig:initial_comp}.  
+Earlier in the model, there is some \pnuc{} production in the first convective \oxygen[]-shell, which extends from $1.55~\Msun$ to $1.95~\Msun$ during $\log_{10}(t - t_{\mathrm{end}})/\mathrm{yr} = -1.76$ to $-2.16$.  
+These nuclei are not processed by any further burning before the merger.  
 
 \begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/initial_composition.pdf}
-\caption{Logarithmic ratio to solar value for the \pnucn{} from $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr}=-3.856$ used for initial \oxygen[]-shell composition and ingested \carbon[]-shell material. The solar values are taken from \cite{loddersAbundancesElementsSolar2009} and the grey line at zero is equal to the solar value.  Markers are the same as those used in Figure \ref{fig:kippenhahn}.
+\caption{Logarithmic ratio to solar value for the \pnucn{} from $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr}=-3.856$ used for initial \oxygen[]-shell composition and ingested \carbon[]-shell material. The solar values are taken from \cite{loddersAbundancesElementsSolar2009} and the grey line at zero is equal to the solar value. Markers are the same as Figure \ref{fig:kippenhahn}.
 \label{fig:initial_comp}}
 \end{figure}
 
-The stellar structure is taken from the onset of the merger at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{\yr}=-3.856$.
-To be able to clearly analyze the impact of mixing alone, we have kept the stellar structure constant.
-The stellar structure is not static, but the change to the temperature, density, and entropy between these timesteps is less than 5\%.
-The merger at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr}=-3.856$ is not fully developed, but \MESA{} cannot accurately model the merger in 1D.
-Therefore, the convective velocity profile is smoothed at the top as if the \carbon[]-shell is merged with the \oxygen[]-shell as seen in Figure \ref{fig:dmlt_forced}.
+The results are presented in terms of an overproduction \OP{} compared to the initial composition:
+\begin{equation}\label{eq:OP}
+    \OP = \log_{10}\Biggl(\frac{X_{f}}{X_{i}}\Biggr)
+\end{equation}
+where $X_{f}$ is the final mass-averaged decayed mass fraction of a species in the \oxygen[]-shell and $X_{i}$ is the inital mass fraction.
+The average overproduction factor is calculated as the arithmetic mean of \OP{}:
+\begin{equation}
+    \langle \OP \rangle = \frac{1}{N}\sum_i^{N} \OP_i
+\end{equation}
+where $N$ is the number of \pnucn{}.
+
+The stellar structure used is from the onset of the merger at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{\yr}=-3.856$ and to clearly analyze the impact of mixing alone, the stellar structure is kept constant.
+Although the structure is not static in the model, the change to the temperature, density, and entropy between the initial composition and where we take the structure from is less than 5\% during those $110~\second$.
+The merger at $\log_{10}(t-t_{\mathrm{end}}) /\mathrm{yr}=-3.856$ is not fully developed, but MLT cannot accurately describe this region as the mixing length $\ell$ is too large \citep{renziniEmbarrassmentsCurrentTreatments1987, arnett3DSimulationsMLT2019}.
+Because of this, the mixing efficiency profile is smoothed at the top as shown in Figure \ref{fig:dmlt_forced} to simulate a full merger.
 
 \begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/Dmlt_forced.pdf}
-\caption{The diffusion coefficient profile and mixing length at model number 9200 for the $M_{\mathrm{ZAMS}}=15~M_\odot$, $Z=0.02$ model. The light blue line is $D$ from MESA, the orange line the smoothed $D$ used for the MLT mixing scenario in this paper, and the grey line is the mixing length. Black dashed lines mark the shell boundaries for this paper.
+\caption{The diffusion coefficient profile and mixing length at model number 9200 for the $M_{\mathrm{ZAMS}}=15~\Msun$, $Z=0.02$ model. The light blue line is $D$ from MESA, the orange line the smoothed $D$ used for the MLT mixing scenario in this paper, and the grey line is the mixing length. Black dashed lines mark the shell boundaries for this paper.
 \label{fig:dmlt_forced}}
 \end{figure}
 
 \subsection{1D implementation of 3D macrophysics}\label{sec:mixing_methods}
 
-MLT predictions of the radial mixing profiles deviate from the more realistic predictions from 3D simulations.
-3D convective \oxygen[]-burning simulations show that the radial convective velocity profile gradually decreases as it approaches the boundary of the \oxygen[]-shell rather than MLT predictions of a stiff boundary \citep{meakinTurbulentConvectionStellar2007,jonesIdealizedHydrodynamicSimulations2017}.
-The downturn can be seen both at the bottom of a shell \citep{herwigHydrodynamicSimulationsHe2006, meakinTurbulentConvectionStellar2007} or at the top \citep{jonesIdealizedHydrodynamicSimulations2017}.
-The decrease in radial velocity happens because mixing in these simulations is driven by convective plumes rather than the blobs of MLT.
-In the middle of a convective region, plumes have strong radial velocities and travel towards the convective boundary, but as they reach the boundary, their radial velocity component diminishes while the other components of the velocity increase.
-This is different from MLT which predicts a stiff boundary where velocities drop to zero at the boundary.
-Using Equation 4 from \cite{jonesIdealizedHydrodynamicSimulations2017}, the downturn in the radial mixing profile can be approximated in 1D.
+MLT predictions of the radial mixing efficiency profile deviate from the more realistic predictions from 3D simulations.
+3D convective \oxygen[]-burning simulations show that the radial convective velocity profile gradually decreases near the shell boundary, in contrast to MLT predictions of a stiff boundary \citep{meakinTurbulentConvectionStellar2007,jonesIdealizedHydrodynamicSimulations2017}.  
+This downturn is seen at both the bottom and top of convective shells \citep{herwigHydrodynamicSimulationsHe2006,meakinTurbulentConvectionStellar2007,jonesIdealizedHydrodynamicSimulations2017}.  
+The decrease occurs because mixing is driven by convective plumes in these simulations, rather than the idealized convective blobs in MLT.  
+Plumes exhibit strong radial velocities in the interior of the convective region but lose their radial component as they reach the boundary, while non-radial velocity components increase.  
+This behavior contrasts with MLT, which predicts a sharp drop to zero velocity at the boundary.  
+Using Equation 4 from \cite{jonesIdealizedHydrodynamicSimulations2017}, the downturn to the mixing efficiency profile can be implemented in 1D:
 \begin{equation}
     D_{\mathrm{3D\text{-} insp.}} = \frac{1}{3} v_{\mathrm{MLT}}\times\min{(\ell,r-r_0)}
 \end{equation}
 where $\ell$ is the mixing length, $r_0$ is the Schwarzschild boundary at the bottom of the \oxygen[]-shell, and an additional factor of $1/3$ is applied to match the MLT diffusion coefficient at the top of the shell.
 
 MLT also underpredicts the strength of the convective velocities in the \oxygen[]-shell.
-\cite{jonesIdealizedHydrodynamicSimulations2017} found that convective velocities are stronger by a factor of $\sim 30$ when compared to the MLT predictions. 
-\cite{andrassy3DHydrodynamicSimulations2020} in their 3D C-shell entrainment simulations that their convective velocities could be up to $\sim 5$ times stronger than \cite{jonesIdealizedHydrodynamicSimulations2017} depending on the luminosity from carbon and oxygen burning.
-It is possible the velocities could be higher as these simulations do not include feedback from a nuclear network and treatment of radiation pressure \citep{jonesIdealizedHydrodynamicSimulations2017, andrassy3DHydrodynamicSimulations2020}.
-\cite{rizzutiShellMergersLate2024a} find that velocities are boosted by a factor of $\sim 10$ due to the feedback from new reactions with the ingested material in their 3D O-C shell mergers.
-In our 1D models, we implement this by applying a boost factor of $3\times$, $10\times$, and $50\times$ to the convective velocities as shown in Figure \ref{fig:all_dconv}.
+\cite{jonesIdealizedHydrodynamicSimulations2017} found that convective velocities are stronger by a factor of $\sim 30$ compared to MLT. 
+\cite{andrassy3DHydrodynamicSimulations2020} in their 3D \carbon[]-shell entrainment simulations \textbf{show} that their velocities could be up to $\sim 5$ times stronger than \cite{jonesIdealizedHydrodynamicSimulations2017} depending on the luminosity of \carbon[]- and \oxygen[]-burning.
+It is possible the velocities could be even higher as these simulations do not include feedback from a nuclear network or treatment of radiation pressure \citep{jonesIdealizedHydrodynamicSimulations2017, andrassy3DHydrodynamicSimulations2020}.
+\cite{rizzutiShellMergersLate2024a} finds that velocities are boosted by a factor of $\sim 10$ due to the feedback from new reactions with the ingested material in their 3D \oxygen[]-\carbon[] shell mergers.
+We implement this by applying a boost factor of $3\times$, $10\times$, and $50\times$ to the convective velocities as shown in Figure \ref{fig:all_dconv}.
 
 \begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/Dmlt_downturn.pdf}
-\caption{The diffusion coefficient profiles for the MLT and 3D-inspired gradual downturn scenarios. The dashed orange line is the $D_{\mathrm{MLT}}$ profile, and the dashed light grey line, dotted light blue line, solid grey line, and dashed dark blue line are the downturn profiles with boost factors of $1$, $3$, $10$, and $50$ respectively. 
+\caption{The diffusion coefficient profiles for the MLT and 3D-inspired gradual downturn scenarios. The dashed orange line is $D_{\mathrm{MLT}}$ and the dashed light grey line, dotted light blue line, solid grey line, and dashed dark blue line are the downturn profiles with boost factors of $1$, $3$, $10$, and $50$ respectively. 
 \label{fig:all_dconv}}
 \end{figure}
 
-The entrainment of \carbon[]-shell material could be different during the merger depending on the strength of burning \citep{jonesIdealizedHydrodynamicSimulations2017, andrassy3DHydrodynamicSimulations2020}.
-To investigate the impact of this, a range of rates are considered: $\natlog{4}{-5}~\Msun\second^{-1}$, $\natlog{4}{-4}~\Msun\second^{-1}$, and $\natlog{4}{-3}~\Msun\second^{-1}$, as well as a scenario with no entrainment.
-The mass of the \carbon[]-shell is 0.8~\Msun{} in the model considered, so for 110~\second{} of merging the maximum possible entrainment rate would be $\natlog{7}{-3}~\Msun\second^{-1}$ similar to \cite{ritterConvectivereactiveNucleosynthesisSc2018}.
+The entrainment rate of \carbon[]-shell material could be lower during the merger depending on the strength of burning \citep{jonesIdealizedHydrodynamicSimulations2017, andrassy3DHydrodynamicSimulations2020}.
+To investigate the impact of this, a range of rates are considered: $\natlog{4}{-5}~\Msun\second^{-1}$, $\natlog{4}{-4}~\Msun\second^{-1}$, $\natlog{4}{-3}~\Msun\second^{-1}$, and a scenario with no entrainment.
+The maximum mass of the convective \carbon[]-shell in our model is $0.8~\Msun$, so for $110~\second$ of merging the maximum possible entrainment rate would be $\natlog{7}{-3}~\Msun\second^{-1}$ similar to \cite{ritterConvectivereactiveNucleosynthesisSc2018}.
 
-3D simulations also show the convective profile can be quenched as material is ingested because of entropy entrainment \citep{millerbertolamiNewEvolutionaryCalculations2006, herwigCONVECTIVEREACTIVEPROTON2011,herwigGLOBALNONSPHERICALOSCILLATIONS2014}.
-During \hydrogen[]-ingestion into a \helium[]-shell, the energy feedback from the ingested material could cause a split in the convective profile with very small amount of entrainment \citep{herwigCONVECTIVEREACTIVEPROTON2011}.
-\cite{herwigGLOBALNONSPHERICALOSCILLATIONS2014} likewise found this effect could cause a drop in the radial velocity profile and reduce the entrainment of species and labelled the event Global Oscillation of Shell Hydrogen-Ingestion (GOSH).
-Similar effects during C-shell entrainment are possible, as \cite{andrassy3DHydrodynamicSimulations2020} found that strong oscillatory modes like GOSHs were present in their 3D simulations.
+1D and 3D simulations show that the convective profile can be quenched as material is ingested as entropy changes due to entrainment and burning \citep{ibenThermalPulsesPcapture1975, sackmannCarbonEruptiveStars1974, herwigFormationHydrogendeficientPostAGB1999, millerbertolamiNewEvolutionaryCalculations2006, herwigCONVECTIVEREACTIVEPROTON2011,herwigGLOBALNONSPHERICALOSCILLATIONS2014}.
+As an example, during \hydrogen[]-ingestion into a \helium[]-shell, the energy feedback from the ingested material could cause a split in the convective profile with very small amount of entrainment \citep{herwigCONVECTIVEREACTIVEPROTON2011}.
+\cite{herwigGLOBALNONSPHERICALOSCILLATIONS2014} found this effect could decrease the radial velocity profile and reduce the entrainment of species and labelled the event Global Oscillation of Shell Hydrogen-Ingestion (GOSH).
+Similar effects during \carbon[]-shell entrainment could be possible, as \cite{andrassy3DHydrodynamicSimulations2020} found that strong oscillatory modes like GOSHs were present in their 3D simulations.
 Energy feedback events like this could explain supernova observations \citep{smithPREPARINGEXPLOSIONHYDRODYNAMIC2014}.
 There is no clear prescription for how to implement this effect into 1D models, but it is clear that there would be decreased mixing because of a split.
-To investigate a possible convective quenching, we consider a GOSH-like event and a partial merger, where a dip (but not full split) occurs in the MLT diffusion profile:
+To investigate a possible convective quenching, we consider a GOSH-like event and a partial merger, where a Gaussian dip (but not full split) occurs in the MLT diffusion profile:
 \begin{equation}
 D_{\mathrm{quench}}=D_{\mathrm{MLT}}-(D_{\mathrm{MLT}}-c)\times\exp\Biggl[-\frac{(r-a)^2}{w^2}\Biggr]
 \end{equation}
-where $c$ is the extent, $w$ is the width, and $a$ is the center of the dip using a simple Gaussian.
-The GOSH-like convective splitting occurs at the location where $D_\alpha=1$ for a significant burning event \citep{herwigCONVECTIVEREACTIVEPROTON2011}. 
+where $c$ is the maximum extent of the dip, $w$ is the width, and $a$ is the center of the dip.
+The GOSH-like convective splitting could occur at the location where $D_\alpha=1$ for a significant burning event \citep{herwigCONVECTIVEREACTIVEPROTON2011}. 
 We centre this event at $a=4.95~\Mm$ at a location of probable energetic feedback could occur.
 The \oxygen[]-shell could partially merge with the \carbon[]-shell due to feedback effects, so we consider a partial merger at $a=7.5~\Mm$ where the unmerged MLT profile has a dip as seen in Figure \ref{fig:dmlt_forced}.
-A width of $w=0.25~\Mm$ is used for both scenarios, which is approximately the distance between the top of the O-shell and the convective bump above it in Figure \ref{fig:dmlt_forced}.
-For both scenarios we consider a weaker dip of $c=10^{14}~\cm^2\second^{-1}$ and a stronger dip of $c=10^{13}~\cm^2\second^{-1}$ to investigate the impact on nucleosynthesis.
+A width of $w=0.25~\Mm$ is used for both scenarios, which is approximately the distance between the top of the \oxygen[]-shell and the convective bump above it in Figure \ref{fig:dmlt_forced}.
+For both scenarios we consider a weaker dip to $c=10^{14}~\cm^2\second^{-1}$ and a stronger dip to $c=10^{13}~\cm^2\second^{-1}$ to investigate the impact on nucleosynthesis.
 The profiles for the GOSH-like and partial merger scenarios are shown in Figure \ref{fig:dgosh_partial}.
 
 \begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/Dmlt_partial_gosh.pdf}
-\caption{The quenched mixing scenario convective profiles. The dashed light orange line and dotted light grey line are the GOSH-like profiles with a dip centred at $r=4.95~\Mm$. The solid red line and dashed dark grey line are the partial merger profiles with a dip centred $r=7.5~\Mm$. The MLT profile is omitted for clarity. 
+\caption{The quenched mixing scenario convective profiles. The dashed light orange line and dotted light grey line are the GOSH-like profiles with a dip centred at $r=4.95~\Mm$. The solid red line and dashed dark grey line are the partial merger profiles with a dip centred $r=7.5~\Mm$.
 \label{fig:dgosh_partial}}
 \end{figure}
 
 \subsection{Determining impact of varying nuclear reactions}\label{sec:nuclear_methods}
 
-Many unstable \nt-deficient isotopes from \selenium[] to \polonium[] have not been measured experimentally and are determined by theoretical models, and the uncertainties of unmeasured reactions reactions for unstable isotopes are much greater than for stable isotopes.
-To determine the impact of nuclear physics for the \gprn{}, we vary our adopted $(\gamma, \alpha)$, $(\gamma, p)$, and $(\gamma, n)$ photo-disintegration rates used by the NuGrid database \citep{pignatariNuGridStellarData2016} for the unstable \nt-deficient isotopes by a random factor uniformly selected between 0.1 to 10 by a Monte Carlo method for 1000 cases.
-This applies the same approach used for $(\nt,\gamma)$ rates for the \iprn{} developed by \cite{denissenkovImpactReactionRate2018} and \cite{denissenkovImpactNgReaction2021}.
-This was done for the MLT and downturn mixing scenarios with an ingestion rate of $\natlog{4}{-3}~\Msun\second^{-1}$.
+Many of the reactions involving the unstable \nt-deficient isotopes from \selenium[] to \polonium[] have not been measured experimentally and are determined by theoretical models, and the uncertainties of unmeasured reactions for unstable isotopes are much greater than for stable isotopes.
+To determine the impact of nuclear physics for the \gprn{}, we vary our $(\gamma, \alpha)$, $(\gamma, p)$, and $(\gamma, n)$ photo-disintegration rates used by the NuGrid code \citep{pignatariNuGridStellarData2016} for all unstable \nt-deficient isotopes from \selenium[] to \polonium[] by a random factor uniformly selected between 0.1 to 10 by a Monte Carlo method for 1000 cases.
+This applies the same approach used for $(\nt,\gamma)$ rates during the \iprn{} developed by \cite{denissenkovImpactReactionRate2018} and \cite{denissenkovImpactNgReaction2021}.
+This was done for the MLT and downturn mixing scenarios in Figure \ref{fig:all_dconv} with an ingestion rate of $\natlog{4}{-3}~\Msun\second^{-1}$.
 This approach also allows for the identification of reaction rates that are relevant for the production of an isotope using correlations.
-The Pearson coefficient describes correlations between $X/X_{\mathrm{no~variation}}$ and the variation factors where $X$ is the final mass-averaged and decayed mass fraction of a Monte Carlo case and $X_{\mathrm{no~variation}}$ is the final decayed mass fraction for the default case where all varation factors are equal to $1$.
-All correlations $|r_\mathrm{P}| \geq 0.15$ are reported in this study.
-In addition to the Pearson coefficient, a logarithmic slope $\zeta$ is also reported to determine the importance of a reaction on the final mass fraction of an isotope.
-The importance of considering $\zeta$ as well as additional caveats for the correlated rates are discussed in Appendix \ref{sec:appendixNuclearRates}.
+The Pearson coefficient describes correlations between $X/X_{\mathrm{no~variation}}$ and the variation factors where $X$ is the final mass-averaged and decayed mass fraction for a Monte Carlo case and $X_{\mathrm{no~variation}}$ is the same for the default case where all variation factors are $1$.
+All correlations with $|r_\mathrm{P}| \geq 0.15$ are reported in this study.
+In addition to the Pearson coefficient, a logarithmic slope $\zeta$ is also reported to determine the importance of a reaction on the final mass fraction of an isotope, which is discussed along with caveats about correlation rates in Appendix \ref{sec:appendixNuclearRates}.
 
 \section{Results} \label{sec:results}
 
@@ -222,9 +217,9 @@ Scenario & No Ingestion & $\natlog{4}{-5}~\Msun\second^{-1}$ & $\natlog{4}{-4}~\
 \hline
 MLT                & $-0.11$ & $1.06$ & $1.92$ & $2.24$ & 0.56 \\
 $1\times$ Downturn & $0.05$  & $1.12$ & $1.98$ & $2.58$ & 0.59 \\
-$3\times$ Downturn & $-0.23$ & $1.28$ & $2.18$ & $2.83$ & 0.69 \\
-$10\times$ Downturn& $-1.23$ & $1.18$ & $2.10$ & $2.89$ & 0.76 \\
-$50\times$ Downturn& $-5.47$ & $0.88$ & $1.81$ & $2.72$ & 0.79 \\
+$3\times$ Downturn & $-0.23$ & $1.28$ & $2.18$ & $2.83$ & $0.69$ \\
+$10\times$ Downturn& $-1.23$ & $1.18$ & $2.10$ & $2.89$ & $0.76$ \\
+$50\times$ Downturn& $-5.47$ & $0.88$ & $1.81$ & $2.72$ & $0.79$ \\
 GOSH-like          & \textendash & \textendash & \textendash & $2.06$ & \textendash \\
 Stronger GOSH-like & \textendash & \textendash & \textendash & $1.78$ & \textendash \\
 Partial Merger     & \textendash & \textendash & \textendash & $2.13$ & \textendash \\
@@ -236,9 +231,9 @@ Stronger Partial Merger & \textendash & \textendash & \textendash & $1.91$ & \te
 \subsection{Convective-reactive production of the \texorpdfstring{\pnucn}{p nuclei}} \label{sec:convreacflow}
 
 Convective-reactive nucleosynthesis is characterized by a region where the timescales for advection and nuclear reactions are similar.
-In the \gprn{}, heavier species are produced at cooler temperatures of $1.5{-}2~\Giga\Kelvin$ and are destroyed at higher temperatures, whereas lighter species are produced in temperatures up to $3.5~\Giga\Kelvin$ \citep{rauscherConstrainingAstrophysicalOrigin2013}.
-Whether an isotope undergoes $(\gamma,\nt)$ and $(\nt,\gamma)$ reactions or contributes to the production of lighter \pnucn{} by $(\gamma,\pt)$ and $(\gamma,\alpha)$ reactions depends on the temperature at that position. 
-The convective-reactive environment of the \oxygen[]-shell allows for the production of both light and heavy \pnucn{} because the shell is not well-mixed, and therefore species are produced at their ideal temperatures.
+In the \gprn{}, heavier species are produced at cooler temperatures of $1.5${--}$2~\Giga\Kelvin$ and are destroyed at higher temperatures, and lighter species are produced in temperatures up to $3.5~\Giga\Kelvin$ \citep{rauscherConstrainingAstrophysicalOrigin2013}.
+Whether an isotope undergoes $(\gamma,\nt)$ and $(\nt,\gamma)$ reactions or contributes to the production of lighter \pnucn{} by $(\gamma,\pt)$ and $(\gamma,\alpha)$ reactions depends on the temperature at that position.
+The convective-reactive environment of the \oxygen[]-shell allows for the production of both light and heavy \pnucn{} because the shell is not well-mixed, and therefore isotopes can be produced at their ideal temperatures while still contributing to lighter species.
 Figure \ref{fig:temperatureprofile} shows how different mass ranges of \pnucn{} can be produced and peak at different positions in the \oxygen[]-shell.
 
 \begin{figure}[!htb]
@@ -255,11 +250,11 @@ These reactions are shown as reaction fluxes $f_{ij}$ which are defined as the n
 \begin{equation}
     f_{ij} = \frac{X_i X_j}{A_i A_j} \rho N_A \Biggl(\langle \sigma v \rangle_{ij} - \langle \sigma v \rangle_{ji}\Biggr)
 \end{equation}
-where $X$ is the mass fraction, $A$ is the atomic mass, $\rho$ is the density, $N_A$ is Avogadro's number $\langle \sigma v \rangle_{ij}$ is the reaction rate between species $i$ and $j$.
+where $X$ is the mass fraction, $A$ is the atomic mass, $\rho$ is the density, $N_A$ is Avogadro's number, and $\langle \sigma v \rangle_{ij}$ is the reaction rate between species $i$ and $j$.
 
 \begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/dy156_fluxes_zeroingest.pdf}
-\caption{Reaction fluxes $f_{ij}$ for \dysprosium[156] and mass fractions $X_i$ for \dysprosium[156,158] and \dysprosium[157] ($t_{1/2} = 8.1~\hour$) without radiogenic contributions for the MLT scenario with no ingestion after $t=110~\second$. The flow of reactions are written left to right in the legend.
+\caption{Reaction fluxes $f_{ij}$ for \dysprosium[156] and mass fractions $X_i$ for \dysprosium[156,158] and \dysprosium[157] ($t_{1/2} = 8.1~\hour$) without radiogenic contributions for the MLT scenario with no ingestion after $t=110~\second$. The direction of a reaction is written left to right in the legend.
 \label{fig:dy156_fluxes_zeroingest}}
 \end{figure}
 
@@ -268,20 +263,19 @@ It is also evident that the mass fraction is not well-mixed as the gradient of t
 
 Entraining \carbon[]-shell material is important for this process, as heavier species can be gradually depleted by $(\gamma,\alpha)$ and $(\gamma,\pt)$ reactions.
 Figure \ref{fig:dy156_fluxes_ingest} shows the same as Figure \ref{fig:dy156_fluxes_zeroingest}, but with a \carbon[]-shell ingestion rate of $\natlog{4}{-3}~\Msun\second^{-1}$, the maximum considered in this study.
-Since the initial amount of \dysprosium[156] in the ingested \carbon[]-shell is negligible as shown in Figure \ref{fig:initial_comp}, the merger provides other species that are used to produce \dysprosium[156].
+Since the initial amount of \dysprosium[156] in the ingested \carbon[]-shell is negligible as shown in Figure \ref{fig:initial_comp}, the role of the merger is to provide the species that produce \dysprosium[156] like the stable \dysprosium[] isotopes.
 
 \begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/dy156_fluxes_ingest.pdf}
-\caption{Reaction fluxes $f_{ij}$ for \dysprosium[156] and mass fractions $X_i$ for \dysprosium[156-158] without radiogenic contributions for the MLT scenario with an ingestion rate of $\natlog{4}{-3}~\Msun\second^{-1}$ after $t=110~\second$. The direction of reactions $i \rightarrow j$ are written as left to right in the legend.
+\caption{Reaction fluxes $f_{ij}$ for \dysprosium[156] and mass fractions $X_i$ for \dysprosium[156-158] without radiogenic contributions for the MLT scenario with an ingestion rate of $\natlog{4}{-3}~\Msun\second^{-1}$ after $t=110~\second$. The direction of a reaction is written left to right in the legend.
 \label{fig:dy156_fluxes_ingest}}
 \end{figure}
 
 \begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/dy156_network_m1.6.pdf}
-\caption{Chart of reactions between isotopes at $m=1.64~\Msun$ [$T=2.28~\Giga\Kelvin$] for the same conditions as Figure \ref{fig:dy156_fluxes_ingest}. Both arrow colour and size indicate $f_{ij}$, and arrows point in the direction of the reaction. 
+\caption{Chart of reactions between isotopes at $m=1.64~\Msun$ [$T=2.28~\Giga\Kelvin$] for the same conditions as Figure \ref{fig:dy156_fluxes_ingest}. Both arrow colour and size indicate $\log_{10}(f_{ij})$, and arrows point in the direction of the reaction. The range of $\log_{10}(f_{ij})$ is the same as Figure \ref{fig:dy156_fluxes_ingest}.
 \label{fig:dy156_network}}
 \end{figure}
-
 
 There are several differences between Figures \ref{fig:dy156_fluxes_zeroingest} and \ref{fig:dy156_fluxes_ingest}.
 First, $f_{ij}$ and $X_i$ are larger by several orders of magnitude and \dysprosium[156] has a net production in the shell, as Figure \ref{fig:ingest_MLT} will show in Section \ref{sec:ingestionimpact}.
@@ -291,16 +285,16 @@ Second, the mass fraction of \dysprosium[156] has a tilt up where it is net prod
 With a continual supply of \dysprosium[158], the chain $\dysprosium[158](\gamma,\nt)\dysprosium[157](\gamma,\nt)\dysprosium[156]$ can occur and significantly contribute to the production of \dysprosium[156] equal to $\erbium[160](\gamma,\alpha)\dysprosium[156]$.
 
 Figure \ref{fig:dy156_fluxes_ingest} also shows another feature of this convective-reactive environment: \dysprosium[156] and \dysprosium[157] co-produce each other. 
-\dysprosium[156] is advected from its location of peak production at $\sim$1.63~\Msun{} both deeper into the shell where it is fully destroyed, and toward the top where it undergoes $\dysprosium[156](\nt,\gamma)\dysprosium[157]$, which mildly contributes to the production of \dysprosium[157] and peaks at $\sim$1.73~\Msun.
+\dysprosium[156] is advected from its location of peak production at $\sim 1.63~\Msun$ both deeper into the shell where it is fully destroyed, and toward the top where it undergoes $\dysprosium[156](\nt,\gamma)\dysprosium[157]$, which mildly contributes to the production of \dysprosium[157] and peaks at $\sim 1.73~\Msun$.
 
-This demonstrates that in a convective-reactive environment isotopes are not well-mixed, and how the reaction rates vary with position.
-They also show how isotopes can produce each other at different locations in the shell.
-Finally, they show why the ingestion of \carbon[]-shell material is necessary for significant production of the \pnucn{} in the \oxygen[]-shell.
+Figures \ref{fig:dy156_fluxes_zeroingest} and \ref{fig:dy156_fluxes_ingest} demonstrate that in a convective-reactive environment isotopes are not well-mixed, and that the relevance of a reaction rate depends on \textbf{their} location in the shell.
+Figure \ref{fig:dy156_fluxes_ingest} also show how isotopes can contribute to the production of each other at different locations in the shell.
+Finally, comparing Figure \ref{fig:dy156_fluxes_ingest} to Figure \ref{fig:dy156_fluxes_zeroingest} shows the importance of ingesting \carbon[]-shell material for significant production of the \pnucn{} in the \oxygen[]-shell.
 
 \subsection{Impact from a downturn and a boost to the mixing speeds}\label{sec:convdownturnimpact}
 
 Here we present the impact of a 3D-inspired gradual downturn at the lower boundary and boosting mixing speeds as explained in Section \ref{sec:mixing_methods} with the diffusion coefficients in Figure \ref{fig:all_dconv}. 
-These cases are calculated with an ingestion speed of $\natlog{4}{-3}~\Msun\second^{-1}$ and the results are shown in Figure \ref{fig:impactmixingcases}.
+These cases are calculated with an ingestion rate of $\natlog{4}{-3}~\Msun\second^{-1}$ and the results are shown in Figure \ref{fig:impactmixingcases}.
 
 \begin{figure}[!htb]
 \includegraphics[width=\textwidth]{chapters/2/figures/impact_mixing_cases.pdf}
@@ -324,13 +318,14 @@ For example, \tin[115], \barium[132], and \lanthanum[138] all increase for the $
 
 Another result is that isotopic pairs of the same element are not affected the same way by the downturn compared to MLT, nor by the increase in mixing speed and we find that the ratio between these isotopes is dependent on the mixing scenario.
 Since these isotopes are connected by $(\gamma,\nt)$ and $(\nt,\gamma)$ reactions, if the location of $D_\alpha = 1$ for a reaction changes because of a change to the mixing speed or the presence of the decreasing diffusion profile, then the production of these isotopes will change.
-\molybdenum[94] is produced more for all mixing scenarios except for the $50\times$ scenario, where \molybdenum[92] has a larger \OP{}, and likewise \tin[115] exhibits this behaviour when compared to \tin[112] and \tin[114].
+\molybdenum[94] is produced more for all mixing scenarios except for the $50\times$ scenario, where \molybdenum[92] has a larger \OP, and likewise \tin[115] exhibits this behaviour when compared to \tin[112] and \tin[114].
 We find that it is possible that the ratio can tend to unity as mixing speeds increase as seen for \ruthenium[96,98], \cadmium[106,108], and \tin[112, 114].
 For \cerium[136,138] the lighter isotope is always favoured as mixing speed increases and for \dysprosium[156,158] the opposite is true.
 This demonstrates the importance of the decreasing diffusion profile and increasing mixing speed  is for the production of the \pnucn{}.
 
 \subsection{Impact from varying the ingestion rate}\label{sec:ingestionimpact}
-Here we present the impact of entraining \carbon[]-shell material with $\natlog{4}{-5}~\Msun\second^{-1}$, $\natlog{4}{-4}~\Msun\second^{-1}$, and $\natlog{4}{-3}~\Msun\second^{-1}$ as well as no entrainment as explained in Section \ref{sec:mixing_methods}.
+
+Here we present the impact of entraining \carbon[]-shell material with $\natlog{4}{-5}~\Msun\second^{-1}$, $\natlog{4}{-4}~\Msun\second^{-1}$, $\natlog{4}{-3}~\Msun\second^{-1}$ as well as no entrainment as explained in Section \ref{sec:mixing_methods}.
 Figure \ref{fig:ingest_MLT} shows the results for the MLT mixing scenario and Figures \ref{fig:ingest_3D}{--}\ref{fig:ingest_50x3D} in Appendix \ref{sec:appendixResultsIngestion} show the results for all downturn scenarios.
 
 \begin{figure}[!htb]
@@ -344,11 +339,10 @@ The only exception is that \selenium[74] production increases for the $10\times$
 This is because with higher ingestion rates, the more stable isotopes enter the shell as demonstrated in Section \ref{sec:convreacflow}.
 The lightest three have the opposite behaviour because without ingestion they are destroyed less by $(\nt,\gamma)$ reactions.
 The difference in \OP{} between two ingestion rates is largely uniformly for \molybdenum[92]{--}$^{196}\mathrm{Hg}$.
-The average spread $\OP_{\max} - \OP_{\min}$ between the different ingestion rates for the MLT and 3D-inspired scenarios is $1.22$, $1.58$, $1.64$, $1.78$, and $1.84 ~\dex$.
+The average spread $\OP_{\max} - \OP_{\min}$ between the different ingestion rates for the MLT and 3D-inspired scenarios is $1.22$, $1.58$, $1.64$, $1.78$, and $1.84 \dex$.
 This shows that the non-linear and non-monotonic behaviour in Section \ref{sec:convdownturnimpact} is because of the changing location of peak burning in the convective-reactive environment and not just more material being present.
 
-Without ingestion of \carbon[]-shell material, the MLT, $1\times$, and $3\times$ scenarios see little to no production, but for the $10\times$ and $50\times$ scenarios there is a significant underproduction of the heavier \pnucn{}.
-\tantalum[180] in particular experiences a significant underproduction of $\OP=-83~\dex$ for the $50\times$3D-inspired scenario.
+Without ingestion of \carbon[]-shell material, the MLT, $1\times$, and $3\times$ scenarios see little to no production, but for the $10\times$ and $50\times$ scenarios there is a significant underproduction of the heavier \pnucn{}. 
 This is because in the fastest cases the species are advected to the bottom of the shell where the temperatures are purely destructive and there is no replenishment from the \carbon[]-shell.
 This shows that entrainment of \carbon[]-shell material is necessary for significant contributions from pre-explosive \gprn.
 
@@ -368,7 +362,7 @@ The results are shown in Figure \ref{fig:impactmixingcases_GOSH_partial}.
 \label{fig:impactmixingcases_GOSH_partial}}
 \end{figure}
 
-The MLT simulation has $\langle\OP\rangle$ of $2.24~\dex$, the GOSH-like scenarios have $\langle\OP\rangle$ of $2.06~\dex$ and $1.78~\dex$, and the partial merger scenarios have $\langle\OP\rangle$ of $2.13~\dex$ and $1.91~\dex$.
+The MLT simulation has $\langle\OP\rangle$ of $2.24~\dex$, the GOSH-like scenarios have $\OP=2.06~\dex$ and $1.78~\dex$, and the partial merger scenarios have $\OP=2.13~\dex$ and $1.91~\dex$.
 We find that the GOSH-like scenarios suppresses the production more than the partial merger scenarios of equal dip depths, and that the deeper dips are suppress production more than the shallow with an average spread $\OP_{\max}-\OP_{\min}=0.51$.
 
 The dip functions as a barrier for the convective-reactive flow, and can section off parts of the \oxygen[]-shell.
@@ -404,7 +398,7 @@ The spread of an individual isotope is dependent on the mixing scenario.
 Species like \cadmium[106], \dysprosium[156], and \tungsten[180] have a different spread in production for each mixing scenario.
 While the change can be monotonic for species like \tungsten[180], \osmium[184], and \platnium[190], for \cadmium[106] and \tin[112], and \barium[130] they decrease for the $50\times$3D-inspired scenario.
 
-This mixing scenario dependence for the spread is also seen for the distribution of \OP as no isotope is double peaked across all mixing scenarios.
+This mixing scenario dependence for the spread is also seen for the distribution of \OP{} as no isotope is double peaked across all mixing scenarios.
 As examples, \selenium[74], \indium[113], and \lanthanum[138] in some mixing scenarios clearly are double peaked, indicating that there are distinctive branches in the nucleosynthetic pathways, but do not have it in others.
 Additionally, the magnitude of which peak is favoured is also dependent on the mixing scenario as seen for \krypton[78] and \strontium[84].
 
@@ -465,7 +459,7 @@ $^{184}\mathrm{Os}$ & $^{184}\mathrm{Pt}(\gamma,\nt)$ \\
 
 It is clearly important to consider the mixing conditions if an experiment is to be proposed to measure a reaction rate.
 As Table \ref{tab:unique_rates} shows for the $50\times$3D-inspired scenario, there are many reactions even for a single isotope that can be correlated uniquely in that mixing scenario.
-This clearly shows that a decreasing radial velocity profile and the exact magnitude of the mixing speeds are critical for understanding the nuclear reactions in this convective-reactive environment.
+This clearly shows that a decreasing radial velocity profile and the exact magnitude of the mixing speeds are crucial for understanding the nuclear reactions in this convective-reactive environment.
 
 There are also correlated reactions that all mixing scenarios share as shown in Table \ref{tab:shared_rates}.
 Additionally, all downturn cases share correlations not found in the MLT scenario: $X(\tin[115])$ with $\tin[110](\gamma,\alpha)$ and $X(\cerium[138])$ with $\neodymium[138](\gamma,\pt)$. 
@@ -515,32 +509,32 @@ $^{196}\mathrm{Hg}$ & $^{196}\mathrm{Pb}(\gamma,\nt)$, $^{202}\mathrm{Pb}(\gamma
 
 The spread in production for varying our adopted nuclear physics rates for each of the mixing scenarios is comparable to the spread seen from varying the mixing conditions.
 The results in Section \ref{sec:goshimpact} have a spread of $0.51~\dex$, in Section \ref{sec:convdownturnimpact} they are $0.96~\dex$, and the maximum spread in Section \ref{sec:ingestionimpact} is $1.84~\dex$.
-The average spread in production from varying the nuclear physics rates ranges from $0.56~\dex$ to $0.79~\dex$.
+The average spread in production from varying the nuclear physics rates ranges from $0.56${--}$0.79~\dex$.
 
-\cite{rauscherUncertaintiesProductionNuclei2016} determined uncertainties for the explosive \gprn{} for a $15~\Msun$ and two $25~\Msun$ models with solar metallicity using a Monte Carlo method.
-The spread in their 90\% probability interval for the $15~\Msun$ model was $0.61~\dex$, and for the $25~\Msun$ models was $0.63~\dex$ and $0.99~\dex$.
+\cite{rauscherUncertaintiesProductionNuclei2016} studied the impact of nuclear uncertainties for the explosive \gpr{} for a $15~\Msun$ and two $25~\Msun$ models with solar metallicity using a Monte Carlo method.
+The spread in their 90\% probability interval for the $15~\Msun$ model was $0.61~\dex$, $0.63~\dex$ for the $25~\Msun$ KEPLER model, and $0.99~\dex$ for the model from \cite{hashimotoExplosiveNucleosynthesisSupernova1989}.
 This is comparable to the maximum spread found in this work, although we are considering pre-explosive \gprn{}.
 \cite{rauscherUncertaintiesProductionNuclei2016} also provide tables of correlated rates, but only a handful of these rates appear in our Tables \ref{tab:mlt_corr}{--}\ref{tab:50x3d_corr} including those they find with $r_\mathrm{P} \geq |0.65|$.
 This is because the convective-reactive environment we consider allows for different reaction pathways to be favoured depending on the mixing conditions.
 
 \section{Discussions and Conclusion} \label{sec:discussion_conclusion}
 
-In this paper, we have shown that understanding the mixing details in the \oxygen[]-burning shell during an \oxygen[]-\carbon[] shell merger is critical for accurately modelling the nucleosynthesis of the \pnucn.
-This work raises the importance of 3D hydrodynamic simulations for understanding the nucleosynthesis in O-C shell mergers \citep{bazanConvectionNucleosynthesisCore1994, yadavLargescaleMixingViolent2020a, rizzutiShellMergersLate2024a}.
+In this paper, we have shown that understanding the mixing details in the \oxygen[]-burning shell during an \oxygen[]-\carbon[] shell merger is crucial for accurately modelling the nucleosynthesis of the \pnucn.
+This work raises the importance of 3D hydrodynamic simulations for understanding the nucleosynthesis in \oxygen[]-\carbon[] shell mergers \citep{bazanConvectionNucleosynthesisCore1994, yadavLargescaleMixingViolent2020a, rizzutiShellMergersLate2024a}.
 We have demonstrated the convective-reactive nature of the nucleosynthesis in the \oxygen[]-shell, where the timescales for advection and reaction are comparable and our results show that:
 \begin{itemize}
-\item A gradual downturn of convective mixing efficiency towards the boundary motivated by 3D simulations increases production of the \pnucn{}, but increasing mixing speeds impacts the production in a non-linear and non-monotonic way.
-\item The ratio of isotopic pairs are sensitive to the mixing scenario.
+\item A gradual downturn motivated by 3D simulations increases production of the \pnucn{}, but increasing mixing speeds impacts the production in a non-linear and non-monotonic way.
+\item The ratio of isotopic pairs \textbf{is} sensitive to the mixing scenario.
 \item Increasing the entrainment rate of \carbon[]-shell material increases the production of the \pnucn{}.
 \item Without entrainment, the \pnucn{} are negligibly produced or net destroyed.
-\item A dip in the convective mixing profile can suppress the production of the \pnucn{}.
+\item A dip in the convective profile can suppress the production of the \pnucn{}.
 \item The location and magnitude of the convective dip impacts the nucleosynthesis of the \pnucn{}.
 \item Varying the adopted reactions rates have a comparable spread in production to changing mixing conditions.
 \item The spread due to varying the reaction rates is dependent on the mixing scenario.
 \item Whether a reaction rate is correlated with an isotope is dependent on the mixing scenario, and some are unique to a single mixing scenario.
 \end{itemize}
 
-Figure \ref{fig:impact_mixing_cases_bars_all} shows the maximum spread for the \pnucn{} across all mixing scenarios considered in this paper, excluding the case of no merger, with an average spread of 2.45~\dex.
+Figure \ref{fig:impact_mixing_cases_bars_all} shows the maximum spread for the \pnucn{} across all mixing scenarios considered in this paper, excluding the case of no merger, with an average spread of $2.45~\dex$.
 This shows the significant impact of the macrophysical uncertainties in 1D stellar models on nucleosynthesis, and this highlights the importance of understanding hydrodynamic models better as the shell merger dominates production of the \pnucn{} \citep{robertiGprocessNucleosynthesisCorecollapse2023,robertiGprocessNucleosynthesisCorecollapse2024b}.
 
 \begin{figure}[!htb]
@@ -551,8 +545,8 @@ The average spread $\OP_{\max} - \OP_{\min} = 2.45~\dex$. $\OP=0$ is the initial
 \end{figure}
 
 Although we find that the mixing conditions significantly impact the results of Section \ref{sec:nuclearimpact}, not all scenarios are equally likely to represent the conditions in a merger.
-The MLT mixing scenario, $1\times$, and $50\times$ case may not be representative of the conditions for realistic O-C shell mergers.
-3D hydrodynamic simulations show the \oxygen[]-shell has a downturn to radial convective velocities and mixing speeds roughly $3{-}10$ times larger than what MLT predicts \citep{jonesIdealizedHydrodynamicSimulations2017,andrassy3DHydrodynamicSimulations2020, rizzutiShellMergersLate2024a}.
+The MLT mixing scenario, $1\times$, and $50\times$ case may not be representative of the conditions for realistic \oxygen[]-\carbon[] shell mergers.
+3D hydrodynamic simulations show the \oxygen[]-shell has a downturn to radial convective velocities and mixing speeds roughly $3-10$ times larger than what MLT predicts \citep{jonesIdealizedHydrodynamicSimulations2017,andrassy3DHydrodynamicSimulations2020, rizzutiShellMergersLate2024a}.
 This suggests that the $3\times$ and $10\times$ downturn mixing scenarios are likely more representative of the conditions in a merger.
 The exploration done in this paper shows the importance of understanding the mixing conditions.
 
@@ -565,54 +559,45 @@ There are limitations to the results provided in this work and further extension
 We have focused on the impact of mixing conditions and varying reaction rates, but do not investigate how different stellar conditions are relevant to the nucleosynthesis or if changing the stable seeds from the \carbon[]-shell impact these results.
 The distribution of stable seeds and the metallicity of the star are of significant importance for the nucleosynthesis of the \pnucn{} \citep{travaglioTestingRoleSNe2015, battinoHeavyElementsNucleosynthesis2020}.
 It is possible that earlier in stellar evolution that weak \sprn{} in the \carbon[]-shell could modify the stable seeds \citep{pignatariWEAKSPROCESSMASSIVE2010}, which could be relevant for the lighter \pnucn.
-The NuGrid $15~\Msun$ $Z=0.02$ model does have the largest overproduction factor compared to the other NuGrid models with shell mergers \citep{ritterConvectivereactiveNucleosynthesisSc2018}.
-However, the other models have $Z=0.01$, and since there is a metallicity dependency of the \gprn{} \cite{travaglioTestingRoleSNe2015}, this is not surprising and it is likely that the spread in production due to the mixing conditions would be similar.
 
 Other stellar models could have different \oxygen[]-shell sizes and temperature profiles due to different mixing prescriptions, initial mass, and rotations, which would directly affect locations of peak burning and how the mixing conditions impact the nucleosynthesis.
 However, if the shell is convective-reactive, a spread in production comparing mixing scenarios would still be expected.
 
-Finally, explosive \gprn{} can contribute 10\% to 40\% of the final yields of the \pnucn{} even with a shell merger \citep{robertiGprocessNucleosynthesisCorecollapse2023}.
-However, \oxygen[]-\carbon[] shell mergers are critical to the nucleosynthesis of a massive star prior to the CCSN regardless of explosive energy \citep{ robertiGprocessNucleosynthesisCorecollapse2024b}.
-Even if the results in Figure \ref{fig:impact_mixing_cases_bars_all} do not represent the whole of the nucleosynthesis of the \pnucn{}, they are still critical for understanding the nucleosynthesis in the \oxygen[]-shell prior to the CCSN.
+Finally, \oxygen[]-\carbon[] shell mergers are crucial to the nucleosynthesis of a massive star prior to the CCSN regardless of explosive energy \citep{ robertiGprocessNucleosynthesisCorecollapse2024b}.
+Even if the results in Figure \ref{fig:impact_mixing_cases_bars_all} do not represent the whole of the nucleosynthesis of the \pnucn{}, they are still crucial for understanding the nucleosynthesis in the \oxygen[]-shell prior to the CCSN.
 
 The results of this work have implications beyond the \pnucn.
-The light odd-Z isotopes \phosphorus[31], \chlorine[35], \potassium[39], and \scandium[45] are also produced during O-C shell mergers and are likewise impacted by varying the mixing conditions \citep{ritterConvectivereactiveNucleosynthesisSc2018, robertiOccurrenceImpactCarbonOxygen2025}.
-Observations have found \phosphorus[]-enhanced stars \citep{masseronPhosphorusrichStarsUnusual2020, braunerUnveilingChemicalFingerprint2023, braunerUnveilingChemicalFingerprint2024} which could be explained by a previous massive star having a \oxygen[]-\carbon[] shell merger.
-Additionally, \potassium[40] has been shown to be relevant to the heating of planets early in their formation \citep{frankRadiogenicHeatingEvolution2014, oneillEffectGalacticChemical2020}
-The shell merger also has a distinct impact on galactic chemical evolution (GCE) models \citep{ritterConvectivereactiveNucleosynthesisSc2018}, and massive star models show this feature regardless of metallicity and stellar evolution model \citep{robertiOccurrenceImpactCarbonOxygen2025}.
-Further work is needed to understand the impact of the macrophysical uncertainties in 1D stellar models on the nucleosynthesis of these light odd-Z isotopes.
+The light odd-Z elements \phosphorus[], \chlorine[], \potassium[], and \scandium[] are also produced during \oxygen[]-\carbon[] shell mergers and based on our preliminary results are likewise impacted by varying the mixing conditions \citep{ritterConvectivereactiveNucleosynthesisSc2018, robertiOccurrenceImpactCarbonOxygen2025}.
+The long-lived radioactive isotope \potassium[40] ($t_{1/2} = \natlog{1.25}{9}~\yr$), which is relevant to the heating of planets early in their formation \citep{frankRadiogenicHeatingEvolution2014, oneillEffectGalacticChemical2020}, is also affected along with the stable \potassium[] isotopes \potassium[39] and \potassium[41]. 
+Finally, observations have found \phosphorus[]-enhanced stars \citep{masseronPhosphorusrichStarsUnusual2020, braunerUnveilingChemicalFingerprint2023, braunerUnveilingChemicalFingerprint2024} which could be explained by a \oxygen[]-\carbon[] shell merger from a previous massive star.
 
+\oxygen[]-\carbon[] shell mergers have a potentially huge impact on galactic chemical evolution models \citep{ritterConvectivereactiveNucleosynthesisSc2018}, and massive star models show this feature regardless of metallicity and stellar evolution model \citep{robertiOccurrenceImpactCarbonOxygen2025}.
+Further work is needed to understand the impact of the macrophysical uncertainties in 1D stellar models on the nucleosynthesis of these light odd-Z elements.
 
 \section{Appendix}\label{sec:appendix}
 
 \subsection{Correlations of nuclear reaction rates}\label{sec:appendixNuclearRates}
 
-The Pearson correlation coefficient, $r_\mathrm{P}$, is insufficient to quantify the importnace of a correlated rate as demonstrated by Figure \ref{fig:corr_ex}.
-A strong correlation does not correspond directly to a signifcant change to the final mass fraction of a species.
-In addition to the correlation coefficient, a slope $\zeta$ is provided that better describes this behaviour.
-$\zeta$ is the slope of a linear regression between $\log_{10}(X/X_\mathrm{no~variation})$ and $\log_{10}(\mathrm{variation~factor})$ where $X$ is the final decayed mass fraction for Monte Carlo rates and $X_\mathrm{no~variation})$ is the final decayed mass fraction for the default case where all variation factors are equal to $1$.
-
+The Pearson correlation coefficient, $r_\mathrm{P}$, is insufficient to assess the importance of a correlated rate.
+As shown in Figure \ref{fig:corr_ex}, a strong correlation does not necessarily imply a significant impact on the final mass fraction of a species. To better quantify this impact, we use $\zeta$, which is defined as the slope of the linear regression between $\log_{10}(X/X_\mathrm{no~variation})$ and $\log_{10}(\mathrm{variation~factor})$, where $X$ is the final, mass-averaged, and decayed mass fraction for a variation, and $X_\mathrm{no~variation}$ is the corresponding default case with no rate variation.
 
 \begin{figure}[!htb]
 \includegraphics[width=\columnwidth]{chapters/2/figures/correlation_example.pdf}
-\caption{Examples of strongly correlated mass fractions with reaction rates for four species for the MLT mixing scenario. The orange dots are the values and the black line is the best linear fit to $\OP_{\mathrm{var}}$ and $\log_{10}(\mathrm{variation~factor})$. The top left plot and bottom right plot show strong correlations for $^{74}\mathrm{Se}$ and $^{196}\mathrm{Hg}$ that directly impact the mass fraction. The top right plot shows a correlation for $^{98}\mathrm{Ru}$ where there is considerable spread in the mass fraction. The bottom left plot shows a correlation for $^{184}\mathrm{Os}$ where the mass fraction is strongly affected only for multiplication factors less than $1$.}
+\caption{Examples of strong correlations between mass fractions and reaction rates for four species under the MLT scenario. Orange dots indicate mass fractions for each variation factor, and the black line shows the linear fit to $\log_{10}(X/X_\mathrm{no~variation})$ versus $\log_{10}(\mathrm{variation~factor})$. Top left and bottom right: strong correlation and significant mass fraction changes for \selenium[74] and $^{196}\mathrm{Hg}$. Top right: strong correlation for \ruthenium[98] with large scatter. Bottom left: correlation for \osmium[184] with a weak slope and asymmetric impact.}
 \label{fig:corr_ex}
 \end{figure}
 
-It is clear from Figure \ref{fig:corr_ex} that similarly correlations do not directly mean that the reaction rate is relevant for the production of a species, but the slope $\zeta$ also does not directly point to this.
-The bottom right plot showing the impact on the final mass fraction of $^{196}\mathrm{Hg}$ from varying the input rate for $^{196}\mathrm{Pb}(\gamma,\nt)$ has both a strong slope and correlation, but the bottom left plot has a strong correlation and a weak slope.
-Reaction rates that are both highly correlated and have a strong slope will have direct impact on the production of species.
+Figure \ref{fig:corr_ex} demonstrates that strong correlations do not always imply significance, nor does a strong $\zeta$ guarantee it. 
+For instance, the bottom right panel shows $^{196}\mathrm{Hg}$ with both a strong correlation and slope, while the bottom left shows a strong correlation for \osmium[184] but a weak slope. 
+Only rates with both high $r_\mathrm{P}$ and $\zeta$ substantially affect final abundances.
 
-Another caveat is that this method of varying the reaction rates in a Monte Carlo way does not distinguish between the photo-disintegration and corresponding capture rate.
-All correlated rates are reported according to their photo-disintegration rates, but as shown by the upper left plot of Figure \ref{fig:corr_ex} for $^{74}\mathrm{Se}$ and $^{75}\mathrm{Se}(\gamma,\nt)$$^{74}\mathrm{Se}$ this results sometimes in saying that a reaction that would be considered a production term is strongly anti-correlated with production.
-This is because when we apply the variation factor, we do so for both $^{75}\mathrm{Se}(\gamma,\nt)$ and $^{74}\mathrm{Se}(\nt,\gamma)$.
-As shown in Section \ref{sec:convreacflow}, the reactions in this shell are not balanced and both could be relevant, although as Figure \ref{fig:dy156_fluxes_ingest} shows for heavier species the $(\gamma,\nt)$ rate is typically the dominant reaction.
-
-\clearpage
+A caveat of $r_\mathrm{P}$ for this method of varying the reaction rates is that it not distinguish between the photo-disintegration and corresponding capture rate because the same variation factor is applied to both.
+All correlated rates are reported according to their photo-disintegration rates, but as shown by the upper left plot of Figure \ref{fig:corr_ex} for \selenium[74] and $\selenium[75](\gamma,\nt)\selenium[74]$ this results in a production term having a negative correlation because $\selenium[74](\nt,\gamma)\selenium[75]$ is also modified in the same way.
+As explained in Section \ref{sec:convreacflow}, the reactions in this shell are not balanced and both a destruction and production term could be relevant at different locations, although as Figure \ref{fig:dy156_fluxes_ingest} shows for heavier species the $(\gamma,\nt)$ rate is typically much stronger.
 
 \subsection{Results of varying ingestion rate}\label{sec:appendixResultsIngestion}
 
-Here we provide the results for varying the ingestion rates for the downturn mixing scenarios.
+Here we provide the results for varying the ingestion rates for the scenarios with a downturn in the mixing efficiency profile as shown in Figure \ref{fig:all_dconv}.
 
 \begin{figure}[!htb] 
 \includegraphics[width=\textwidth]{chapters/2/figures/ingest_3D.pdf}
@@ -638,9 +623,9 @@ Here we provide the results for varying the ingestion rates for the downturn mix
 \label{fig:ingest_50x3D}}
 \end{figure}
 
-\subsection{Results of varying the input nuclear physics}\label{sec:appendixResultsNuclear}
+\subsection{Results of varying the input nuclear reactions}\label{sec:appendixResultsNuclear}
 
-Here we provide the results for varying the input nuclear reactions for the  downturn mixing scenarios and the reaction rate correlation tables for the MLT and downturn scenarios.  
+Here we provide the results for varying the input nuclear reactions for the scenarios with a downturn in the mixing efficiency profile as shown in Figure \ref{fig:all_dconv} and the reaction rate correlation tables for the MLT and downturn scenarios.
 
 \begin{figure}[!htb] 
 \includegraphics[width=\textwidth]{chapters/2/figures/nuclearimpact_3D.pdf}
